@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Breakspider — splash entry study</title>
+  <style>
+    :root { color-scheme: dark; --ink: #f4f0e5; --line: #45413b; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body { overflow: hidden; background: #000; color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+    body.entered { overflow: auto; }
+    button { font: inherit; cursor: pointer; }
+    button:focus-visible { outline: 2px solid var(--ink); outline-offset: 5px; }
+
+    /* This is only a reveal target; the homepage design is still open. */
+    .home {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: radial-gradient(circle at 50% 45%, #34302b 0, #211e1b 48%, #171512 100%);
+    }
+    .home-header, .home-footer { display: flex; justify-content: space-between; gap: 24px; padding: 30px clamp(24px, 5vw, 80px); }
+    .home-header { border-bottom: 1px solid var(--line); }
+    .home-footer { border-top: 1px solid var(--line); color: #a9a297; font: 11px/1.5 Consolas, monospace; letter-spacing: .14em; text-transform: uppercase; }
+    .home-header strong { font: 800 14px/1 Arial, Helvetica, sans-serif; letter-spacing: .2em; }
+    .home-header span { color: #a9a297; font: 11px/1 Consolas, monospace; letter-spacing: .14em; text-transform: uppercase; }
+    .home-hero { width: min(900px, calc(100% - 48px)); margin: auto; padding: 100px 0; }
+    .eyebrow { margin: 0 0 24px; color: #bcb5a8; font: 12px/1.5 Consolas, monospace; letter-spacing: .2em; text-transform: uppercase; }
+    .home h1 { margin: 0; max-width: 9ch; font-size: clamp(58px, 12vw, 150px); line-height: .87; letter-spacing: -.08em; text-transform: uppercase; }
+    .home-copy { max-width: 46ch; margin: 34px 0 30px; color: #d5cec1; font-size: clamp(15px, 2vw, 19px); line-height: 1.5; }
+    .replay {
+      border: 1px solid #a49c90; padding: 13px 19px; color: var(--ink);
+      background: transparent; font: 700 11px/1 Consolas, monospace;
+      letter-spacing: .16em; text-transform: uppercase;
+    }
+    .replay:hover { background: var(--ink); color: #171512; }
+
+    .splash { position: fixed; inset: 0; z-index: 10; overflow: hidden; background: #000; }
+    .splash.is-ready { cursor: pointer; }
+    .splash.is-split-ready { cursor: default; background: transparent; }
+    /* The final web break is centered at x=750 of the 1600-unit artboard.
+       Shifting the stage by 46.875% puts that break on the viewport seam. */
+    .logo-shell {
+      position: absolute; top: 50%; left: 50%;
+      width: min(92vw, 1380px, 140vh); aspect-ratio: 1600 / 820;
+      transform: translate(-46.875%, -50%);
+    }
+    .logo-shell iframe, .logo-shell img {
+      position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
+      display: block; pointer-events: none;
+    }
+    .logo-shell .still { opacity: 0; }
+    .splash.is-ready .logo-shell .still { opacity: 1; }
+    .entry {
+      position: absolute; left: 50%; bottom: clamp(30px, 5vh, 64px);
+      transform: translate(-50%, 10px); opacity: 0; visibility: hidden;
+      display: grid; justify-items: center; gap: 12px;
+      transition: opacity .35s ease, transform .35s ease, visibility .35s;
+    }
+    .splash.is-ready .entry { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+    .enter {
+      min-width: 180px; border: 1px solid var(--ink); padding: 14px 26px;
+      background: #000; color: var(--ink); font: 800 14px/1 Consolas, monospace;
+      letter-spacing: .24em; text-transform: uppercase;
+    }
+    .enter:hover, .enter:focus-visible { background: var(--ink); color: #000; }
+    .entry small { color: #aaa396; font: 10px/1.3 Consolas, monospace; letter-spacing: .15em; text-transform: uppercase; white-space: nowrap; }
+
+    /* At Enter, matching final artwork replaces the live frame for one beat.
+       Each black half owns a clipped copy of that same full-size artwork. */
+    .panels { position: absolute; inset: 0; visibility: hidden; pointer-events: none; }
+    .splash.is-split-ready .panels { visibility: visible; }
+    .panel {
+      position: absolute; top: 0; bottom: 0; width: 50%; overflow: hidden;
+      background: #000; transform: translateX(0);
+      transition: transform 1050ms cubic-bezier(.4,0,.2,1);
+      will-change: transform;
+    }
+    .panel.left { left: 0; }
+    .panel.right { right: 0; }
+    .panel img {
+      position: absolute; top: var(--logo-top); width: var(--logo-width);
+      height: var(--logo-height); max-width: none; pointer-events: none;
+    }
+    .panel.left img { left: var(--logo-left); }
+    .panel.right img { left: var(--logo-left-right); }
+    .splash.is-split-ready .logo-shell, .splash.is-split-ready .entry { opacity: 0; visibility: hidden; transition: none; }
+    .splash.is-opening .panel.left { transform: translateX(-102%); }
+    .splash.is-opening .panel.right { transform: translateX(102%); }
+    [hidden] { display: none !important; }
+    @media (max-width: 600px) {
+      .home-header, .home-footer { padding: 20px 24px; }
+      .home-header span { display: none; }
+      .home-hero { padding: 90px 0; }
+      .entry { bottom: 12vh; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .panel, .entry { transition-duration: 1ms; }
+    }
+  </style>
+</head>
+<body>
+  <main class="home" id="home" inert aria-hidden="true">
+    <header class="home-header"><strong>BREAKSPIDER</strong><span>Homepage / interaction placeholder</span></header>
+    <section class="home-hero" aria-labelledby="home-title">
+      <p class="eyebrow">After the intro / proof of concept</p>
+      <h1 id="home-title" tabindex="-1">Homepage reveal.</h1>
+      <p class="home-copy">This stands in for the site homepage. The opening transition is the part being tested here.</p>
+      <button class="replay" id="replay-intro" type="button">Replay intro ↺</button>
+    </section>
+    <footer class="home-footer"><span>Breakspider</span><span>Home content placeholder</span></footer>
+  </main>
+
+  <div class="splash" id="splash" aria-label="Breakspider animated splash screen">
+    <div class="logo-shell" id="logo-shell">
+      <iframe id="logo-frame" title="Breakspider logo animation" src="../logo-animation/index.html?embed=1" tabindex="-1" aria-hidden="true"></iframe>
+      <img class="still" id="logo-still" src="../../assets/breakspider-logo/logo-full.svg" alt="">
+    </div>
+    <div class="entry">
+      <button class="enter" id="enter" type="button" disabled>Enter</button>
+      <small>Or click anywhere</small>
+    </div>
+    <div class="panels" aria-hidden="true">
+      <div class="panel left" id="left-panel"><img src="../../assets/breakspider-logo/logo-full.svg" alt=""></div>
+      <div class="panel right"><img src="../../assets/breakspider-logo/logo-full.svg" alt=""></div>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const splash = document.getElementById('splash');
+      const home = document.getElementById('home');
+      const shell = document.getElementById('logo-shell');
+      const frame = document.getElementById('logo-frame');
+      const still = document.getElementById('logo-still');
+      const enterButton = document.getElementById('enter');
+      const leftPanel = document.getElementById('left-panel');
+      let state = 'playing';
+
+      // Both panel images must occupy the same viewport coordinates as the
+      // live stage. The panel boundary is the viewport center and the web gap.
+      function syncPanelArtwork() {
+        const box = shell.getBoundingClientRect();
+        splash.style.setProperty('--logo-left', `${box.left}px`);
+        splash.style.setProperty('--logo-left-right', `${box.left - innerWidth / 2}px`);
+        splash.style.setProperty('--logo-top', `${box.top}px`);
+        splash.style.setProperty('--logo-width', `${box.width}px`);
+        splash.style.setProperty('--logo-height', `${box.height}px`);
+      }
+      addEventListener('resize', syncPanelArtwork);
+      syncPanelArtwork();
+
+      async function showEnter() {
+        if (state !== 'playing') return;
+        await still.decode().catch(() => {});
+        if (state !== 'playing') return;
+        state = 'ready';
+        syncPanelArtwork();
+        enterButton.disabled = false;
+        splash.classList.add('is-ready');
+      }
+      addEventListener('message', (event) => {
+        if (event.source === frame.contentWindow && event.data?.type === 'breakspider:intro-finished') showEnter();
+      });
+
+      function finishOpen() {
+        if (state !== 'opening') return;
+        state = 'entered';
+        splash.hidden = true;
+        home.inert = false;
+        home.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('entered');
+        document.getElementById('home-title').focus({ preventScroll: true });
+      }
+      function openSite() {
+        if (state !== 'ready') return;
+        state = 'opening';
+        syncPanelArtwork();
+        splash.classList.add('is-split-ready');
+        // Let the matching final artwork paint before the two panels move.
+        requestAnimationFrame(() => requestAnimationFrame(() => splash.classList.add('is-opening')));
+        leftPanel.addEventListener('transitionend', (event) => {
+          if (event.propertyName === 'transform') finishOpen();
+        }, { once: true });
+        setTimeout(finishOpen, 1250); // Also covers reduced-motion browsers.
+      }
+      enterButton.addEventListener('click', (event) => { event.stopPropagation(); openSite(); });
+      splash.addEventListener('click', openSite);
+      document.getElementById('replay-intro').addEventListener('click', () => location.reload());
+    })();
+  </script>
+</body>
+</html>

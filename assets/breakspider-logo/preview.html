@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Breakspider — logo asset sheet</title>
+  <style>
+    :root { color-scheme: dark; --ink:#f4f0e5; --muted:#aaa69d; --line:#343331; --bg:#090909; }
+    * { box-sizing:border-box }
+    body { margin:0; background:#111110; color:var(--ink); font:14px/1.45 system-ui,sans-serif; }
+    main { max-width:1440px; margin:auto; padding:28px clamp(16px,4vw,58px) 90px; }
+    h1,h2,p { margin:0; }
+    h1 { font-size:clamp(24px,3vw,39px); letter-spacing:-.045em; font-weight:650; }
+    h2 { font-size:13px; text-transform:uppercase; letter-spacing:.19em; color:var(--muted); font-weight:650; margin:48px 0 16px; }
+    p { color:var(--muted); max-width:750px; }
+    header { display:flex; justify-content:space-between; gap:20px; align-items:end; padding:4px 0 20px; border-bottom:1px solid var(--line); }
+    .eyebrow { color:#c8bb9f; text-transform:uppercase; letter-spacing:.21em; font-size:11px; margin-bottom:9px; }
+    .stamp { white-space:nowrap; color:#aaa69d; border:1px solid #48443e; padding:8px 12px; font-size:11px; letter-spacing:.15em; transform:rotate(2deg); }
+    .panel { background:var(--bg); border:1px solid var(--line); position:relative; overflow:hidden; }
+    .hero { margin-top:22px; aspect-ratio:1600/680; display:flex; align-items:center; justify-content:center; }
+    .hero img { display:block; width:100%; height:100%; object-fit:contain; }
+    .hero .tag { position:absolute; left:18px; top:14px; }
+    .tag { font-size:10px; color:#bbb5a9; text-transform:uppercase; letter-spacing:.15em; z-index:2; }
+    .grid { display:grid; grid-template-columns:repeat(12,1fr); gap:14px; }
+    .card { min-height:190px; padding:16px; display:flex; flex-direction:column; }
+    .card .art { flex:1; min-height:125px; display:flex; align-items:center; justify-content:center; padding:13px 4px 0; }
+    .card img { display:block; max-width:100%; max-height:170px; object-fit:contain; }
+    .card small { color:#77736d; font-size:11px; letter-spacing:.02em; }
+    .half { grid-column:span 6; }
+    .third { grid-column:span 4; }
+    .quarter { grid-column:span 3; }
+    .wide { grid-column:span 8; }
+    .break-word img,.spider-word img { width:96%; max-height:240px; }
+    .break-word,.spider-word { min-height:285px; }
+    .web-card img { width:100%; }
+    .web-card { min-height:230px; }
+    .bug img { max-height:125px; }
+    .state { grid-column:span 12; padding:34px 24px 14px; }
+    .state img { display:block; width:100%; height:auto; }
+    .state .tag { position:absolute; top:14px; left:16px; }
+    .final { aspect-ratio:1600/680; display:flex; align-items:center; justify-content:center; }
+    .final img { width:100%; height:100%; object-fit:contain; }
+    .final .tag { position:absolute; top:14px; left:16px; }
+    .assembly .stage { height:100%; aspect-ratio:1600/820; max-width:100%; position:relative; }
+    .assembly .stage img { position:absolute; width:auto; height:auto; max-height:none; object-fit:fill; }
+    .note { border-left:2px solid #9d998b; padding:3px 0 3px 16px; margin-top:20px; }
+    code { color:#d9d3c7; background:#22211f; padding:2px 5px; }
+    a { color:var(--ink); text-decoration-color:#837f72; }
+    @media(max-width:720px) {
+      .stamp { display:none; }
+      .half,.third,.quarter,.wide { grid-column:span 12; }
+      .card { min-height:190px; }
+      .hero,.final { aspect-ratio:1.7; }
+      .state { padding:34px 12px 12px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div><div class="eyebrow">Identity study / 01</div><h1>Breakspider asset sheet</h1><p>Off-white ink, crooked letters, a web that holds together until it doesn't.</p></div>
+    <div class="stamp">VECTOR / MOTION READY</div>
+  </header>
+
+  <section class="panel hero"><span class="tag">Refreshed full logo · self-contained SVG</span><img src="logo-full.svg" alt="Refreshed Breakspider logo"></section>
+
+  <h2>01 / Independent layers</h2>
+  <section class="grid" aria-label="Individual animation assets">
+    <div class="panel card half break-word"><div class="tag">01 — BREAK</div><div class="art"><img src="break.svg" alt="BREAK wordmark"></div><small>Rigid wordmark / transparent SVG</small></div>
+    <div class="panel card half spider-word"><div class="tag">02 — SPIDER</div><div class="art"><img src="spider-wordmark.svg" alt="SPIDER wordmark"></div><small>Rigid wordmark / transparent SVG</small></div>
+    <div class="panel card half web-card"><div class="tag">03 — Left web</div><div class="art"><img src="web-left.svg" alt="Left web section"></div><small>Sagged section / separate pivot</small></div>
+    <div class="panel card half web-card"><div class="tag">04 — Right web</div><div class="art"><img src="web-right.svg" alt="Right web section"></div><small>Sagged section / separate pivot</small></div>
+    <div class="panel card third"><div class="tag">05 — Torn silk</div><div class="art"><img src="web-frays.svg" alt="Center snapped and frayed web strands"></div><small>Paired ends from the former center ties</small></div>
+    <div class="panel card third bug"><div class="tag">06 — Spider</div><div class="art"><img src="spider.svg" alt="Small spider motif"></div><small>Standalone body / silk anchor in right web</small></div>
+    <div class="panel card third"><div class="tag">System notes</div><div class="art" style="align-items:start; flex-direction:column; gap:9px; padding-top:24px"><p>Same ink and stroke language in every layer.</p><p>Each part has transparent, cropped bounds for motion.</p></div><small>Placement coordinates: <a href="manifest.json">manifest.json</a></small></div>
+  </section>
+
+  <h2>02 / One web, three key poses</h2>
+  <p style="margin-bottom:16px">The outer anchors, twelve spokes, and four capture rings correspond in every pose. The center bridge stretches under load, then splits into paired silk ends.</p>
+  <section class="grid">
+    <div class="panel state"><span class="tag">07 — Pre-load · lightly tensioned</span><img src="web-taut.svg" alt="Lightly tensioned intact web before the words land"></div>
+    <div class="panel state"><span class="tag">08 — Loaded · sagged, still connected</span><img src="web-loaded.svg" alt="Same web pulled downward by the wordmarks while the center bridge holds"></div>
+    <div class="panel state"><span class="tag">09 — Broken · overloaded final</span><img src="web-broken.svg" alt="Same web deformed further with its center bridge snapped into paired silk ends"></div>
+  </section>
+
+  <h2>03 / Assembly check</h2>
+  <section class="grid">
+    <div class="panel half final"><span class="tag">10 — Final logo · one self-contained SVG</span><img src="logo-full.svg" alt="Complete rebuilt logo"></div>
+    <div class="panel half final assembly"><span class="tag">11 — Same logo · six separate files</span>
+      <div class="stage" role="img" aria-label="Logo assembled from the six separate exported wordmark, web, fray, and spider SVG files">
+        <img src="web-left.svg" alt="" style="left:5.3125%;top:51.2195%;width:41.25%;height:45.122%">
+        <img src="web-right.svg" alt="" style="left:47.1875%;top:50.6098%;width:49.375%;height:46.3415%">
+        <img src="web-frays.svg" alt="" style="left:41.875%;top:72.561%;width:10%;height:26.2195%">
+        <img src="break.svg" alt="" style="left:5%;top:17.0732%;width:42.1875%;height:52.439%">
+        <img src="spider-wordmark.svg" alt="" style="left:45.9375%;top:15.8537%;width:43.75%;height:54.2683%">
+        <img src="spider.svg" alt="" style="left:91.25%;top:67.6829%;width:8.4375%;height:18.2927%">
+      </div>
+    </div>
+  </section>
+  <p class="note">The original concept remains at <a href="../logo-concept-draft.png">logo-concept-draft.png</a>. These files redraw the system; they do not embed the reference image. The two final logo SVGs are self-contained. The assembly above uses the six separate SVG files.</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,139 @@
+{
+  "canvas": {
+    "width": 1600,
+    "height": 820,
+    "background": "transparent",
+    "ink": "#f4f0e5"
+  },
+  "bounds": {
+    "break.svg": {
+      "x": 80,
+      "y": 140,
+      "width": 675,
+      "height": 430
+    },
+    "spider-wordmark.svg": {
+      "x": 735,
+      "y": 130,
+      "width": 700,
+      "height": 445
+    },
+    "web-left.svg": {
+      "x": 85,
+      "y": 420,
+      "width": 660,
+      "height": 370
+    },
+    "web-right.svg": {
+      "x": 755,
+      "y": 415,
+      "width": 790,
+      "height": 380
+    },
+    "web-frays.svg": {
+      "x": 670,
+      "y": 595,
+      "width": 160,
+      "height": 215
+    },
+    "spider.svg": {
+      "x": 1460,
+      "y": 555,
+      "width": 135,
+      "height": 150
+    },
+    "web-taut.svg": {
+      "x": 85,
+      "y": 420,
+      "width": 1460,
+      "height": 180
+    },
+    "web-loaded.svg": {
+      "x": 85,
+      "y": 420,
+      "width": 1460,
+      "height": 250
+    },
+    "web-broken.svg": {
+      "x": 85,
+      "y": 415,
+      "width": 1460,
+      "height": 400
+    },
+    "logo-full.svg": {
+      "x": 0,
+      "y": 0,
+      "width": 1600,
+      "height": 820
+    },
+    "logo-assembled.svg": {
+      "x": 0,
+      "y": 0,
+      "width": 1600,
+      "height": 820
+    }
+  },
+  "reference": "../logo-concept-draft.png",
+  "layer_order": [
+    "web-left.svg",
+    "web-right.svg",
+    "web-frays.svg",
+    "break.svg",
+    "spider-wordmark.svg",
+    "spider.svg"
+  ],
+  "assets": [
+    "break.svg",
+    "spider-wordmark.svg",
+    "web-left.svg",
+    "web-right.svg",
+    "web-frays.svg",
+    "spider.svg",
+    "web-taut.svg",
+    "web-loaded.svg",
+    "web-broken.svg",
+    "logo-full.svg",
+    "logo-assembled.svg"
+  ],
+  "web_keyframes": {
+    "preload": {
+      "asset": "web-taut.svg",
+      "center_y": 480,
+      "hub_y": 535,
+      "gap": 8,
+      "bridge_sag": 1,
+      "center_connected": true
+    },
+    "loaded": {
+      "asset": "web-loaded.svg",
+      "center_y": 544,
+      "hub_y": 622,
+      "gap": 24,
+      "bridge_sag": 10,
+      "center_connected": true
+    },
+    "broken": {
+      "asset": "web-broken.svg",
+      "center_y": 614,
+      "hub_y": 735,
+      "gap": 80,
+      "center_connected": false
+    },
+    "shared_topology": {
+      "spokes_per_side": 6,
+      "capture_rings": 4,
+      "center_bridge_points": 4
+    }
+  },
+  "spider_tether_join": {
+    "x": 1524.119,
+    "y": 580.785
+  },
+  "usage": "SVGs have tightly cropped transparent bounds. Place each component using its bounds in the 1600x820 composition. Both full logo SVGs are self-contained. preview.html proves the assembly by positioning the six separate SVG files.",
+  "motion_notes": {
+    "wordmarks": "Rigid whole-object layers; animate each SVG with translation and rotation.",
+    "web": "Three poses share twelve spoke indices, four capture rings, outer anchors, and center-bridge attachment points. Animate web-taut.svg to web-loaded.svg to web-broken.svg.",
+    "frays": "At the snap, replace the four connected center silk bridges with their paired broken ends. The ends start at corresponding attachment points on each half.",
+    "spider": "Independent far-right SVG layer; the right-web tether and spider silk share the exact spider_tether_join coordinate."
+  }
+}
