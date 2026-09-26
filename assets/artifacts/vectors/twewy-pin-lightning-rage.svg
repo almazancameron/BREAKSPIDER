@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Gold Lightning Rage pin with three spiraling black phrases">
+  <title>Lightning Rage pin</title>
+  <defs>
+    <radialGradient id="gold" cx="48%" cy="42%" r="68%">
+      <stop stop-color="#fff0ae"/>
+      <stop offset=".45" stop-color="#f1d35c"/>
+      <stop offset=".78" stop-color="#b68731"/>
+      <stop offset="1" stop-color="#3f321d"/>
+    </radialGradient>
+    <clipPath id="disc"><circle cx="60" cy="60" r="59"/></clipPath>
+    <path id="letter-l" d="M1 1V15H9"/>
+    <path id="letter-i" d="M1 1H9M5 1V15M1 15H9"/>
+    <path id="letter-g" d="M9 3C6 0 2 1 1 5V11C2 15 6 17 9 13V9H5"/>
+    <path id="letter-h" d="M1 1V15M9 1V15M1 8H9"/>
+    <path id="letter-t" d="M0 1H10M5 1V15"/>
+    <path id="letter-n" d="M0 1H2.8V15H0ZM2.4 1H4.5L9.4 15H7.3ZM7.2 1H10V15H7.2Z" fill="#0d0d0b" stroke="#0d0d0b" stroke-width=".7" stroke-linejoin="round"/>
+    <path id="letter-r" d="M0 15V1H6.2C10.8 1 10.8 8.3 6.3 9.2L11 15H7.6L4.3 9.5H3.4V15ZM3.4 3.3V6.5H6.1C7.8 6.5 7.8 3.3 6.1 3.3Z" fill="#0d0d0b" fill-rule="evenodd" stroke="none"/>
+    <path id="letter-a" d="M-1 15 4 2H5.5L2.2 15ZM4.5 2H6L11 15H7.8ZM2.1 10.3H7.9L8.7 12.4H1.3Z" fill="#0d0d0b" stroke="#0d0d0b" stroke-width=".7" stroke-linejoin="round"/>
+    <path id="letter-e" d="M9 1H1V15H9M1 8H8"/>
+    <path id="letter-p" d="M1 15V1H6C10 1 10 7 6 7H1"/>
+    <path id="letter-u" d="M1 1V11C1 16 9 16 9 11V1"/>
+    <path id="letter-k" d="M1 1V15M9 1 1 9 10 15"/>
+    <path id="letter-s" d="M9 2C6 0 1 1 1 5 1 8 9 7 9 11 9 16 4 16 1 13"/>
+    <path id="letter-o" d="M5 1C1 1 1 5 1 8S1 15 5 15 9 12 9 8 9 1 5 1Z"/>
+    <path id="letter-d" d="M1 1V15H5C9 15 10 12 10 8S9 1 5 1Z"/>
+  </defs>
+  <circle cx="60" cy="60" r="60" fill="#14120e"/>
+  <g clip-path="url(#disc)">
+    <circle cx="60" cy="60" r="59" fill="url(#gold)"/>
+
+    <!-- Soft flashes, slanted orange bands and a pale central whirl. -->
+    <path d="M-5 65C15 73 33 86 50 105L37 124H-5Z" fill="#f1e1a0" opacity=".58"/>
+    <path d="M-4 78 39 112 30 123-5 88ZM15 123 51 80 59 78 37 123Z" fill="#f2df8a" opacity=".83"/>
+    <path d="M23 5C37-3 53-5 70 2L67 21 57 28 41 17Z" fill="#f9cf38" opacity=".48"/>
+    <path d="M-4 35 24 57 42 69 38 75 13 61-4 54Z" fill="#e59227" opacity=".48"/>
+    <path d="M-3 39 29 66 36 71-3 51Z" fill="#ffcf62" opacity=".57"/>
+    <path d="M25 122 55 79 65 79 45 122Z" fill="#cb853b" opacity=".55"/>
+    <path d="M3 43C8 27 23 20 33 27 23 28 16 41 9 50Z" fill="#fff0bd" opacity=".65"/>
+    <path d="M43 65C43 46 56 31 74 29 63 36 58 47 59 57 61 68 70 73 80 70 88 67 94 61 99 56 94 76 78 86 62 83 49 81 43 73 43 65Z" fill="#f5e19d"/>
+    <path d="M23 27 44 41 57 52 43 55 28 43Z" fill="#e58c2a" opacity=".62"/>
+    <path d="M38 77 68 51 76 48 52 71Z" fill="#f4a830" opacity=".64"/>
+    <path d="M49 57C52 43 65 33 78 34M54 72c12 9 27 6 40-5" fill="none" stroke="#d9943e" stroke-width="2" opacity=".8"/>
+    <path d="M3 72C20 81 28 91 38 112M12 118 53 78M20 122 62 78" fill="none" stroke="#e9b757" stroke-width="3" opacity=".6"/>
+    <path d="M18 12 34 29M64-3 60 29M99 14 79 37M115 63 81 70M96 113 73 83" fill="none" stroke="#b37b30" stroke-width="1.3" opacity=".62"/>
+    <path d="M32 84 72 29M38 94 80 39M50 17 71 40" fill="none" stroke="#bb7c32" stroke-width="1.2" opacity=".7"/>
+    <path d="M13 15 45 45 54 49M7 29 47 52M5 40 42 65M36 12 58 40M51 5 61 36M111 14 77 44M117 26 80 51M119 42 80 57" fill="none" stroke="#8e591f" stroke-width=".65" opacity=".65"/>
+    <path d="M20 6 53 44 57 47M3 36 42 65M31 13 55 48M117 22 80 52M117 38 77 56" fill="none" stroke="#f6e28b" stroke-width="1.3" opacity=".67"/>
+
+    <!-- Lettering sits above every painted mark. Its gentle growth suggests depth. -->
+<g id="lightning-rage-lettering" fill="none" stroke="#0d0d0b" stroke-width="4.3" stroke-linecap="square" stroke-linejoin="miter">
+      <use href="#letter-l" transform="translate(54 49) rotate(-27.1) scale(.15 .3)"/>
+      <use href="#letter-i" transform="translate(53.4 43.8) rotate(-21.7) scale(.17 .45)"/>
+      <use href="#letter-g" transform="translate(52.3 38.2) rotate(-19.2) scale(.20 .61)"/>
+      <use href="#letter-h" transform="translate(50.7 32.4) rotate(-18.5) scale(.23 .76)"/>
+      <use href="#letter-t" transform="translate(48.1 26.6) rotate(-19.3) scale(.26 .92)"/>
+      <use href="#letter-n" transform="translate(44.3 20.9) rotate(-21.4) scale(.4 1.18)"/>
+      <use href="#letter-i" transform="translate(39.2 16) rotate(-24.8) scale(.31 1.22)"/>
+      <use href="#letter-n" transform="translate(33.2 12.8) rotate(-36) scale(.43 1.84)"/>
+      <use href="#letter-g" transform="translate(26.1 12.2) rotate(-42) scale(.33 1.9)"/>
+      <use href="#letter-r" transform="translate(14.6 19.1) rotate(-50) scale(.38 2.22)"/>
+      <use href="#letter-a" transform="translate(8.6 26.0) rotate(-55) scale(.54 2.65)"/>
+      <use href="#letter-g" transform="translate(4.3 34.6) rotate(-56) scale(.40 2.64)"/>
+      <use href="#letter-e" transform="translate(1.6 46) rotate(-58) scale(.42 3.08)"/>
+    </g>
+
+<g id="tiger-in-the-grass-lettering" fill="none" stroke="#0d0d0b" stroke-width="4.6" stroke-linecap="square" stroke-linejoin="miter">
+      <use href="#letter-t" transform="translate(61.3 46.4) rotate(5.4) scale(0.14 0.25)"/>
+      <use href="#letter-i" transform="translate(61.7 43.0) rotate(5.8) scale(0.16 0.36)"/>
+      <use href="#letter-g" transform="translate(62.4 39.3) rotate(6.6) scale(0.17 0.48)"/>
+      <use href="#letter-e" transform="translate(63.4 35.6) rotate(7.8) scale(0.19 0.59)"/>
+      <use href="#letter-r" transform="translate(64.7 31.6) rotate(9.5) scale(0.21 0.71)"/>
+      <use href="#letter-i" transform="translate(68.3 25.1) rotate(13.3) scale(0.24 0.94)"/>
+      <use href="#letter-n" transform="translate(71.4 21.4) rotate(16.5) scale(.53 1.16)"/>
+      <use href="#letter-t" transform="translate(78.5 16.8) rotate(23.2) scale(.32 1.4)"/>
+      <use href="#letter-h" transform="translate(83.8 15.6) rotate(28.2) scale(.34 1.54)"/>
+      <use href="#letter-e" transform="translate(89.6 15.7) rotate(33.7) scale(.36 1.66)"/>
+      <use href="#letter-g" transform="translate(98.9 18.8) rotate(43.3) scale(.39 1.91)"/>
+      <use href="#letter-r" transform="translate(104.3 22.2) rotate(49.6) scale(.41 2.05)"/>
+      <use href="#letter-a" transform="translate(109.2 26.8) rotate(56.0) scale(.63 2.25)"/>
+      <use href="#letter-s" transform="translate(113.3 32.3) rotate(62.5) scale(.44 2.3)"/>
+      <use href="#letter-s" transform="translate(116.6 38.6) rotate(69.3) scale(.46 2.42)"/>
+    </g>
+
+<g id="punks-not-dead-lettering" fill="none" stroke="#0d0d0b" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter">
+      <use href="#letter-p" transform="translate(57 60) rotate(-6) scale(.14 .34)"/>
+      <use href="#letter-u" transform="translate(60 62) rotate(-6) scale(.15 .9)"/>
+      <use href="#letter-n" transform="translate(63 64) rotate(-7) scale(.27 1.65)"/>
+      <use href="#letter-k" transform="translate(66 66) rotate(-8) scale(.18 2.15)"/>
+      <use href="#letter-s" transform="translate(69 68) rotate(-9) scale(.21 2.75)"/>
+      <use href="#letter-n" transform="translate(73 69) rotate(-10) scale(.34 3.4)"/>
+      <use href="#letter-o" transform="translate(77 70) rotate(-11) scale(.24 3.2)"/>
+      <use href="#letter-t" transform="translate(81 70) rotate(-12) scale(.25 3.1)"/>
+      <use href="#letter-d" transform="translate(85 69) rotate(-13) scale(.26 3)"/>
+      <use href="#letter-e" transform="translate(90 67) rotate(-14) scale(.27 3)"/>
+      <use href="#letter-a" transform="translate(95 65) rotate(-15) scale(.39 3.18)"/>
+      <use href="#letter-d" transform="translate(100 62) rotate(-16) scale(.29 2.7)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Angular speech burst with a question mark">
+  <title>Question speech bubble</title>
+  <path d="M33 3 52 18 57 2 65 16 78 3 83 25 116 13 99 42 118 40 109 47 125 54 97 68 116 88 86 88 98 115 76 101 72 112 67 97 50 126 44 94 15 109 28 81 15 82 23 73 2 65 27 54 10 39 28 43 23 33 33 35Z" fill="#fff" stroke="#080808" stroke-width="3.5" stroke-linejoin="miter"/>
+  <g fill="#080808" transform="translate(-16)">
+    <path d="M62 38 90 32 98 58 81 64 77 78 66 71 69 64 75 58 89 52 84 42 73 46 73 55 62 56Z"/>
+    <path d="M63 80H75L76 92H63Z"/>
+  </g>
+</svg>

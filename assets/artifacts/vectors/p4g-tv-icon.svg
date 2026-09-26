@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Yellow-screen television with uneven antennas, feet, and a toothed white dial">
+  <title>P4G television</title>
+  <g fill="#000">
+    <!-- The two antenna loops are deliberately different in size and tilt. -->
+    <path fill-rule="evenodd" d="M190 152 92 98 Q82 92 86 81 L150 18 Q162 7 171 20 L213 147Z M196 145 117 95 Q110 91 115 84 L152 50 Q161 43 167 53Z"/>
+    <path fill-rule="evenodd" d="M245 150 273 9 Q276-3 288 1 L387 40 Q400 45 393 56 L296 153Z M261 145 285 41 Q288 31 298 34 L350 55 Q361 59 355 69 L294 146Z"/>
+    <path d="M185 166 Q188 140 223 140 L270 140 Q302 140 306 166Z"/>
+
+    <!-- The angled feet sit behind the shallow, bowed cabinet. -->
+    <path d="M64 447 112 452 C97 474 79 500 64 510 Q59 513 51 510 Q45 507 47 501Z"/>
+    <path d="M390 452 437 448 452 501 Q455 511 445 512 L433 510Z"/>
+    <path d="M8 179 Q8 170 18 169 C156 160 347 161 495 169 Q503 169 504 178 C511 258 512 371 504 449 Q504 456 495 457 C340 471 165 470 18 458 Q9 458 8 449 C1 370 1 259 8 179Z"/>
+  </g>
+
+  <!-- A softly bowed CRT face fills most of the cabinet's width. -->
+  <path d="M29 182 C142 171 272 171 381 182 Q388 183 389 191 C401 267 405 360 389 433 Q388 439 381 440 C259 454 149 455 28 440 Q21 439 20 432 C11 351 12 263 20 190 Q21 183 29 182Z" fill="#fbe106"/>
+
+  <!-- Seven rounded vents and two concentric ring buttons. -->
+  <g fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round">
+    <path d="M404 193h77 M405 203h78 M405 214h79 M406 225h79 M407 236h79 M407 247h80 M408 257h80"/>
+  </g>
+  <g fill="#fff">
+    <circle cx="431" cy="285" r="18"/><circle cx="479" cy="285" r="18"/>
+  </g>
+  <g fill="#000">
+    <circle cx="431" cy="285" r="14"/><circle cx="479" cy="285" r="14"/>
+  </g>
+  <g fill="#fff">
+    <circle cx="431" cy="285" r="10"/><circle cx="479" cy="285" r="10"/>
+  </g>
+
+  <!-- The prominent twelve-tooth dial has a dark ring and white center. -->
+  <g fill="#fff">
+    <circle cx="454" cy="365" r="39"/>
+    <rect x="449" y="318" width="10" height="15"/>
+    <rect x="449" y="318" width="10" height="15" transform="rotate(30 454 365)"/>
+    <rect x="449" y="318" width="10" height="15" transform="rotate(60 454 365)"/>
+    <rect x="449" y="318" width="10" height="15" transform="rotate(90 454 365)"/>
+    <rect x="449" y="318" width="10" height="15" transform="rotate(120 454 365)"/>
+    <rect x="449" y="318" width="10" height="15" transform="rotate(150 454 365)"/>
+    <rect x="449" y="318" width="10" height="15" transform="rotate(180 454 365)"/>
+    <rect x="449" y="318" width="10" height="15" transform="rotate(210 454 365)"/>
+    <rect x="449" y="318" width="10" height="15" transform="rotate(240 454 365)"/>
+    <rect x="449" y="318" width="10" height="15" transform="rotate(270 454 365)"/>
+    <rect x="449" y="318" width="10" height="15" transform="rotate(300 454 365)"/>
+    <rect x="449" y="318" width="10" height="15" transform="rotate(330 454 365)"/>
+  </g>
+  <circle cx="454" cy="365" r="32" fill="#000"/>
+  <circle cx="454" cy="365" r="25" fill="#fff"/>
+</svg>

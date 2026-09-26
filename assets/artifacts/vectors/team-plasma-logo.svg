@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-label="Cyan Team Plasma monogram on a split silver and charcoal shield">
+  <title>Team Plasma crest</title>
+  <defs>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#d5d5d5"/>
+      <stop offset="1" stop-color="#ededed"/>
+    </linearGradient>
+    <linearGradient id="charcoal" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#414141"/>
+      <stop offset="1" stop-color="#303030"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Tall, divided shield; the outer black of the source is kept as a border. -->
+  <path d="M103 34H789V415C789 616 645 767 451 857 257 767 103 616 103 415Z" fill="#000"/>
+  <path d="M120 51H447V834C268 740 120 596 120 415Z" fill="url(#silver)"/>
+  <path d="M458 51H772V415C772 594 638 738 458 834Z" fill="url(#charcoal)"/>
+
+  <!-- The cyan bar shows through the hollow bowl, with black rules above and below. -->
+  <path d="M458 232H773V291H458Z" fill="#03aec6"/>
+  <path d="M103 209H790V232H103ZM289 291H790V304H289ZM187 613H714V636H187Z" fill="#000"/>
+
+  <!-- The left banners end at the upright, rather than crossing the shield. -->
+  <path d="M121 232H350V416Z" fill="#02acc5" stroke="#000" stroke-width="14" stroke-linejoin="bevel"/>
+  <path d="M287 291H350V337Z" fill="#000"/>
+  <path d="M205 613 350 499V613Z" fill="#02acc5" stroke="#000" stroke-width="14" stroke-linejoin="miter"/>
+
+  <!-- The lower right stroke rises from the bowl and stays inside the shield. -->
+  <path d="M456 477 524 466 715 613H458V547H518L458 501Z" fill="#02acc5" stroke="#000" stroke-width="14" stroke-linejoin="miter"/>
+
+  <!-- Arrow crest, upright and rounded bowl are one shape. The inner opening is cut out. -->
+  <path d="M188 71H353L405 45 457 71H517C645 73 741 161 743 277 746 367 685 431 557 460 524 469 489 477 458 482V838C396 787 350 729 350 710V173Z M454 148V389L491 410C560 379 604 329 604 283 604 211 547 159 454 148Z" fill="#03acc5" fill-rule="evenodd" stroke="#000" stroke-width="14" stroke-linejoin="miter"/>
+</svg>

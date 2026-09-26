@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Breakspider vector asset review — development only</title>
+  <style>
+    :root { color-scheme:dark; font:14px/1.45 system-ui,sans-serif; background:#151414; color:#f4f0e5 }
+    * { box-sizing:border-box }
+    body { margin:0 }
+    main { max-width:1500px; margin:auto; padding:32px clamp(16px,4vw,60px) 80px }
+    h1 { margin:0 0 5px; font-size:clamp(27px,3vw,42px); letter-spacing:-.04em }
+    p { margin:0; color:#b5aea4 }
+    header { padding-bottom:22px; border-bottom:1px solid #46403b }
+    .eyebrow { color:#e4b66c; font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(310px,1fr)); gap:16px; margin-top:24px }
+    .card { border:1px solid #49423d; background:#201e1c; padding:12px }
+    .card h2 { overflow-wrap:anywhere; margin:13px 3px 3px; font:600 13px/1.35 ui-monospace,Consolas,monospace }
+    .card a { color:#f4f0e5; text-decoration-color:#958473 }
+    .pair { display:grid; grid-template-columns:1fr 1fr; gap:8px }
+    .field { min-width:0; min-height:235px; padding:10px; display:flex; flex-direction:column; align-items:center; justify-content:space-between; gap:8px }
+    .field.dark { background:#292727; color:#f4f0e5 }
+    .field.light { background:#f0ede6; color:#231d1a }
+    .field .label { align-self:flex-start; font:700 10px/1 ui-monospace,Consolas,monospace; text-transform:uppercase; letter-spacing:.13em; opacity:.72 }
+    .sizes { flex:1; width:100%; display:flex; flex-direction:column; align-items:center; justify-content:space-evenly; gap:8px }
+    .small,.medium { display:block; object-fit:contain }
+    .small { width:48px; height:48px }
+    .medium { width:138px; height:138px; max-width:100% }
+    .dark .mono { filter:invert(1) }
+    footer { color:#a99d91; margin-top:28px; font-size:12px }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">Development only / removable contact sheet</div>
+    <h1>Artifact vector review</h1>
+    <p>Each asset appears at 48 px and 138 px on dark and light fields. Select a filename to open its SVG.</p>
+  </header>
+  <section class="grid" id="gallery" aria-label="New vector assets"></section>
+  <footer>This standalone page is not linked from site navigation. Remove this HTML file after review; the SVGs remain independent.</footer>
+</main>
+<script>
+  const assets = [
+    ['brotherhood-lrxiii.svg', false],
+    ['heartless-emblem.svg', false],
+    ['kingdom-key-kh.svg', false],
+    ['isaac-treasure-map.svg', false],
+    ['p4g-tv-icon.svg', false],
+    ['phantom-thieves-2.svg', false],
+    ['player-pin-switch.svg', false],
+    ['rescue-team-badge-basic.svg', false],
+    ['ror-drifter-cube.svg', false],
+    ['team-plasma-logo.svg', false],
+    ['twewy-pin-lightning-rage.svg', false],
+    ['twewy-speech-bubble.svg', true],
+    ['warframe-lotus.svg', true],
+    ['yevon.svg', true]
+  ];
+  const gallery = document.getElementById('gallery');
+  for (const [filename, mono] of assets) {
+    const card = document.createElement('article');
+    card.className = 'card';
+    const pair = document.createElement('div');
+    pair.className = 'pair';
+    for (const tone of ['dark','light']) {
+      const field = document.createElement('div');
+      field.className = `field ${tone}`;
+      const label = document.createElement('span');
+      label.className = 'label';
+      label.textContent = tone;
+      const sizes = document.createElement('div');
+      sizes.className = 'sizes';
+      for (const size of ['small','medium']) {
+        const img = document.createElement('img');
+        img.className = `${size}${mono ? ' mono' : ''}`;
+        img.src = filename;
+        img.alt = `${filename} at ${size} size on ${tone}`;
+        sizes.append(img);
+      }
+      field.append(label,sizes);
+      pair.append(field);
+    }
+    const title = document.createElement('h2');
+    const link = document.createElement('a');
+    link.href = filename;
+    link.textContent = filename;
+    title.append(link);
+    card.append(pair,title);
+    gallery.append(card);
+  }
+</script>
+</body>
+</html>

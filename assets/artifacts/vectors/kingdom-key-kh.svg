@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Silver Kingdom Key with an open gold guard, chain, and mouse-head charm">
+  <title>Kingdom Key</title>
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <!-- The round metal shaft continues beneath the crown and the guard. -->
+    <path d="M12 55 34 35 284 300 265 320Z" fill="#767a7b"/>
+    <path d="M12 55 27 40 278 306 265 320Z" fill="#b9bbba"/>
+    <path d="M23 46 33 37 284 300 275 309Z" fill="#e2e1dc"/>
+
+    <!-- Three uneven crown teeth and the notched spaces between them. -->
+    <path d="M2 55 81 1 95 13 84 32 103 25 120 42 106 63 126 54 144 72 130 94 153 78 154 96 113 149Z" fill="#666a6b"/>
+    <path d="M8 53 80 6 90 16 77 37 99 31 112 44 96 70 123 61 137 74 120 105 148 85 148 95 112 138Z" fill="#aeb0ae"/>
+    <path d="M12 53 77 11 85 17 71 41 97 35 103 43 86 73 120 65 126 74 109 105 141 88 115 128Z" fill="#d2d2cf"/>
+    <path d="M7 55 22 44 119 130 112 144Z" fill="#888b8a"/>
+
+    <!-- Blue collar, then the dark handle visible through the open guard. -->
+    <path d="M265 320 284 300 315 329 295 350Z" fill="#16256d"/>
+    <path d="M274 310 284 300 315 329 305 339Z" fill="#273b8b"/>
+    <path d="M295 350 315 329 412 426 392 447Z" fill="#303334"/>
+    <path d="M305 339 312 332 405 425 398 432Z" fill="#575858"/>
+
+    <!-- The guard is a pierced, slightly irregular diamond, not a solid plate. -->
+    <defs>
+      <clipPath id="guard-frame">
+        <path clip-rule="evenodd" d="M350 295 365 301 447 359 Q454 364 450 373 L429 405 400 446 338 480 Q328 486 319 478 L261 401 Q254 393 259 382 L268 361 318 312Z M352 317 321 329 277 382 276 391 330 454 348 445 410 375 415 366Z"/>
+      </clipPath>
+    </defs>
+    <path fill="#eda900" fill-rule="evenodd" d="M350 295 365 301 447 359 Q454 364 450 373 L429 405 400 446 338 480 Q328 486 319 478 L261 401 Q254 393 259 382 L268 361 318 312Z M352 317 321 329 277 382 276 391 330 454 348 445 410 375 415 366Z"/>
+    <g clip-path="url(#guard-frame)" fill="none" stroke-width="7">
+      <path d="M264 391 273 367 321 319 352 305 440 366" stroke="#ffd037"/>
+      <path d="M264 391 329 470 346 466" stroke="#ffca2e"/>
+      <path d="M446 373 419 410 394 440 336 476" stroke="#cf8500"/>
+    </g>
+
+    <!-- A broad metal cuff crosses the end of the grip. -->
+    <path d="M404 451 416 456" fill="none" stroke="#777b7a" stroke-width="3"/>
+    <path d="M370 426 389 405 427 438 407 460Z" fill="#b97500"/>
+    <path d="M374 424 389 409 423 439 406 455Z" fill="#f3b314"/>
+    <circle cx="434" cy="367" r="9" fill="#f5bf21"/>
+    <circle cx="434" cy="367" r="4.5" fill="#52636a"/>
+    <circle cx="330" cy="470" r="9" fill="#f5bf21"/>
+    <circle cx="330" cy="470" r="4.5" fill="#52636a"/>
+
+    <!-- Separate oval links keep the chain fine and open. -->
+    <g fill="none" stroke="#777b7a" stroke-width="3.2">
+      <ellipse cx="424" cy="460" rx="6" ry="11" transform="rotate(-43 424 460)"/>
+      <ellipse cx="439" cy="475" rx="6" ry="11" transform="rotate(-43 439 475)"/>
+      <ellipse cx="454" cy="490" rx="6" ry="11" transform="rotate(-43 454 490)"/>
+      <ellipse cx="469" cy="505" rx="6" ry="11" transform="rotate(-43 469 505)"/>
+      <ellipse cx="484" cy="520" rx="6" ry="11" transform="rotate(-43 484 520)"/>
+      <ellipse cx="499" cy="535" rx="6" ry="11" transform="rotate(-43 499 535)"/>
+      <ellipse cx="514" cy="550" rx="6" ry="11" transform="rotate(-43 514 550)"/>
+    </g>
+    <path d="M540 560 Q544 560 547 561 C546 554 550 547 557 545 C565 542 573 549 571 558 C570 566 564 570 557 569 C559 572 560 576 560 580 C560 591 551 600 540 600 C529 600 520 591 520 580 C520 576 521 572 523 569 C516 570 510 566 509 558 C507 549 515 542 523 545 C530 547 534 554 533 561 Q536 560 540 560Z" fill="#929594" stroke="#626666" stroke-width="2"/>
+    <path d="M513 550q5-7 10-3M556 547q6-4 10 3" fill="none" stroke="#d8dad7" stroke-width="3"/>
+  </g>
+</svg>

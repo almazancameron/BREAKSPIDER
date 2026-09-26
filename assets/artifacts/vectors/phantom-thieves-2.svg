@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 335" role="img" aria-label="Phantom Thieves red top hat and grinning black mask">
+  <title>Phantom Thieves hat and mask</title>
+
+  <!-- This silhouette is reused for the final sticker contour. -->
+  <path id="silhouette" d="M205 12 C159 6 112 18 75 35 C43 50 20 70 15 89 Q10 103 25 113 C54 136 75 172 82 201 Q85 206 79 208 C55 217 34 227 31 248 C27 267 39 282 62 290 Q78 297 90 298 C100 303 108 317 123 320 Q138 325 137 311 Q139 306 147 307 L178 314 Q193 318 206 303 C226 280 239 266 261 254 C286 240 301 222 307 199 Q314 175 309 150 L305 142 Q317 137 322 131 Q327 125 318 123 L296 122 Q290 119 298 113 L307 108 L296 112 Q297 104 293 102 Q290 99 285 108 Q274 118 248 121 L211 126 C201 104 200 80 203 57 L208 22 Q209 14 205 12Z"/>
+  <defs><clipPath id="inside-silhouette"><use href="#silhouette"/></clipPath></defs>
+  <g clip-path="url(#inside-silhouette)">
+
+  <!-- The hat has a broad red upper plane and a mostly black right side. -->
+  <g fill="#fe1800">
+    <path d="M18 96 C20 72 58 39 105 23 C131 14 153 11 168 11 C144 21 114 37 89 55 C65 73 46 88 31 96 Q22 101 18 96Z"/>
+    <path d="M80 86 C103 66 126 53 151 47 L151 55 C153 89 167 130 169 150 Q167 159 152 171 L125 192 Q119 197 113 185 L99 153 L92 148 L87 130 L80 128 L73 111 L83 108Z"/>
+    <path d="M146 48 C149 86 159 126 170 146 Q169 152 164 152 C154 132 145 91 146 48Z"/>
+    <path d="M165 45 C170 78 179 117 184 143 Q183 149 178 148 C170 127 165 88 165 45Z"/>
+  </g>
+  <g fill="#000">
+    <path d="M100 69 C124 46 147 35 163 30 C141 45 118 61 100 69Z"/>
+    <path d="M126 55 C133 50 139 46 143 45 C140 75 149 119 162 151 L156 156 C140 129 128 80 126 55Z"/>
+    <path d="M151 42 C154 72 162 115 175 149 L170 152 C158 128 151 83 151 42Z"/>
+  </g>
+
+  <!-- The red crown band sweeps into a black diagonal brim. -->
+  <path d="M96 198 C124 187 151 158 177 142 C195 131 213 127 226 127 C192 145 170 169 155 206 C142 239 127 265 111 268 C103 253 99 224 96 198Z" fill="#fe1800"/>
+  <path d="M139 205 C159 163 187 139 216 132 C188 149 164 175 139 205Z" fill="#000"/>
+  <path d="M112 278 C134 256 146 219 163 184 C182 146 205 132 231 126 C193 152 177 182 161 221 C144 262 126 285 110 284Z" fill="#000"/>
+  <path d="M73 184 C87 189 103 190 117 183 C133 174 146 158 165 145 C145 173 131 200 117 228 C107 250 101 263 93 262 C82 259 79 243 76 226 C72 207 68 192 73 184Z" fill="#000"/>
+  <path d="M34 251 C38 230 65 220 89 220 C102 220 106 229 113 241 C122 256 131 265 130 273 C114 291 90 295 63 282 C43 275 31 263 34 251Z" fill="#fe1800"/>
+  <path d="M76 282 C95 278 105 270 113 263 C106 279 94 285 76 282Z" fill="#000"/>
+
+  <!-- Red cheek and jaw sit beneath the uneven white grin. -->
+  <path d="M135 285 C145 251 158 224 183 203 C204 185 233 170 262 159 C262 182 243 213 220 244 C198 273 187 299 169 303 L139 297Z" fill="#fe1800"/>
+  <path d="M150 284 C154 272 147 260 150 245 C153 225 166 214 185 211 Q195 209 199 199 Q205 194 211 196 Q214 185 225 184 Q234 184 239 178 Q250 177 265 168 C259 185 251 191 244 191 Q246 206 233 214 Q228 219 221 217 C219 232 227 241 221 253 Q212 266 197 266 L180 280 Q168 290 150 284Z" fill="#fff" stroke="#000" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M213 209 Q221 217 236 212 C232 224 221 238 214 240 Q208 241 210 232Z" fill="#fe1800" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M197 275 Q203 265 217 261 L206 279Z" fill="#fe1800"/>
+
+  <!-- Three small, differently shaped white eye marks. -->
+  <g fill="#fff">
+    <path d="M194 172 Q199 160 209 155 Q207 167 194 172Z"/>
+    <path d="M242 153 Q243 139 259 130 Q260 144 253 150 Q248 154 242 153Z"/>
+    <path d="M278 151 Q284 155 293 150 Q292 163 285 166 Q279 164 278 151Z"/>
+    <path d="M266 121 Q270 118 273 119 Q271 124 267 124Z"/>
+  </g>
+  </g>
+  <use href="#silhouette" fill="none" stroke="#fff" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

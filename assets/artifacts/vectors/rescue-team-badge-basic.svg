@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 175" role="img" aria-label="White-and-red rescue egg with gold wings">
+  <title>Rescue team badge</title>
+  <g stroke="#171310" stroke-linejoin="round" stroke-width="5">
+    <path d="M185 78Q119 5 69 5q-9 33 21 64-23 11-13 32 10 25 44 31-5 24 19 32 32 10 66-11Z" fill="#e1ae55"/>
+    <path d="M275 78Q341 5 391 5q9 33-21 64 23 11 13 32-10 25-44 31 5 24-19 32-32 10-66-11Z" fill="#e1ae55"/>
+    <path d="M180 74Q112 8 74 8q5 37 45 58 30 17 63 17ZM280 74Q348 8 386 8q-5 37-45 58-30 17-63 17Z" fill="#fff6ad"/>
+    <path d="M177 97q-63-23-97-24 9 38 57 48 26 6 46-4Zm106 0q63-23 97-24-9 38-57 48-26 6-46-4Z" fill="#ffe98a"/>
+    <path d="M184 123q-34 8-55 0 10 31 54 31l17-14Zm92 0q34 8 55 0-10 31-54 31l-17-14Z" fill="#f9df7e"/>
+    <path d="M230 14q-42 1-56 64-12 73 56 87 68-14 56-87-14-63-56-64Z" fill="#efedeb"/>
+    <path d="M176 102q53 25 108 0-4 50-54 61-50-11-54-61Z" fill="#c82448"/>
+  </g>
+  <ellipse cx="216" cy="47" rx="14" ry="23" fill="#fff" opacity=".85"/>
+</svg>

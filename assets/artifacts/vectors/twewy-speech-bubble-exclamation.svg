@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Angular speech burst with an exclamation mark">
+  <title>Exclamation speech bubble</title>
+  <path d="M33 3 52 18 57 2 65 16 78 3 83 25 116 13 99 42 118 40 109 47 125 54 97 68 116 88 86 88 98 115 76 101 72 112 67 97 50 126 44 94 15 109 28 81 15 82 23 73 2 65 27 54 10 39 28 43 23 33 33 35Z" fill="#fff" stroke="#080808" stroke-width="3.5" stroke-linejoin="miter"/>
+  <g fill="#080808" transform="translate(15)">
+    <path d="M44 30 56 31 56 70 44 70Z"/>
+    <path d="M42 76H55L56 90H42Z"/>
+  </g>
+</svg>

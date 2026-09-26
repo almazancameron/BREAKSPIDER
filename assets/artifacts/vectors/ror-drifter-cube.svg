@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Blue framed purple Drifter cube with a cross latch">
+  <title>Drifter cube</title>
+
+  <!-- Uneven outer profile and the two differently sized faces. -->
+  <path d="M24 47 Q24 39 37 37 L106 32 Q113 29 121 32 L239 70 Q245 72 244 79 L236 104 L218 202 Q216 212 207 216 L169 234 Q163 237 156 233 L35 205 Q28 203 27 196 L26 76Z" fill="#15132b"/>
+  <path d="M34 56 169 82 164 222 34 197Z" fill="#4b4168"/>
+  <path d="m177 86 61-12-21 126-51 22Z" fill="#433e64"/>
+
+  <!-- The upper and lower courses meet a broad horizontal timber. -->
+  <path d="M40 66 160 88 163 112 39 100Z" fill="#65577c"/>
+  <path d="M44 73 153 94" fill="none" stroke="#766689" stroke-width="2" opacity=".6"/>
+  <path d="M39 100 165 112 164 136 39 123Z" fill="#383550"/>
+  <path d="M40 102 163 115M39 122l124 13" fill="none" stroke="#2a2946" stroke-width="2"/>
+  <path d="M39 124 162 137 153 218 39 196Z" fill="#514565"/>
+  <path d="M40 166 80 175 93 186 39 174Z" fill="#625476"/>
+  <path d="M40 174 84 183M41 190l109 24" fill="none" stroke="#37314f" stroke-width="3"/>
+
+  <!-- One upright plank is crossed by a broad diagonal timber. -->
+  <path d="M128 130 160 136 153 215 124 208Z" fill="#645273" stroke="#3a3455" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M143 138 148 139 142 191" fill="none" stroke="#81698d" stroke-width="2" opacity=".65"/>
+  <path d="M66 124 84 127 144 188 138 205 123 200 74 145Z" fill="#625173" stroke="#37314f" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M72 128 128 188M84 131l54 59" fill="none" stroke="#806b91" stroke-width="2" opacity=".65"/>
+
+  <!-- Recessed narrow right face with its slanted inset and single middle band. -->
+  <path d="M187 98 226 87 209 190 177 207Z" fill="#332f54"/>
+  <path d="M192 102 221 94 205 185 181 197Z" fill="#5a4e78"/>
+  <path d="m198 111 16-6-26 64Z" fill="#716083"/>
+  <path d="M179 145 222 145 219 168 176 169Z" fill="#3b365a"/>
+  <path d="M184 174 210 168 206 188 180 200Z" fill="#64547d"/>
+
+  <!-- The lid is shallow; its inset is darker than the irregular cyan rim. -->
+  <path d="M27 48 Q30 41 42 40 L108 34 Q115 33 121 35 L239 72 174 88 55 56Z" fill="#358ec4"/>
+  <path d="M48 47 110 39 222 74 171 81 74 53Z" fill="#67b6d8"/>
+  <path d="M63 48 111 40 208 73 171 78 81 54Z" fill="#286fae"/>
+  <path d="M80 46 111 41 174 62 205 72 166 72Z" fill="#28598f"/>
+  <path d="M56 51 164 80 175 86 58 58Z" fill="#a2dcdf" opacity=".8"/>
+  <path d="M111 34 239 72 231 77 111 39Z" fill="#77bbd4"/>
+
+  <!-- Bent metal frame: wider at the front-left and on the front-right corner. -->
+  <path d="M27 49 43 42 55 48 38 73 36 173 29 181 27 75Z" fill="#2a7fc1"/>
+  <path d="M38 72 45 57 43 169 37 181Z" fill="#80c5d8"/>
+  <path d="M161 80 175 85 190 101 177 119 168 211 157 224 162 119Z" fill="#378bc5"/>
+  <path d="M169 88 178 105 171 202 165 215 170 119Z" fill="#84cbd9"/>
+  <path d="M234 76 243 74 235 104 226 111Z" fill="#2476ba"/>
+  <path d="M225 106 233 98 217 197 209 206Z" fill="#77b8d0"/>
+
+  <!-- Bottom rails beneath the corner armor. -->
+  <path d="M30 173 39 178 40 194 161 219 171 209 169 226 157 234 34 204 28 197Z" fill="#327fb8"/>
+  <path d="M39 196 154 224 164 216 157 229 35 200Z" fill="#85c6d4"/>
+  <path d="M176 213 213 199 217 206 169 230 160 230Z" fill="#2477b4"/>
+  <path d="M173 216 208 201 216 207 181 226 166 230Z" fill="#2a83bd"/>
+
+  <!-- Plates wrap over the upper and lower corners; seams mark each fold. -->
+  <g stroke="#235b93" stroke-width="2" stroke-linejoin="round">
+    <path d="M27 47 Q30 42 42 40 L56 48 38 74 28 66Z" fill="#2c82c1"/>
+    <path d="M160 80 175 84 190 98 182 111 172 118 162 107Z" fill="#2e85c1"/>
+    <path d="M228 73 240 71 Q244 72 243 77 L236 101 226 109 229 87Z" fill="#267cba"/>
+    <path d="M30 173 39 180 52 202 36 203 29 196Z" fill="#176bb2"/>
+    <path d="M154 216 170 207 182 226 167 234 139 227Z" fill="#196fb4"/>
+  </g>
+  <path d="M160 80 175 84 190 98 178 102 168 90Z" fill="#56a9ce"/>
+  <path d="M160 80 168 90 178 102 172 118 162 107Z" fill="#318bc1"/>
+  <path d="M178 102 190 98 182 111 172 118Z" fill="#206da9"/>
+  <path d="M228 73 240 71 235 85 229 88Z" fill="#4da0cd"/>
+  <path d="M29 48 38 67 53 49M168 90l10 12-6 16M230 86l5-2 5-11M30 176l10 17 9 9M141 226l16-7 12-10" fill="none" stroke="#8bcbd8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Two offset blue cube faces make the low clasp. -->
+  <g stroke="#25476e" stroke-width="2" stroke-linejoin="round">
+    <path d="M102 172 113 168 126 177 125 190 112 194 102 184Z" fill="#378cbb"/>
+    <path d="M102 172 113 168 125 177 113 181Z" fill="#72bdd4"/>
+    <path d="M113 181 125 177 125 190 112 194Z" fill="#2877ae"/>
+    <path d="M84 174 95 168 112 176 110 198 100 203 83 198 83 181Z" fill="#378cbb"/>
+    <path d="M84 174 95 168 112 176 100 182Z" fill="#78c1d5"/>
+    <path d="M84 174 100 182 100 203 83 198Z" fill="#469ac5"/>
+    <path d="M100 182 112 176 110 198 100 203Z" fill="#2877ae"/>
+  </g>
+  <path d="M91 185h2m25-1h2" fill="none" stroke="#244f83" stroke-width="3" stroke-linecap="round"/>
+</svg>
