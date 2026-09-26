@@ -27,6 +27,9 @@
     .small { width:48px; height:48px }
     .medium { width:138px; height:138px; max-width:100% }
     .dark .mono { filter:invert(1) }
+    .sticker-sample { position:relative; width:230px; max-width:100%; margin:12px auto 0 }
+    .sticker-sample img { display:block; width:100% }
+    .sticker-sample span { position:absolute; inset:0; display:grid; place-items:center; color:#1d1816; font:800 18px/1 ui-monospace,Consolas,monospace; letter-spacing:.03em; pointer-events:none }
     footer { color:#a99d91; margin-top:28px; font-size:12px }
   </style>
 </head>
@@ -45,6 +48,14 @@
     ['brotherhood-lrxiii.svg', false],
     ['heartless-emblem.svg', false],
     ['kingdom-key-kh.svg', false],
+    ['nav-sticker-ticket.svg', false],
+    ['nav-sticker-blob.svg', false],
+    ['nav-sticker-thorn.svg', false],
+    ['nav-sticker-fold.svg', false],
+    ['nav-sticker-melt.svg', false],
+    ['nav-sticker-comet.svg', false],
+    ['nav-sticker-shard.svg', false],
+    ['nav-sticker-moth.svg', false],
     ['isaac-treasure-map.svg', false],
     ['p4g-tv-icon.svg', false],
     ['phantom-thieves-2.svg', false],
@@ -58,6 +69,16 @@
     ['yevon.svg', true]
   ];
   const gallery = document.getElementById('gallery');
+  const stickerLabels = {
+    'nav-sticker-ticket.svg': 'HOME',
+    'nav-sticker-blob.svg': 'PROJECTS',
+    'nav-sticker-thorn.svg': 'ABOUT',
+    'nav-sticker-fold.svg': 'SKETCHBOOK',
+    'nav-sticker-melt.svg': 'CONTACT',
+    'nav-sticker-comet.svg': 'COLLECTION',
+    'nav-sticker-shard.svg': 'WRITING',
+    'nav-sticker-moth.svg': 'SKETCHBOOK'
+  };
   for (const [filename, mono] of assets) {
     const card = document.createElement('article');
     card.className = 'card';
@@ -86,7 +107,14 @@
     link.href = filename;
     link.textContent = filename;
     title.append(link);
-    card.append(pair,title);
+    card.append(pair);
+    if (stickerLabels[filename]) {
+      const sample = document.createElement('div');
+      sample.className = 'sticker-sample';
+      sample.innerHTML = `<img src="${filename}" alt=""><span>${stickerLabels[filename]}</span>`;
+      card.append(sample);
+    }
+    card.append(title);
     gallery.append(card);
   }
 </script>
