@@ -1,0 +1,8 @@
+Breakspider — résumé placeholder
+
+[Your Name]
+Full-stack software engineer and game developer
+Email: you@example.com
+
+Professional summary and work history will be added when supplied.
+For current project examples, see /projects on Breakspider.

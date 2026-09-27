@@ -1,5 +1,5 @@
-import HomePrototype02 from "@/components/HomePrototype02";
+import HomePrototype04 from "@/components/HomePrototype04";
 
 export default function Home() {
-  return <HomePrototype02 />;
+  return <HomePrototype04 />;
 }
