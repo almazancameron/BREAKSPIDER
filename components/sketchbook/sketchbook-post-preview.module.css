@@ -1,0 +1,31 @@
+.post {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.meta,
+.post time {
+  color: var(--color-text-muted);
+  font: 0.68rem var(--font-mono);
+}
+
+.meta {
+  color: var(--color-accent-secondary);
+  text-transform: uppercase;
+}
+
+.post h2 {
+  margin: 0.5rem 0;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.post h2 a {
+  color: var(--color-text);
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 0.2em;
+}
+
+.post > p:not(.meta) {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}

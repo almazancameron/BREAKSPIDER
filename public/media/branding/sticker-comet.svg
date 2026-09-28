@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100" role="img" aria-label="Blank star-headed comet sticker">
+  <title>Star-headed comet sticker</title>
+  <defs>
+    <path id="comet-shape" d="M47 2c7 8 16 10 22 20Q80 10 98 4l2 17c52-6 112 2 140 33q12 14 18 29C216 69 166 65 112 71l4 10-23-1Q85 92 81 99 72 84 64 77L38 95l2-30Q16 65 1 61l31-16Q20 34 10 28q18-1 39 4Z"/>
+    <clipPath id="comet-inside"><use href="#comet-shape"/></clipPath>
+  </defs>
+  <use href="#comet-shape" fill="#c6a2d3"/>
+  <g clip-path="url(#comet-inside)" fill="none" stroke-linejoin="miter" stroke-miterlimit="4">
+    <use href="#comet-shape" stroke="#71497d" stroke-width="18"/>
+    <use href="#comet-shape" stroke="#c6a2d3" stroke-width="14"/>
+  </g>
+</svg>

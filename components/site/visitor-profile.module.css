@@ -1,0 +1,93 @@
+.trigger {
+  display: inline-flex;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.trigger:focus-visible,
+.bar button:focus-visible,
+.collection:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1rem;
+  color: var(--color-text);
+  background: var(--color-surface-raised);
+  font: 700 0.68rem var(--font-mono);
+  letter-spacing: 0.08em;
+}
+
+.bar button {
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.identity h2,
+.identity p {
+  margin: 0.25rem 0;
+}
+
+.identity h2 {
+  font-size: 1.6rem;
+}
+
+.identity p:last-child {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.eyebrow {
+  color: var(--color-accent-secondary);
+  font: 0.62rem var(--font-mono);
+  letter-spacing: 0.05em;
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;
+  margin: 0 1.25rem 1.25rem;
+}
+
+.stats div {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.stats dt {
+  color: var(--color-text-muted);
+  font: 0.65rem var(--font-mono);
+  text-transform: uppercase;
+}
+
+.stats dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.collection {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9rem 1.25rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-accent);
+  font-weight: 700;
+  text-decoration: none;
+}

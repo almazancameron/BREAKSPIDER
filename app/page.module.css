@@ -1,0 +1,14 @@
+.links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 0.65rem 1.25rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links a {
+  color: var(--color-accent);
+  font-weight: 700;
+  text-underline-offset: 0.25em;
+}

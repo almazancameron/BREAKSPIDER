@@ -1,0 +1,41 @@
+.preview {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.link img {
+  width: 4rem;
+  height: 4rem;
+  image-rendering: pixelated;
+}
+
+.link strong,
+.link small {
+  display: block;
+}
+
+.link strong {
+  font-size: 1.4rem;
+}
+
+.link small {
+  margin-top: 0.35rem;
+  color: var(--color-accent-secondary);
+  font: 0.65rem var(--font-mono);
+  text-transform: uppercase;
+}
+
+.preview p {
+  margin: 0.6rem 0 0;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}

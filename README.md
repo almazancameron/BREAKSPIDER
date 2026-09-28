@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+﻿# Breakspider
 
-## Getting Started
+Breakspider is a personal internet space and portfolio built with Next.js, React, and TypeScript. The production app is in `app/`; the original Next.js visual prototype is preserved under `prototype/breakspider-nextjs-prototype/` for reference.
 
-First, run the development server:
+## Local development
+
+Install the locked dependencies and start the development server:
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). The production pages are currently foundation shells; route-specific visual compositions are implemented in later roadmap phases.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Useful checks:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm test
+npm run typecheck
+npm run lint
+npm run build
+```
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+- `app/` contains explicit App Router routes and the shared root layout.
+- `components/` contains shared site/UI components and page-specific compositions.
+- `content/` contains typed local v0.1 content records.
+- `lib/content/repository.ts` is the narrow server-side content access boundary. Pages use its functions; the local implementation can later be replaced by a Supabase implementation without changing those pages.
+- `lib/visitor/` owns versioned browser visitor state; components do not access `localStorage` directly.
+- `lib/audio/` owns the sound registry and browser audio playback.
+- `public/media/` contains only selected production media. Source archives and prototype media remain outside the production public namespace.
+- `docs/`, `screenshots/`, and `prototype/` retain design guidance and visual references.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Vercel can use the repository defaults: framework preset **Next.js**, install command `npm ci`, and build command `npm run build`. No environment variables are required for the static v0.1 foundation. Connect the repository to the intended Vercel project to enable branch and pull request preview deployments; no Vercel account or project configuration is stored in this repository.

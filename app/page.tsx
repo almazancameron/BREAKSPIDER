@@ -1,9 +1,20 @@
-import Image from "next/image";
+import Link from "next/link";
+import { RoutePlaceholder } from "../components/pages/route-placeholder";
+import { SITE_LINKS } from "../lib/site/navigation";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      smiley face
-    </div>
+    <RoutePlaceholder
+      eyebrow="PERSONAL INTERNET SPACE"
+      title="Breakspider"
+      summary="A place for software, games, and things worth inspecting."
+    >
+      <ul className={styles.links}>
+        {SITE_LINKS.map((link) => (
+          <li key={link.href}><Link href={link.href}>{link.label} ↗</Link></li>
+        ))}
+      </ul>
+    </RoutePlaceholder>
   );
 }
