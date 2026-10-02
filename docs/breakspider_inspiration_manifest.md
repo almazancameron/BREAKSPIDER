@@ -497,7 +497,7 @@ Treat this as a responsive interaction reference only.
 
 ## Breakspider takeaway
 
-These are structural references for `/projects/pixel-pugilists` and `/projects/viscap`.
+These are structural references for `/projects/one-night-familiar-fight` and `/projects/viscap-ai`.
 
 Project pages should be able to explain:
 

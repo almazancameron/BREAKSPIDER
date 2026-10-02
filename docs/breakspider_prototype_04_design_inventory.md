@@ -2,6 +2,8 @@
 
 This document records the canonical Breakspider homepage: Prototype 04. The Prototype 01–03 implementations and comparison routes have been retired. It describes the current page at the desktop canvas size used for review (about 1440 px wide) and its mobile reading order at about 390 px wide. Prototype 04 is a visual prototype: the creator name, email, résumé path, and some destination pages still use placeholder or stub content.
 
+Prototype 04 calls the game **Pixel Pugilists**, its early development name. It is now called **One Night Familiar Fight (ONFF)**; this inventory records the prototype's original labels and links, while production uses `/projects/one-night-familiar-fight`.
+
 ## Design premise
 
 Breakspider is a personal internet profile that happens to contain a professional portfolio. The visitor should meet a recognizable person and a lived-in collection of interests, while still finding the creator's work and contact path quickly.
@@ -88,7 +90,7 @@ Use short labels and practical descriptions: “Working on,” “Projects,” �
 
 ## Interaction inventory
 
-- **Intro:** the animated splash appears on a first visit, then the Enter action stores the completed state in local storage. The footer's Replay intro action clears that state.
+- **Intro:** the animated splash appears on a first visit through the homepage, then the Enter action stores the completed state in local storage. Direct interior-route visits do not show the splash. The homepage footer's Replay intro action clears that state.
 - **Sound:** the header control toggles the interface sound and remembers its state locally. Audio is off by default.
 - **Visitor avatar:** opens a compact visitor-profile popover with a local save-slot identity and collection link. Escape or clicking outside closes it.
 - **Spotlight capture:** its “Inspect build artifact” action opens the Pixel Pugilists build detail.

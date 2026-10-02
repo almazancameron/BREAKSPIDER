@@ -1,5 +1,7 @@
 # Breakspider Visual Direction — Prototype 02
 
+**Historical naming:** This brief uses **Pixel Pugilists**, the early development name for **One Night Familiar Fight (ONFF)**. Production planning and routes use the current name.
+
 ## Purpose
 
 The first implemented homepage prototype was structurally competent but aesthetically misinterpreted.

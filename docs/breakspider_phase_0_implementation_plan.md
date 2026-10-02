@@ -87,7 +87,7 @@ Create explicit route files for the v0.1 route set, including a temporary shell 
 
 - `/sketchbook/[slug]` resolves an entry through the content repository.
 - `/familiars/[slug]` resolves a Familiar through the repository.
-- Project detail routes remain explicit because Pixel Pugilists and Viscap have distinct page compositions.
+- Project detail routes remain explicit because One Night Familiar Fight and Viscap have distinct page compositions. The canonical public URLs are `/projects/one-night-familiar-fight` and `/projects/viscap-ai`; keep local content IDs separate from these URLs unless they intentionally match the public slug.
 
 Replace the catchall string-dispatch route with these route files. Each route can initially render a simple shell, but direct navigation and refresh must work. Unknown content slugs should use Next's `notFound()` path.
 
@@ -188,12 +188,12 @@ Existing capture scripts target prototypes, so confirm whether they remain usefu
 7. **Assets and deployment:** arrange the selected production media, update project metadata/README, connect Vercel previews, and verify preview deployment.
 8. **Phase 0 review gate:** run the verification checklist, inspect the route and ownership boundaries, and review with the roadmap acceptance criteria before starting Phase 1.
 
-## Risks and decisions to settle before coding
+## Decisions and remaining risks
 
-- **Prototype state compatibility:** decide whether intro/audio preferences from the current prototype should carry forward. Production keys should be versioned and migration intentional.
+- **Prototype state compatibility:** production intro state is separate from prototype state and uses a versioned key. The intro plays only on a first visit through `/`; direct interior-route visits do not show it. Do not implicitly migrate prototype keys. Audio preference persistence is owned by the production sound manager.
 - **Content body format:** choose a lightweight typed block format for Sketchbook and project sections; avoid embedding page JSX in content records or adding a Markdown system without a content need.
 - **Route shells and future depth:** confirm `/play/onff` should exist as a placeholder in Phase 0, as implied by the v0.1 route list.
-- **Visitor-state scope:** define which fields Phase 0 persists versus merely models for later unlock/equipment features.
+- **Visitor-state scope:** the production visitor system persists real collectible unlocks and equipped cosmetics locally, in addition to visitor identity and route history. The prototype's Collection selection/pinning interactions are visual previews only; production unlock/equipment behavior is implemented in the later visitor-profile and scavenger-hunt phases.
 - **Audio implementation:** decide whether v0.1 uses only synthesized interface sounds initially or also serves audio assets.
 - **Dialog baseline:** confirm native `<dialog>` is acceptable for shared modal behavior across the target modern browsers.
 - **Vercel access:** a successful preview requires the repository to be connected to the intended Vercel account/team; no credentials or project link are present in the repo.

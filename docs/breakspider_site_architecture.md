@@ -19,6 +19,8 @@ The architecture should support two simultaneous goals:
 
 The architecture should stay expandable without requiring the first release to contain every future idea.
 
+The current game name is **One Night Familiar Fight (ONFF)**. **Pixel Pugilists** was its early development name and remains in historical prototype material. Treat those names as the same project; use `/projects/one-night-familiar-fight` for the production project page and `/projects/viscap-ai` for Viscap.
+
 ---
 
 # 1. High-Level Architecture
@@ -46,8 +48,8 @@ Proposed first-class routes:
 /
 ├── /about
 ├── /projects
-│   ├── /projects/pixel-pugilists
-│   └── /projects/viscap
+│   ├── /projects/one-night-familiar-fight
+│   └── /projects/viscap-ai
 ├── /sketchbook
 │   └── /sketchbook/[slug]
 ├── /familiars
@@ -275,6 +277,8 @@ Some homepage widgets should change over time.
 
 This gives the site personality and makes repeat visits feel slightly different.
 
+Prototype 04's homepage clutter is authored and spatially composed. In production, keep those authored objects and their relationships as the primary visual layer; randomized scraps are a supplemental layer placed around them. Randomization should add variation without replacing the designed composition, shifting priority content, or turning the page into uniform scatter.
+
 Suitable candidates for randomization or scheduled rotation:
 
 - Random Familiar
@@ -400,7 +404,7 @@ Initial structure:
 ```text
 /projects
 ├── Viscap
-├── Pixel Pugilists
+├── One Night Familiar Fight
 └── future experiments/projects
 ```
 
@@ -426,15 +430,15 @@ Filtering is not required for v0.1.
 
 ---
 
-# 12. Pixel Pugilists Project Page
+# 12. One Night Familiar Fight Project Page
 
 Route:
 
 ```text
-/projects/pixel-pugilists
+/projects/one-night-familiar-fight
 ```
 
-The PP page should primarily function as a **design and development notebook**, not a player-facing marketing page.
+The ONFF page should primarily function as a **design and development notebook**, not a player-facing marketing page.
 
 Primary emphasis:
 
@@ -471,7 +475,7 @@ The page should cross-link heavily to:
 - any available demo
 - future technical writeups
 
-The PP page should remain clearly understandable as a project page even if its presentation is expressive.
+The ONFF page should remain clearly understandable as a project page even if its presentation is expressive.
 
 ---
 
@@ -479,7 +483,7 @@ The PP page should remain clearly understandable as a project page even if its p
 
 FFC is not required for v0.1, but the architecture should anticipate it.
 
-Unlike PP, an eventual FFC page may be more **player-facing** because FFC is intended as a fuller game experience.
+Unlike ONFF, an eventual FFC page may be more **player-facing** because FFC is intended as a fuller game experience.
 
 This means project pages should not all be forced into one identical template.
 
@@ -496,7 +500,7 @@ The projects system should support:
 Route:
 
 ```text
-/projects/viscap
+/projects/viscap-ai
 ```
 
 The page should make it explicit that Viscap was **one interconnected application containing many systems**, not a collection of unrelated mini-projects.
@@ -541,8 +545,8 @@ The first version can keep these as sections on one page.
 If one subsystem later warrants a deeper writeup, the architecture may support linkable child routes such as:
 
 ```text
-/projects/viscap/media-library
-/projects/viscap/storyboards
+/projects/viscap-ai/media-library
+/projects/viscap-ai/storyboards
 ```
 
 Child routes should only be created if the content is substantial enough to justify bookmarking.
@@ -619,7 +623,7 @@ Examples:
 - Available for work
 - Currently employed
 - Open to game-industry opportunities
-- Currently building Pixel Pugilists
+- Currently building One Night Familiar Fight
 
 The status does not need to become a global persistent header element.
 
@@ -719,7 +723,7 @@ The Familiar catalogue is a real first-class system but should not dominate the 
 Initial homepage exposure:
 
 - Random Familiar widget
-- PP project links
+- ONFF project links
 - contextual references
 
 Catalogue entries:
@@ -744,15 +748,15 @@ Potential Familiar data:
 - design notes
 - related Sketchbook posts
 
-The catalogue should cross-link to PP.
+The catalogue should cross-link to ONFF.
 
-PP should cross-link back to relevant Familiars.
+ONFF should cross-link back to relevant Familiars.
 
 ---
 
 # 20. Familiar Tagging
 
-Familiars may use their own structured tags based on PP's game taxonomy.
+Familiars may use their own structured tags based on ONFF's game taxonomy.
 
 Examples may include:
 
@@ -802,6 +806,8 @@ The Collection page should show:
 - source/hint information only when desirable.
 
 The site should avoid revealing every secret collectible's acquisition method by default.
+
+The visual prototype previews profile selection and item pinning, but does not implement collectible ownership, unlock conditions, persistent equipment, or cross-page profile updates. Those are real v0.1 production features: discovery should award an item to browser-local visitor state, and equipping an owned cosmetic should update the visitor profile across the site. This is a planned product expansion, not behavior to assume already exists in the prototype.
 
 ---
 
@@ -900,7 +906,7 @@ Examples:
 - Projects
 - contact info
 - résumé
-- Pixel Pugilists
+- One Night Familiar Fight
 - Viscap
 
 ## Tier 2 — Discoverable
@@ -943,8 +949,8 @@ The site should intentionally reinforce relationships between systems.
 Key relationships:
 
 ```text
-Pixel Pugilists ↔ Familiars
-Pixel Pugilists ↔ Sketchbook
+One Night Familiar Fight ↔ Familiars
+One Night Familiar Fight ↔ Sketchbook
 Familiars ↔ Sketchbook
 Projects ↔ Sketchbook
 About ↔ Projects
@@ -955,11 +961,11 @@ Viscap ↔ Viscap Subsystems
 Examples:
 
 A Familiar page may link to:
-- PP
+- ONFF
 - posts discussing its design
 - related mechanics
 
-A PP page may surface:
+An ONFF page may surface:
 - featured Familiars
 - relevant Sketchbook posts
 
@@ -1007,8 +1013,8 @@ Deep URLs are acceptable and encouraged for content worth saving.
 Examples:
 
 ```text
-/projects/pixel-pugilists
-/projects/viscap
+/projects/one-night-familiar-fight
+/projects/viscap-ai
 /sketchbook/battle-plans
 /familiars/ashwing
 ```
@@ -1016,8 +1022,8 @@ Examples:
 Potential future examples:
 
 ```text
-/projects/viscap/media-library
-/projects/pixel-pugilists/simulation
+/projects/viscap-ai/media-library
+/projects/one-night-familiar-fight/simulation
 ```
 
 Rule:
@@ -1040,7 +1046,7 @@ Desired path:
 Home
 → About
 → Projects
-→ Viscap / Pixel Pugilists
+→ Viscap / One Night Familiar Fight
 → Contact / Resume
 ```
 
@@ -1061,7 +1067,7 @@ Desired path:
 ```text
 Home
 → Projects
-→ Pixel Pugilists
+→ One Night Familiar Fight
 → Familiar Catalogue / Sketchbook
 → gets distracted by interactive systems
 ```
@@ -1091,12 +1097,12 @@ They should be able to learn what the site is about even without professional in
 
 ---
 
-## Existing Pixel Pugilists Visitor
+## Existing One Night Familiar Fight Visitor
 
 Desired path:
 
 ```text
-Pixel Pugilists
+One Night Familiar Fight
 ↔ Familiar Catalogue
 ↔ related Sketchbook posts
 ```
@@ -1372,8 +1378,8 @@ Recommended first public route set:
 /
 ├── /about
 ├── /projects
-│   ├── /projects/pixel-pugilists
-│   └── /projects/viscap
+│   ├── /projects/one-night-familiar-fight
+│   └── /projects/viscap-ai
 ├── /sketchbook
 ├── /familiars
 ├── /familiars/[slug]
@@ -1389,8 +1395,8 @@ Priority:
 - `/`
 - `/about`
 - `/projects`
-- `/projects/pixel-pugilists`
-- `/projects/viscap`
+- `/projects/one-night-familiar-fight`
+- `/projects/viscap-ai`
 
 ## Can begin small but functional
 - `/sketchbook`
@@ -1423,14 +1429,14 @@ This is already enough to create the intended constellation without overloading 
 
 At minimum:
 
-### Pixel Pugilists
+### One Night Familiar Fight
 Must link to:
 - Familiars
 - relevant Sketchbook content when available
 
 ### Familiar Entries
 Must link to:
-- Pixel Pugilists
+- One Night Familiar Fight
 
 ### Viscap
 Must show:

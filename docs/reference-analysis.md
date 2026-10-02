@@ -465,7 +465,7 @@ Do not borrow Foam's black gallery aesthetic, photography treatment, or endless-
 
 ### Original observations
 
-These references combine representative animation, readable hierarchy, process screenshots, technical decisions, unfinished work, and development evolution without feeling like generic corporate case-study pages. They are structural references for Pixel Pugilists and Viscap.
+These references combine representative animation, readable hierarchy, process screenshots, technical decisions, unfinished work, and development evolution without feeling like generic corporate case-study pages. They are structural references for One Night Familiar Fight and Viscap.
 
 ### Screenshots
 
@@ -489,7 +489,7 @@ These are primarily scroll-led articles. Embedded animation/video provides repre
 
 ### Potential Breakspider borrowing
 
-Use modular sections for Problem → Constraint → Solution → Why → Challenge → Result. Pair screenshots or diagrams with the decision they explain. Let abandoned ideas and unfinished states appear as evidence of process. Viscap should use the structure to show one interconnected platform; Pixel Pugilists should use it as a design/development notebook.
+Use modular sections for Problem → Constraint → Solution → Why → Challenge → Result. Pair screenshots or diagrams with the decision they explain. Let abandoned ideas and unfinished states appear as evidence of process. Viscap should use the structure to show one interconnected platform; One Night Familiar Fight should use it as a design/development notebook.
 
 ### Do not borrow
 

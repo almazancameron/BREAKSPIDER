@@ -10,6 +10,8 @@ Prototype 04 is the current homepage visual source of truth. The migrated About 
 
 > **Same person. Same internet space. Different room.**
 
+Use **One Night Familiar Fight (ONFF)** as the current game name. **Pixel Pugilists** was its early development name and may still appear in Prototype 04, screenshots, and archived design notes; those references describe the same game, not a separate project. Production URLs are `/projects/one-night-familiar-fight` for the project page and `/projects/viscap-ai` for Viscap, with the playable build at `/play/onff`.
+
 For the real implementation, the prototypes define **visual and interaction intent**, not code architecture.
 
 The production codebase should be optimized first for **developer friendliness, maintainability, and future expansion**, while preserving those approved designs.
@@ -21,7 +23,7 @@ Breakspider v0.1 is a public, evolving personal website / professional portfolio
 - a distinctive, highly personalized homepage
 - clear professional identity and contact paths
 - a unified Projects archive
-- full Pixel Pugilists and Viscap project pages
+- full One Night Familiar Fight and Viscap project pages
 - Sketchbook feed + long entries
 - Familiar catalogue + detail pages
 - Collection / visitor profile system
@@ -47,7 +49,7 @@ The site should be safe to launch while visibly unfinished and capable of accumu
 - **Vercel**
 - local/static content for v0.1
 - `localStorage` for persistent visitor state
-- browser-memory page-load seed for randomized clutter
+- browser-memory page-load seed for a supplemental randomized clutter layer around authored placements
 - static production assets in the repo/public bundle
 
 ### Future stack direction
@@ -153,7 +155,7 @@ For example:
 - homepage Spotlight arrangement
 - homepage authored clutter positions
 - Viscap connected-system visualization
-- Pixel Pugilists battle-plan presentation
+- One Night Familiar Fight battle-plan presentation
 - About profile composition
 - Projects archive arrangement
 - Familiar-detail hero treatment
@@ -289,8 +291,8 @@ Target routes:
 /
 ├── /about
 ├── /projects
-│   ├── /projects/pixel-pugilists
-│   └── /projects/viscap
+│   ├── /projects/one-night-familiar-fight
+│   └── /projects/viscap-ai
 ├── /sketchbook
 │   └── /sketchbook/[slug]
 ├── /familiars
@@ -301,6 +303,8 @@ Target routes:
 ```
 
 Optional aliases or nested playable routes can be added later, but avoid unnecessary routing complexity for v0.1.
+
+The canonical public project detail URLs are `/projects/one-night-familiar-fight` and `/projects/viscap-ai`. Keep links and explicit route files aligned with these public slugs; internal project IDs do not define public routes.
 
 ## 5. Visual Sources of Truth
 
@@ -368,11 +372,12 @@ Use the finished Breakspider logo animation.
 
 Behavior:
 
-- first-ever visit: show splash
+- show the splash only when a first-time visitor enters through the homepage (`/`)
+- direct visits to interior routes do not redirect through or block on the splash
 - store `breakspider_intro_seen_v1 = true` in `localStorage`
 - subsequent visits: skip automatically
 - browser data cleared: splash can appear again
-- persistent `Replay intro` affordance exists somewhere appropriate
+- provide a persistent `Replay intro` affordance on the homepage
 - splash always has a skip path
 
 ### Header
@@ -427,6 +432,20 @@ These are hand-authored and deterministic:
 - core artifact interactions
 - major hand-placed decorative objects
 
+The authored composition is the primary clutter layer and carries Prototype 04's specific object relationships, clusters, overlaps, and negative space. Randomized clutter is an additional, curated layer around it; it must enhance the authored composition rather than replace or rearrange it.
+
+### Prototype interaction baseline
+
+Preserve the small, optional interactions that give Prototype 04 its personality. The production interaction pass should account for:
+
+- inspectable Spotlight/project artifacts and the found Map object
+- Familiar cycling with a direct catalogue link that remains available without cycling
+- artifact-file focus on hover and keyboard focus, plus the explicit shuffle control
+- tap-to-inspect behavior and the swipeable artifact strip on mobile
+- small reversible reactions such as touching and restoring the homepage crystal
+
+These interactions remain secondary to the visible professional paths. Production collectibles may build on them, but should not make them mandatory for understanding or navigating the site.
+
 ### Homepage clutter system
 
 Use a hybrid model.
@@ -447,7 +466,7 @@ Random clutter must never overcrowd or cover these.
 
 #### Layer B — randomized clutter
 
-On every full page load / refresh:
+Add a restrained set of randomized decorative objects around the authored composition. On every full page load / refresh:
 
 - generate a new in-memory layout seed
 - keep that seed stable while the SPA remains loaded
@@ -513,6 +532,7 @@ Randomized clutter should respect exclusion zones created by anchored structural
 - homepage matches Prototype 04's composition closely
 - clutter differs after hard refresh
 - clutter remains stable during the loaded session
+- authored placements and object relationships remain the dominant composition
 - no random artifact obscures essential content
 - page remains readable at primary desktop widths
 - mobile translates rather than shrinks desktop
@@ -554,7 +574,7 @@ Use the approved Projects prototype.
 
 ### Core principle
 
-Viscap and Pixel Pugilists must not be presented as matching portfolio cards.
+Viscap and One Night Familiar Fight must not be presented as matching portfolio cards.
 
 #### Viscap should read as
 
@@ -563,7 +583,7 @@ Viscap and Pixel Pugilists must not be presented as matching portfolio cards.
 - product/system oriented
 - broad application scope
 
-#### Pixel Pugilists should read as
+#### One Night Familiar Fight should read as
 
 - game development
 - systems design
@@ -577,7 +597,7 @@ Viscap and Pixel Pugilists must not be presented as matching portfolio cards.
 - archive can grow naturally when more projects become substantial
 - page remains visually tied to Breakspider without copying homepage density
 
-## 11. Phase 5 — Pixel Pugilists Project Page
+## 11. Phase 5 — One Night Familiar Fight Project Page
 
 ### Content goals
 
@@ -596,7 +616,7 @@ Use real media:
 
 Likely narrative structure:
 
-- what PP is
+- what ONFF is
 - design goals
 - priority/battle-plan system
 - deterministic battle resolution
@@ -614,7 +634,7 @@ Likely narrative structure:
 - Priority Builder receives meaningful visual emphasis
 - project media is real rather than decorative filler
 - links into Familiars, Sketchbook and playable build work
-- page-specific clutter derives primarily from PP/game-dev material
+- page-specific clutter derives primarily from ONFF/game-dev material
 
 ## 12. Phase 6 — Viscap Project Page
 
@@ -654,7 +674,7 @@ Use roughly 6–9 carefully selected screenshots rather than the entire capture 
 - relationships between systems are visible
 - screenshots are privacy-safe
 - user contribution/role is described accurately
-- visual treatment is cleaner than PP while still unmistakably Breakspider
+- visual treatment is cleaner than ONFF while still unmistakably Breakspider
 
 ## 13. Phase 7 — Sketchbook
 
@@ -699,7 +719,7 @@ Allow:
 
 2–4 real Familiars is acceptable for v0.1.
 
-The catalogue is explicitly designed to grow after launch, especially when Pixel Pugilists development returns to the foreground.
+The catalogue is explicitly designed to grow after launch, especially when One Night Familiar Fight development returns to the foreground.
 
 ### Catalogue
 
@@ -730,6 +750,8 @@ Potential content:
 - content access layer is compatible with future Supabase CMS
 
 ## 15. Phase 9 — Visitor Profile + Collection
+
+The production visitor system is a deliberate expansion beyond the visual prototype. Prototype profile and Collection controls demonstrate the intended presentation, but their selection/pinning state is preview-only: the prototype does not implement real unlocks, persistent ownership, or cosmetic equipment. Phase 9 and Phase 10 must implement those behaviors as working product functionality.
 
 ### Visitor state
 
@@ -783,6 +805,8 @@ They must never gate essential navigation or professional information.
 
 A visitor ignoring collectibles should still experience the complete portfolio.
 
+This scavenger hunt is new production functionality, not a port of existing prototype unlock logic. Use the prototype's inspectable objects and interactions as inspiration and entry points, then define explicit, testable unlock conditions and persistent rewards for the production visitor state.
+
 ### Recommended launch path
 
 #### 1. Home — Map
@@ -806,8 +830,8 @@ Unlock after meaningfully interacting with both public project entries or openin
 Purpose:
 - introduces both major bodies of work
 
-#### 4. Pixel Pugilists — Cursor follower/trail
-Unlock through a PP-specific interaction such as inspecting the Priority Builder, Familiar/system artifact, or playable-build path.
+#### 4. One Night Familiar Fight — Cursor follower/trail
+Unlock through an ONFF-specific interaction such as inspecting the Priority Builder, Familiar/system artifact, or playable-build path.
 
 Purpose:
 - rewards deep project exploration
@@ -910,7 +934,7 @@ If the build requires cross-origin isolation / SharedArrayBuffer due to thread s
 
 - build loads reliably from production Vercel deployment
 - game input works
-- page can return to PP project
+- page can return to ONFF project
 - mobile handling is deliberate, even if gameplay is desktop-first
 - build assets are cached appropriately
 - no surprise autoplay/audio behavior
@@ -980,7 +1004,7 @@ Before public v0.1:
 - add LinkedIn
 - add résumé PDF
 - redact/anonymize Viscap media
-- verify PP screenshots
+- verify ONFF screenshots
 - choose final initial Familiars
 - write 3–5 short Sketchbook posts
 - write 1 long Sketchbook post
@@ -1027,14 +1051,15 @@ Breakspider v0.1 is launch-ready when:
 
 ### Homepage
 - Prototype 04 production composition is implemented
-- fixed + randomized clutter works
+- authored clutter remains primary and the supplemental randomized layer works around it
 - no random clutter covers priority content
+- prototype-inspired inspection, Familiar cycling, file focus/shuffle, and mobile swipe interactions work
 - major CTAs are obvious
 
 ### Core content
 - About works
 - Projects archive works
-- PP project page works
+- ONFF project page works
 - Viscap project page works
 - Sketchbook feed works
 - at least one long Sketchbook entry works
@@ -1069,6 +1094,7 @@ Breakspider v0.1 is launch-ready when:
 - bespoke page composition is isolated and understandable
 - content and asset references are not unnecessarily scattered through presentation code
 - visitor state, collectible logic, audio, and inspection/modal behavior have clear centralized ownership
+- collectible unlocks and equipped cosmetics are real browser-persisted production features, not prototype-only preview state
 - homepage clutter configuration is readable and easy to hand-tune
 - local content repositories can later be replaced by Supabase implementations without rewriting page components
 - a developer can add ordinary Familiar, Sketchbook, collectible, and changelog content without modifying unrelated systems
@@ -1158,7 +1184,7 @@ Implement through Next.js route handlers and/or Supabase Edge Functions dependin
 
 Likely directions:
 
-- finish all 16 initial PP Familiar entries
+- finish all 16 initial ONFF Familiar entries
 - more Sketchbook content
 - more project pages
 - more collectibles
@@ -1184,6 +1210,7 @@ For each phase:
 2. identify the exact phase
 3. ask Codex to inspect the current repository and relevant approved prototype(s)
 4. require Codex to identify what is reusable behavior, reusable infrastructure, content/data, configuration, page-specific composition, and prototype-only scaffolding
+   - explicitly distinguish implemented prototype interactions from production features that the roadmap intentionally adds, especially persistent collectible unlocks and cosmetic equipment
 5. ask for a detailed implementation plan for that phase only
 6. review the plan specifically for maintainability, unnecessary abstraction, duplication, and future content ergonomics
 7. implement that phase

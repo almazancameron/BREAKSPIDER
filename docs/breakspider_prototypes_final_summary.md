@@ -6,6 +6,8 @@ This document summarizes the current visual and interactive prototype set. It is
 
 Prototype 04 is the canonical homepage direction. Prototype 01–03 homepage implementations have been retired. The About, Projects, and Pixel Pugilists pages were migrated into the Prototype 04 visual world first; seven further page prototypes complete the current route set. The work is a set of related rooms, not one layout repeated with different content.
 
+The prototype labels the game **Pixel Pugilists**, its early development name. The current game name is **One Night Familiar Fight (ONFF)**; production uses `/projects/one-night-familiar-fight` for its project page and `/projects/viscap-ai` for Viscap. Prototype route names below describe the preserved prototype as built.
+
 The shared design premise is:
 
 > **Same person. Same internet space. Different room.**
@@ -20,7 +22,7 @@ The home page is the most accumulated customized profile. Deeper pages retain it
 
 The desktop canvas centers on the Spotlight, with About and Projects immediately available. Current work, Sketchbook, Familiar, Changelog, found Map, and inspectable project files occupy the surrounding field. Real PP and Viscap imagery carry the project story; the creator’s OC, Familiar sprites, badges, pickups, and Noise sprites make the page feel personally accumulated. Some lower sprites sit behind the inspection files by design.
 
-The intro appears on a first visit and remembers completion locally. Header controls provide navigation, sound, and a visitor profile. Visitors can inspect project artifacts, cycle the Familiar, open the map, and shuffle the featured file. At mobile widths the canvas becomes a vertical reading sequence with reduced clutter.
+The intro appears on a first visit through the homepage and remembers completion locally; direct visits to interior routes bypass it. Header controls provide navigation, sound, and a visitor profile. Visitors can inspect project artifacts, cycle the Familiar, open the map, and shuffle the featured file. At mobile widths the canvas becomes a vertical reading sequence with reduced clutter.
 
 Review: [desktop](../screenshots/prototype-04-desktop-1440x900.png) · [mobile](../screenshots/prototype-04-mobile-390x844.png)
 
@@ -92,7 +94,7 @@ Review: [Ashwing desktop](../screenshots/familiars-ashwing-desktop-1440x900.png)
 
 **Room:** A visitor profile and cosmetic inventory.
 
-The visitor avatar anchors categories for profile cosmetics and future features. The page distinguishes selected/showcased items from other inventory and includes category selection and local pinning interactions. Mobile presents the profile before the inventory. These interactions are a visual preview only; there is no unlock, account, or persistent equipment system yet.
+The visitor avatar anchors categories for profile cosmetics and future features. The page distinguishes selected/showcased items from other inventory and includes category selection and local pinning interactions. Mobile presents the profile before the inventory. These interactions are a visual preview only; the prototype has no unlock, account, or persistent equipment system. The production roadmap intentionally adds browser-persisted collectible unlocks and cosmetic equipment, using this page as the presentation reference rather than treating its preview state as implemented behavior.
 
 Review: [desktop](../screenshots/collection-desktop-1440x900.png) · [mobile](../screenshots/collection-mobile-390x844.png)
 
@@ -115,7 +117,7 @@ Review: [desktop](../screenshots/map-desktop-1440x900.png) · [mobile](../screen
 
 ## Prototype-wide open content
 
-The prototypes still need the creator’s final name, contact details, résumé destination, and reviewed copy. Viscap screenshots need a privacy pass. Sketchbook dates and text need replacement or approval. Familiar roster size and detailed mechanics need confirmed source content. Collection ownership, unlocks, persistence, and the ONFF public route remain future work. These are content/product follow-ups; the current pages are reviewable visual prototypes.
+The prototypes still need the creator’s final name, contact details, résumé destination, and reviewed copy. Viscap screenshots need a privacy pass. Sketchbook dates and text need replacement or approval. Familiar roster size and detailed mechanics need confirmed source content. Real Collection ownership, unlocks, persistent equipment, and the ONFF public route are production follow-ups; they are intentionally not implemented by the visual prototype. These are content/product follow-ups; the current pages are reviewable visual prototypes.
 
 ## Review captures
 

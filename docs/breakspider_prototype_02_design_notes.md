@@ -1,6 +1,6 @@
 # Breakspider Prototype 02 — design notes
 
-**Archive note:** Prototype 02 has been retired. Prototype 04 is the canonical homepage; use the [Prototype 04 layout and design inventory](breakspider_prototype_04_design_inventory.md) for current implementation guidance. This file and the [Prototype 02 visual direction brief](breakspider_visual_direction_prototype_02.md) remain as historical design context.
+**Archive note:** Prototype 02 has been retired. Prototype 04 is the canonical homepage; use the [Prototype 04 layout and design inventory](breakspider_prototype_04_design_inventory.md) for current implementation guidance. This file and the [Prototype 02 visual direction brief](breakspider_visual_direction_prototype_02.md) remain as historical design context. They use **Pixel Pugilists**, the early development name for **One Night Familiar Fight (ONFF)**.
 
 These notes record what was working in the Prototype 02 homepage at the time.
 
