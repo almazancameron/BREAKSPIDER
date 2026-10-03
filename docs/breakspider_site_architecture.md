@@ -279,6 +279,8 @@ This gives the site personality and makes repeat visits feel slightly different.
 
 Prototype 04's homepage clutter is authored and spatially composed. In production, keep those authored objects and their relationships as the primary visual layer; randomized scraps are a supplemental layer placed around them. Randomization should add variation without replacing the designed composition, shifting priority content, or turning the page into uniform scatter.
 
+The production authoring convention for positioning those decorative objects is documented in [CLUTTER_POSITIONING.md](CLUTTER_POSITIONING.md). It covers anchor-relative clutter placement; structural page layout remains page-specific.
+
 Suitable candidates for randomization or scheduled rotation:
 
 - Random Familiar

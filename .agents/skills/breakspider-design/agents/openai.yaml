@@ -1,0 +1,4 @@
+interface:
+  display_name: "Breakspider Design"
+  short_description: "Preserve Breakspider visual direction"
+  default_prompt: "Use $breakspider-design to review or implement this Breakspider interface without flattening its established art direction."

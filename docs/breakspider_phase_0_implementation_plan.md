@@ -1,5 +1,7 @@
 # Breakspider Phase 0 — Repository and Implementation Foundation
 
+> **Status: Complete (2026-10-02).** The production foundation is implemented and deployed to Vercel. The owner confirmed keyboard/accessibility control checks and shell layout at the target responsive sizes.
+
 > **Goal:** Establish a lightweight production foundation for Breakspider v0.1 while keeping it static and easy to migrate to Supabase later.
 
 > **Scope:** Phase 0 only. This plan does not include implementing the finished page compositions or connecting a backend.
@@ -29,8 +31,8 @@ app/
   page.tsx
   about/page.tsx
   projects/page.tsx
-  projects/pixel-pugilists/page.tsx
-  projects/viscap/page.tsx
+  projects/one-night-familiar-fight/page.tsx
+  projects/viscap-ai/page.tsx
   sketchbook/page.tsx
   sketchbook/[slug]/page.tsx
   familiars/page.tsx
@@ -66,7 +68,7 @@ public/
     brand/
     home/
     projects/
-      pixel-pugilists/
+      pixel-pugilists/  # legacy source-media label for ONFF prototype assets
       viscap/
     familiars/
     sketchbook/
@@ -149,6 +151,8 @@ Use the prototype review widths as explicit verification targets: approximately 
 
 Organize selected production assets under descriptive `public/media/` subdirectories and reference them through content records or page configuration. Keep the larger source archive in `assets/`; do not copy the full archive into the served public bundle. Preserve prototype screenshots and proof-of-concepts for visual comparison. Audit licensing/provenance and privacy-sensitive Viscap screenshots before choosing production media.
 
+For the authored placement convention for decorative homepage clutter, see [CLUTTER_POSITIONING.md](CLUTTER_POSITIONING.md). Ordinary page composition and diagram layout remain page-specific, as described in the [prototype reuse map](breakspider_prototype_reuse_map.md).
+
 ## Vercel
 
 Configure the Vercel project against the repository using Next.js defaults:
@@ -162,51 +166,47 @@ Configure the Vercel project against the repository using Next.js defaults:
 
 Avoid adding `vercel.json` unless a concrete routing, header, or cache requirement appears. Phase 0 acceptance includes a successful preview deployment.
 
-## Testing and verification
+## Verification record
 
-No tests were run for this planning task. During implementation, verify Phase 0 with:
+Completed for the Phase 0 foundation:
 
-1. `npm run typecheck` and `npm run build`.
-2. Direct requests and browser refreshes on every required route, plus an unknown route and unknown content slug.
-3. Repository tests for lookup success, missing slugs, and stable ordering where ordering is part of the content contract.
-4. Visitor-state checks for defaults, valid saved data, malformed data, and unavailable storage; confirm server rendering does not access browser APIs.
-5. Modal keyboard checks: opening focus, Tab containment, Escape close, focus restoration, and backdrop behavior.
-6. Audio checks: default muted, persisted preference, and graceful operation when audio is unavailable.
-7. Browser review at the four responsive widths, including no horizontal overflow, clear mobile reading order, keyboard access, and reduced-motion behavior.
-8. Vercel preview build and direct route checks against the deployed preview.
+- `npm test`: 13 tests pass.
+- `npm run typecheck`, `npm run lint`, and `npm run build`: pass.
+- Local route smoke checks: canonical project routes and `/play/onff` respond successfully; the plan-era `/projects/viscap` path redirects to `/projects/viscap-ai`; unknown routes/slugs return 404.
+- The owner confirmed keyboard/accessibility control checks and shell layout at desktop, tablet/narrow desktop, and mobile sizes.
+- The owner confirmed the Vercel deployment is live.
 
-Existing capture scripts target prototypes, so confirm whether they remain useful for comparison or need replacement for production-route captures.
+The visual parity of the header, splash, and page compositions remains intentionally assigned to later roadmap phases.
 
-## Implementation order
+## Completed implementation order
 
-1. **Inventory and baseline:** record current build/typecheck state, confirm route and asset references, and preserve existing untracked user content.
-2. **Production structure:** replace catchall routing with explicit route files and static route shells; keep all v0.1 URLs resolving.
-3. **Global shell and tokens:** establish root metadata/layout, shared header/navigation shell, typography/color tokens, and breakpoint conventions.
-4. **Content layer:** define models, local content modules, repository functions, and route-level not-found behavior.
-5. **Visitor state:** add the versioned local state module and client-facing access layer with safe server defaults.
-6. **Shared interactions:** add modal/focus, audio manager/registry, and reduced-motion utility.
-7. **Assets and deployment:** arrange the selected production media, update project metadata/README, connect Vercel previews, and verify preview deployment.
-8. **Phase 0 review gate:** run the verification checklist, inspect the route and ownership boundaries, and review with the roadmap acceptance criteria before starting Phase 1.
+1. **Inventory and baseline:** recorded the starting state, confirmed route and asset references, and preserved user content.
+2. **Production structure:** replaced catchall dispatch with explicit route files and temporary route shells.
+3. **Global shell and tokens:** established root metadata/layout, shared header/navigation shell, visual tokens, and breakpoint conventions.
+4. **Content layer:** added typed models, local content modules, repository functions, and route-level not-found behavior.
+5. **Visitor state:** added versioned local state and React access with safe server defaults.
+6. **Shared interactions:** added shared dialog/focus, audio registry/manager, and reduced-motion support.
+7. **Assets and deployment:** organized selected production media, updated project documentation, and deployed the foundation to Vercel.
+8. **Phase 0 review gate:** completed automated checks, route smoke checks, ownership review, and owner-confirmed browser/responsive checks.
 
-## Decisions and remaining risks
+## Resolved decisions and later-phase considerations
 
-- **Prototype state compatibility:** production intro state is separate from prototype state and uses a versioned key. The intro plays only on a first visit through `/`; direct interior-route visits do not show it. Do not implicitly migrate prototype keys. Audio preference persistence is owned by the production sound manager.
-- **Content body format:** choose a lightweight typed block format for Sketchbook and project sections; avoid embedding page JSX in content records or adding a Markdown system without a content need.
-- **Route shells and future depth:** confirm `/play/onff` should exist as a placeholder in Phase 0, as implied by the v0.1 route list.
-- **Visitor-state scope:** the production visitor system persists real collectible unlocks and equipped cosmetics locally, in addition to visitor identity and route history. The prototype's Collection selection/pinning interactions are visual previews only; production unlock/equipment behavior is implemented in the later visitor-profile and scavenger-hunt phases.
-- **Audio implementation:** decide whether v0.1 uses only synthesized interface sounds initially or also serves audio assets.
-- **Dialog baseline:** confirm native `<dialog>` is acceptable for shared modal behavior across the target modern browsers.
-- **Vercel access:** a successful preview requires the repository to be connected to the intended Vercel account/team; no credentials or project link are present in the repo.
-- **Content and privacy:** current prototype copy includes placeholders, and Viscap media needs a privacy review before public use. These are content readiness issues rather than reasons to add backend infrastructure.
+- **Prototype state compatibility:** production visitor state uses an explicit versioned key and does not silently adopt prototype keys. Audio preference is persisted through the visitor-state owner.
+- **Content body format:** Sketchbook and project content use lightweight typed block/section data; page JSX stays in presentation code.
+- **Routes:** `/play/onff` exists as a shell. The canonical project routes are `/projects/one-night-familiar-fight` and `/projects/viscap-ai`.
+- **Visitor-state scope:** the production model includes visitor identity, route history, unlocks, and equipped cosmetics. The actual collectible unlock/equipment features remain later-phase work.
+- **Audio and dialogs:** Phase 0 uses a synthesized named sound and native `<dialog>` behind shared owners.
+- **Deployment:** the owner confirmed the Phase 0 foundation is deployed to Vercel.
+- **Later content/privacy work:** finalize creator/contact copy and review Viscap media before those pages are publicly launched. These are later content-readiness tasks, not Phase 0 blockers.
 
 ## Phase 0 acceptance checklist
 
-- All v0.1 routes resolve, even if deeper routes are temporary shells.
-- Global header/navigation works.
-- Local content is available through typed repository functions.
-- No Firebase or Supabase dependency is added.
-- Production code is easy to iterate visually, with shared systems and page compositions clearly owned.
-- A mobile breakpoint foundation exists.
-- A Vercel preview deployment succeeds.
-- Prototype code has been audited rather than copied wholesale.
-- Adding a simple content entry does not require unrelated presentation changes.
+- [x] All v0.1 routes resolve, even if deeper routes are temporary shells.
+- [x] Global header/navigation works.
+- [x] Local content is available through typed repository functions.
+- [x] No Firebase or Supabase dependency is added.
+- [x] Production code is easy to iterate visually, with shared systems and page compositions clearly owned.
+- [x] A mobile breakpoint foundation exists and the owner confirmed the shell at target sizes.
+- [x] A Vercel deployment succeeds.
+- [x] Prototype code has been audited rather than copied wholesale.
+- [x] Adding a simple content entry does not require unrelated presentation changes.

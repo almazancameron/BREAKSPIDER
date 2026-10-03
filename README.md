@@ -35,4 +35,4 @@ npm run build
 
 ## Deployment
 
-Vercel can use the repository defaults: framework preset **Next.js**, install command `npm ci`, and build command `npm run build`. No environment variables are required for the static v0.1 foundation. Connect the repository to the intended Vercel project to enable branch and pull request preview deployments; no Vercel account or project configuration is stored in this repository.
+The Phase 0 foundation is deployed to Vercel using the **Next.js** framework preset, `npm ci` for installation, and `npm run build`. No environment variables are required for the static v0.1 foundation. Vercel project/account settings are managed in the Vercel dashboard rather than stored in this repository. Attach the production domain when the site is ready to launch.

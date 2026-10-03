@@ -84,6 +84,8 @@ The Spotlight is an application-like window because it is the homepage's central
 
 Place objects in clusters, attach small pieces to meaningful anchors, and allow some overlap. Vary density: a busy edge or archive cluster can sit next to quiet dark space. Avoid distributing sprites at regular intervals, mirroring the left and right edges, or adding material solely to fill every visible pixel. When an object is moved, preserve or improve its relationship to nearby content and keep key text clear.
 
+For the production authoring workflow and saved anchor-relative placement data, see [CLUTTER_POSITIONING.md](CLUTTER_POSITIONING.md). This covers decorative clutter placement, not the homepage's structural layout.
+
 ### Copy stays direct
 
 Use short labels and practical descriptions: “Working on,” “Projects,” “Latest Sketchbook Post,” “Open project,” and “See updates.” The playful language is reserved for objects that earn it, such as “WILD ENCOUNTER” above the roaming Familiar. Avoid poetic exploration copy and avoid making every module sound like a game system.

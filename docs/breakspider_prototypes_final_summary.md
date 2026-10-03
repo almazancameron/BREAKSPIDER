@@ -113,6 +113,7 @@ Review: [desktop](../screenshots/map-desktop-1440x900.png) · [mobile](../screen
 - Mix real project interfaces, profile objects, game sprites, plain links, screenshots, and occasional containers. Frame an object only when the frame helps explain its function.
 - Preserve the native colors and visual origins of creator-owned work and selected collected artifacts.
 - Place decorative objects in purposeful clusters and keep them away from essential copy and controls. Decrease clutter on mobile and translate interactions to tap or keyboard where needed.
+- For production authoring of decorative-object positions, see [CLUTTER_POSITIONING.md](CLUTTER_POSITIONING.md); page-specific compositions remain governed by each route's design.
 - Keep copy direct and functional. Do not use poetic filler to stand in for missing content.
 
 ## Prototype-wide open content

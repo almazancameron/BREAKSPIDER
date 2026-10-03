@@ -326,43 +326,45 @@ Do not make all deeper pages copies of Prototype 04.
 
 ## 6. Phase 0 — Repository and Implementation Foundation
 
+**Status: Complete (2026-10-02).** The foundation is deployed to Vercel. The owner confirmed accessible control checks and responsive shell review. See the [Phase 0 implementation record](breakspider_phase_0_implementation_plan.md).
+
 ### Goal
 
 Create the production codebase structure without prematurely building backend infrastructure.
 
 ### Work
 
-- establish production Next.js + TypeScript app
-- define route structure
-- establish global layout/header
-- configure asset directories
-- implement global typography/color tokens
-- establish shared responsive breakpoints
-- establish content models
-- establish local content repository layer
-- establish visitor-state model
-- establish sound manager
-- establish modal/focus infrastructure
-- establish reduced-motion utility
-- configure Vercel preview deployments
-- audit prototype code before reuse; prototypes are visual specs, not production architecture
-- identify reusable behavior vs page-specific composition for the already-approved prototypes
-- establish a clear convention for authored layout/config data so bespoke positioning does not leak throughout JSX
-- keep prototypes available for visual reference rather than mixing prototype code blindly into production
+- [x] establish production Next.js + TypeScript app
+- [x] define route structure
+- [x] establish global layout/header foundation
+- [x] configure asset directories
+- [x] implement global typography/color tokens
+- [x] establish shared responsive breakpoints
+- [x] establish content models
+- [x] establish local content repository layer
+- [x] establish visitor-state model
+- [x] establish sound manager
+- [x] establish modal/focus infrastructure
+- [x] establish reduced-motion utility
+- [x] configure and verify the Vercel deployment
+- [x] audit prototype code before reuse; prototypes are visual specs, not production architecture
+- [x] identify reusable behavior vs page-specific composition for the already-approved prototypes
+- [x] establish a clear convention for authored layout/config data so bespoke positioning does not leak throughout JSX; for decorative clutter, see [CLUTTER_POSITIONING.md](CLUTTER_POSITIONING.md)
+- [x] keep prototypes available for visual reference rather than mixing prototype code blindly into production
 
 ### Acceptance criteria
 
-- all v0.1 routes resolve, even if deeper routes are temporary shells
-- global header/nav works
-- local content can be read through typed repository functions
-- no Firebase/Supabase dependency yet
-- production code is easy to iterate visually
-- mobile breakpoint foundation exists
-- preview deployment succeeds on Vercel
-- a developer can trace content, visitor state, audio, modal, and layout responsibilities without hunting through page-specific hacks
-- approved prototype code has been audited rather than copied wholesale
-- shared systems have clear ownership and page-specific composition remains intentionally isolated
-- adding a simple new content entry does not require editing unrelated presentation components
+- [x] all v0.1 routes resolve, even if deeper routes are temporary shells
+- [x] global header/nav works
+- [x] local content can be read through typed repository functions
+- [x] no Firebase/Supabase dependency yet
+- [x] production code is easy to iterate visually
+- [x] mobile breakpoint foundation exists
+- [x] preview deployment succeeds on Vercel
+- [x] a developer can trace content, visitor state, audio, modal, and layout responsibilities without hunting through page-specific hacks
+- [x] approved prototype code has been audited rather than copied wholesale
+- [x] shared systems have clear ownership and page-specific composition remains intentionally isolated
+- [x] adding a simple new content entry does not require editing unrelated presentation components
 
 ## 7. Phase 1 — Splash, Global Shell, and Shared UI
 
@@ -433,6 +435,8 @@ These are hand-authored and deterministic:
 - major hand-placed decorative objects
 
 The authored composition is the primary clutter layer and carries Prototype 04's specific object relationships, clusters, overlaps, and negative space. Randomized clutter is an additional, curated layer around it; it must enhance the authored composition rather than replace or rearrange it.
+
+For the authoring workflow and stored anchor-relative placement data for decorative clutter, see [CLUTTER_POSITIONING.md](CLUTTER_POSITIONING.md). That convention applies to decorative assets; structural page layout remains page-specific.
 
 ### Prototype interaction baseline
 
@@ -511,6 +515,9 @@ Generate clusters and deliberate gaps.
 - mobile uses much lower clutter density
 
 #### Semantic anchoring for authored artifacts
+
+Use the anchor and relative-offset convention in [CLUTTER_POSITIONING.md](CLUTTER_POSITIONING.md) for the decorative-artifact placements described here.
+
 Hand-placed decorative artifacts should generally be positioned relative to a meaningful page element or named layout region rather than by global page coordinates.
 Examples of semantic anchors include Spotlight, About, Projects, Current Project, Familiar, Visitor Profile, and named edge/field regions.
 This allows decorative relationships to survive responsive layout changes and reduces brittle viewport-specific positioning.
