@@ -1,5 +1,4 @@
-import assert from "node:assert/strict";
-import test from "node:test";
+import { expect, test } from "vitest";
 
 import {
   createDefaultVisitorState,
@@ -37,31 +36,31 @@ function createStorage(initialValue = null) {
 test("visitor state defaults to a muted, empty local profile", () => {
   const state = createDefaultVisitorState("visitor-test");
 
-  assert.equal(state.visitorId, "visitor-test");
-  assert.equal(state.soundMuted, true);
-  assert.deepEqual(state.unlockedCollectibleIds, []);
-  assert.deepEqual(state.visitedPages, []);
+  expect(state.visitorId).toBe("visitor-test");
+  expect(state.soundMuted).toBe(true);
+  expect(state.unlockedCollectibleIds).toEqual([]);
+  expect(state.visitedPages).toEqual([]);
 });
 
 test("visitor labels are derived from the persisted visitor id", () => {
-  assert.equal(getVisitorDisplayLabel("visitor-000"), "Visitor 000");
-  assert.equal(getVisitorDisplayLabel("d41c4de2-1234-5678"), "Visitor D41C4DE2");
+  expect(getVisitorDisplayLabel("visitor-000")).toBe("Visitor 000");
+  expect(getVisitorDisplayLabel("d41c4de2-1234-5678")).toBe("Visitor D41C4DE2");
 });
 
 test("route visits are unique in history and counted on repeat visits", () => {
   const firstVisit = recordPageVisit(createDefaultVisitorState("visitor-test"), "/about");
   const secondVisit = recordPageVisit(firstVisit, "/about");
 
-  assert.deepEqual(secondVisit.visitedPages, ["/about"]);
-  assert.equal(secondVisit.pageVisitCounts["/about"], 2);
+  expect(secondVisit.visitedPages).toEqual(["/about"]);
+  expect(secondVisit.pageVisitCounts["/about"]).toBe(2);
 });
 
 test("visitor state round-trips through the versioned storage envelope", () => {
   const state = createDefaultVisitorState("visitor-test");
   const serialized = serializeVisitorState(state);
 
-  assert.equal(JSON.parse(serialized).version, 1);
-  assert.deepEqual(deserializeVisitorState(serialized), state);
+  expect(JSON.parse(serialized).version).toBe(1);
+  expect(deserializeVisitorState(serialized)).toEqual(state);
 });
 
 test("visitor state migrates version zero records and rejects malformed records", () => {
@@ -80,10 +79,10 @@ test("visitor state migrates version zero records and rejects malformed records"
     },
   });
 
-  assert.equal(deserializeVisitorState(legacy)?.visitorId, "visitor-old");
-  assert.equal(deserializeVisitorState("not json"), null);
-  assert.equal(deserializeVisitorState(JSON.stringify({ version: 99, state: {} })), null);
-  assert.equal(deserializeVisitorState(JSON.stringify({ version: 1, state: {} })), null);
+  expect(deserializeVisitorState(legacy)?.visitorId).toBe("visitor-old");
+  expect(deserializeVisitorState("not json")).toBeNull();
+  expect(deserializeVisitorState(JSON.stringify({ version: 99, state: {} }))).toBeNull();
+  expect(deserializeVisitorState(JSON.stringify({ version: 1, state: {} }))).toBeNull();
 });
 
 test("visitor state loads defaults and tolerates unavailable storage", () => {
@@ -96,8 +95,8 @@ test("visitor state loads defaults and tolerates unavailable storage", () => {
     },
   };
 
-  assert.equal(loadVisitorState(unavailable).soundMuted, true);
-  assert.equal(saveVisitorState(createDefaultVisitorState("visitor-test"), unavailable), false);
+  expect(loadVisitorState(unavailable).soundMuted).toBe(true);
+  expect(saveVisitorState(createDefaultVisitorState("visitor-test"), unavailable)).toBe(false);
 });
 
 test("visitor state loads valid data and saves under the production key", () => {
@@ -105,7 +104,7 @@ test("visitor state loads valid data and saves under the production key", () => 
   const state = createDefaultVisitorState("visitor-test");
   state.visitedPages.push("/");
 
-  assert.equal(saveVisitorState(state, storage), true);
-  assert.equal(storage.lastKey(), VISITOR_STATE_STORAGE_KEY);
-  assert.equal(loadVisitorState(storage).visitedPages[0], "/");
+  expect(saveVisitorState(state, storage)).toBe(true);
+  expect(storage.lastKey()).toBe(VISITOR_STATE_STORAGE_KEY);
+  expect(loadVisitorState(storage).visitedPages[0]).toBe("/");
 });

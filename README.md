@@ -22,6 +22,8 @@ npm run lint
 npm run build
 ```
 
+`npm test` runs the focused Vitest suite once; `npm run test:watch` reruns tests while you edit. Tests use a Node environment and cover content lookup, persistence, and other important logic. Browser verification at desktop/mobile sizes remains the main check for visual layout, navigation, focus, motion, and interactive flows. Add automated tests selectively where they protect meaningful behavior; broad component coverage is not a launch requirement.
+
 ## Project structure
 
 - `app/` contains explicit App Router routes and the shared root layout.
