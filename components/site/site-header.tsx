@@ -4,6 +4,7 @@ import { PRIMARY_NAVIGATION } from "../../lib/site/navigation";
 import { VisitorProfile } from "./visitor-profile";
 import { SoundToggle } from "./sound-toggle";
 import styles from "./site-header.module.css";
+import { SiteNavigation } from "./site-navigation";
 
 export function SiteHeader() {
   return (
@@ -18,13 +19,7 @@ export function SiteHeader() {
         />
         <span>PERSONAL INTERNET SPACE</span>
       </Link>
-      <nav className={styles.navigation} aria-label="Primary navigation">
-        {PRIMARY_NAVIGATION.map((link) => (
-          <Link key={link.href} href={link.href}>
-            {link.label}
-          </Link>
-        ))}
-      </nav>
+      <SiteNavigation />
       <div className={styles.controls}>
         <SoundToggle />
         <VisitorProfile />

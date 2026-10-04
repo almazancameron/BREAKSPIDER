@@ -1,0 +1,59 @@
+.navigation {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.link {
+    width: 148px;
+    min-height: 54px;
+    display: grid;
+    place-items: center;
+    font: 900 15px/1 Verdana, Arial, sans-serif;
+    text-decoration: none;
+    transition: transform var(--motion-fast);
+}
+
+.home {
+    background: center / 100% 100% no-repeat url('/media/navigation/home.svg');
+    color: #211a1d;
+    filter: drop-shadow(3px 4px 0 #9b473c);
+}
+
+.projects {
+    background: center / 100% 100% no-repeat url('/media/navigation/projects.svg');
+    color: #142630;
+    filter: drop-shadow(3px 4px 0 #a76545);
+}
+    
+.about {
+    background: center / 100% 100% no-repeat url('/media/navigation/about.svg');
+    color: #342520;
+    filter: drop-shadow(3px 4px 0 #427f79);
+}
+
+.link[aria-current="page"],
+.link[aria-current="location"] {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 2px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .link:hover {
+        transform: translateY(-3px);
+    }
+}
+
+.link:focus-visible {
+    transform: translateY(-3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .link,
+    .link:hover,
+    .link:focus-visible {
+        transform: none;
+        transition: none;
+    }
+}
