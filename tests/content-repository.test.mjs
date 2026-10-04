@@ -15,12 +15,12 @@ test("project reads preserve authored order and find by slug", async () => {
   const projects = await getProjects();
 
   expect(projects.map((project) => project.slug)).toEqual([
-    "pixel-pugilists",
-    "viscap-ai",
     "one-night-familiar-fight",
+    "viscap-ai",
   ]);
   expect((await getProject("viscap-ai"))?.title).toBe("Viscap");
   expect((await getProject("one-night-familiar-fight"))?.title).toBe("One Night Familiar Fight");
+  expect(await getProject("pixel-pugilists")).toBeNull();
 });
 
 test("content lookups return null for missing slugs", async () => {

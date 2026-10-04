@@ -3,8 +3,8 @@ import type { Project } from "../lib/content/models.ts";
 export const projects = [
   {
     id: "pixel-pugilists",
-    slug: "pixel-pugilists",
-    title: "Pixel Pugilists",
+    slug: "one-night-familiar-fight",
+    title: "One Night Familiar Fight",
     type: "game",
     status: "active",
     summary:
@@ -12,7 +12,7 @@ export const projects = [
     heroMedia: {
       kind: "image",
       src: "/media/projects/pixel-pugilists/priority-builder.png",
-      alt: "Pixel Pugilists priority builder",
+      alt: "One Night Familiar Fight priority builder",
       width: 1159,
       height: 661,
     },
@@ -50,24 +50,5 @@ export const projects = [
     relatedSketchbookPosts: [],
     relatedFamiliars: [],
     links: [],
-  },
-  {
-    id: "one-night-familiar-fight",
-    slug: "one-night-familiar-fight",
-    title: "One Night Familiar Fight",
-    type: "game",
-    status: "active",
-    summary: "A Familiar combat game with a web build planned for a later implementation phase.",
-    heroMedia: null,
-    sections: [
-      {
-        heading: "Playable build",
-        paragraphs: ["The web build and player wrapper will be added in the playable-build phase."],
-        media: [],
-      },
-    ],
-    relatedSketchbookPosts: [],
-    relatedFamiliars: [],
-    links: [{ label: "Playable build", href: "/play/onff" }],
   },
 ] satisfies Project[];

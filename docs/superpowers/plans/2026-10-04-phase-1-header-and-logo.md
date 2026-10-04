@@ -12,6 +12,8 @@
 
 **Learning format:** Each task explains the idea before the edits. Read a task first, then start changing files at its **Step 1**. Code blocks labeled **worked example** can be used directly; explanations and behavior tables are instructions, not missing function implementations. All new exported components can use your preferred arrow-function style. Existing unrelated components do not need a style rewrite.
 
+**Implementation update (2026-10-04):** The owner implemented the navigation component and connected it to the header. At the owner's request, Codex completed the remaining layout, control styling, logo animation, and browser verification in the existing workspace. The tutorial steps below remain available for learning; the implementation record at the end describes what was verified.
+
 **Verification approach:** Browser verification is required. Use the existing Vitest suite as a regression check; this plan requires no new unit tests, snapshots, component testing setup, or coverage target. Most of the new behavior is CSS, browser focus, and route presentation, which you can verify directly.
 
 ## Global Constraints
@@ -386,13 +388,32 @@ Review your diff and ensure only planned files changed. Commit your work if that
 
 ## Completion Checklist
 
-- [ ] Approved header arrangement is implemented on desktop and mobile.
-- [ ] Home, Projects, and About links work and identify the current page/section.
-- [ ] Existing profile and sound controls still work and retain persistence/focus behavior.
-- [ ] Logo has a brief hover/focus reaction and a press reaction with immediate Home navigation.
-- [ ] Reduced motion removes decorative movement.
-- [ ] Completed splash behavior passes regression browser checks.
-- [ ] Existing tests, lint, build, and typecheck pass.
-- [ ] No new dependencies, animation iframe in the header, or duplicate visitor/audio state were introduced.
+- [x] Approved header arrangement is implemented on desktop and mobile.
+- [x] Home, Projects, and About links work and identify the current page/section.
+- [x] Existing profile and sound controls still work and retain persistence/focus behavior.
+- [x] Logo has a brief hover/focus reaction and a press reaction with immediate Home navigation.
+- [x] Reduced motion removes decorative movement.
+- [x] Completed splash behavior passes regression browser checks.
+- [x] Existing tests, lint, build, and typecheck pass.
+- [x] No new dependencies, animation iframe in the header, or duplicate visitor/audio state were introduced.
 
 This completes the header and logo portion of Phase 1. It does not complete the remaining UI sound mapping or the later homepage/profile/collection implementation.
+
+## Implementation Record — 2026-10-04
+
+- Preserved the owner's navigation sticker assets, custom shadow colors, route matching, and current-link underline. Added responsive sizing to that stylesheet.
+- Completed the three-group header with visitor controls on the left and identity on the right. Navigation moves to a second row at 1220 px; compact rules apply at 760 px. Status copy disappears on mobile to reserve control space.
+- Added `HeaderLogo` as a small Server Component with CSS hover/focus settle motion, a pressed pose, and explicit reduced-motion overrides. The link navigates immediately.
+- Browser verification uncovered the Projects page prefetching `/projects/pixel-pugilists`, a retired public route. `content/projects.ts` had two records for the same game. Consolidated them into the richer existing record, retaining its internal ID, media, and relationships, with canonical slug/title `one-night-familiar-fight` / `One Night Familiar Fight`. Updated the existing repository test to expect the two real projects and reject the retired slug.
+- Final checks: all 18 Vitest tests passed; lint, production build, and standalone TypeScript check passed.
+- Verified in production with headless Edge at 1920, 1440, 1221, 1220, 1000, 768, 761, 760, 390, and 320 px: no horizontal overflow, usable control targets, and the intended one/two-row layout.
+- Verified route selection through client navigation, direct project detail entry, and Back/Forward; no primary link selected on Sketchbook, Familiars, Collection, Map, or the playable route.
+- Verified profile Escape/focus restoration, sound persistence across reload, keyboard logo focus/outline, hover/settle, desktop press, mobile touch navigation without lingering hover, and reduced motion.
+- Verified no-JavaScript primary navigation on an interior route and no splash iframe downloads during normal header navigation.
+- Re-ran the splash's cache-disabled asset-delay check: it stayed black while SVG decoding was blocked, then played the full animation for approximately 3981 ms. Cached playback, split entry, and failed-artwork recovery also passed.
+- Screenshots were reviewed at desktop and mobile sizes. Other browser engines, physical devices, and actual 200% browser zoom were not exercised in this verification; include them in the later responsive/browser pass.
+- No commit or deployment was performed. UI sound mapping is still the next separate Phase 1 task.
+
+### Follow-up: Shorter Header
+
+At the owner's request, reduced vertical padding and row gaps, lowered the header's minimum heights, and resized the logo from 210/172/128 px to 176/144/112 px at desktop/tablet/mobile. Control targets remain at least 44 px. The production build and the browser checks across all ten widths passed again, including focus, navigation, persistence, and reduced motion.

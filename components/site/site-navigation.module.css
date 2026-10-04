@@ -2,6 +2,7 @@
     display: flex;
     gap: 4px;
     align-items: center;
+    justify-self: center;
 }
 
 .link {
@@ -47,6 +48,31 @@
 
 .link:focus-visible {
     transform: translateY(-3px);
+}
+
+@media (max-width: 76.25rem) {
+    .navigation {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    .link {
+        width: 126px;
+        min-height: 44px;
+    }
+}
+
+@media (max-width: 47.5rem) {
+    .navigation {
+        width: 100%;
+    }
+
+    .link {
+        flex: 1;
+        min-width: 0;
+        width: auto;
+        font-size: 12px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
