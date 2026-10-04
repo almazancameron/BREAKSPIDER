@@ -465,6 +465,8 @@ Follow-up: Enter and its hint remain hidden during playback, then fade in over 3
 
 Follow-up: A server-rendered black cover prevents the homepage flashing before hydration checks intro eligibility. It hands off to the dialog before paint, clears promptly for returning visitors/blocked storage, and includes no-JavaScript and stalled-hydration fallbacks.
 
+Follow-up: The splash's initial unknown motion-preference state renders no logo. Normal playback uses only the animation iframe on a black background; the final static logo appears after completion/fallback, or immediately for reduced motion. Browser checks confirmed no early final-logo render on first entry or replay, including a delayed animation document. Lint and the production build pass.
+
 ## Practical Starting Point
 
 Start with Task 1. It is small, testable with the repository's existing tools, and pins the exact storage behavior before animation and routing enter the picture. Then make the approved animation render through Task 2 before connecting persistence in Task 3. Keep each optional commit limited to your own files: the repository already has unrelated documentation and prototype changes.

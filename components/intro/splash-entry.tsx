@@ -140,10 +140,10 @@ export const SplashEntry = ({ onCommitSeen, onDismiss }: SplashEntryProps) => {
             <div className={styles.logo} ref={logoRef} aria-hidden="true">
                 {reducedMotion === false && phase === "playing" ? (
                     <iframe ref={iframeRef} title="Breakspider logo animation" src="/intro/logo-animation/index.html?embed=1" tabIndex={-1} aria-hidden="true" />
-                ) : (
+                ) : phase !== "playing" || reducedMotion === true ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={logo} alt="" />
-                )}
+                ) : null}
             </div>
             <div className={`${styles.entry} ${phase === "ready" ? styles.ready : ""}`} aria-hidden={phase !== "ready"}>
                 <button className={styles.enter} type="button" disabled={phase !== "ready"} onClick={enter}>Enter</button>

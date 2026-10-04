@@ -46,6 +46,8 @@
     pointer-events: none;
 }
 
+.logo iframe { background: #000; }
+
 .entry {
     position: absolute;
     left: 50%;
