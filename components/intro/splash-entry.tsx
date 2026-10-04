@@ -73,12 +73,19 @@ export const SplashEntry = ({ onCommitSeen, onDismiss }: SplashEntryProps) => {
         const makeReady = () => {
             if (phaseRef.current === "playing") changePhase("ready")
         }
+        let fallback = window.setTimeout(makeReady, 15000)
         const onMessage = (event: MessageEvent) => {
             if (event.origin !== window.location.origin || event.source !== iframeRef.current?.contentWindow) return
-            if (event.data && typeof event.data === "object" && event.data.type === "breakspider:intro-finished") makeReady()
+            if (!event.data || typeof event.data !== "object") return
+            if (event.data.type === "breakspider:intro-started") {
+                window.clearTimeout(fallback)
+                fallback = window.setTimeout(makeReady, 4800)
+            } else if (event.data.type === "breakspider:intro-finished" || event.data.type === "breakspider:intro-unavailable") {
+                window.clearTimeout(fallback)
+                makeReady()
+            }
         }
         window.addEventListener("message", onMessage)
-        const fallback = window.setTimeout(makeReady, 4800)
         return () => {
             window.removeEventListener("message", onMessage)
             window.clearTimeout(fallback)
@@ -149,7 +156,7 @@ export const SplashEntry = ({ onCommitSeen, onDismiss }: SplashEntryProps) => {
                 <button className={styles.enter} type="button" disabled={phase !== "ready"} onClick={enter}>Enter</button>
                 <small>Or click anywhere</small>
             </div>
-            <div className={styles.panels} aria-hidden="true">
+            <div className={styles.panels} hidden={phase !== "opening"} aria-hidden="true">
                 <div className={`${styles.panel} ${styles.left}`} onTransitionEnd={(event) => {
                     if (event.target === event.currentTarget && event.propertyName === "transform" && phaseRef.current === "opening") finish()
                 }}>

@@ -27,6 +27,7 @@
     h1 { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
     .caption { color: #aca89d; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
     .stage {
+      visibility: hidden;
       position: relative;
       width: 100%;
       aspect-ratio: 1600 / 820;
@@ -428,15 +429,23 @@
       window.addEventListener('keydown', (event) => {
         if (event.key.toLowerCase() === 'r' && !event.repeat) replay();
       });
-      replay();
-
-      // Optional ?t=2.9 seeks to a still frame for reviewing the key poses.
-      const seek = new URLSearchParams(location.search).get('t');
-      if (seek !== null && Number.isFinite(Number(seek))) {
-        seekTo(Number(seek));
-      } else if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        seekTo(4);
+      async function start() {
+        try {
+          await Promise.all([...document.querySelectorAll('.stage img')].map((image) => image.decode()));
+          replay();
+          const seek = new URLSearchParams(location.search).get('t');
+          if (seek !== null && Number.isFinite(Number(seek))) {
+            seekTo(Number(seek));
+          } else if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            seekTo(4);
+          }
+          $('stage').style.visibility = 'visible';
+          if (embedded) window.parent.postMessage({ type: 'breakspider:intro-started' }, window.location.origin);
+        } catch {
+          if (embedded) window.parent.postMessage({ type: 'breakspider:intro-unavailable' }, window.location.origin);
+        }
       }
+      start();
     })();
   </script>
 </body>
