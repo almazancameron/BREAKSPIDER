@@ -53,7 +53,7 @@ The intro is silent. It never requests autoplay permission or changes the persis
 
 Automatic completion moves focus to `#main-content` without scrolling. Replay completion restores focus to the replay button. A route change must not restore focus to an element from the departed route. The Enter control does not steal focus when it becomes available.
 
-Server markup and the first hydration render contain the normal site, without a blocking splash. The storage decision happens after hydration. A brief glimpse of the homepage for a fresh visitor is an accepted tradeoff: no server can know a localStorage flag, and the homepage stays usable without JavaScript. Do not add a global blank/loading screen to conceal that check.
+Server markup and the first hydration render contain the normal site underneath a homepage-only black cover. The storage decision happens after hydration. Returning visitors or unavailable storage remove the cover immediately; eligible visitors hand off to the splash. The dialog opens in a layout effect before the browser paints that handoff. A noscript rule hides the cover when JavaScript is disabled, and a ten-second CSS fallback reveals the site if hydration never completes. Interior routes do not render the cover.
 
 ## File Responsibilities
 
@@ -377,7 +377,7 @@ export function ReplayIntroButton(): React.ReactElement;
 
 Read this sequence before implementing the checklist:
 
-1. Server render and first client render: provider displays `children`, marks `ready` false, and shows no splash. Matching initial HTML avoids hydration errors.
+1. Server render and first client render: provider displays `children` underneath a homepage-only black cover, marks `ready` false, and shows no splash yet. Matching initial HTML avoids hydration errors.
 2. Effect after hydration: provider checks the initial pathname and saved flag once, then sets `ready` true and opens the splash only if eligible.
 3. Visitor accepts Enter/Skip: splash calls `onCommitSeen`; provider saves the flag. Dismissal proceeds even if saving fails.
 4. Splash finishes opening or is skipped: `onDismiss` hides it and restores the appropriate focus.
@@ -460,6 +460,10 @@ Implemented and verified on 2026-10-04:
 - Desktop, opening-transition, and mobile screenshots were inspected. Physical mobile devices and other browser engines have not been verified.
 
 The motion document was copied from the approved prototype with its completion message restricted to the same origin. The temporary preview component was unnecessary: the finished provider supplied the browser preview. Browser verification tooling and screenshots live in the system temporary directory; no browser-testing dependency was added to the app. No commits or deployment were performed. The checklist remains available as a learning reference rather than being marked as work performed by the owner.
+
+Follow-up: Enter and its hint remain hidden during playback, then fade in over 350 ms when ready, matching the prototype. The hint is `Or click anywhere`; clicks on it or the logo/background also enter. Skip remains available throughout. Reduced motion removes the visible fade.
+
+Follow-up: A server-rendered black cover prevents the homepage flashing before hydration checks intro eligibility. It hands off to the dialog before paint, clears promptly for returning visitors/blocked storage, and includes no-JavaScript and stalled-hydration fallbacks.
 
 ## Practical Starting Point
 

@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react"
 import styles from "./splash-entry.module.css"
 
 type Phase = "playing" | "ready" | "opening" | "dismissed"
@@ -43,7 +43,7 @@ export const SplashEntry = ({ onCommitSeen, onDismiss }: SplashEntryProps) => {
         finish()
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const dialog = dialogRef.current
         if (!dialog) return
         const previousOverflow = document.body.style.overflow
@@ -135,7 +135,7 @@ export const SplashEntry = ({ onCommitSeen, onDismiss }: SplashEntryProps) => {
             className={`${styles.splash} ${phase === "opening" ? styles.opening : ""} ${moving ? styles.moving : ""}`}
             aria-label="Breakspider intro"
             onCancel={(event) => { event.preventDefault(); skip() }}
-            onClick={(event) => { if (event.target === event.currentTarget) enter() }}
+            onClick={enter}
         >
             <div className={styles.logo} ref={logoRef} aria-hidden="true">
                 {reducedMotion === false && phase === "playing" ? (
@@ -145,9 +145,9 @@ export const SplashEntry = ({ onCommitSeen, onDismiss }: SplashEntryProps) => {
                     <img src={logo} alt="" />
                 )}
             </div>
-            <div className={styles.entry}>
+            <div className={`${styles.entry} ${phase === "ready" ? styles.ready : ""}`} aria-hidden={phase !== "ready"}>
                 <button className={styles.enter} type="button" disabled={phase !== "ready"} onClick={enter}>Enter</button>
-                <small>{phase === "playing" ? "Playing intro" : "Or click the background"}</small>
+                <small>Or click anywhere</small>
             </div>
             <div className={styles.panels} aria-hidden="true">
                 <div className={`${styles.panel} ${styles.left}`} onTransitionEnd={(event) => {
@@ -161,7 +161,7 @@ export const SplashEntry = ({ onCommitSeen, onDismiss }: SplashEntryProps) => {
                     <img src={logo} alt="" />
                 </div>
             </div>
-            <button className={styles.skip} type="button" autoFocus onClick={skip}>Skip intro</button>
+            <button className={styles.skip} type="button" autoFocus onClick={(event) => { event.stopPropagation(); skip() }}>Skip intro</button>
         </dialog>
     )
 }

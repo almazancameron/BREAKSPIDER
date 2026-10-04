@@ -4,6 +4,7 @@ import { createContext, useCallback, useContext, useEffect, useRef, useState, ty
 import { usePathname } from "next/navigation"
 import { markIntroSeen, readIntroSeen, shouldShowInitialIntro } from "../../lib/intro/intro-state"
 import { SplashEntry } from "./splash-entry"
+import styles from "./splash-entry.module.css"
 
 type IntroContextValue = {
     ready: boolean
@@ -69,6 +70,12 @@ export const IntroProvider = ({ children }: { children: ReactNode }) => {
 
     return (
         <IntroContext.Provider value={{ ready, replayIntro }}>
+            {!ready && pathname === "/" && (
+                <>
+                    <div id="intro-loading-cover" className={styles.loadingCover} aria-hidden="true" />
+                    <noscript><style>{"#intro-loading-cover { display: none; }"}</style></noscript>
+                </>
+            )}
             {children}
             {show && pathname === "/" && <SplashEntry onCommitSeen={commitSeen} onDismiss={dismiss} />}
         </IntroContext.Provider>

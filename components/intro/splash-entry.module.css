@@ -1,3 +1,15 @@
+.loadingCover {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-overlay);
+    background: #000;
+    animation: releaseCover 0s 10s forwards;
+}
+
+@keyframes releaseCover {
+    to { visibility: hidden; }
+}
+
 .splash {
     position: fixed;
     inset: 0;
@@ -41,7 +53,16 @@
     display: grid;
     justify-items: center;
     gap: 12px;
-    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, 10px);
+    transition: opacity .35s ease, transform .35s ease, visibility .35s ease;
+}
+
+.ready {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
 }
 
 .enter, .skip, .replay {
@@ -115,5 +136,5 @@
 .replay:hover { border-color: var(--color-accent); }
 
 @media (prefers-reduced-motion: reduce) {
-    .panel { transition: none; }
+    .panel, .entry { transition: none; }
 }
