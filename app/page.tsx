@@ -2,6 +2,7 @@ import Link from "next/link";
 import { RoutePlaceholder } from "../components/pages/route-placeholder";
 import { SITE_LINKS } from "../lib/site/navigation";
 import styles from "./page.module.css";
+import { ReplayIntroButton } from "../components/intro/replay-intro-button";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           <li key={link.href}><Link href={link.href}>{link.label} ↗</Link></li>
         ))}
       </ul>
+      <ReplayIntroButton />
     </RoutePlaceholder>
   );
 }

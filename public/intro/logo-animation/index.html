@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Breakspider — logo motion study</title>
+  <script>if (new URLSearchParams(location.search).has('embed')) document.documentElement.classList.add('embed');</script>
+  <style>
+    :root { color-scheme: dark; font-family: Arial, Helvetica, sans-serif; }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      background: #000;
+      color: #f2eee3;
+    }
+    main { width: min(100%, 1500px); padding: clamp(12px, 3vw, 36px); }
+    .topline, .controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .topline { padding: 0 3px 12px; }
+    h1 { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+    .caption { color: #aca89d; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+    .stage {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1600 / 820;
+      overflow: hidden;
+      background: #000;
+      border: 1px solid #292821;
+      isolation: isolate;
+    }
+    .asset {
+      position: absolute;
+      display: block;
+      object-fit: fill;
+      user-select: none;
+      pointer-events: none;
+      will-change: transform, opacity;
+      transform-box: border-box;
+    }
+    /* All bounds below come from assets/breakspider-logo/manifest.json.
+       Every exported SVG therefore stays in its original 1600 × 820 composition. */
+    #web-pre, #web-loaded, #web-final { left: 5.3125%; width: 91.25%; }
+    /* Vertical stretch pivots at the shared outer support height (y≈439),
+       so the center dips while both attachment points stay planted. */
+    #web-pre { top: 51.2195%; height: 21.9512%; transform-origin: 50% 10.6%; }
+    #web-loaded { top: 51.2195%; height: 30.4878%; opacity: 0; transform-origin: 50% 7.6%; }
+    /* The pre-load and loaded exports used here omit only their separate
+       right-side tether. That strand appears with the spider. */
+    #web-final { top: 50.6098%; height: 48.7805%; opacity: 0; }
+    #web-left { left: 5.3125%; top: 51.2195%; width: 41.25%; height: 45.122%; opacity: 0; transform-origin: 4.09% 7.03%; }
+    #web-right { left: 47.1875%; top: 50.6098%; width: 49.375%; height: 46.3415%; opacity: 0; transform-origin: 84.05% 6.32%; clip-path: inset(0 15.95% 0 0); }
+    #web-frays { left: 41.875%; top: 72.561%; width: 10%; height: 26.2195%; opacity: 0; }
+    #word-break { left: 5%; top: 17.0732%; width: 42.1875%; height: 52.439%; transform: translateY(-160%) rotate(-5deg); transform-origin: 50% 64%; }
+    #word-spider { left: 45.9375%; top: 15.8537%; width: 43.75%; height: 54.2683%; transform: translateY(-160%) rotate(4deg); transform-origin: 50% 64%; }
+    #spider { left: 91.25%; top: 67.6829%; width: 8.4375%; height: 18.2927%; opacity: 0; transform: translate(-68%, -430%) rotate(-15deg); transform-origin: 50% 50%; }
+    #spider svg { display: block; width: 100%; height: 100%; }
+    #spider-leader { clip-path: inset(100% 0 0 0); }
+    .junction-strain { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; transform-origin: 46.875% 53.54%; }
+    #junction-main { stroke-width: 3.5; }
+    #junction-fines { stroke-width: 1.35; }
+    .moving-silk { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; overflow: visible; }
+    .controls { padding: 16px 3px 0; }
+    button {
+      appearance: none;
+      border: 1px solid #aaa394;
+      background: #efe9dc;
+      color: #12110e;
+      padding: 10px 19px;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    button:hover { background: #fff; }
+    button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+    .readout { min-width: 160px; color: #aaa596; text-align: right; font: 11px/1.4 Consolas, monospace; letter-spacing: .08em; text-transform: uppercase; }
+    .progress { height: 2px; margin-top: 12px; background: #27251f; overflow: hidden; }
+    .progress > span { display: block; width: 0; height: 100%; background: #ebe4d4; }
+    noscript img { display: block; width: 100%; }
+    /* The splash interaction reuses this exact timeline inside a clean frame. */
+    .embed, .embed body { width: 100%; height: 100%; overflow: hidden; }
+    .embed body { display: block; min-height: 0; }
+    .embed main { width: 100%; height: 100%; padding: 0; }
+    .embed .stage { width: 100%; height: 100%; aspect-ratio: auto; border: 0; }
+    .embed .topline, .embed .controls, .embed .progress { display: none; }
+    @media (max-width: 600px) {
+      .caption { display: none; }
+      .readout { min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="topline">
+      <h1>Breakspider / motion study</h1>
+      <span class="caption">4 seconds · existing SVG artwork</span>
+    </div>
+    <div class="stage" id="stage" role="img" aria-label="Breakspider logo animation: words and a spider fall in, the spider pulls a strand from the web, and the center snaps.">
+      <!-- Draw order keeps the wordmarks above the deforming web. The last handoff
+           uses the exact exported broken-web SVG, so the held pose is identical
+           to the original asset-system composition. -->
+      <img class="asset" id="web-pre" src="assets/web-taut.svg" alt="" draggable="false">
+      <img class="asset" id="web-loaded" src="assets/web-loaded.svg" alt="" draggable="false">
+      <!-- A brief stressed version of the loaded center bridge. These four
+           paths are copied from web-loaded.svg; only their motion changes. -->
+      <svg class="junction-strain" id="junction-strain" viewBox="0 0 1600 820" preserveAspectRatio="none" aria-hidden="true">
+        <rect x="739" y="541" width="22" height="90" fill="#000"/>
+        <g id="junction-lines" fill="none" stroke="#f4f0e5" stroke-linecap="round" stroke-linejoin="round">
+          <path id="junction-main" d="M738 544 Q750 554 762 544"/>
+          <g id="junction-fines">
+            <path d="M738 565.8 Q750 575.8 762 565.8"/>
+            <path d="M738 589.2 Q750 595.2 762 589.2"/>
+            <path d="M738 622 Q750 628 762 622"/>
+          </g>
+        </g>
+      </svg>
+      <img class="asset" id="web-left" src="assets/web-left.svg" alt="" draggable="false">
+      <img class="asset" id="web-right" src="assets/web-right.svg" alt="" draggable="false">
+      <img class="asset" id="web-frays" src="assets/web-frays.svg" alt="" draggable="false">
+      <img class="asset" id="web-final" src="assets/web-broken.svg" alt="" draggable="false">
+      <svg class="moving-silk" id="moving-silk" viewBox="0 0 1600 820" preserveAspectRatio="none" aria-hidden="true">
+        <path id="tether-path" fill="none" stroke="#f4f0e5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <img class="asset" id="word-break" src="assets/break.svg" alt="" draggable="false">
+      <img class="asset" id="word-spider" src="assets/spider-wordmark.svg" alt="" draggable="false">
+      <!-- The source spider paths stay intact. Only its short leader is clipped
+           during the fall, then uncovered as the spider backs off the web. -->
+      <div class="asset" id="spider" aria-hidden="true">
+        <svg viewBox="1460 555 135 150" preserveAspectRatio="none">
+          <g transform="translate(1490 590) rotate(10)">
+            <g>
+              <path id="spider-leader" d="M32 -15 C32 -2 31 7 31 14" fill="none" stroke="#f4f0e5" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M24 23 C9 15 8 6 3 3 M20 30 C8 27 3 29 -5 23 M18 37 C8 41 4 47 -3 51 M23 45 C15 56 17 64 11 71" fill="none" stroke="#f4f0e5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M45 21 C55 12 59 6 66 5 M49 29 C61 23 68 24 76 22 M50 38 C63 38 68 46 77 50 M45 46 C54 57 50 65 58 71" fill="none" stroke="#f4f0e5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M27 16 Q33 11 40 17 L43 28 Q51 37 46 49 Q37 58 26 51 Q15 43 18 32 L23 25 Z" fill="#f4f0e5"/>
+              <path d="M27 31 l6 -2 M34 45 l4 -2" stroke="#090909" stroke-width="1"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <noscript><img src="assets/logo-full.svg" alt="Breakspider logo"></noscript>
+    </div>
+    <div class="controls">
+      <button id="replay" type="button" aria-label="Replay the Breakspider animation">Replay ↺</button>
+      <div class="readout" id="readout" aria-live="off">Pre-load · 0.0 s</div>
+    </div>
+    <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+  </main>
+  <script>
+    (() => {
+      // The Web Animations API keeps this proof of concept fully local/offline.
+      // All tracks use one 4 s clock; keyframe offsets below are seconds.
+      const duration = 4000;
+      const embedded = document.documentElement.classList.contains('embed');
+      const $ = (id) => document.getElementById(id);
+      const frame = (seconds, values, easing) => ({
+        offset: seconds * 1000 / duration,
+        ...values,
+        ...(easing ? { easing } : {})
+      });
+      const fastOut = 'cubic-bezier(.18,.86,.28,1)';
+      const fall = 'cubic-bezier(.36,0,.78,.92)';
+      const elastic = 'cubic-bezier(.26,.78,.44,1)';
+      const tracks = [
+        // 0.0–0.96: lightly tensioned. BREAK's first contact stretches this pose
+        // downward until its center meets the compressed loaded pose.
+        ['web-pre', [
+          frame(0, { opacity: 1, transform: 'scaleY(1)' }),
+          frame(.96, { opacity: 1, transform: 'scaleY(1)' }, fall),
+          frame(1.02, { opacity: 1, transform: 'scaleY(1.17)' }, fastOut),
+          frame(1.075, { opacity: 0, transform: 'scaleY(1.47)' }),
+          frame(4, { opacity: 0, transform: 'scaleY(1.47)' })
+        ]],
+        // BREAK makes the connected web dip, rebound, and settle at a partial
+        // load. SPIDER then adds a deeper overshoot and smaller second rebound.
+        // The pre/loaded crossfade lasts only 55 ms while their hubs align.
+        ['web-loaded', [
+          frame(0, { opacity: 0, transform: 'scaleY(.61)' }),
+          frame(1.02, { opacity: 0, transform: 'scaleY(.61)' }, fastOut),
+          frame(1.075, { opacity: 1, transform: 'scaleY(.82)' }, fastOut),
+          frame(1.12, { opacity: 1, transform: 'scaleY(.86)' }, elastic),
+          frame(1.27, { opacity: 1, transform: 'scaleY(.67)' }, elastic),
+          frame(1.43, { opacity: 1, transform: 'scaleY(.73)' }),
+          frame(1.55, { opacity: 1, transform: 'scaleY(.73)' }, fastOut),
+          frame(1.68, { opacity: 1, transform: 'scaleY(1.13)' }, elastic),
+          frame(1.84, { opacity: 1, transform: 'scaleY(.93)' }, elastic),
+          frame(2.06, { opacity: 1, transform: 'scaleY(1)' }),
+          frame(2.76, { opacity: 1, transform: 'scaleY(1)' }, fastOut),
+          frame(2.84, { opacity: 1, transform: 'scaleY(1.035)' }, fastOut),
+          frame(2.88, { opacity: 1, transform: 'scaleY(1.065)' }),
+          frame(2.89, { opacity: 0, transform: 'scaleY(1.065)' }),
+          frame(4, { opacity: 0, transform: 'scaleY(1.065)' })
+        ]],
+        // Three-frame warning: the connected bridge thins near the end of the
+        // spider's pull, peaking before the spider reaches full extension.
+        // Its endpoints stay attached until the snap at 2.89.
+        ['junction-strain', [
+          frame(0, { opacity: 0, transform: 'scaleY(1)' }),
+          frame(2.775, { opacity: 0, transform: 'scaleY(1)' }),
+          frame(2.78, { opacity: 1, transform: 'scaleY(1)' }, fastOut),
+          frame(2.88, { opacity: 1, transform: 'scaleY(1.065)' }),
+          frame(2.89, { opacity: 0, transform: 'scaleY(1.065)' }),
+          frame(4, { opacity: 0, transform: 'scaleY(1.065)' })
+        ]],
+        ['junction-main', [
+          frame(0, { strokeWidth: '3.5px' }),
+          frame(2.78, { strokeWidth: '3.5px' }, fastOut),
+          frame(2.855, { strokeWidth: '1.6px' }),
+          frame(4, { strokeWidth: '1.6px' })
+        ]],
+        ['junction-fines', [
+          frame(0, { strokeWidth: '1.35px' }),
+          frame(2.78, { strokeWidth: '1.35px' }, fastOut),
+          frame(2.855, { strokeWidth: '.85px' }),
+          frame(4, { strokeWidth: '.85px' })
+        ]],
+        // 2.88–3.4: separate halves swing from their outer anchors. The
+        // frayed center is the existing matching asset, not a new effect.
+        ['web-left', [
+          frame(0, { opacity: 0, transform: 'translateY(-3%) rotate(-3deg)' }),
+          frame(2.88, { opacity: 0, transform: 'translateY(-3%) rotate(-3deg)' }),
+          frame(2.89, { opacity: 1, transform: 'translateY(-3%) rotate(-3deg)' }, fastOut),
+          frame(2.935, { opacity: 1, transform: 'translate(-.55%, -3.8%) rotate(-3.4deg)' }, fastOut),
+          frame(3.01, { opacity: 1, transform: 'translateY(0) rotate(1.6deg)' }, elastic),
+          frame(3.18, { opacity: 1, transform: 'translateY(0) rotate(-.7deg)' }, elastic),
+          frame(3.37, { opacity: 1, transform: 'translateY(0) rotate(0)' }),
+          frame(3.43, { opacity: 1, transform: 'translateY(0) rotate(0)' }),
+          frame(3.49, { opacity: 0, transform: 'translateY(0) rotate(0)' }),
+          frame(4, { opacity: 0, transform: 'translateY(0) rotate(0)' })
+        ]],
+        ['web-right', [
+          frame(0, { opacity: 0, transform: 'translateY(-3%) rotate(3deg)' }),
+          frame(2.88, { opacity: 0, transform: 'translateY(-3%) rotate(3deg)' }),
+          frame(2.89, { opacity: 1, transform: 'translateY(-3%) rotate(3deg)' }, fastOut),
+          frame(2.935, { opacity: 1, transform: 'translate(.55%, -3.8%) rotate(3.4deg)' }, fastOut),
+          frame(3.01, { opacity: 1, transform: 'translateY(0) rotate(-1.5deg)' }, elastic),
+          frame(3.18, { opacity: 1, transform: 'translateY(0) rotate(.6deg)' }, elastic),
+          frame(3.37, { opacity: 1, transform: 'translateY(0) rotate(0)' }),
+          frame(3.43, { opacity: 1, transform: 'translateY(0) rotate(0)' }),
+          frame(3.49, { opacity: 0, transform: 'translateY(0) rotate(0)' }),
+          frame(4, { opacity: 0, transform: 'translateY(0) rotate(0)' })
+        ]],
+        ['web-frays', [
+          frame(0, { opacity: 0, transform: 'translateY(-7%) rotate(-3deg)' }),
+          frame(2.88, { opacity: 0, transform: 'translateY(-7%) rotate(-3deg)' }),
+          frame(2.89, { opacity: 1, transform: 'translateY(-7%) rotate(-3deg)' }, fastOut),
+          frame(2.935, { opacity: 1, transform: 'translate(-1%, -9%) rotate(-6deg)' }, fastOut),
+          frame(3.04, { opacity: 1, transform: 'translateY(4%) rotate(2deg)' }, elastic),
+          frame(3.22, { opacity: 1, transform: 'translateY(-1%) rotate(-.6deg)' }, elastic),
+          frame(3.37, { opacity: 1, transform: 'translateY(0) rotate(0)' }),
+          frame(3.43, { opacity: 1, transform: 'translateY(0) rotate(0)' }),
+          frame(3.49, { opacity: 0, transform: 'translateY(0) rotate(0)' }),
+          frame(4, { opacity: 0, transform: 'translateY(0) rotate(0)' })
+        ]],
+        // Exact final web pose takes over once the brief swing has settled.
+        ['web-final', [
+          frame(0, { opacity: 0 }), frame(3.43, { opacity: 0 }),
+          frame(3.49, { opacity: 1 }), frame(4, { opacity: 1 })
+        ]],
+        // 0.5–1.3: BREAK lands left. Only translation and rotation animate.
+        ['word-break', [
+          frame(0, { transform: 'translateY(-160%) rotate(-5deg)' }),
+          frame(.49, { transform: 'translateY(-160%) rotate(-5deg)' }, fall),
+          frame(.99, { transform: 'translateY(3.3%) rotate(1.5deg)' }, fastOut),
+          frame(1.12, { transform: 'translateY(-2.3%) rotate(-.7deg)' }, elastic),
+          frame(1.29, { transform: 'translateY(.65%) rotate(.25deg)' }, elastic),
+          frame(1.43, { transform: 'translateY(0) rotate(0)' }),
+          frame(2.89, { transform: 'translateY(0) rotate(0)' }, fastOut),
+          frame(2.98, { transform: 'translateY(.55%) rotate(-.35deg)' }, elastic),
+          frame(3.14, { transform: 'translateY(-.12%) rotate(.08deg)' }, elastic),
+          frame(3.37, { transform: 'translateY(0) rotate(0)' }),
+          frame(4, { transform: 'translateY(0) rotate(0)' })
+        ]],
+        // 1.1–1.9: SPIDER lands right and deepens the connected sag.
+        ['word-spider', [
+          frame(0, { transform: 'translateY(-160%) rotate(4deg)' }),
+          frame(1.08, { transform: 'translateY(-160%) rotate(4deg)' }, fall),
+          frame(1.57, { transform: 'translateY(3.8%) rotate(-1.7deg)' }, fastOut),
+          frame(1.72, { transform: 'translateY(-2.3%) rotate(.7deg)' }, elastic),
+          frame(1.88, { transform: 'translateY(.55%) rotate(-.2deg)' }, elastic),
+          frame(2.02, { transform: 'translateY(0) rotate(0)' }),
+          frame(2.89, { transform: 'translateY(0) rotate(0)' }, fastOut),
+          frame(2.98, { transform: 'translateY(.65%) rotate(.38deg)' }, elastic),
+          frame(3.14, { transform: 'translateY(-.12%) rotate(-.08deg)' }, elastic),
+          frame(3.37, { transform: 'translateY(0) rotate(0)' }),
+          frame(4, { transform: 'translateY(0) rotate(0)' })
+        ]],
+        // 1.7–2.3: spider falls shortly after SPIDER. Its head meets the
+        // right web attachment at (1419, 439) with the short silk masked.
+        // 2.3–2.43: it backs off, revealing that silk from the body outward.
+        // 2.43–2.89: it draws the longer strand from the same point until snap.
+        ['spider', [
+          frame(0, { opacity: 0, transform: 'translate(-68%, -430%) rotate(-15deg)' }),
+          frame(1.68, { opacity: 0, transform: 'translate(-68%, -430%) rotate(-15deg)' }, fall),
+          // Visibility changes on entry; the fall keeps one uninterrupted
+          // transform curve from 1.68 to 2.08, like the wordmark drops.
+          frame(1.77, { opacity: 1 }),
+          frame(2.08, { opacity: 1, transform: 'translate(-68%, -110%) rotate(-12deg)' }, fastOut),
+          frame(2.18, { opacity: 1, transform: 'translate(-68%, -119%) rotate(-17deg)' }, elastic),
+          frame(2.3, { opacity: 1, transform: 'translate(-68%, -115%) rotate(-15deg)' }, elastic),
+          frame(2.43, { opacity: 1, transform: 'translate(-68%, -96%) rotate(-15deg)' }, fastOut),
+          frame(2.62, { opacity: 1, transform: 'translate(-36%, -54%) rotate(-7deg)' }, fastOut),
+          frame(2.76, { opacity: 1, transform: 'translate(-9%, -12%) rotate(-2deg)' }, elastic),
+          frame(2.89, { opacity: 1, transform: 'translate(6%, 7%) rotate(9deg)' }),
+          frame(2.93, { opacity: 1, transform: 'translate(6%, 7%) rotate(9deg)' }, elastic),
+          frame(3.12, { opacity: 1, transform: 'translate(-1.5%, -2%) rotate(-3deg)' }, elastic),
+          frame(3.42, { opacity: 1, transform: 'translate(0, 0) rotate(0)' }),
+          frame(4, { opacity: 1, transform: 'translate(0, 0) rotate(0)' })
+        ]],
+        ['spider-leader', [
+          frame(0, { clipPath: 'inset(100% 0 0 0)' }),
+          frame(2.3, { clipPath: 'inset(100% 0 0 0)' }, fastOut),
+          frame(2.43, { clipPath: 'inset(0 0 0 0)' }),
+          frame(4, { clipPath: 'inset(0 0 0 0)' })
+        ]]
+      ];
+
+      const readout = $('readout');
+      const progress = $('progress');
+      const stage = $('stage');
+      const spider = $('spider');
+      const webRight = $('web-right');
+      const movingSilk = $('moving-silk');
+      const tetherPath = $('tether-path');
+      let animations = [];
+      let run = 0;
+      let finishPosted = false;
+
+      function labelFor(seconds) {
+        if (seconds < .5) return 'Pre-load';
+        if (seconds < 1.1) return 'BREAK lands';
+        if (seconds < 1.72) return 'SPIDER lands';
+        if (seconds < 2.08) return 'Spider falls';
+        if (seconds < 2.43) return 'Spider catches web';
+        if (seconds < 2.89) return 'Spider tugs';
+        if (seconds < 3.45) return 'Center snaps';
+        return 'Broken / final';
+      }
+      function update(seconds) {
+        const t = Math.max(0, Math.min(4, seconds));
+        readout.textContent = `${labelFor(t)} · ${t.toFixed(1)} s`;
+        progress.style.width = `${t / 4 * 100}%`;
+        updateTether(t);
+        if (embedded && t >= 3.98 && !finishPosted) {
+          finishPosted = true;
+          window.parent.postMessage({ type: 'breakspider:intro-finished' }, window.location.origin);
+        }
+      }
+      function updateTether(t) {
+        // The source spider SVG's short silk begins at (1524.119, 580.785)
+        // in the 1600 × 820 composition. Follow that exact point through the
+        // rigid spider transform, then draw the source tether's same curve
+        // from the right web anchor to the moving endpoint. During the snap,
+        // that anchor follows the recoiling right half instead of staying put.
+        // Its short leader reveals while it slips down from the catch. Once
+        // that tip reaches the corner, the live tether grows with the pull.
+        if (t < 2.43 || t >= 3.49) {
+          movingSilk.style.opacity = '0';
+          return;
+        }
+        const sx = stage.clientWidth / 1600;
+        const sy = stage.clientHeight / 820;
+        const originX = spider.offsetWidth / 2;
+        const originY = spider.offsetHeight / 2;
+        const matrix = new DOMMatrix(getComputedStyle(spider).transform);
+        const tip = new DOMPoint(64.119 * sx - originX, 25.785 * sy - originY).matrixTransform(matrix);
+        const x = (spider.offsetLeft + originX + tip.x) / sx;
+        const y = (spider.offsetTop + originY + tip.y) / sy;
+        let webX = 1419;
+        let webY = 439;
+        if (t >= 2.89) {
+          // The exported right web starts at (755, 415). Transform its real
+          // corner point rather than approximating the animated rotation.
+          const style = getComputedStyle(webRight);
+          const [pivotX, pivotY] = style.transformOrigin.split(' ').map(parseFloat);
+          const cornerX = (1419 - 755) * sx;
+          const cornerY = (439 - 415) * sy;
+          const corner = new DOMPoint(cornerX - pivotX, cornerY - pivotY)
+            .matrixTransform(new DOMMatrix(style.transform));
+          webX += (pivotX + corner.x - cornerX) / sx;
+          webY += (pivotY + corner.y - cornerY) / sy;
+        }
+        const dx = x - webX;
+        const dy = y - webY;
+        tetherPath.setAttribute('d', `M${webX.toFixed(2)} ${webY.toFixed(2)} C${(webX + dx * .58).toFixed(2)} ${(webY + dy * .36).toFixed(2)} ${(x + dx * .027).toFixed(2)} ${(y - dy * .105).toFixed(2)} ${x.toFixed(2)} ${y.toFixed(2)}`);
+        movingSilk.style.opacity = String(t < 2.51 ? (t - 2.43) / .08 : t > 3.43 ? (3.49 - t) / .06 : 1);
+      }
+      function replay() {
+        run++;
+        finishPosted = false;
+        const thisRun = run;
+        animations.forEach((animation) => animation.cancel());
+        animations = tracks.map(([id, keyframes]) =>
+          $(id).animate(keyframes, { duration, fill: 'both' })
+        );
+        update(0);
+        function tick() {
+          if (thisRun !== run) return;
+          const seconds = (animations[0].currentTime || 0) / 1000;
+          update(seconds);
+          if (seconds < 4) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+      function seekTo(seconds) {
+        const t = Math.max(0, Math.min(4, Number(seconds) || 0));
+        run++;
+        animations.forEach((animation) => {
+          animation.pause();
+          animation.currentTime = t * 1000;
+        });
+        update(t);
+      }
+
+      // Keeps GIF/video export in sync with the live spider-silk drawing.
+      window.breakspiderMotion = { seek: seekTo, replay };
+
+      $('replay').addEventListener('click', replay);
+      window.addEventListener('keydown', (event) => {
+        if (event.key.toLowerCase() === 'r' && !event.repeat) replay();
+      });
+      replay();
+
+      // Optional ?t=2.9 seeks to a still frame for reviewing the key poses.
+      const seek = new URLSearchParams(location.search).get('t');
+      if (seek !== null && Number.isFinite(Number(seek))) {
+        seekTo(Number(seek));
+      } else if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        seekTo(4);
+      }
+    })();
+  </script>
+</body>
+</html>

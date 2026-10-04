@@ -2,6 +2,10 @@
 
 **Execution owner:** You will edit the files and implement this plan yourself. The checkpoints below are suitable for manual implementation; no agent execution or delegation is requested.
 
+**Implementation update (2026-10-04):** At the owner's subsequent request, Codex completed the splash portion in the existing workspace, preserving the owner's arrow-function style. This tutorial remains as the explanation of the implementation. Header styling, logo micro-animation, and audio mapping are still separate work.
+
+**Learning format:** This is a guided implementation tutorial. Read the explanation for a step, make its edit, and check the result before moving on. Interface blocks describe the eventual shape of your code; they are explicitly labeled and are not complete implementations. Worked examples teach the unfamiliar pieces; you can try writing them yourself before consulting the example. Future Breakspider plans should use this same teaching format.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking. This instruction applies only if the owner later requests agent implementation.
 
 **Goal:** Deliver the approved Breakspider intro on a first homepage entry, with reliable skip, persistence, replay, and accessible entry into the existing production site.
@@ -80,7 +84,15 @@ Keep full-logo panel artwork at `/media/branding/breakspider-logo.svg`. During p
 
 **Files:** Create `lib/intro/intro-state.ts` and `tests/intro-state.test.mjs`.
 
-**Interfaces produced:**
+### What you are learning
+
+This task separates a browser detail (reading a saved value) from a product decision (whether to show the intro). That makes the policy easy to understand and lets us check it without launching the whole website.
+
+`localStorage` is a browser key/value store that survives page reloads. Its values are strings, so we save `"true"`, not the boolean `true`. It is unavailable on the server and can also be blocked in a browser. Those cases should let someone reach the site normally.
+
+An **export** makes a value or function available for another file to import. It does not implement the function. A **type** describes which values TypeScript allows; it does not create a runtime value or execute any behavior.
+
+**Interface reference only — these are the names and types we want at the end, not a complete file:**
 
 ```ts
 export const INTRO_SEEN_STORAGE_KEY = "breakspider_intro_seen_v1";
@@ -91,10 +103,44 @@ export function markIntroSeen(storage?: IntroStorage | null): boolean;
 export function shouldShowInitialIntro(initialPathname: string, status: IntroSeenStatus): boolean;
 ```
 
-Use explicit Vitest imports and assertions like these in the eligibility test, alongside the storage tests described below:
+Read the unfamiliar syntax this way:
+
+| Syntax | Meaning here |
+| --- | --- |
+| `Pick<Storage, "getItem" \| "setItem">` | Accept an object with these two storage methods. We do not need the rest of the browser Storage API. |
+| `"seen" \| "unseen" \| "unavailable"` | The result must be one of these exact strings. This is a union type. |
+| `storage?` | The caller may omit this argument. An omitted argument is `undefined`. |
+| `IntroStorage \| null` | The caller may explicitly provide no storage with `null`. |
+| `): boolean` | The function returns a boolean. The code inside `{ ... }` must produce it. |
+
+`export function name(...): Result;` ends in a semicolon and describes a signature. In this ordinary `.ts` module, write a body inside braces instead. Do not use `declare` to make TypeScript accept the missing body: that would promise a runtime implementation we have not provided.
+
+### Step 1: Start with the smallest runnable function
+
+- [ ] Add the exported constant and the two exported types from the interface reference to `lib/intro/intro-state.ts`.
+- [ ] Implement `shouldShowInitialIntro` with a body. It should return true only when both conditions are true:
+
+```ts
+export function shouldShowInitialIntro(
+  initialPathname: string,
+  status: IntroSeenStatus,
+): boolean {
+  return initialPathname === "/" && status === "unseen";
+}
+```
+
+`===` compares values without converting their types. `&&` requires both comparisons to pass. This is a **pure function**: it depends only on its inputs and does not read storage, update React, or change anything elsewhere.
+
+**Checkpoint:** You now have a real exported function, not just its declaration. It can be imported and called. The remaining functions are still work to do; do not paste their bodyless signatures into the file.
+
+### Step 2: Check the policy with a small Vitest test
+
+- [ ] Create `tests/intro-state.test.mjs`. This is JavaScript, so do not put TypeScript parameter/type annotations in this file. The existing Vitest configuration can import the TypeScript module from it.
+- [ ] Add this runnable test:
 
 ```js
 import { expect, test } from "vitest";
+import { shouldShowInitialIntro } from "../lib/intro/intro-state.ts";
 
 test("automatic intro is limited to an unseen homepage entry", () => {
   expect(shouldShowInitialIntro("/", "unseen")).toBe(true);
@@ -108,18 +154,121 @@ test("automatic intro is limited to an unseen homepage entry", () => {
 });
 ```
 
-- [ ] **Step 1: Write focused persistence tests.** Use the existing Vitest `test` / `expect` pattern and an injected fake storage. Group related cases into a few meaningful tests: missing value → `"unseen"`; exact `"true"` → `"seen"`; malformed values → `"unseen"`; null or throwing storage → `"unavailable"`. Assert a successful write uses exactly `breakspider_intro_seen_v1` and `"true"`, returns true, and does not touch visitor/audio/prototype keys. A throwing write returns false. Do not add tests for incidental implementation details.
-- [ ] **Step 2: Add an exhaustive eligibility table.** `shouldShowInitialIntro("/", "unseen")` is true. `/` with seen/unavailable is false. `/about`, `/projects/one-night-familiar-fight`, and `/play/onff` are false for all three statuses. In a Node process, calling default read/write must safely return unavailable/false.
-- [ ] **Step 3: Run the focused tests before implementation.** `npm test -- tests/intro-state.test.mjs` should fail because the new module does not exist. This small logic suite is the automated testing scope for the splash; subsequent tasks use browser checks.
-- [ ] **Step 4: Implement the interfaces.** Resolve optional browser storage inside a guarded function; guard access to `window.localStorage` as well as get/set calls. Keep the explicit intro key separate from the versioned visitor-state envelope. Add no visitor-state schema migration.
-- [ ] **Step 5: Rerun the test command.** All new tests pass; `npm test` continues to pass existing tests.
-- [ ] **Step 6: Optional checkpoint commit.** Stage only these two files: `git add lib/intro/intro-state.ts tests/intro-state.test.mjs`, then `git commit -m "feat: define intro persistence and entry policy"`.
+`test` names a behavior and runs the callback. `expect(actual).toBe(expected)` compares the returned value with what we want. The loops cover the same rule for several interior paths and saved states; they are not testing React navigation.
+
+- [ ] Run `npm test -- tests/intro-state.test.mjs`. Expect one passing test. The `--` forwards the file argument through npm to Vitest. Use `npm run test:watch -- tests/intro-state.test.mjs` if you prefer feedback after each save.
+
+**Checkpoint:** If the test cannot find an export, check the import path and the `export` keyword. If an assertion fails, compare its actual/expected values with the two comparisons in the function.
+
+### Step 3: Resolve browser storage safely
+
+We want two ways to call the storage functions. Website code can omit the argument and use browser storage. Tests can pass a tiny fake object. This is **dependency injection**: supply the dependency instead of forcing every caller to use the real browser.
+
+- [ ] Add this private helper to `intro-state.ts`:
+
+```ts
+function getBrowserStorage(): IntroStorage | null {
+  try {
+    return typeof window === "undefined" ? null : window.localStorage;
+  } catch {
+    return null;
+  }
+}
+```
+
+It is private because other files do not need to import it. `typeof window` safely checks whether we are in a browser; referencing `window` directly on the server would throw. Even accessing the `localStorage` property can throw, so that access belongs inside `try`. `catch` gives us a usable fallback.
+
+**Checkpoint:** This helper does not run when the module is imported. It runs when a function requests storage. Avoid a top-level `const storage = window.localStorage`: Next.js may import this module while rendering on the server.
+
+### Step 4: Read the saved flag
+
+- [ ] Implement `readIntroSeen`. Try it yourself using these rules: no storage means unavailable; exactly `"true"` means seen; anything else means unseen; a read error means unavailable.
+
+**Worked implementation — valid code to put in the module:**
+
+```ts
+export function readIntroSeen(
+  storage: IntroStorage | null = getBrowserStorage(),
+): IntroSeenStatus {
+  if (!storage) return "unavailable";
+
+  try {
+    return storage.getItem(INTRO_SEEN_STORAGE_KEY) === "true"
+      ? "seen"
+      : "unseen";
+  } catch {
+    return "unavailable";
+  }
+}
+```
+
+The default argument runs when the caller omits storage or passes `undefined`. Explicit `null` stays null, allowing a test to simulate unavailable storage. The ternary expression `condition ? a : b` selects one of two results.
+
+### Step 5: Save completion without trapping the visitor
+
+- [ ] Implement `markIntroSeen`: if there is no storage return false; otherwise write the key/value in a try block and return true; catch a write failure and return false.
+
+```ts
+export function markIntroSeen(
+  storage: IntroStorage | null = getBrowserStorage(),
+): boolean {
+  if (!storage) return false;
+
+  try {
+    storage.setItem(INTRO_SEEN_STORAGE_KEY, "true");
+    return true;
+  } catch {
+    return false;
+  }
+}
+```
+
+The return value says whether saving worked. It must not decide whether someone is allowed to dismiss the intro. Later React code should dismiss even when this returns false.
+
+### Step 6: Check persistence with fake storage
+
+- [ ] Expand the test import to include `INTRO_SEEN_STORAGE_KEY`, `readIntroSeen`, and `markIntroSeen`.
+- [ ] Add this runnable example:
+
+```js
+test("intro completion round-trips using only the intro key", () => {
+  const values = new Map();
+  const storage = {
+    getItem: (key) => values.get(key) ?? null,
+    setItem: (key, value) => values.set(key, value),
+  };
+
+  expect(readIntroSeen(storage)).toBe("unseen");
+  expect(markIntroSeen(storage)).toBe(true);
+  expect([...values.entries()]).toEqual([[INTRO_SEEN_STORAGE_KEY, "true"]]);
+  expect(readIntroSeen(storage)).toBe("seen");
+});
+```
+
+`Map` stores the values in memory for this test. `?? null` returns null only when the lookup is missing/null, matching the browser API. The fake implements just the two methods our code needs; it does not need a browser or a mocking framework.
+
+- [ ] Add one grouped test for malformed strings (`"false"`, `"invalid"`, `""`) returning unseen. Reuse a fake whose `getItem` returns each string.
+- [ ] Add one grouped test for unavailable storage: explicit null, and a fake whose `getItem`/`setItem` throw `new Error("storage blocked")`. Expect read unavailable and write false. In this Node test environment, calls with no argument should also return unavailable/false.
+- [ ] Run the focused test command, then `npm test`. Expect your new tests and the 13 existing tests to pass. Broad coverage targets and component tests are not required.
+- [ ] Optionally commit only these two files with `git add lib/intro/intro-state.ts tests/intro-state.test.mjs` and `git commit -m "feat: define intro persistence and entry policy"`.
+
+**Task 1 checkpoint:** Explain these three things in your own words before continuing: why storage holds a string, why the browser lookup happens inside a function, and why unavailable is different from unseen. Those are the main lessons; memorizing the TypeScript syntax is not the goal.
 
 ## Task 2: Implement the Approved Splash Presentation
 
 **Files:** Create splash component/CSS and production animation document/assets from the file table.
 
-**Interface produced:**
+### What you are learning
+
+React describes what should be on the screen, but an animation also needs to communicate with browser APIs over time. This task introduces three tools:
+
+- **State** (`useState`) remembers a value and causes React to render again when it changes. Use it for the phase that affects visible controls.
+- **Refs** (`useRef`) hold DOM elements or mutable values without causing a render. Use them to access a dialog/iframe and to immediately guard repeated events.
+- **Effects** (`useEffect`) connect a mounted component to something outside React, such as a browser event or timer. The function an effect returns disconnects it.
+
+Put `"use client"` at the top of `splash-entry.tsx` because it uses React hooks and browser events. This does not make `window` safe during rendering: Next.js also renders initial Client Component HTML on the server. Access browser APIs in effects or event handlers.
+
+**Interface reference only — add a component body that returns JSX:**
 
 ```ts
 type SplashEntryProps = {
@@ -130,6 +279,67 @@ export function SplashEntry(props: SplashEntryProps): React.ReactElement;
 ```
 
 Mounting starts one run. Unmounting cancels it. The parent decides when to mount it; this component performs no localStorage or route access. `onCommitSeen` is called once per run when Enter/Skip/Escape is accepted; `onDismiss` is called once when the overlay is actually finished.
+
+Props are inputs supplied by the parent. `() => void` means a callback with no arguments and no useful return value. Calling `onCommitSeen()` asks the parent to save progress; calling `onDismiss()` asks it to remove the splash. Passing a callback does not call it: use `onClick={skip}`, not `onClick={skip()}`.
+
+### Build in layers, with a browser checkpoint after each
+
+Follow the numbered steps below in order. Do not implement the message handling, motion settings, and split panels before you have a static dialog that opens and skips correctly.
+
+**Before Steps 1–2: understand the iframe boundary.** An iframe is a separate document inside the page. Our existing animation can keep its own HTML, styling, and timeline without being rewritten as React. Files in `public/intro/...` are served at `/intro/...`; the URL does not include `public`. Open the animation URL directly in a browser and verify the assets load before embedding it. In the iframe JSX, use `title="Breakspider logo animation"`, `tabIndex={-1}`, `aria-hidden="true"`, and CSS `pointer-events: none`; the outer dialog provides the accessible name and all controls.
+
+**Before Step 3: understand native dialogs.** Rendering `<dialog>` does not automatically open it as a modal. `showModal()` does that, placing it in the browser's top layer and making the page behind it unavailable to keyboard interaction. A DOM ref lets you call that method. The setup/cleanup pattern looks like this; it is an illustration inside your component, not a complete file:
+
+```tsx
+const dialogRef = useRef<HTMLDialogElement>(null);
+
+useEffect(() => {
+  const dialog = dialogRef.current;
+  if (!dialog) return;
+  if (!dialog.open) dialog.showModal();
+  return () => {
+    if (dialog.open) dialog.close();
+  };
+}, []);
+```
+
+`[]` means this effect has no reactive dependencies to watch. Development Strict Mode still runs an extra setup/cleanup cycle to expose incomplete cleanup. Do not disable Strict Mode to hide problems. After implementing a static black dialog, verify Skip and Escape remove it before adding animation. Native Escape produces a cancel event; prevent its default close so your Skip handler also records completion and dismisses through React.
+
+**Before Step 4: understand the phases.** Use a string union for `playing`, `ready`, `opening`, and `dismissed`. This prevents contradictory boolean combinations such as “opening and still playing.” Enter is disabled in playing, enabled in ready, and starts opening. Skip is always enabled. React updates may be batched, so an immediate ref guard protects against two callbacks firing before the next render. Keep the ref and state synchronized through one phase-changing helper.
+
+The iframe announces completion using `postMessage`. The parent hears a `message` event. Check origin (the sender's site), source (this iframe window), and payload type before changing phase. A correctly spelled message alone is not enough. Remove the listener in the effect cleanup. At this checkpoint, let Enter dismiss immediately; add the panel transition only after playback → ready works.
+
+**Before Step 5: understand fallbacks and reduced motion.** A timeout is a backup, not the animation clock: `window.setTimeout(makeReady, 4800)` eventually enables entry even if completion is missing. Clear that timer when it is no longer needed. `window.matchMedia("(prefers-reduced-motion: reduce)")` tells you whether the visitor requests less motion. Determine that preference in an effect before mounting the iframe; initially render only static artwork until the preference is known, so reduced-motion visitors do not briefly start an animation.
+
+**Before Step 6: understand the coordinate math.** The logo's broken seam is 750 units from its left edge, on a 1600-unit artboard: `750 / 1600 = 0.46875`. CSS `left: 50%` places the stage origin at viewport center; `translateX(-46.875%)` moves its seam onto that center. `getBoundingClientRect()` gives the displayed stage's viewport coordinates. CSS custom properties carry those measurements to both clipped panel copies. Their artwork matches before they slide apart. First check this with motion disabled; then enable the 1,050 ms transition.
+
+**Before Step 7: understand cleanup ownership.** Every added listener needs a matching removal; every timeout/frame needs cancellation. Saving the old body overflow before assigning `"hidden"` lets you restore the original value, rather than guessing it was empty. Keep the latest callbacks available to your handlers without repeatedly restarting animation effects when the parent renders. Either stabilize parent callbacks or hold the latest callbacks in refs; avoid suppressing dependency warnings without understanding them.
+
+**Step 8 harness example — a complete temporary client component:** Create `components/intro/splash-preview.tsx` to try the splash before building the provider:
+
+```tsx
+"use client";
+
+import { useState } from "react";
+import { SplashEntry } from "./splash-entry";
+
+export function SplashPreview() {
+  const [show, setShow] = useState(false);
+  return (
+    <>
+      <button type="button" onClick={() => setShow(true)}>Preview intro</button>
+      {show && (
+        <SplashEntry
+          onCommitSeen={() => { /* No storage in this preview. */ }}
+          onDismiss={() => setShow(false)}
+        />
+      )}
+    </>
+  );
+}
+```
+
+Import/render `<SplashPreview />` in `app/page.tsx` alongside the existing homepage links. The homepage can remain a Server Component: it may render a Client Component. Clicking the button mounts the splash, and dismissal removes it. Delete the harness and its import after Task 3. It is a temporary local development tool, not a production route.
 
 - [ ] **Step 1: Prepare the motion derivative.** Copy `prototype/logo-animation/index.html` into `public/intro/logo-animation/index.html`. Copy these nine files from its `assets/` directory into `public/intro/logo-animation/assets/`: `web-taut.svg`, `web-loaded.svg`, `web-left.svg`, `web-right.svg`, `web-frays.svg`, `web-broken.svg`, `break.svg`, `spider-wordmark.svg`, and `logo-full.svg`. Preserve keyframes, modified pre-load/loaded web assets, inline spider, and live tether math. Do not substitute the GIF or regenerate the early web poses from the general logo library: the animation copies intentionally omit the early right tether.
 - [ ] **Step 2: Audit the embedded document.** Use `/intro/logo-animation/index.html?embed=1`. Keep existing embed styling; ensure controls/readouts stay hidden and the iframe cannot receive pointer or keyboard interaction. Change completion `postMessage` target from `"*"` to `window.location.origin`. Keep debug/export helpers confined to the iframe; none should become site-wide shortcuts. Retain only referenced production assets, not render scripts or exports.
@@ -149,13 +359,61 @@ Use a dedicated native dialog here rather than broadening `components/ui/dialog.
 
 **Interfaces consumed:** Task 1 persistence/policy functions and Task 2 `SplashEntry` callbacks.
 
-**Interfaces produced:**
+### What you are learning
+
+The homepage replay button and fullscreen splash need to share a little state. A **React context** lets a provider expose that state to descendants without threading props through the header, page, and every component between them. The existing `lib/visitor/visitor-state-provider.tsx` shows this pattern in this repository.
+
+The intro provider goes in the root layout because Next.js preserves that layout during client navigation. If you put the provider only inside the homepage, leaving and returning Home would mount it again and could repeat the entry decision. A **document entry** is a full browser load/refresh; a **client navigation** changes routes inside the already-running application. We only automatically check eligibility on document entry.
+
+**Interface reference only — each function needs its own body:**
 
 ```ts
 export function IntroProvider({ children }: { children: React.ReactNode }): React.ReactElement;
 export function useIntro(): { ready: boolean; replayIntro: () => void };
 export function ReplayIntroButton(): React.ReactElement;
 ```
+
+### How the pieces connect
+
+Read this sequence before implementing the checklist:
+
+1. Server render and first client render: provider displays `children`, marks `ready` false, and shows no splash. Matching initial HTML avoids hydration errors.
+2. Effect after hydration: provider checks the initial pathname and saved flag once, then sets `ready` true and opens the splash only if eligible.
+3. Visitor accepts Enter/Skip: splash calls `onCommitSeen`; provider saves the flag. Dismissal proceeds even if saving fails.
+4. Splash finishes opening or is skipped: `onDismiss` hides it and restores the appropriate focus.
+5. Homepage Replay: context callback mounts a new splash run. It does not repeat the automatic entry check or clear the flag.
+6. Route leaves Home: remove the splash and cancel focus restoration to the old page.
+
+**Before Step 1: build the context contract.** Start with `createContext` and a nullable default, then implement `useIntro` using `useContext`. If the context is null, throw a clear error that the hook must be used inside `IntroProvider`. This reveals an incorrectly placed replay button instead of failing silently. Keep the provider's `children` visible even when `ready` is false.
+
+**Before Step 2: separate the two route questions.** The captured initial pathname answers “Did this document enter through Home?” The current `usePathname()` answers “Are we still on Home?” Only the first drives automatic eligibility. A ref can remember whether you already initialized; React state controls visible UI. Do not include a changing pathname in an effect that blindly reopens the intro on every Home visit. If an effect sets state while initializing from storage, use the existing visitor provider as the local pattern and explain any narrow lint exception; do not disable the rule across the file.
+
+**Before Step 3: distinguish saving from dismissal.** Enter records seen before the opening transition, while `onDismiss` runs after it. Skip does both immediately. Keeping the callbacks separate is why a visitor can safely leave during the transition without losing the accepted entry. Use an immediate guard for repeated Replay clicks and reset per-run completion guards when a new splash mounts.
+
+**Before Step 4: understand programmatic focus.** A `<main>` is not normally focusable. `tabIndex={-1}` permits JavaScript `.focus()` without putting main into the normal Tab sequence. `{ preventScroll: true }` avoids a jump when focus moves. Store the replay trigger using `document.activeElement` when replay begins, check that it is an `HTMLElement`, and confirm it is still connected before restoring focus. Native dialog close can restore focus too; verify the final result after it has closed.
+
+**Before Step 5: make a small consumer component.** The following is a complete implementation for `replay-intro-button.tsx` once the provider exists:
+
+```tsx
+"use client";
+
+import { useIntro } from "./intro-provider";
+
+export function ReplayIntroButton() {
+  const { ready, replayIntro } = useIntro();
+  return (
+    <button type="button" disabled={!ready} onClick={replayIntro}>
+      Replay intro
+    </button>
+  );
+}
+```
+
+Notice the callback is passed to `onClick` without parentheses. Keep the existing global focus outline; add page-owned visual styling if needed. Render it only on the homepage.
+
+**Before Steps 6–7: use browser tools to check persistence.** In the browser's console, `localStorage.removeItem("breakspider_intro_seen_v1")` clears only this flag. Reload to simulate a fresh document. Use the site's links to simulate client navigation. In the Application/Storage panel, inspect the saved value after Enter or Skip. Do not clear all browser storage for every case: that would also reset visitor state and conceal accidental coupling.
+
+**Task 3 checkpoint:** Enter through `/about`, use a site link to go Home, and confirm no automatic intro appears. Then click Replay and verify it still works. This proves the provider distinguishes document entry from route navigation.
 
 - [ ] **Step 1: Add the persistent provider.** Place `IntroProvider` inside `VisitorStateProvider` around the existing skip link, header, main, footer, and tracker. Pass server-rendered children through it; keep layout and homepage as Server Components. Provider renders children unconditionally and mounts the dialog as a sibling only when showing an intro. Do not move page content into client-side fetching/rendering.
 - [ ] **Step 2: Decide eligibility once.** On initial client setup, capture the entry pathname and call `readIntroSeen` / `shouldShowInitialIntro`. Guard initialization so Strict Mode effect replay cannot reset the document decision. Expose `ready` after the check, including on interior routes and unavailable storage. Observe current pathname with `usePathname` for cancellation, without reevaluating automatic eligibility on every route transition. Wait if pathname is unavailable; treat a resolved non-home entry as ineligible.
@@ -171,6 +429,14 @@ export function ReplayIntroButton(): React.ReactElement;
 
 **Files:** Refine splash CSS/component as necessary. Update the Phase 1 splash verification record in this plan; do not mark all of Phase 1 complete.
 
+### What you are learning
+
+A unit test can prove a storage decision while missing a clipped Skip button or a focus jump. This task uses the real browser to check the things the test environment cannot show. Use DevTools responsive mode to set width/height, its Rendering panel to emulate reduced motion, and Network/Console panels to inspect asset failures and runtime errors.
+
+For each numbered check below, write down what you tried and what you saw. If something fails, fix that behavior and repeat the affected check; you do not need to invent an automated test for every visual issue. A successful production build checks a different path from the development server, so finish by running `npm run build` and `npm run start` and repeating the core flows there.
+
+`100dvh` follows the current visible viewport as mobile browser chrome changes; safe-area insets reserve space around cutouts and home indicators. Those tools help layout, but the real checkpoint is that Enter and Skip remain reachable in short and narrow viewports.
+
 - [ ] **Step 1: Compare visuals at 1440×900 and 1920×1080.** Check animation final pose, warm off-white artwork on black, Enter placement, seam alignment, and opening panels against the approved captures. Resize before/during opening: panel artwork must not jump away from its seam.
 - [ ] **Step 2: Review 768×900, 390×844, 320px width, and a short landscape viewport.** Logo may become smaller so Enter and Skip remain visible. Use dynamic viewport sizing and safe-area padding where useful. Avoid page-wide horizontal overflow and controls clipped by mobile browser chrome. The prototype's logo sizing is a reference, not permission to let it collide with controls at short heights.
 - [ ] **Step 3: Review keyboard and reduced motion.** Tab stays inside the splash; Skip is usable immediately; Escape dismisses in every state; Enter can be keyboard-activated; background navigation cannot be focused while modal. Verify final focus for automatic entry versus replay. Toggle reduced motion while playing and opening, and verify static dismissal plus timer cleanup.
@@ -181,7 +447,19 @@ export function ReplayIntroButton(): React.ReactElement;
 
 ## Implementation Verification Record
 
-Not implemented yet. The checkboxes above are the owner's work checklist; this document does not assert any future code or checks pass.
+Implemented and verified on 2026-10-04:
+
+- `npm test`: 18 tests pass, including the owner's four intro tests and one focused regression test for the production key and unavailable writes.
+- `npm run typecheck`, `npm run lint`, and `npm run build`: pass.
+- Headless Microsoft Edge verification against the production build: normal four-second playback, split opening, first-entry persistence, automatic dismissal focus, returning visits, replay/Escape, and replay focus restoration pass.
+- Direct `/about` entry followed by client navigation Home bypasses the intro. Leaving Home during replay removes the splash, restores scrolling, and does not accidentally mark it seen.
+- Reduced motion displays the static logo and downloads no animation document. Enter/Skip fit at 1920×1080, 768×900, 390×844, 320×568, and 844×390, with no horizontal page overflow. Keyboard movement between the dialog controls passes.
+- Blocked reads fail open; blocked writes do not prevent replay or Skip. Missing animation completion enables Enter through the fallback. A broken final-logo image also does not block entry.
+- Query/hash entry, motion changes during playback/opening, repeated replay/Skip, Escape during opening, and resizing during playback/opening pass. The seam remains centered after resize; stale timers do not reopen a dismissed splash.
+- Returning visitors do not download the animation. Navigation without JavaScript works. No browser runtime errors were observed in these checks.
+- Desktop, opening-transition, and mobile screenshots were inspected. Physical mobile devices and other browser engines have not been verified.
+
+The motion document was copied from the approved prototype with its completion message restricted to the same origin. The temporary preview component was unnecessary: the finished provider supplied the browser preview. Browser verification tooling and screenshots live in the system temporary directory; no browser-testing dependency was added to the app. No commits or deployment were performed. The checklist remains available as a learning reference rather than being marked as work performed by the owner.
 
 ## Practical Starting Point
 
