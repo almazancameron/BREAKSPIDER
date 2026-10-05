@@ -3,15 +3,15 @@ import { SketchbookPostPreview } from "../../components/sketchbook/sketchbook-po
 import { getSketchbookPosts } from "../../lib/content/repository";
 
 export default async function SketchbookPage() {
-  const posts = await getSketchbookPosts();
+    const posts = await getSketchbookPosts();
 
-  return (
-    <RoutePlaceholder
-      eyebrow="NOTES / UPDATES / ODD LITTLE LOGS"
-      title="Sketchbook"
-      summary="Short notes and longer development entries."
-    >
-      {posts.map((post) => <SketchbookPostPreview key={post.id} post={post} />)}
-    </RoutePlaceholder>
-  );
+    return (
+        <RoutePlaceholder
+            eyebrow="NOTES / UPDATES / ODD LITTLE LOGS"
+            title="Sketchbook"
+            summary="Short notes and longer development entries."
+        >
+            {posts.map((post) => <SketchbookPostPreview key={post.id} post={post} />)}
+        </RoutePlaceholder>
+    );
 }

@@ -7,22 +7,22 @@
 .sidebar{position:relative;padding-top:4px}.sideHeading{color:#ec81b9;font:800 10px Consolas,monospace;margin-bottom:19px}.sidebar>a{display:flex;align-items:center;gap:11px;border-top:1px solid #5c6078;padding:14px 2px;font:800 13px Arial,sans-serif}.sidebar>a:last-of-type{border-bottom:1px solid #5c6078}.sidebar>a img{width:52px;height:52px;object-fit:contain;image-rendering:pixelated}.sidebar>a span{flex:1}.sidebar>a small{display:block;color:#9aa2bd;font:700 9px Consolas,monospace;margin-top:5px}.sidebar>a:hover{color:#cbf361}.sideNote{margin-top:45px;border-left:3px solid #ec81b9;padding:4px 0 4px 14px}.sideNote span{color:#cbf361;font:700 9px Consolas,monospace}.sideNote p{font:12px/1.5 Arial,sans-serif;color:#c9cbd8}.sideNoise{position:absolute;right:-20px;top:650px;width:80px;image-rendering:pixelated}
 @media(max-width:700px){.page{min-height:0;padding:0 16px 64px}.crumb{padding-top:23px;font-size:8px}.crumb b{display:none}.intro{padding:43px 0 26px}.intro h1{font-size:62px;margin:14px 0}.intro p{font-size:13px}.introBits{width:60px;height:50px;align-self:flex-start}.introBits img:first-child{width:62px;height:62px;right:-14px;top:24px}.introBits img:last-child,.introBits span{display:none}.filters{gap:5px}.filters>span{width:100%;margin-bottom:3px}.filters button{font-size:9px;padding:7px 8px}.layout{display:block;padding-top:28px}.feed::before{left:49px}.post{grid-template-columns:49px minmax(0,1fr);gap:10px;padding-bottom:31px}.post::before{left:44px;width:9px;height:9px}.date{font-size:8px}.date small{font-size:7px}.postContent{padding-bottom:23px}.post h2{font-size:27px}.post p{font-size:12px}.long .postContent{padding:15px 10px 16px;box-shadow:4px 5px 0 #68456c}.longImage img{height:145px}.longImage span{font-size:7px;padding:5px}.postFooter{font-size:7px}.spritePost{align-items:start;gap:0}.spritePost img{width:75px;height:75px;margin-right:-8px}.spritePost a{font-size:10px}.screenPair img{height:105px}.plainText{font-size:17px!important}.sidebar{padding:10px 0 0 59px}.sideHeading{font-size:9px}.sidebar>a{font-size:11px}.sideNote{margin-top:20px}.sideNoise{display:none}}
 @media(max-width:700px){
-  .intro h1{font-size:clamp(43px,13.5vw,54px)}
-  .filters button{min-height:34px;font-size:10px}
-  .feed::before{left:7px}
-  .post{display:block;padding:0 0 34px 22px}
-  .post::before{left:1px}
-  .date{display:flex;align-items:center;gap:7px;margin:0 0 9px;font-size:9px}
-  .date b,.date span,.date small{display:inline;margin:0}
-  .post h2{font-size:29px}
-  .post p{font-size:13px}
-  .sidebar{padding-left:22px}
+    .intro h1{font-size:clamp(43px,13.5vw,54px)}
+    .filters button{min-height:34px;font-size:10px}
+    .feed::before{left:7px}
+    .post{display:block;padding:0 0 34px 22px}
+    .post::before{left:1px}
+    .date{display:flex;align-items:center;gap:7px;margin:0 0 9px;font-size:9px}
+    .date b,.date span,.date small{display:inline;margin:0}
+    .post h2{font-size:29px}
+    .post p{font-size:13px}
+    .sidebar{padding-left:22px}
 }
 
 /* 05 study: keep the big handwritten feeling, but show a post sooner. */
 @media(min-width:701px){
-  .intro{padding:48px 0 27px}
-  .intro h1{font-size:clamp(89px,8.4vw,122px)}
-  .introBits{height:142px}
-  .layout{padding-top:30px}
+    .intro{padding:48px 0 27px}
+    .intro h1{font-size:clamp(89px,8.4vw,122px)}
+    .introBits{height:142px}
+    .layout{padding-top:30px}
 }

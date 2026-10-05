@@ -368,6 +368,14 @@ Create the production codebase structure without prematurely building backend in
 
 ## 7. Phase 1 — Splash, Global Shell, and Shared UI
 
+**Status: In progress (2026-10-04).** Splash, header, and logo micro-animation are complete and accepted by the owner. The remaining work is deliberate UI sound selection/mapping and audio playback verification. Muted-by-default preference, browser persistence, and the sound toggle already exist.
+
+Implementation records and tutorial plans:
+
+- [Splash implementation](superpowers/plans/2026-10-03-phase-1-splash.md)
+- [Header and logo implementation — complete](superpowers/plans/2026-10-04-phase-1-header-and-logo.md)
+- [Audio implementation plan — remaining](superpowers/plans/2026-10-04-phase-1-audio.md)
+
 ### Splash behavior
 
 Use the finished Breakspider logo animation.
@@ -383,6 +391,8 @@ Behavior:
 - splash always has a skip path
 
 ### Header
+
+**Complete and accepted (2026-10-04).** Desktop/mobile navigation, visitor controls, compact header sizing, and independent logo-half animation are implemented. The final logo reacts to hover, keyboard focus, and press, respects reduced motion, and retains immediate Home navigation. Existing visitor profile focus behavior and sound preference were preserved.
 
 Global header includes:
 
@@ -406,12 +416,13 @@ The static Breakspider logo should have a smaller hover/click animation related 
 
 ### Acceptance criteria
 
-- intro persistence works
-- replay works
-- logo micro-animation works
-- sound defaults muted and remembers preference
-- header behaves correctly on desktop and mobile
-- keyboard/focus behavior is reasonable at low implementation cost
+- [x] intro persistence works
+- [x] replay works
+- [x] logo micro-animation works
+- [x] sound defaults muted and remembers preference
+- [x] header behaves correctly on desktop and mobile
+- [x] keyboard/focus behavior is reasonable at low implementation cost
+- [ ] chosen UI sounds are mapped deliberately, fail safely, and stop when muted; playback is verified in browsers
 
 ## 8. Phase 2 — Homepage Production Implementation
 

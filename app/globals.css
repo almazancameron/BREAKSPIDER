@@ -2,65 +2,65 @@
 @import "../styles/tokens.css";
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  min-width: 320px;
-  scroll-behavior: smooth;
-  background: var(--color-background);
+    min-width: 320px;
+    scroll-behavior: smooth;
+    background: var(--color-background);
 }
 
 body {
-  min-height: 100vh;
-  margin: 0;
-  color: var(--color-text);
-  background: var(--color-background);
-  font-family: var(--font-body);
-  -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--color-text);
+    background: var(--color-background);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
 }
 
 button,
 input,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
 
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid var(--color-focus);
-  outline-offset: 3px;
+    outline: 2px solid var(--color-focus);
+    outline-offset: 3px;
 }
 
 ::selection {
-  color: var(--color-background);
-  background: var(--color-accent);
+    color: var(--color-background);
+    background: var(--color-accent);
 }
 
 .skip-link {
-  position: absolute;
-  z-index: var(--z-overlay);
-  top: 0.5rem;
-  left: 0.5rem;
-  padding: 0.75rem 1rem;
-  transform: translateY(-150%);
-  color: var(--color-background);
-  background: var(--color-accent);
-  font-weight: 700;
+    position: absolute;
+    z-index: var(--z-overlay);
+    top: 0.5rem;
+    left: 0.5rem;
+    padding: 0.75rem 1rem;
+    transform: translateY(-150%);
+    color: var(--color-background);
+    background: var(--color-accent);
+    font-weight: 700;
 }
 
 .skip-link:focus {
-  transform: translateY(0);
+    transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }

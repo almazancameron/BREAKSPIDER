@@ -1,5 +1,7 @@
 # Phase 1 Header and Logo Animation Implementation Plan
 
+**Status: Complete and accepted by the owner (2026-10-04).** Includes the later shorter-header adjustment and independent logo-half animation. The next and final Phase 1 implementation is [audio](2026-10-04-phase-1-audio.md).
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans if the owner later requests implementation. Steps use checkbox syntax for tracking. The current execution method is **manual implementation by the owner**; this document does not request agent implementation or delegation.
 
 **Goal:** Finish the shared header using the approved prototype's desktop/mobile arrangement, add accurate current-section navigation, and give the logo a short hover/focus/click reaction.
@@ -123,34 +125,34 @@ import { PRIMARY_NAVIGATION } from "../../lib/site/navigation"
 import styles from "./site-navigation.module.css"
 
 const linkStyles: Record<string, string> = {
-  "/": styles.home,
-  "/projects": styles.projects,
-  "/about": styles.about,
+    "/": styles.home,
+    "/projects": styles.projects,
+    "/about": styles.about,
 }
 
 export const SiteNavigation = () => {
-  const pathname = usePathname()
+    const pathname = usePathname()
 
-  return (
-    <nav className={styles.navigation} aria-label="Primary navigation">
-      {PRIMARY_NAVIGATION.map((link) => {
-        const current = link.href === "/"
-          ? pathname === "/"
-          : pathname === link.href || pathname.startsWith(`${link.href}/`)
+    return (
+        <nav className={styles.navigation} aria-label="Primary navigation">
+            {PRIMARY_NAVIGATION.map((link) => {
+                const current = link.href === "/"
+                    ? pathname === "/"
+                    : pathname === link.href || pathname.startsWith(`${link.href}/`)
 
-        return (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={`${styles.link} ${linkStyles[link.href]}`}
-            aria-current={current ? (pathname === link.href ? "page" : "location") : undefined}
-          >
-            {link.label}
-          </Link>
-        )
-      })}
-    </nav>
-  )
+                return (
+                    <Link
+                        key={link.href}
+                        href={link.href}
+                        className={`${styles.link} ${linkStyles[link.href]}`}
+                        aria-current={current ? (pathname === link.href ? "page" : "location") : undefined}
+                    >
+                        {link.label}
+                    </Link>
+                )
+            })}
+        </nav>
+    )
 }
 ```
 
@@ -278,17 +280,17 @@ import Link from "next/link"
 import styles from "./header-logo.module.css"
 
 export const HeaderLogo = () => {
-  return (
-    <Link className={styles.logo} href="/" aria-label="Breakspider home">
-      <Image
-        src="/media/branding/breakspider-logo.svg"
-        alt=""
-        width={1600}
-        height={820}
-        className={styles.artwork}
-      />
-    </Link>
-  )
+    return (
+        <Link className={styles.logo} href="/" aria-label="Breakspider home">
+            <Image
+                src="/media/branding/breakspider-logo.svg"
+                alt=""
+                width={1600}
+                height={820}
+                className={styles.artwork}
+            />
+        </Link>
+    )
 }
 ```
 
@@ -308,10 +310,10 @@ In `header-logo.module.css`, use `.logo { display: flex; align-items: center; wi
 
 ```css
 @keyframes logoSettle {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  25% { transform: translateY(-2px) rotate(-1.5deg); }
-  55% { transform: translateY(1px) rotate(1deg); }
-  80% { transform: translateY(-0.5px) rotate(-0.4deg); }
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-2px) rotate(-1.5deg); }
+    55% { transform: translateY(1px) rotate(1deg); }
+    80% { transform: translateY(-0.5px) rotate(-0.4deg); }
 }
 ```
 

@@ -22,16 +22,16 @@
 
 /* 05 study: visitors reach the first real project sooner. */
 @media(min-width:701px){
-  .intro{top:87px}
-  .intro h1{font-size:clamp(68px,6.6vw,96px)}
-  .spine{top:392px;height:1000px}
-  .viscap{top:376px}
-  .game{top:944px}
-  .after{top:1574px}
-  .main{min-height:1700px}
+    .intro{top:87px}
+    .intro h1{font-size:clamp(68px,6.6vw,96px)}
+    .spine{top:392px;height:1000px}
+    .viscap{top:376px}
+    .game{top:944px}
+    .after{top:1574px}
+    .main{min-height:1700px}
 }
 @media(max-width:700px){
-  .intro{margin-top:23px}
-  .index{margin-top:20px}
-  .viscap{margin-top:28px}
+    .intro{margin-top:23px}
+    .index{margin-top:20px}
+    .viscap{margin-top:28px}
 }

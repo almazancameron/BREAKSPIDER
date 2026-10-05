@@ -5,16 +5,16 @@ import { HeaderLogo } from "./header-logo"
 import styles from "./site-header.module.css"
 
 export const SiteHeader = () => {
-  return (
-    <header className={styles.header}>
-      <div className={styles.controls}>
-        <VisitorProfile />
-        <SoundToggle />
-      </div>
-      <SiteNavigation />
-      <div className={styles.identity}>
-        <HeaderLogo />
-      </div>
-    </header>
-  )
+    return (
+        <header className={styles.header}>
+            <div className={styles.controls}>
+                <VisitorProfile />
+                <SoundToggle />
+            </div>
+            <SiteNavigation />
+            <div className={styles.identity}>
+                <HeaderLogo />
+            </div>
+        </header>
+    )
 }

@@ -5,19 +5,19 @@ import { getFamiliar, getFamiliars } from "../../../lib/content/repository";
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const familiars = await getFamiliars();
-  return familiars.map(({ slug }) => ({ slug }));
+    const familiars = await getFamiliars();
+    return familiars.map(({ slug }) => ({ slug }));
 }
 
 export default async function FamiliarDetailPage({
-  params,
+    params,
 }: {
-  params: Promise<{ slug: string }>;
+    params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params;
-  const familiar = await getFamiliar(slug);
+    const { slug } = await params;
+    const familiar = await getFamiliar(slug);
 
-  if (!familiar) notFound();
+    if (!familiar) notFound();
 
-  return <FamiliarProfile familiar={familiar} />;
+    return <FamiliarProfile familiar={familiar} />;
 }

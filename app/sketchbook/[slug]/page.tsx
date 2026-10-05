@@ -5,19 +5,19 @@ import { getSketchbookPost, getSketchbookPosts } from "../../../lib/content/repo
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const posts = await getSketchbookPosts();
-  return posts.filter((post) => post.isLongform).map(({ slug }) => ({ slug }));
+    const posts = await getSketchbookPosts();
+    return posts.filter((post) => post.isLongform).map(({ slug }) => ({ slug }));
 }
 
 export default async function SketchbookEntryPage({
-  params,
+    params,
 }: {
-  params: Promise<{ slug: string }>;
+    params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params;
-  const post = await getSketchbookPost(slug);
+    const { slug } = await params;
+    const post = await getSketchbookPost(slug);
 
-  if (!post || !post.isLongform) notFound();
+    if (!post || !post.isLongform) notFound();
 
-  return <SketchbookEntry post={post} />;
+    return <SketchbookEntry post={post} />;
 }

@@ -1,24 +1,24 @@
 .body {
-  max-width: 48rem;
-  margin-top: 2rem;
-  color: var(--color-text-muted);
-  line-height: 1.7;
+    max-width: 48rem;
+    margin-top: 2rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
 }
 
 .body h2,
 .body h3 {
-  color: var(--color-text);
+    color: var(--color-text);
 }
 
 .body figure {
-  margin: 2rem 0;
+    margin: 2rem 0;
 }
 
 .body figure img {
-  width: 100%;
+    width: 100%;
 }
 
 .body figcaption {
-  margin-top: 0.5rem;
-  font: 0.72rem var(--font-mono);
+    margin-top: 0.5rem;
+    font: 0.72rem var(--font-mono);
 }

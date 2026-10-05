@@ -1,23 +1,23 @@
 .directory {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .group h2 {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 .group ul {
-  display: grid;
-  gap: 0.6rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    display: grid;
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .group a {
-  color: var(--color-accent);
-  text-underline-offset: 0.25em;
+    color: var(--color-accent);
+    text-underline-offset: 0.25em;
 }

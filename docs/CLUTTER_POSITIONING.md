@@ -26,15 +26,15 @@ Clutter should be stored as normal repo-authored data rather than embedded layou
 
 ```ts
 {
-  id: "hero-decoration",
-  asset: "/artifacts/example.png",
-  anchor: "hero",
-  anchorPoint: "bottom-right",
-  x: 24,
-  y: -16,
-  rotation: -8,
-  scale: 0.9,
-  zIndex: 3,
+    id: "hero-decoration",
+        asset: "/artifacts/example.png",
+            anchor: "hero",
+                anchorPoint: "bottom-right",
+                    x: 24,
+                        y: -16,
+                            rotation: -8,
+                                scale: 0.9,
+                                    zIndex: 3,
 }
 ```
 

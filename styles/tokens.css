@@ -1,29 +1,29 @@
 :root {
-  color-scheme: dark;
-  --color-background: #0b0e18;
-  --color-surface: #171b29;
-  --color-surface-raised: #22283a;
-  --color-border: #47506a;
-  --color-border-strong: #8995b4;
-  --color-text: #f4f0e5;
-  --color-text-muted: #b7bfd1;
-  --color-accent: #c9f266;
-  --color-accent-secondary: #78dff2;
-  --color-focus: #ff97bd;
-  --color-shadow: #05070d;
-  --font-body: Arial, Helvetica, sans-serif;
-  --font-mono: "Cascadia Code", Consolas, monospace;
-  --motion-fast: 120ms ease-out;
-  --motion-normal: 220ms ease-out;
-  --z-sticky: 10;
-  --z-overlay: 100;
+    color-scheme: dark;
+    --color-background: #0b0e18;
+    --color-surface: #171b29;
+    --color-surface-raised: #22283a;
+    --color-border: #47506a;
+    --color-border-strong: #8995b4;
+    --color-text: #f4f0e5;
+    --color-text-muted: #b7bfd1;
+    --color-accent: #c9f266;
+    --color-accent-secondary: #78dff2;
+    --color-focus: #ff97bd;
+    --color-shadow: #05070d;
+    --font-body: Arial, Helvetica, sans-serif;
+    --font-mono: "Cascadia Code", Consolas, monospace;
+    --motion-fast: 120ms ease-out;
+    --motion-normal: 220ms ease-out;
+    --z-sticky: 10;
+    --z-overlay: 100;
 }
 
 /* Keep compact layouts aligned with the shared 47.5rem media-query convention. */
 @theme inline {
-  --color-background: var(--color-background);
-  --color-foreground: var(--color-text);
-  --font-sans: var(--font-body);
-  --font-mono: var(--font-mono);
-  --breakpoint-mobile: 47.5rem;
+    --color-background: var(--color-background);
+    --color-foreground: var(--color-text);
+    --font-sans: var(--font-body);
+    --font-mono: var(--font-mono);
+    --breakpoint-mobile: 47.5rem;
 }

@@ -7,24 +7,24 @@ import { IntroProvider } from "../components/intro/intro-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Breakspider — a personal web space",
-  description: "A personal internet space for software, games, and things worth inspecting.",
+    title: "Breakspider — a personal web space",
+    description: "A personal internet space for software, games, and things worth inspecting.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <html lang="en">
-      <body>
-        <VisitorStateProvider>
-          <IntroProvider>
-            <a className="skip-link" href="#main-content">Skip to content</a>
-            <SiteHeader />
-            <main id="main-content" tabIndex={-1}>{children}</main>
-            <SiteFooter />
-            <RouteVisitTracker />
-          </IntroProvider>
-        </VisitorStateProvider>
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body>
+                <VisitorStateProvider>
+                    <IntroProvider>
+                        <a className="skip-link" href="#main-content">Skip to content</a>
+                        <SiteHeader />
+                        <main id="main-content" tabIndex={-1}>{children}</main>
+                        <SiteFooter />
+                        <RouteVisitTracker />
+                    </IntroProvider>
+                </VisitorStateProvider>
+            </body>
+        </html>
+    );
 }

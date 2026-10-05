@@ -122,10 +122,10 @@ Read the unfamiliar syntax this way:
 
 ```ts
 export function shouldShowInitialIntro(
-  initialPathname: string,
-  status: IntroSeenStatus,
+    initialPathname: string,
+    status: IntroSeenStatus,
 ): boolean {
-  return initialPathname === "/" && status === "unseen";
+    return initialPathname === "/" && status === "unseen";
 }
 ```
 
@@ -143,14 +143,14 @@ import { expect, test } from "vitest";
 import { shouldShowInitialIntro } from "../lib/intro/intro-state.ts";
 
 test("automatic intro is limited to an unseen homepage entry", () => {
-  expect(shouldShowInitialIntro("/", "unseen")).toBe(true);
-  expect(shouldShowInitialIntro("/", "seen")).toBe(false);
-  expect(shouldShowInitialIntro("/", "unavailable")).toBe(false);
-  for (const path of ["/about", "/projects/one-night-familiar-fight", "/play/onff"]) {
-    for (const status of ["seen", "unseen", "unavailable"]) {
-      expect(shouldShowInitialIntro(path, status)).toBe(false);
+    expect(shouldShowInitialIntro("/", "unseen")).toBe(true);
+    expect(shouldShowInitialIntro("/", "seen")).toBe(false);
+    expect(shouldShowInitialIntro("/", "unavailable")).toBe(false);
+    for (const path of ["/about", "/projects/one-night-familiar-fight", "/play/onff"]) {
+        for (const status of ["seen", "unseen", "unavailable"]) {
+            expect(shouldShowInitialIntro(path, status)).toBe(false);
+        }
     }
-  }
 });
 ```
 
@@ -168,11 +168,11 @@ We want two ways to call the storage functions. Website code can omit the argume
 
 ```ts
 function getBrowserStorage(): IntroStorage | null {
-  try {
-    return typeof window === "undefined" ? null : window.localStorage;
-  } catch {
-    return null;
-  }
+    try {
+        return typeof window === "undefined" ? null : window.localStorage;
+    } catch {
+        return null;
+    }
 }
 ```
 
@@ -188,17 +188,17 @@ It is private because other files do not need to import it. `typeof window` safe
 
 ```ts
 export function readIntroSeen(
-  storage: IntroStorage | null = getBrowserStorage(),
+    storage: IntroStorage | null = getBrowserStorage(),
 ): IntroSeenStatus {
-  if (!storage) return "unavailable";
+    if (!storage) return "unavailable";
 
-  try {
-    return storage.getItem(INTRO_SEEN_STORAGE_KEY) === "true"
-      ? "seen"
-      : "unseen";
-  } catch {
-    return "unavailable";
-  }
+    try {
+        return storage.getItem(INTRO_SEEN_STORAGE_KEY) === "true"
+            ? "seen"
+            : "unseen";
+    } catch {
+        return "unavailable";
+    }
 }
 ```
 
@@ -210,16 +210,16 @@ The default argument runs when the caller omits storage or passes `undefined`. E
 
 ```ts
 export function markIntroSeen(
-  storage: IntroStorage | null = getBrowserStorage(),
+    storage: IntroStorage | null = getBrowserStorage(),
 ): boolean {
-  if (!storage) return false;
+    if (!storage) return false;
 
-  try {
-    storage.setItem(INTRO_SEEN_STORAGE_KEY, "true");
-    return true;
-  } catch {
-    return false;
-  }
+    try {
+        storage.setItem(INTRO_SEEN_STORAGE_KEY, "true");
+        return true;
+    } catch {
+        return false;
+    }
 }
 ```
 
@@ -232,16 +232,16 @@ The return value says whether saving worked. It must not decide whether someone 
 
 ```js
 test("intro completion round-trips using only the intro key", () => {
-  const values = new Map();
-  const storage = {
-    getItem: (key) => values.get(key) ?? null,
-    setItem: (key, value) => values.set(key, value),
-  };
+    const values = new Map();
+    const storage = {
+        getItem: (key) => values.get(key) ?? null,
+        setItem: (key, value) => values.set(key, value),
+    };
 
-  expect(readIntroSeen(storage)).toBe("unseen");
-  expect(markIntroSeen(storage)).toBe(true);
-  expect([...values.entries()]).toEqual([[INTRO_SEEN_STORAGE_KEY, "true"]]);
-  expect(readIntroSeen(storage)).toBe("seen");
+    expect(readIntroSeen(storage)).toBe("unseen");
+    expect(markIntroSeen(storage)).toBe(true);
+    expect([...values.entries()]).toEqual([[INTRO_SEEN_STORAGE_KEY, "true"]]);
+    expect(readIntroSeen(storage)).toBe("seen");
 });
 ```
 
@@ -272,8 +272,8 @@ Put `"use client"` at the top of `splash-entry.tsx` because it uses React hooks 
 
 ```ts
 type SplashEntryProps = {
-  onCommitSeen: () => void;
-  onDismiss: () => void;
+    onCommitSeen: () => void;
+    onDismiss: () => void;
 };
 export function SplashEntry(props: SplashEntryProps): React.ReactElement;
 ```
@@ -294,12 +294,12 @@ Follow the numbered steps below in order. Do not implement the message handling,
 const dialogRef = useRef<HTMLDialogElement>(null);
 
 useEffect(() => {
-  const dialog = dialogRef.current;
-  if (!dialog) return;
-  if (!dialog.open) dialog.showModal();
-  return () => {
-    if (dialog.open) dialog.close();
-  };
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    if (!dialog.open) dialog.showModal();
+    return () => {
+        if (dialog.open) dialog.close();
+    };
 }, []);
 ```
 
@@ -324,18 +324,18 @@ import { useState } from "react";
 import { SplashEntry } from "./splash-entry";
 
 export function SplashPreview() {
-  const [show, setShow] = useState(false);
-  return (
-    <>
-      <button type="button" onClick={() => setShow(true)}>Preview intro</button>
-      {show && (
-        <SplashEntry
-          onCommitSeen={() => { /* No storage in this preview. */ }}
-          onDismiss={() => setShow(false)}
-        />
-      )}
-    </>
-  );
+    const [show, setShow] = useState(false);
+    return (
+        <>
+            <button type="button" onClick={() => setShow(true)}>Preview intro</button>
+            {show && (
+                <SplashEntry
+                    onCommitSeen={() => { /* No storage in this preview. */ }}
+                    onDismiss={() => setShow(false)}
+                />
+            )}
+        </>
+    );
 }
 ```
 
@@ -400,12 +400,12 @@ Read this sequence before implementing the checklist:
 import { useIntro } from "./intro-provider";
 
 export function ReplayIntroButton() {
-  const { ready, replayIntro } = useIntro();
-  return (
-    <button type="button" disabled={!ready} onClick={replayIntro}>
-      Replay intro
-    </button>
-  );
+    const { ready, replayIntro } = useIntro();
+    return (
+        <button type="button" disabled={!ready} onClick={replayIntro}>
+            Replay intro
+        </button>
+    );
 }
 ```
 

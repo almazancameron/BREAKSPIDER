@@ -1,38 +1,38 @@
 .toggle {
-  display: inline-flex;
-  align-items: center;
-  min-width: 44px;
-  min-height: 44px;
-  gap: 0.4rem;
-  padding: 0.35rem;
-  border: 0;
-  color: var(--color-text);
-  background: transparent;
-  font: 700 0.68rem var(--font-mono);
-  cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+    gap: 0.4rem;
+    padding: 0.35rem;
+    border: 0;
+    color: var(--color-text);
+    background: transparent;
+    font: 700 0.68rem var(--font-mono);
+    cursor: pointer;
 }
 
 .toggle:disabled {
-  opacity: 0.65;
-  cursor: wait;
+    opacity: 0.65;
+    cursor: wait;
 }
 
 .toggle:focus-visible {
-  outline: 2px solid var(--color-focus);
-  outline-offset: 3px;
+    outline: 2px solid var(--color-focus);
+    outline-offset: 3px;
 }
 
 .toggle span:first-child {
-  color: var(--color-accent);
+    color: var(--color-accent);
 }
 
 @media (max-width: 47.5rem) {
-  .toggle {
-    justify-content: center;
-    font-size: 16px;
-  }
+    .toggle {
+        justify-content: center;
+        font-size: 16px;
+    }
 
-  .toggle span:last-child {
-    display: none;
-  }
+    .toggle span:last-child {
+        display: none;
+    }
 }
