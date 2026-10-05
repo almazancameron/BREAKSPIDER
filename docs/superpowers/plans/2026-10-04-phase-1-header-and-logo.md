@@ -417,3 +417,13 @@ This completes the header and logo portion of Phase 1. It does not complete the 
 ### Follow-up: Shorter Header
 
 At the owner's request, reduced vertical padding and row gaps, lowered the header's minimum heights, and resized the logo from 210/172/128 px to 176/144/112 px at desktop/tablet/mobile. Control targets remain at least 44 px. The production build and the browser checks across all ten widths passed again, including focus, navigation, persistence, and reduced motion.
+
+### Follow-up: Independently Moving Logo Halves
+
+At the owner's request, replaced the whole-logo wobble with opposite 500 ms pull/recoil/settle animations for BREAK and SPIDER. This supersedes Task 3's original single-image motion example.
+
+`HeaderLogo` now places two copies of the existing final SVG in a reserved 1600:820 stage. Each copy is clipped to one side of the original x = 750 split: `750 / 1600 = 46.875%`. The left clip removes the right 53.125%; the right clip removes the left 46.875%. Both images retain the full canvas dimensions, so they stay aligned rather than being squeezed into half-width images. Transforming each clipped group keeps its wordmark, web, and any attached spider together. The SVG URL is shared, so this adds no new asset downloads or splash iframe.
+
+The link and focus outline stay stationary; only the clipped artwork moves. Hover and keyboard focus run the animation once, press gives each half an opposite pose, and navigation remains immediate. Reduced motion removes both halves' animation and transforms. Header dimensions remain unchanged.
+
+Production build and lint passed. Browser checks passed for independent transforms, settling, keyboard focus, reduced motion, desktop press, and mobile tap navigation. Resting screenshots at 1440, 768, 390, and 320 px matched the original lockup within minor raster antialiasing: only a handful of pixels differed, with a maximum RGB channel difference of 3/255. No browser runtime errors were observed.
