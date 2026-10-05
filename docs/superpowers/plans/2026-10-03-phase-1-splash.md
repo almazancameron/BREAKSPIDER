@@ -1,8 +1,10 @@
 # Phase 1 Splash Implementation Plan
 
+**Status: Complete and accepted by the owner.** Includes the Enter fade-in, black loading cover, and cold-cache artwork decoding fix. Header, logo animation, and audio are also complete; Phase 1 was accepted in full on 2026-10-05. The next roadmap phase is the production homepage.
+
 **Execution owner:** You will edit the files and implement this plan yourself. The checkpoints below are suitable for manual implementation; no agent execution or delegation is requested.
 
-**Implementation update (2026-10-04):** At the owner's subsequent request, Codex completed the splash portion in the existing workspace, preserving the owner's arrow-function style. This tutorial remains as the explanation of the implementation. Header styling, logo micro-animation, and audio mapping are still separate work.
+**Implementation update (2026-10-04):** At the owner's subsequent request, Codex completed the splash portion in the existing workspace, preserving the owner's arrow-function style. This tutorial remains as the explanation of the implementation. Header styling, logo micro-animation, and audio mapping were covered in separate plans and are now complete.
 
 **Learning format:** This is a guided implementation tutorial. Read the explanation for a step, make its edit, and check the result before moving on. Interface blocks describe the eventual shape of your code; they are explicitly labeled and are not complete implementations. Worked examples teach the unfamiliar pieces; you can try writing them yourself before consulting the example. Future Breakspider plans should use this same teaching format.
 
@@ -444,6 +446,18 @@ For each numbered check below, write down what you tried and what you saw. If so
 - [ ] **Step 5: Run final automated checks.** `npm test`, `npm run typecheck`, `npm run lint`, and `npm run build` all pass. Run `npm run start` for a production-build browser check; repeat fresh Home, returning Home, direct interior → Home, and replay. Check console/network for missing intro assets and hydration errors.
 - [ ] **Step 6: Record actual results.** Add commands/results and browser/viewport checks below. Leave unchecked cases explicit. Header parity, logo micro-animation, and audio mapping remain separate Phase 1 plans.
 - [ ] **Step 7: Optional final commit.** Stage only your final splash refinements and this verification record; commit as `feat: stabilize splash entry and replay`.
+
+## Completion Checklist
+
+- [x] First homepage entry, persistence, direct interior entry, and replay behave as specified.
+- [x] Skip, Escape, Enter, focus restoration, and reduced motion are implemented and verified.
+- [x] Enter fades in after playback, with the hint `Or click anywhere`.
+- [x] Cold entry stays black until artwork is decoded; no homepage or finished-logo flash precedes playback.
+- [x] Loading and storage failures preserve a usable entry path.
+- [x] Automated checks and production Edge browser verification pass.
+- [x] Owner accepted the splash and confirmed that the cold-cache fix works.
+
+The task checkboxes above remain tutorial checkpoints for a reader following the implementation. This completion checklist and the verification record track the delivered work. Physical devices and other browser engines remain part of the later launch browser pass.
 
 ## Implementation Verification Record
 

@@ -368,13 +368,13 @@ Create the production codebase structure without prematurely building backend in
 
 ## 7. Phase 1 — Splash, Global Shell, and Shared UI
 
-**Status: Awaiting audio acceptance (2026-10-05).** Splash, header, and logo micro-animation are complete and accepted by the owner. UI audio selection/mapping, lazy playback, and mute cancellation are implemented and passed automated/production Edge checks. The remaining step is the owner's listening and browser approval before marking Phase 1 complete.
+**Status: Complete and accepted (2026-10-05).** Splash, header, logo micro-animation, and UI audio are complete and accepted by the owner. UI audio selection/mapping, lazy playback, and mute cancellation passed automated/production Edge checks, and the owner confirmed that the implementation works as expected.
 
 Implementation records and tutorial plans:
 
-- [Splash implementation](superpowers/plans/2026-10-03-phase-1-splash.md)
+- [Splash implementation — complete](superpowers/plans/2026-10-03-phase-1-splash.md)
 - [Header and logo implementation — complete](superpowers/plans/2026-10-04-phase-1-header-and-logo.md)
-- [Audio implementation — awaiting owner testing](superpowers/plans/2026-10-04-phase-1-audio.md)
+- [Audio implementation — complete](superpowers/plans/2026-10-04-phase-1-audio.md)
 
 ### Splash behavior
 
@@ -422,7 +422,7 @@ The static Breakspider logo should have a smaller hover/click animation related 
 - [x] sound defaults muted and remembers preference
 - [x] header behaves correctly on desktop and mobile
 - [x] keyboard/focus behavior is reasonable at low implementation cost
-- [ ] chosen UI sounds are mapped deliberately, fail safely, and stop when muted; playback is verified in browsers
+- [x] chosen UI sounds are mapped deliberately, fail safely, and stop when muted; playback is verified in browsers
 
 ## 8. Phase 2 — Homepage Production Implementation
 

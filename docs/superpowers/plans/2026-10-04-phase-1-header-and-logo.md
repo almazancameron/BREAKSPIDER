@@ -1,6 +1,6 @@
 # Phase 1 Header and Logo Animation Implementation Plan
 
-**Status: Complete and accepted by the owner (2026-10-04).** Includes the later shorter-header adjustment and independent logo-half animation. The next and final Phase 1 implementation is [audio](2026-10-04-phase-1-audio.md).
+**Status: Complete and accepted by the owner (2026-10-04).** Includes the later shorter-header adjustment and independent logo-half animation. [Audio](2026-10-04-phase-1-audio.md) was subsequently completed and accepted on 2026-10-05, completing Phase 1. The next roadmap phase is the production homepage. Task checkboxes below remain tutorial checkpoints; the completion checklist records the delivered work.
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans if the owner later requests implementation. Steps use checkbox syntax for tracking. The current execution method is **manual implementation by the owner**; this document does not request agent implementation or delegation.
 
@@ -386,7 +386,7 @@ Compare the desktop header and mobile two-row composition with the referenced ca
 
 - [ ] **Step 4: Save a checkpoint when satisfied.**
 
-Review your diff and ensure only planned files changed. Commit your work if that is your normal workflow. Do not stage unrelated edits accidentally. The next separate Phase 1 work is deliberate UI sound selection/mapping; full collectible/profile equipment remains Phase 9.
+Review your diff and ensure only planned files changed. Commit your work if that is your normal workflow. Do not stage unrelated edits accidentally. UI sound selection/mapping is covered by the separate, now-complete audio plan; full collectible/profile equipment remains Phase 9.
 
 ## Completion Checklist
 
@@ -399,7 +399,7 @@ Review your diff and ensure only planned files changed. Commit your work if that
 - [x] Existing tests, lint, build, and typecheck pass.
 - [x] No new dependencies, animation iframe in the header, or duplicate visitor/audio state were introduced.
 
-This completes the header and logo portion of Phase 1. It does not complete the remaining UI sound mapping or the later homepage/profile/collection implementation.
+This completes the header and logo portion of Phase 1. With splash and audio also accepted, all of Phase 1 is complete. Homepage, profile equipment, and Collection implementation belong to later phases.
 
 ## Implementation Record — 2026-10-04
 
@@ -414,7 +414,7 @@ This completes the header and logo portion of Phase 1. It does not complete the 
 - Verified no-JavaScript primary navigation on an interior route and no splash iframe downloads during normal header navigation.
 - Re-ran the splash's cache-disabled asset-delay check: it stayed black while SVG decoding was blocked, then played the full animation for approximately 3981 ms. Cached playback, split entry, and failed-artwork recovery also passed.
 - Screenshots were reviewed at desktop and mobile sizes. Other browser engines, physical devices, and actual 200% browser zoom were not exercised in this verification; include them in the later responsive/browser pass.
-- No commit or deployment was performed. UI sound mapping is still the next separate Phase 1 task.
+- No commit or deployment was performed. UI sound mapping was subsequently completed under the separate audio plan and accepted on 2026-10-05.
 
 ### Follow-up: Shorter Header
 

@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans if the owner later requests implementation. The current execution method is manual implementation by the owner; this document requests no agent implementation or delegation.
 
-**Status:** Implemented, awaiting owner listening/browser acceptance (2026-10-05). At the owner's request, Codex completed the remaining sound-manager functions and event wiring using the owner's selected clip. The tutorial below is retained as an explanation of the implementation. Splash, header, and logo animation are complete and accepted.
+**Status:** Complete and accepted (2026-10-05). At the owner's request, Codex completed the remaining sound-manager functions and event wiring using the owner's selected clip. The owner reviewed the implementation and confirmed that it works as expected. The tutorial below is retained as an explanation of the implementation. Splash, header, logo animation, and audio are now complete and accepted, completing Phase 1.
 
 **Goal:** Add a restrained set of deliberate UI sounds, using the existing mute preference and centralized sound manager, with reliable cancellation and browser-safe playback.
 
@@ -352,7 +352,7 @@ Also test an unavailable Web Audio API or blocked playback in browser settings i
 
 Verify fresh homepage intro, Skip, Enter, Replay, profile focus restoration, header navigation, independent logo motion, and the compact layout at 1440, 768, 390, and 320 px. Sound remains silent during intro and does not alter visitor collectibles or equipped cosmetics.
 
-- [ ] **Step 5: Update Phase 1 status after browser/listening approval.**
+- [x] **Step 5: Update Phase 1 status after browser/listening approval.**
 
 Add an implementation record here naming the chosen clip, final volume, mappings, checks, and any browser limits. In the master roadmap, check the remaining audio criterion and mark Phase 1 complete only after the owner accepts the result. Review the diff and save a commit if desired; do not stage unrelated work.
 
@@ -366,9 +366,9 @@ Add an implementation record here naming the chosen clip, final volume, mappings
 - [x] No hover/focus, hydration, intro, or background playback was introduced.
 - [x] Clip loads lazily and is reused within the document.
 - [x] Failure, cold-load cancellation, rapid interaction, keyboard, and touch checks pass.
-- [ ] Sound character and volume have been approved by listening.
+- [x] Sound character and volume have been approved by the owner.
 - [x] Existing tests, lint, build, and typecheck pass.
-- [ ] Owner accepts audio and Phase 1 completion is recorded.
+- [x] Owner accepts audio and Phase 1 completion is recorded.
 
 After this, the next roadmap phase is the production homepage. Collection rewards, unlock jingles, richer profile equipment, and game audio belong to their later phases.
 
@@ -383,4 +383,4 @@ After this, the next roadmap phase is the production homepage. Collection reward
 - Checked navigation/profile/keyboard/touch event counts, Escape/button/backdrop/Collection close paths, blocked storage, rejected resume, missing-file retry, and mute during delayed loading. No uncaught browser runtime errors were observed.
 - Rapid profile open/close checks measured a maximum of one active source and one clip download. Muting stopped the active clip immediately.
 - Cold-cache splash regression checks passed: black loading screen until artwork decoded, approximately 3978 ms of playback, cached entry, split entry, and failed-artwork recovery.
-- Actual sound character/volume approval, physical devices, and Firefox/Safari verification remain for the owner. No commit or deployment was performed. Phase 1 is not yet marked accepted/complete.
+- The owner accepted the audio implementation on 2026-10-05 and confirmed that it works as expected. Phase 1 is marked complete in the roadmap. Physical-device and Firefox/Safari verification were not performed by Codex and remain part of the later launch browser pass. No commit or deployment was performed.

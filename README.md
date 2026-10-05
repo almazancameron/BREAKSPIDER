@@ -2,6 +2,8 @@
 
 Breakspider is a personal internet space and portfolio built with Next.js, React, and TypeScript. The production app is in `app/`; the original Next.js visual prototype is preserved under `prototype/breakspider-nextjs-prototype/` for reference.
 
+**Implementation progress:** Phase 0 and Phase 1 are complete. Splash, shared header, logo animation, and UI audio are implemented and accepted; Phase 1 completion was recorded on 2026-10-05. Next is Phase 2: the production homepage. See the [master implementation roadmap](docs/breakspider_master_implementation_roadmap_v2.md).
+
 ## Local development
 
 Install the locked dependencies and start the development server:
