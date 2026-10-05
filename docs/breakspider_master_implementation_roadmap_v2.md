@@ -368,13 +368,13 @@ Create the production codebase structure without prematurely building backend in
 
 ## 7. Phase 1 — Splash, Global Shell, and Shared UI
 
-**Status: In progress (2026-10-04).** Splash, header, and logo micro-animation are complete and accepted by the owner. The remaining work is deliberate UI sound selection/mapping and audio playback verification. Muted-by-default preference, browser persistence, and the sound toggle already exist.
+**Status: Awaiting audio acceptance (2026-10-05).** Splash, header, and logo micro-animation are complete and accepted by the owner. UI audio selection/mapping, lazy playback, and mute cancellation are implemented and passed automated/production Edge checks. The remaining step is the owner's listening and browser approval before marking Phase 1 complete.
 
 Implementation records and tutorial plans:
 
 - [Splash implementation](superpowers/plans/2026-10-03-phase-1-splash.md)
 - [Header and logo implementation — complete](superpowers/plans/2026-10-04-phase-1-header-and-logo.md)
-- [Audio implementation plan — remaining](superpowers/plans/2026-10-04-phase-1-audio.md)
+- [Audio implementation — awaiting owner testing](superpowers/plans/2026-10-04-phase-1-audio.md)
 
 ### Splash behavior
 

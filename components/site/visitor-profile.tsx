@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Dialog } from "../ui/dialog";
 import { getVisitorDisplayLabel } from "../../lib/visitor/visitor-state.ts";
 import { useVisitorState } from "../../lib/visitor/visitor-state-provider";
+import { useUISound } from "../../lib/audio/use-ui-sound";
 import { VisitorAvatar } from "./visitor-avatar";
 import styles from "./visitor-profile.module.css";
 
@@ -13,6 +14,19 @@ const PROFILE_TITLE_ID = "visitor-profile-title";
 export function VisitorProfile() {
     const [open, setOpen] = useState(false);
     const { state } = useVisitorState();
+    const playUI = useUISound();
+
+    const openProfile = () => {
+        if (open) return;
+        playUI("uiClick");
+        setOpen(true);
+    };
+
+    const closeProfile = () => {
+        if (!open) return;
+        playUI("uiClick");
+        setOpen(false);
+    };
 
     return (
         <>
@@ -22,19 +36,19 @@ export function VisitorProfile() {
                 aria-label="Open visitor profile"
                 aria-haspopup="dialog"
                 aria-expanded={open}
-                onClick={() => setOpen(true)}
+                onClick={openProfile}
             >
                 <VisitorAvatar />
             </button>
             <Dialog
                 open={open}
-                onClose={() => setOpen(false)}
+                onClose={closeProfile}
                 labelledBy={PROFILE_TITLE_ID}
                 className={styles.dialog}
             >
                 <div className={styles.bar}>
                     <span>LOCAL PROFILE</span>
-                    <button type="button" autoFocus aria-label="Close visitor profile" onClick={() => setOpen(false)}>
+                    <button type="button" autoFocus aria-label="Close visitor profile" onClick={closeProfile}>
                         Close
                     </button>
                 </div>
@@ -56,7 +70,7 @@ export function VisitorProfile() {
                         <dd>{state.visitedPages.length}</dd>
                     </div>
                 </dl>
-                <Link className={styles.collection} href="/collection" onClick={() => setOpen(false)}>
+                <Link className={styles.collection} href="/collection" onClick={closeProfile}>
                     Open Collection <span aria-hidden="true">↗</span>
                 </Link>
             </Dialog>

@@ -1,6 +1,6 @@
 "use client";
 
-import { playSound } from "../../lib/audio/sound-manager";
+import { playSound, stopAllSounds } from "../../lib/audio/sound-manager";
 import { useVisitorState } from "../../lib/visitor/visitor-state-provider";
 import styles from "./sound-toggle.module.css";
 
@@ -12,8 +12,9 @@ export function SoundToggle() {
         if (!ready) return;
 
         const nextMuted = !muted;
+        if (nextMuted) stopAllSounds();
         updateVisitorState((current) => ({ ...current, soundMuted: nextMuted }));
-        playSound("interface", nextMuted);
+        if (!nextMuted) void playSound("interface", false);
     }
 
     return (

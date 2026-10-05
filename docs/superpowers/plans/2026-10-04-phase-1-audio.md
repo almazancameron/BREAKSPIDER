@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans if the owner later requests implementation. The current execution method is manual implementation by the owner; this document requests no agent implementation or delegation.
 
-**Status:** Planned. This is the final remaining part of Phase 1. Splash, header, and logo animation are complete and accepted.
+**Status:** Implemented, awaiting owner listening/browser acceptance (2026-10-05). At the owner's request, Codex completed the remaining sound-manager functions and event wiring using the owner's selected clip. The tutorial below is retained as an explanation of the implementation. Splash, header, and logo animation are complete and accepted.
 
 **Goal:** Add a restrained set of deliberate UI sounds, using the existing mute preference and centralized sound manager, with reliable cancellation and browser-safe playback.
 
@@ -57,7 +57,7 @@ The missing pieces are selected event mappings, clip support, tracking active pl
 Use **two named sounds**, not two files:
 
 - `interface`: retain the existing synthesized tone as sound-on confirmation, with its current frequency/duration/volume.
-- `uiClick`: start with `assets/artifacts/audio clips/wii-keyboard-click-3.mp3`, copied to `/audio/ui-click.mp3`, at gain `0.12`. This source exists and is about 2.9 KB. It is a proposed starting choice, not a claim that its loudness has already been approved; listen before finalizing.
+- `uiClick`: the owner selected `assets/artifacts/audio clips/wii-ui-click.mp3`, copied to `/audio/ui-click.mp3`, at gain `0.12`. The deployed file is 9,866 bytes and matches the selected source. Listen before finalizing the gain.
 
 Do not deploy the archive wholesale. Explosions, voice clips, jingles, unlock sounds, and page-specific jokes can wait for interactions that justify them. A single quiet click is sufficient for this phase's navigation and profile feedback.
 
@@ -93,11 +93,11 @@ A **discriminated union** is a TypeScript type with multiple shapes distinguishe
 
 - [ ] **Step 1: Listen to the candidate and copy it into public assets.**
 
-Open `assets/artifacts/audio clips/wii-keyboard-click-3.mp3` in your local media player. Listen at a modest system volume. If it suits ordinary UI feedback, run:
+Open `assets/artifacts/audio clips/wii-ui-click.mp3` in your local media player. Listen at a modest system volume. This is the owner's selected source, already copied for this implementation. For reference, the copy command is:
 
 ```powershell
 New-Item -ItemType Directory -Force public/audio
-Copy-Item -LiteralPath 'assets/artifacts/audio clips/wii-keyboard-click-3.mp3' -Destination 'public/audio/ui-click.mp3'
+Copy-Item -LiteralPath 'assets/artifacts/audio clips/wii-ui-click.mp3' -Destination 'public/audio/ui-click.mp3'
 ```
 
 Use a short, unobtrusive clip without a long tail. You may choose a different source after listening; keep the deployed destination and registry name the same. Avoid introducing a trimming/conversion toolchain just for this small task.
@@ -344,7 +344,7 @@ Listen on at least a Chromium browser and, when available, Firefox/Safari and a 
 
 Use DevTools request blocking to block `/audio/ui-click.mp3`, then activate navigation/profile while enabled. The action must complete and the manager must return failure internally without an unhandled rejection. Unblock, trigger another action, and confirm a retry can succeed.
 
-For the race check, clear the document's in-memory cache by reloading, enable sound, and throttle the network. Open the profile to start the clip request, then immediately mute. Wait for loading to finish: there must be no late click. Unmute and try again: playback should still work. Repeat with quick sequences of open/close/navigation to verify the newest request wins rather than forming a queue.
+For the race check, clear the document's in-memory cache by reloading, enable sound, and throttle the network. Activate a primary navigation link to start the clip request, then immediately mute. This keeps the mute button available; an open modal profile makes background header controls inert. Wait for loading to finish: there must be no late click. Unmute and try again: playback should still work. Repeat with quick sequences of open/close/navigation to verify the newest request wins rather than forming a queue.
 
 Also test an unavailable Web Audio API or blocked playback in browser settings if practical. The UI must remain usable; do not add a warning dialog for optional sound feedback. Inspect the console for unhandled resume/decode failures.
 
@@ -358,16 +358,29 @@ Add an implementation record here naming the chosen clip, final volume, mappings
 
 ## Completion Checklist
 
-- [ ] Existing muted-by-default, persistent preference remains the single source of truth.
-- [ ] Registry has the confirmation tone and one intentionally chosen click clip.
-- [ ] Playback resources and loading/cancellation stay centralized.
-- [ ] Muting stops active and pending playback.
-- [ ] Navigation and profile events each request feedback once and never wait for it.
-- [ ] No hover/focus, hydration, intro, or background playback was introduced.
-- [ ] Clip loads lazily and is reused within the document.
-- [ ] Failure, cold-load cancellation, rapid interaction, keyboard, and touch checks pass.
+- [x] Existing muted-by-default, persistent preference remains the single source of truth.
+- [x] Registry has the confirmation tone and one intentionally chosen click clip.
+- [x] Playback resources and loading/cancellation stay centralized.
+- [x] Muting stops active and pending playback.
+- [x] Navigation and profile events each request feedback once and never wait for it.
+- [x] No hover/focus, hydration, intro, or background playback was introduced.
+- [x] Clip loads lazily and is reused within the document.
+- [x] Failure, cold-load cancellation, rapid interaction, keyboard, and touch checks pass.
 - [ ] Sound character and volume have been approved by listening.
-- [ ] Existing tests, lint, build, and typecheck pass.
+- [x] Existing tests, lint, build, and typecheck pass.
 - [ ] Owner accepts audio and Phase 1 completion is recorded.
 
 After this, the next roadmap phase is the production homepage. Collection rewards, unlock jingles, richer profile equipment, and game audio belong to their later phases.
+
+## Implementation Record — 2026-10-05
+
+- Finished the owner's registry and sound-manager scaffold, preserving the selected click file and gain `0.12`. Corrected the asset URL to `/audio/ui-click.mp3` so interior routes use the same URL.
+- Added lazy fetch/decode caching, a shared audio context, single-source playback, cleanup, and revision-based cancellation for loading/resume races. Failed loads are removed from the cache so a later deliberate interaction can retry.
+- Added `useUISound` using the existing visitor readiness/preference. Primary navigation and explicit profile open/close handlers request the click once. Enabling sound requests the existing tone; muting stops active/pending work immediately.
+- Preserved the header and splash, four-space indentation, profile focus handling, and immediate navigation. No new dependencies or preference keys were added.
+- Expanded the small audio suite with repeated-stop safety and a pending-resume cancellation regression. All 20 tests passed, along with lint, production build, and standalone TypeScript checks.
+- Production Edge checks used real Web Audio to verify the selected MP3 decodes, muted interactions create no context or download, first clip use loads once, subsequent use reuses the decoded buffer, and saved sound-on restores silently.
+- Checked navigation/profile/keyboard/touch event counts, Escape/button/backdrop/Collection close paths, blocked storage, rejected resume, missing-file retry, and mute during delayed loading. No uncaught browser runtime errors were observed.
+- Rapid profile open/close checks measured a maximum of one active source and one clip download. Muting stopped the active clip immediately.
+- Cold-cache splash regression checks passed: black loading screen until artwork decoded, approximately 3978 ms of playback, cached entry, split entry, and failed-artwork recovery.
+- Actual sound character/volume approval, physical devices, and Firefox/Safari verification remain for the owner. No commit or deployment was performed. Phase 1 is not yet marked accepted/complete.
