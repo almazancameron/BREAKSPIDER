@@ -4,7 +4,7 @@
 
 **Goal:** Add current work, latest Sketchbook, a random initial Familiar with explicit cycling, and an honest site changelog.
 
-**Status:** Implemented (2026-10-07), awaiting owner verification and acceptance. The owner approved this plan and requested agent implementation. Part 1 remains accepted; later chunks remain planned.
+**Status:** Complete and accepted (2026-10-07). The owner verified Part 2 locally and in live deployment and requested that it be marked complete. Part 1 remains accepted; Parts 3–6 remain planned.
 
 **Architecture:** Read records in the server page and retain ordinary sections in its composition. A small Familiar client component owns cycling. A browser-only module retains one seed for the loaded document, later reused by supplemental clutter.
 
@@ -18,7 +18,7 @@
 
 ## Implementation record — 2026-10-07
 
-The server page now reads the activity feeds through the existing repository. Current work uses the selected project record. The owner subsequently requested removal of its decorative sprite to avoid repeating the Familiar module beneath it. Following owner approval, Sketchbook uses a compact framed feed of up to ten newest records, with UTC dates and separate long-entry and short-note destinations. The scrollable interior supports keyboard focus; the directory link stays outside it. Public Sketchbook game labels now use ONFF without changing internal IDs, relationships, slugs, or media paths. The Familiar module exposes separate cycling, detail, and catalogue controls. The roaming Ashwing link is anchored above Projects on wide desktop and omitted on compact layouts. Changelog displays the authored foundation record and UTC date; `See updates` appears only when older entries or additional notes exist.
+The server page now reads the activity feeds through the existing repository. Current work uses the selected project record. The owner subsequently requested removal of its decorative sprite to avoid repeating the Familiar module beneath it. Following owner approval, Sketchbook uses a compact framed feed of up to ten newest records, with UTC dates and separate long-entry and short-note destinations. The scrollable interior supports keyboard focus; the directory link stays outside it. Public Sketchbook game labels now use ONFF without changing internal IDs, relationships, slugs, or media paths. The Familiar module exposes separate cycling, detail, and catalogue controls. The roaming Ashwing link is anchored above Projects on wide desktop and omitted on compact layouts. Changelog displays the latest authored entry and UTC date, with four git-history entries added above the original foundation record; `See updates` appears only when older entries or additional notes exist.
 
 Owner-requested desktop refinements keep Familiar directly beneath Working on, with its identity aligned to current work and its sprite on the right. Sketchbook is offset 12px down and 12px right from its previously aligned position. Its new framed feed spans the lower grid rows so it does not push Familiar down. Browser geometry confirmed Familiar retained its exact vertical position at 1221, 1440, 1600, and 1920px. Compact layouts retain normal reading order. Final feed captures passed at ten widths from 320px to 1920px with no broken images, horizontal overflow, or production console errors. Native Chrome verified both authored post destinations and PageDown scrolling in the focused feed; lint and the final production build passed.
 
@@ -36,11 +36,11 @@ Temporary repository fixtures verified empty feeds, a missing current project, o
 
 An independent read-only code and capture review reported no substantive findings. Development-mode navigation still emits the pre-existing Next.js warning about global `scroll-behavior: smooth` without the optional `data-scroll-behavior` attribute; the installed Next.js 16 upgrade guide documents that opt-in. The accepted root layout and scroll behavior were left unchanged. Earlier QA stream failures were traced to the test's broad deterministic crypto stub also duplicating Next.js dev request IDs; scoping it to the homepage seed resolved those failures without application changes.
 
-All servers and browser processes started for testing were stopped before handoff. The tutorial below remains the implementation and learning reference. Owner local/live acceptance has not yet been recorded for this chunk.
+All servers and browser processes started for testing were stopped before handoff. The tutorial below remains the implementation and learning reference. The owner confirmed local testing and live deployment verification and accepted this chunk on 2026-10-07.
 
 ## Learn first: give each activity its own treatment
 
-Current work is orange type plus a Familiar sprite, Sketchbook is a compact framed recent-post feed (an owner-approved refinement to the prototype fragment), Familiar is sprite plus identity, and changelog is a small `UPDATE.TXT` window. Their differing treatments make the page feel accumulated. Keep current work and Familiar frameless; the owner-approved Sketchbook frame borrows the existing panel materials without making every activity identical.
+Current work is frameless orange type, Sketchbook is a compact framed recent-post feed (an owner-approved refinement to the prototype fragment), Familiar is sprite plus identity, and changelog is a small `UPDATE.TXT` window. Their differing treatments make the page feel accumulated. Keep current work and Familiar frameless; the owner-approved Sketchbook frame borrows the existing panel materials without making every activity identical.
 
 The repository already sorts posts and changelog newest-first. Take the first ten posts for Sketchbook and the first changelog record rather than introducing another sort. A **hydration mismatch** occurs when the first browser render differs from the server HTML. Random selection must happen after that first render, never during rendering or module import. The initial server-visible Familiar stays useful while the browser starts.
 
@@ -77,7 +77,7 @@ Use a small framed section with a heading, scrollable interior capped at 19rem, 
 
 Put Familiar before changelog. Changelog shows latest version, title, date, and the first one to three notes. Use native `details` labelled `See updates` for the remaining authored entries; include `latestUpdate.links` when available. There is no dedicated changelog route, and `/sketchbook` does not render this changelog data. Do not create a broken `See updates` link copied from the prototype. Empty changelog means `No site updates yet` without an unusable disclosure.
 
-Style the `UPDATE.TXT` framing locally. Format dates with a fixed locale and UTC, as the current Sketchbook preview does, so server/browser dates agree. Current content is a foundation entry; changing it is the owner's later authoring choice.
+Style the `UPDATE.TXT` framing locally. Format dates with a fixed locale and UTC, as the current Sketchbook preview does, so server/browser dates agree. Current content includes four git-history updates and the original foundation entry.
 
 **Learning checkpoint:** Explain why a long-post link and a short-note link differ, and why a public slug cannot be derived from an internal project ID.
 
