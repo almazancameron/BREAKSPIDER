@@ -6,9 +6,15 @@ type ContentImageProps = {
     media: ImageMedia;
     className?: string;
     sizes?: string;
+    loading?: "eager" | "lazy";
 };
 
-export function ContentImage({ media, className, sizes = "(max-width: 48rem) 100vw, 50vw" }: ContentImageProps) {
+export function ContentImage({
+    media,
+    className,
+    sizes = "(max-width: 48rem) 100vw, 50vw",
+    loading = "lazy",
+}: ContentImageProps) {
     return (
         <Image
             className={`${styles.image} ${className ?? ""}`}
@@ -17,6 +23,7 @@ export function ContentImage({ media, className, sizes = "(max-width: 48rem) 100
             width={media.width ?? 960}
             height={media.height ?? 540}
             sizes={sizes}
+            loading={loading}
         />
     );
 }

@@ -1,15 +1,21 @@
 import { changelogEntries } from "../../content/changelog.ts";
 import { collectibles } from "../../content/collectibles.ts";
 import { familiars } from "../../content/familiars.ts";
+import { homepageContent } from "../../content/homepage.ts";
 import { projects } from "../../content/projects.ts";
 import { sketchbookPosts } from "../../content/sketchbook.ts";
 import type {
     ChangelogEntry,
     Collectible,
     Familiar,
+    HomepageContent,
     Project,
     SketchbookPost,
 } from "./models.ts";
+
+export const getHomepageContent = async (): Promise<HomepageContent> => {
+    return { ...homepageContent };
+};
 
 /**
  * Pages read authored content through this module. The local arrays can later

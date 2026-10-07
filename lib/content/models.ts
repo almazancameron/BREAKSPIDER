@@ -12,6 +12,18 @@ export type ProjectSection = {
     media: ImageMedia[];
 };
 
+export type HomepageContent = {
+    displayName: string;
+    availability: string;
+    email: string | null;
+    introduction: string;
+    aboutSummary: string;
+    currentProjectSlug: string;
+    featuredFamiliarSlug: string | null;
+    spotlightCapture: ImageMedia;
+    portrait: ImageMedia;
+};
+
 export type Project = {
     id: string;
     slug: string;
