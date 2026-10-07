@@ -4,6 +4,8 @@
 
 **Goal:** Replace the homepage placeholder with the approved Spotlight, About/portrait, and Projects hierarchy.
 
+**Status:** Complete and accepted (2026-10-07). The owner confirmed verification through local testing and live deployment.
+
 **Architecture:** An async Server Component reads authored homepage settings and project records through the repository. Page-owned JSX and CSS establish the responsive composition. Small interactive controls arrive in later chunks.
 
 **Tech Stack:** Installed Next.js/React/TypeScript, CSS Modules, existing `ContentImage` and `Link`. No dependencies.
@@ -16,13 +18,15 @@
 
 ## Implementation record — 2026-10-07
 
-The owner approved the Phase 2 plans and subsequently requested agent implementation of this first chunk. Part 1 is implemented; owner visual acceptance is still pending. The remaining tutorial chunks have not been implemented.
+The owner approved the Phase 2 plans and subsequently requested agent implementation of this first chunk. Part 1 is complete and accepted after owner verification through local testing and live deployment. The remaining tutorial chunks have not been implemented.
 
 The homepage now reads authored settings from `content/homepage.ts` through `getHomepageContent()`. Spotlight, About/portrait, and the overlapping project previews follow Prototype 04's hierarchy. Mobile uses the explicit Spotlight → About → Projects order. Identity and availability remain draft copy; Viscap uses the approved media-pending treatment. The creator portrait was copied unchanged from the approved prototype.
 
+Owner-requested layout refinements keep the portrait beside the bio at tablet widths and reduce the desktop About footprint around 1600px. The bio widens gradually on larger screens, bringing the group closer to Spotlight while retaining space for future clutter.
+
 One small implementation adjustment: `ContentImage` gained an optional `loading` prop so the immediately visible combat capture can load eagerly. Its default remains `lazy`, preserving all existing callers. No new dependencies or client components were added. The accepted splash, header, logo, profile, audio, root layout, and global tokens were not edited.
 
-Production browser verification passed at 320, 390, 720, 760, 768, 1024, 1220, 1221, 1440, and 1920 CSS pixels: no horizontal overflow, missing visible images, or browser errors. The 720px check exercises the available width of a 1440px desktop at 200% zoom; it is a reflow check, not a claim that native browser zoom was exercised. Longer About copy remained clear of Projects. Canonical navigation, sequential keyboard focus, exposed focus outlines, reduced-motion preview stacking, profile Escape/focus return, sound toggle state, fresh/seen intro behavior, and replay/skip were checked. Actual sound audibility still requires a listening check in the owner's browser.
+Production browser verification passed at 320, 390, 720, 760, 768, 1024, 1220, 1221, 1440, and 1920 CSS pixels: no horizontal overflow, missing visible images, or browser errors. The 720px check exercises the available width of a 1440px desktop at 200% zoom; it is a reflow check, not a claim that native browser zoom was exercised. Longer About copy remained clear of Projects. Canonical navigation, sequential keyboard focus, exposed focus outlines, reduced-motion preview stacking, profile Escape/focus return, sound toggle state, fresh/seen intro behavior, and replay/skip were checked. Automated audio checks cover toggle state; owner verification through local testing and live deployment is recorded above.
 
 An independent review found a desktop caption focus outline obscured by Projects. The caption link now uses its content width, and the complete outline was verified in the browser. Responsive range queries also avoid overlapping rules at the compact and wide boundaries. The reviewer confirmed both corrections and reported no outstanding findings.
 
@@ -51,7 +55,7 @@ Read but do not change `app/layout.tsx`, `styles/tokens.css`, `components/ui/con
 
 ## Task 1: Author the homepage settings
 
-- [ ] **Step 1 — FIRST EDIT: Add the homepage type to `lib/content/models.ts`.**
+- [x] **Step 1 — FIRST EDIT: Add the homepage type to `lib/content/models.ts`.**
 
 **Interface only — a complete type definition, not a component implementation:**
 
@@ -71,13 +75,13 @@ export type HomepageContent = {
 
 Use ordinary strings for the current text-led Spotlight. Its stable section and isolated body can be changed later; a multi-mode renderer for hypothetical videos/toys is unnecessary now.
 
-- [ ] **Step 2: Create `content/homepage.ts`, exporting `homepageContent` with `satisfies HomepageContent`.**
+- [x] **Step 2: Create `content/homepage.ts`, exporting `homepageContent` with `satisfies HomepageContent`.**
 
 Set `displayName` to `[Your Name]`, `availability` to `[Availability]`, `email` to `null`, `currentProjectSlug` to `one-night-familiar-fight`, and `featuredFamiliarSlug` to `null`. Use the prototype introduction: `I build connected applications, game systems, and interfaces with a few things worth poking at.` Use a short draft About summary based on the prototype. Availability is visibly draft; do not claim the visitor/creator is currently online.
 
 Reference `/media/projects/pixel-pugilists/combat.png` for `spotlightCapture` with ONFF alt text. Read its actual dimensions before filling `width`/`height`; do not guess them. Open the image URL in the dev browser and read `document.querySelector("img").naturalWidth` and `.naturalHeight` in DevTools. Reference the copied portrait destination and likewise record its actual dimensions. Keep draft copy in this one authored record so replacing identity does not require layout edits. Null email means omit the email row; no fake `mailto:` link.
 
-- [ ] **Step 3: Copy the portrait and add the repository read.**
+- [x] **Step 3: Copy the portrait and add the repository read.**
 
 **Complete copy commands — run from the repository root:**
 
@@ -102,7 +106,7 @@ Do not copy unreviewed Viscap screenshots. The existing Viscap mark may accompan
 
 ## Task 2: Build the professional spine
 
-- [ ] **Step 1: Replace `RoutePlaceholder` and its all-routes list in `app/page.tsx`.**
+- [x] **Step 1: Replace `RoutePlaceholder` and its all-routes list in `app/page.tsx`.**
 
 Keep `ReplayIntroButton` near the end. Change `Home` to an async component. Read homepage settings and projects together:
 
@@ -120,13 +124,13 @@ const currentProject = projects.find(
 
 Import those functions from `../lib/content/repository`. Render one `div` with `styles.canvas`, one `h1`, and sibling named sections. The root layout already supplies the main landmark. DOM order is Spotlight, About, Projects; keep the portrait inside About so its mobile reading relationship is natural. Later chunks append the remaining sections in the reading guide's order.
 
-- [ ] **Step 2: Build the Spotlight.**
+- [x] **Step 2: Build the Spotlight.**
 
 Give it `aria-labelledby="home-spotlight-title"`. Include a small window bar, draft availability/name, `Full-stack software engineer.` and `Game developer.` in the single h1, authored introduction, `See projects` → `/projects`, and `About + contact` → `/about`. Highlight the game-developer line in pink, and use mono labels for `WEB APPS`, `GAME SYSTEMS`, `INTERACTIONS`.
 
 Render the combat capture in a separate positioned figure inside Spotlight, retaining its native colors. Start with an `Open ONFF project` link below it, using the selected `currentProject.slug` for its href, or `/projects` with `Open projects` if the configured project is missing. Chunk 3 replaces that control with inspection; every intermediate state has a working destination. Title bar imitation minimize/close glyphs are decorative spans, not dead buttons.
 
-- [ ] **Step 3: Build About and Projects.**
+- [x] **Step 3: Build About and Projects.**
 
 About contains heading, name/summary, optional real email, and a direct `/about` path. Use `Profile + contact` until a résumé actually exists; do not promise a download from a nonexistent path. The linked portrait goes to `/about` and visually bridges the Spotlight/About boundary on wide desktop.
 
@@ -136,7 +140,7 @@ Use `ContentImage` for available media, with meaningful alt text and display-spe
 
 ## Task 3: Compose the field in local CSS
 
-- [ ] **Step 1: Establish normal flow first, then wide desktop relationships.**
+- [x] **Step 1: Establish normal flow first, then wide desktop relationships.**
 
 Use a mobile-first grid with `min-width: 0` on children, local dark radial washes and low-contrast grid, and sufficient room for focus outlines. On wide desktop, use twelve columns: Spotlight spans columns 1–8; About sits in 10–12; Projects occupies the right field around columns 8–12 below About, overlapping the Spotlight's lower-right edge selectively. Keep About/portrait outside Spotlight's readable text area. Use page-owned grid rows/gaps and modest overlap margins, rather than the prototype's fixed 1469px canvas height.
 
@@ -166,13 +170,13 @@ Use a mobile-first grid with `min-width: 0` on children, local dark radial washe
 
 The values are a tuning starting point, not new approved coordinates. Match silhouettes and hierarchy against the captures. At 1440, the reference Spotlight is about 62% of the canvas, with the Projects surface around 37%. At 1920 use the field width intentionally; do not cap the whole page at the placeholder's 72rem. Let content determine row height and adjust overlap if real copy grows.
 
-- [ ] **Step 2: Implement each material treatment.**
+- [x] **Step 2: Implement each material treatment.**
 
 Spotlight has cream headline, cyan capture frame and offset pink shadow. About remains frameless. Projects is a work-evidence window; previews retain ONFF orange/cyan and Viscap blue. Position the capture against Spotlight, not the viewport. Include enough Spotlight body padding/width to keep text out of its overlapping media. On narrow desktop/tablet, reduce or remove overlap before it causes collisions.
 
 Raise each overlapping project preview on both `:hover` and `:focus-visible`, keeping its label and outline exposed above the other preview. Apply reduced-motion rules to any lift/transition while retaining the stacking change. The full project destination must remain clear without either interaction.
 
-- [ ] **Step 3: Recompose compact widths.**
+- [x] **Step 3: Recompose compact widths.**
 
 Use the shared `47.5rem` compact threshold and an earlier wide-layout threshold around `76.25rem`. Below the wide threshold, use a simpler content-flow arrangement; below `47.5rem`, a single explicit column. Put the capture in flow below Spotlight copy, the portrait beside/below About, and Projects next. Remove desktop translate/negative margins where they no longer fit. Use type clamps and wrap the longer ONFF title; don't force the old two-line game name.
 
@@ -180,12 +184,12 @@ Only game sprites receive `image-rendering: pixelated`. Product captures and the
 
 ## Browser checkpoint before chunk 2
 
-- [ ] Run `npm run dev`. After entering/skipping the accepted intro, inspect `/` at 1440×900, 1920×1080, 1024×900, 768×900, 390×844, and 320×740.
-- [ ] Spotlight dominates; About/contact and both project paths are apparent without hovering. Compare viewport captures. Viscap pending media is the intentional exception.
-- [ ] Tab through every link: outlines remain visible despite overlap. Both project links reach canonical routes. Replay intro works and returns to the homepage with these regions intact.
-- [ ] At mobile width, confirm Spotlight → About → Projects, legible capture, no clipped ONFF title, and no horizontal page scrollbar. Repeat at 200% zoom with longer draft copy.
-- [ ] Navigate to an interior route and back. Header/logo/profile/audio remain the accepted implementation; homepage CSS does not leak.
-- [ ] Run `npm run typecheck` and `npm run lint`. Resolve errors caused by this chunk. No new automated test is needed for these static layout changes.
+- [x] Run `npm run dev`. After entering/skipping the accepted intro, inspect `/` at 1440×900, 1920×1080, 1024×900, 768×900, 390×844, and 320×740.
+- [x] Spotlight dominates; About/contact and both project paths are apparent without hovering. Compare viewport captures. Viscap pending media is the intentional exception.
+- [x] Tab through every link: outlines remain visible despite overlap. Both project links reach canonical routes. Replay intro works and returns to the homepage with these regions intact.
+- [x] At mobile width, confirm Spotlight → About → Projects, legible capture, no clipped ONFF title, and no horizontal page scrollbar. Repeat at 200% zoom with longer draft copy.
+- [x] Navigate to an interior route and back. Header/logo/profile/audio remain the accepted implementation; homepage CSS does not leak.
+- [x] Run `npm run typecheck` and `npm run lint`. Resolve errors caused by this chunk. No new automated test is needed for these static layout changes.
 
 **Learning checkpoint:** Identify which offsets express structural media overlap and which future offsets will belong in decorative placement data. Confirm that changing identity copy does not require changing the page's data access.
 

@@ -2,7 +2,7 @@
 
 > **For agentic workers:** Use `superpowers:executing-plans` only if the owner later requests implementation. These are tutorials for manual implementation by the owner. They authorize no implementation or delegation.
 
-**Status:** Planned, not implemented. Phase 1 is complete and accepted.
+**Status:** Part 1 (primary composition) is complete and accepted (2026-10-07). The owner verified it through local testing and live deployment. Part 2 (activity modules) is implemented, awaiting owner verification and acceptance. Parts 3–6 remain planned. Phase 1 remains complete and accepted.
 
 **Goal:** Translate the approved Prototype 04 homepage into production, including its optional interactions, editable authored decoration, and restrained session-stable random clutter.
 
@@ -18,8 +18,8 @@ Finish each tutorial's browser checkpoint before starting the next. Each chunk y
 
 | Order | Tutorial | Result and dependency |
 | --- | --- | --- |
-| 1 | [Primary composition](2026-10-06-phase-2-primary-composition.md) | Spotlight, About/portrait, and overlapping project evidence replace the homepage placeholder. Establish the professional spine and responsive layout first. |
-| 2 | [Activity modules](2026-10-06-phase-2-activity-modules.md) | Current project, latest Sketchbook, Familiar cycling, and changelog complete the structural field. Depends on chunk 1's data and layout ownership. |
+| 1 | [Primary composition](2026-10-06-phase-2-primary-composition.md) — complete and accepted | Spotlight, About/portrait, and overlapping project evidence replace the homepage placeholder. Verified locally and in live deployment by the owner. |
+| 2 | [Activity modules](2026-10-06-phase-2-activity-modules.md) — implemented, awaiting acceptance | Current project, recent Sketchbook feed, Familiar cycling, and changelog complete the structural field. Depends on chunk 1's data and layout ownership. |
 | 3 | [Artifact interactions](2026-10-06-phase-2-artifact-interactions.md) | Shared homepage inspection, found Map, archive focus/shuffle, mobile file strip, and reversible crystal. Depends on actual content from chunks 1–2. |
 | 4 | [Authored clutter](2026-10-06-phase-2-authored-clutter.md) | Curated clusters attach to semantic anchors through readable placement records. Depends on finished structural regions and interactive-object footprints. |
 | 5 | [Dev-only placement editor](2026-10-06-phase-2-placement-editor.md) | Drag, nearest-anchor selection, manual correction, breakpoint adjustments, and export. Depends on chunk 4's schema and renderer; explicitly requested by the owner. |

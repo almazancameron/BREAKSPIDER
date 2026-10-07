@@ -4,6 +4,8 @@
 
 **Goal:** Add current work, latest Sketchbook, a random initial Familiar with explicit cycling, and an honest site changelog.
 
+**Status:** Implemented (2026-10-07), awaiting owner verification and acceptance. The owner approved this plan and requested agent implementation. Part 1 remains accepted; later chunks remain planned.
+
 **Architecture:** Read records in the server page and retain ordinary sections in its composition. A small Familiar client component owns cycling. A browser-only module retains one seed for the loaded document, later reused by supplemental clutter.
 
 **Tech Stack:** Existing Next.js/React/TypeScript/CSS Modules/content repository; no packages.
@@ -14,11 +16,33 @@
 
 **Review focus:** Empty feeds, one Familiar, stale draft labels, hydration, and overflow have explicit checks below.
 
-## Learn first: an activity fragment is not another portfolio card
+## Implementation record — 2026-10-07
 
-Current work is orange type plus a Familiar sprite, Sketchbook is compact text and a lower rule, Familiar is sprite plus identity, and changelog is a small `UPDATE.TXT` window. Their differing treatments make the page feel accumulated. Reusing a generic card here would lose the approved design even if the data were correct.
+The server page now reads the activity feeds through the existing repository. Current work uses the selected project record. The owner subsequently requested removal of its decorative sprite to avoid repeating the Familiar module beneath it. Following owner approval, Sketchbook uses a compact framed feed of up to ten newest records, with UTC dates and separate long-entry and short-note destinations. The scrollable interior supports keyboard focus; the directory link stays outside it. Public Sketchbook game labels now use ONFF without changing internal IDs, relationships, slugs, or media paths. The Familiar module exposes separate cycling, detail, and catalogue controls. The roaming Ashwing link is anchored above Projects on wide desktop and omitted on compact layouts. Changelog displays the authored foundation record and UTC date; `See updates` appears only when older entries or additional notes exist.
 
-The repository already sorts posts and changelog newest-first. Consume the first record rather than introducing another sort. A **hydration mismatch** occurs when the first browser render differs from the server HTML. Random selection must happen after that first render, never during rendering or module import. The initial server-visible Familiar stays useful while the browser starts.
+Owner-requested desktop refinements keep Familiar directly beneath Working on, with its identity aligned to current work and its sprite on the right. Sketchbook is offset 12px down and 12px right from its previously aligned position. Its new framed feed spans the lower grid rows so it does not push Familiar down. Browser geometry confirmed Familiar retained its exact vertical position at 1221, 1440, 1600, and 1920px. Compact layouts retain normal reading order. Final feed captures passed at ten widths from 320px to 1920px with no broken images, horizontal overflow, or production console errors. Native Chrome verified both authored post destinations and PageDown scrolling in the focused feed; lint and the final production build passed.
+
+Further owner-requested refinements match the Sketchbook frame exactly to Projects' border, navy body/header, and layered black/pink shadow. The feed extends 32px to the right only in wide desktop layouts, allowing Projects to overlap its edge by about 12px. Working on is text-only and uses its full column width. Familiar's description reservation and desktop link heights are tighter, and its desktop width is capped to bring the sprite closer to its text; mobile links retain 44px targets. Responsive Chrome captures at ten widths from 320px to 1920px, computed frame matching, canonical links, and keyboard feed scrolling passed. Lint and the final production build passed.
+
+After adding git-history changelog entries, opening `See updates` exposed a shared-grid sizing issue: spanning panels distributed extra height across both activity rows, moving Familiar. The wide desktop grid now gives the lower activity row a flexible `minmax(0, 1fr)` track, so current work determines the row above Familiar while expanded panels grow below it. Browser checks clicked the disclosure at ten widths from 320px to 1920px and measured zero Familiar movement at every width; Replay moved down below the expanded changelog. Production build, overflow checks, and keyboard feed scrolling passed. All test processes were stopped.
+
+Familiar randomness is restored after deterministic markup hydrates. A browser-memory seed survives SPA navigation; no new storage keys or dependencies were added. A valid featured slug controls the initial choice, while explicit cycling remains available. The accepted identity, primary panel positions, responsive About refinements, Phase 1 components, root layout, and global styles were preserved.
+
+Browser captures and interaction checks covered widths from 320px to 1920px, including 760/768 and 1220/1221 boundaries, 1600px, and the 720px reflow equivalent of a 1440px viewport at 200% zoom. Native browser zoom itself was not exercised. Pointer and keyboard cycling kept name, sprite, tags, and detail link together; initial selection was silent, enabled cycling used the accepted UI sound, and mute prevented playback. SPA navigation retained the browser document and seed and restored the same initial choice. Profile Escape/focus return, replay/skip, reduced motion, canonical links, and mobile reading order passed. Production console checks reported no errors or hydration warnings.
+
+Temporary repository fixtures verified empty feeds, a missing current project, one Familiar, invalid and valid featured overrides, a newest short note, extra changelog notes, older updates, and their links. Expanded updates remained in flow on desktop, mobile, and 720px reflow. The original repository was restored exactly; no test content remains in application files.
+
+`npm run lint`, `npm run typecheck`, `npm run test` (24 tests across five files), and `npm run build` passed. Four focused seed tests were added and observed failing before the utility existed, then passing. Ruling: these meaningful seed-lifetime/range tests complement the approved browser-first tutorial; broad component tests were not added, and seeded placement tests remain in chunk 6. Browser plugin and cached Playwright were unavailable, so verification used the repository's existing native Chrome DevTools approach without adding packages.
+
+An independent read-only code and capture review reported no substantive findings. Development-mode navigation still emits the pre-existing Next.js warning about global `scroll-behavior: smooth` without the optional `data-scroll-behavior` attribute; the installed Next.js 16 upgrade guide documents that opt-in. The accepted root layout and scroll behavior were left unchanged. Earlier QA stream failures were traced to the test's broad deterministic crypto stub also duplicating Next.js dev request IDs; scoping it to the homepage seed resolved those failures without application changes.
+
+All servers and browser processes started for testing were stopped before handoff. The tutorial below remains the implementation and learning reference. Owner local/live acceptance has not yet been recorded for this chunk.
+
+## Learn first: give each activity its own treatment
+
+Current work is orange type plus a Familiar sprite, Sketchbook is a compact framed recent-post feed (an owner-approved refinement to the prototype fragment), Familiar is sprite plus identity, and changelog is a small `UPDATE.TXT` window. Their differing treatments make the page feel accumulated. Keep current work and Familiar frameless; the owner-approved Sketchbook frame borrows the existing panel materials without making every activity identical.
+
+The repository already sorts posts and changelog newest-first. Take the first ten posts for Sketchbook and the first changelog record rather than introducing another sort. A **hydration mismatch** occurs when the first browser render differs from the server HTML. Random selection must happen after that first render, never during rendering or module import. The initial server-visible Familiar stays useful while the browser starts.
 
 Read the installed server/client and boundary guides before editing. Complete [primary composition](2026-10-06-phase-2-primary-composition.md) first.
 
@@ -37,21 +61,19 @@ Read the installed server/client and boundary guides before editing. Complete [p
 
 ## Task 1: Complete the structural field
 
-- [ ] **Step 1 — FIRST EDIT: Extend the page's existing `Promise.all` with Familiar, Sketchbook, and changelog reads.**
+- [x] **Step 1 — FIRST EDIT: Extend the page's existing `Promise.all` with Familiar, Sketchbook, and changelog reads.**
 
-Keep reads in `app/page.tsx`, not in client effects. Name the resulting arrays `familiars`, `posts`, and `changelog`. Derive `latestPost = posts[0] ?? null` and `latestUpdate = changelog[0] ?? null`. Use existing project selection for current work; do not maintain a second project title/summary.
+Keep reads in `app/page.tsx`, not in client effects. Name the resulting arrays `familiars`, `posts`, and `changelog`. Derive `recentPosts = posts.slice(0, 10)` and `latestUpdate = changelog[0] ?? null`. Use existing project selection for current work; do not maintain a second project title/summary.
 
-- [ ] **Step 2: Render Current Project after Projects.**
+- [x] **Step 2: Render Current Project after Projects.**
 
-Use `Working on`, the ONFF title, summary, and its canonical project link. A related sprite (Pebbloq, found by slug) may sit beside the title/description as a decorative image. Omit it when missing. Keep this region containerless, with orange title language. Allow three-line wrapping for `One Night Familiar Fight` rather than copying the old game name's dimensions.
+Use `Working on`, the ONFF title, summary, and its canonical project link. Keep this region containerless and text-only, with orange title language. The owner requested removal of the neighboring sprite because the separate Familiar module already provides that relationship. Allow three-line wrapping for `One Night Familiar Fight` rather than copying the old game name's dimensions.
 
-- [ ] **Step 3: Render latest Sketchbook next.**
+- [x] **Step 3: Render the recent Sketchbook feed next.**
 
-Show title, excerpt, tags, and a real destination. For a long entry link to `/sketchbook/${latestPost.slug}`; for a short note link to `/sketchbook` with `Open Sketchbook`, because short notes live in the feed. An empty feed displays `No Sketchbook entries yet` and a directory link. Do not invent a publication date or claim sample copy is finalized.
+Use a small framed section with a heading, scrollable interior capped at 19rem, and an always-visible directory link beneath it. Render up to ten newest posts as articles with their authored UTC date, title, excerpt, tags, and a real destination. Long entries link to their canonical detail route; short notes link to /sketchbook because they live in the directory feed. An empty feed displays `No Sketchbook entries yet`. Give the scroll area a labelled region, `tabIndex={0}`, and a visible keyboard focus outline so arrow/PageDown scrolling works. On wide desktop span rows 3 through 4 to preserve Familiar's position despite the taller frame; retain normal flow on smaller screens.
 
-Change visible `Pixel Pugilists` labels in `content/sketchbook.ts` to `One Night Familiar Fight` or `ONFF`, including alt/caption/tags where describing the current game. Preserve `relatedProject: "pixel-pugilists"`, IDs, slugs, and asset paths. This is a naming correction, not a content rewrite.
-
-- [ ] **Step 4: Render the Familiar slot and changelog.**
+- [x] **Step 4: Render the Familiar slot and changelog.**
 
 Put Familiar before changelog. Changelog shows latest version, title, date, and the first one to three notes. Use native `details` labelled `See updates` for the remaining authored entries; include `latestUpdate.links` when available. There is no dedicated changelog route, and `/sketchbook` does not render this changelog data. Do not create a broken `See updates` link copied from the prototype. Empty changelog means `No site updates yet` without an unusable disclosure.
 
@@ -61,7 +83,7 @@ Style the `UPDATE.TXT` framing locally. Format dates with a fixed locale and UTC
 
 ## Task 2: Keep random selection stable and understandable
 
-- [ ] **Step 1: Create `lib/home/home-session.ts`.**
+- [x] **Step 1: Create `lib/home/home-session.ts`.**
 
 Do not add `use client` here; the module is a utility imported only by client consumers. Keep a module-local `let seed: number | null = null`. Create it only when a mounted client calls the function, using `window.crypto.getRandomValues`. Throw a clear error if accidentally called on the server; it must never be called during rendering. Never store it in localStorage/sessionStorage. Full refresh creates a new JS document/module; SPA route navigation keeps it.
 
@@ -91,7 +113,7 @@ export const createSeededRandom = (seed: number): (() => number) => {
 
 This little generator is for decoration, not security. Its unsigned 32-bit arithmetic gives repeatable values. Each consumer creates its own generator from the saved seed; do not share one advancing generator between Familiar and clutter, or cycling could change the decoration sequence.
 
-- [ ] **Step 2: Implement `HomeFamiliar` as a Client Component.**
+- [x] **Step 2: Implement `HomeFamiliar` as a Client Component.**
 
 **Interface only — define the real component body separately:**
 
@@ -120,7 +142,7 @@ const showNext = () => {
 };
 ```
 
-- [ ] **Step 3: Style sprite/text and place the new regions.**
+- [x] **Step 3: Style sprite/text and place the new regions.**
 
 Keep pixel rendering confined to sprites. In wide desktop CSS, Current Project occupies the lower-left area under Spotlight, Sketchbook sits nearer the middle, Familiar below current work, and changelog lower-right. Use the reference's uneven density and readable gaps, with normal-flow row sizing. On compact screens reset desktop placements and preserve DOM order. Use actual content widths before the next chunk adds found objects.
 
@@ -128,7 +150,7 @@ Also retain the prototype's separate roaming Familiar link above Projects on wid
 
 ## Browser checkpoint before chunk 3
 
-- [ ] Check all widths from chunk 1 and full-page captures. Current work and Familiar are frameless; Sketchbook is lighter than the framed changelog.
+- [ ] Check all widths from chunk 1 and full-page captures. Current work and Familiar are frameless; Sketchbook is a compact framed feed with a slight desktop offset. Check keyboard scrolling, long/short destinations, the empty state, and the ten-post limit; its directory footer remains outside the scroll area.
 - [ ] Cycle repeatedly by click and keyboard: name, sprite, tags, and detail href remain one record. Catalogue works before cycling; mute prevents feedback. Initial selection is silent.
 - [ ] Roaming Familiar links directly to the catalogue, reacts to focus as well as hover, and does not obscure Projects; compact screens retain the main Familiar module.
 - [ ] Reload and watch the console: no hydration warnings. Navigate away/back with `Link`; the initial Familiar matches for the same roster/seed. Hard refresh may choose the same Familiar by chance; it is not a guaranteed alternation.
