@@ -1,0 +1,30 @@
+.crystal {
+    display: grid;
+    place-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.crystal img {
+    display: block;
+    width: 48px;
+    height: 48px;
+    image-rendering: pixelated;
+    filter: drop-shadow(3px 4px 0 #090912);
+    transition: filter var(--motion-fast);
+}
+
+.crystal[aria-pressed="true"] img {
+    filter: drop-shadow(0 0 8px #f9778c);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .crystal img {
+        transition: none;
+    }
+
+}

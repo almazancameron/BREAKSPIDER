@@ -40,7 +40,7 @@
     align-self: start;
     border: 2px solid #b4b9d2;
     background: #202435;
-    box-shadow: 10px 10px 0 #090b12, 15px 15px 0 #7d3a79;
+    box-shadow: 10px 10px 0 #0b0d16, 15px 15px 0 #a15088;
 }
 
 .windowBar,
@@ -181,7 +181,7 @@
     margin: 0 1.75rem 1.75rem;
     border: 3px solid var(--home-cyan);
     background: #0c101b;
-    box-shadow: 6px 6px 0 #0e101a, 9px 9px 0 #a04082;
+    box-shadow: 6px 6px 0 #0e101a, 9px 9px 0 #a15088;
     transform: rotate(1deg);
 }
 
@@ -202,17 +202,21 @@
     object-fit: cover;
 }
 
-.heroCapture figcaption a {
+.heroCapture figcaption button {
     display: block;
     width: fit-content;
     max-width: 100%;
     padding: 0.65rem 0.5rem;
     color: var(--color-text);
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    min-height: 2.75rem;
     font: 700 0.65rem/1.4 var(--font-mono);
     text-decoration: none;
 }
 
-.heroCapture figcaption a:hover {
+.heroCapture figcaption button:hover {
     color: #111623;
     background: var(--home-cyan);
 }
@@ -565,7 +569,57 @@
 }
 
 .familiar {
+    position: relative;
     align-self: start;
+}
+
+.crystal {
+    display: flex;
+    justify-content: end;
+    margin-top: 1rem;
+}
+
+.foundMap {
+    justify-self: center;
+    align-self: start;
+}
+
+.foundMap button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    transform: rotate(-7deg);
+    transition: transform var(--motion-fast);
+}
+
+.foundMap button:hover,
+.foundMap button:focus-visible {
+    transform: rotate(0) translateY(-5px);
+}
+
+.foundMap svg {
+    filter: drop-shadow(7px 8px 0 #080912);
+}
+
+.foundMap span,
+.foundMap strong {
+    font: 700 0.7rem/1.6 var(--font-mono);
+}
+
+.foundMap span {
+    color: var(--home-pink);
+}
+
+.foundMap strong {
+    color: var(--color-accent);
+}
+
+.artifactPile {
+    min-width: 0;
 }
 
 .changelog {
@@ -705,6 +759,8 @@
         grid-column: 2;
     }
 
+    .foundMap,
+    .artifactPile,
     .homeActions {
         grid-column: 1 / -1;
     }
@@ -714,7 +770,7 @@
     .canvas {
         grid-template-columns: repeat(12, minmax(0, 1fr));
         /* Let spanning panels expand below the row that anchors Familiar. */
-        grid-template-rows: minmax(19.75rem, auto) auto auto minmax(0, 1fr) auto;
+        grid-template-rows: minmax(19.75rem, auto) auto auto minmax(0, 1fr) auto auto auto;
         column-gap: 1.25rem;
         row-gap: 0;
     }
@@ -826,7 +882,7 @@
         grid-column: 5 / 8;
         grid-row: 3 / 5;
         margin-top: -6.25rem;
-        margin-left: 0.75rem;
+        margin-left: -2rem;
         margin-right: -2rem;
         transform: translate(2.5rem, 0);
     }
@@ -846,8 +902,27 @@
 
     .homeActions {
         grid-column: 1 / -1;
-        grid-row: 5;
+        grid-row: 7;
         margin-top: 2.5rem;
+    }
+
+    .crystal {
+        position: absolute;
+        right: 0;
+        bottom: -3.5rem;
+        margin: 0;
+    }
+
+    .foundMap {
+        grid-column: 7 / 10;
+        grid-row: 5;
+        margin-top: 2rem;
+    }
+
+    .artifactPile {
+        grid-column: 1 / -1;
+        grid-row: 6;
+        margin-top: 1rem;
     }
 }
 
@@ -858,7 +933,7 @@
     }
 
     .spotlight {
-        box-shadow: 5px 6px 0 #090b12, 8px 9px 0 #7d3a79;
+        box-shadow: 5px 6px 0 #0b0d16, 8px 9px 0 #a15088;
     }
 
     .windowBar {
@@ -903,7 +978,7 @@
 
     .heroCapture {
         margin: 0 0.85rem 1.25rem;
-        box-shadow: 4px 4px 0 #0e101a, 6px 6px 0 #a04082;
+        box-shadow: 4px 4px 0 #0b0d16, 6px 6px 0 #a15088;
     }
 
     .spotlightCorner {
@@ -945,6 +1020,15 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .foundMap button {
+        transition: none;
+    }
+
+    .foundMap button:hover,
+    .foundMap button:focus-visible {
+        transform: none;
+    }
+
     .creatorPortrait,
     .projectPreview,
     .roamingFamiliar {

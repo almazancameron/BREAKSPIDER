@@ -37,7 +37,13 @@ export const projects = [
         status: "complete",
         summary:
             "An interconnected production platform with tools for creative teams, media, storyboards, and workflows.",
-        heroMedia: null,
+        heroMedia: {
+            kind: "image",
+            src: "/media/projects/viscap/media-library.PNG",
+            alt: "One Night Familiar Fight priority builder",
+            width: 1159,
+            height: 661,
+        },
         sections: [
             {
                 heading: "One connected platform",

@@ -1,6 +1,7 @@
 import { changelogEntries } from "../../content/changelog.ts";
 import { collectibles } from "../../content/collectibles.ts";
 import { familiars } from "../../content/familiars.ts";
+import { homeArtifacts } from "../../content/home-artifacts.ts";
 import { homepageContent } from "../../content/homepage.ts";
 import { projects } from "../../content/projects.ts";
 import { sketchbookPosts } from "../../content/sketchbook.ts";
@@ -8,6 +9,7 @@ import type {
     ChangelogEntry,
     Collectible,
     Familiar,
+    HomeArtifact,
     HomepageContent,
     Project,
     SketchbookPost,
@@ -57,4 +59,8 @@ export async function getChangelogEntries(): Promise<ChangelogEntry[]> {
     return [...changelogEntries].sort((left, right) =>
         right.publishedAt.localeCompare(left.publishedAt),
     );
+}
+
+export async function getHomeArtifacts(): Promise<HomeArtifact[]> {
+    return [...homeArtifacts];
 }

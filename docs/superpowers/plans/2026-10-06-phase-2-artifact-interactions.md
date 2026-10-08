@@ -4,6 +4,12 @@
 
 **Goal:** Restore Prototype 04's inspectable files, found Map, focus/shuffle behavior, mobile swipe strip, and reversible crystal reaction.
 
+**Status:** Implemented (2026-10-07), awaiting owner local/live verification and acceptance. Task 1 was completed from the owner's initial content type; the owner then requested implementation of Tasks 2-4. Parts 1-2 remain accepted; Parts 4-6 remain planned.
+
+**Task 1 implementation record:** Added the three authored records in `content/home-artifacts.ts`, the shallow-copy `getHomeArtifacts()` reader, and the static `HomeMapGlyph` component. ONFF uses the existing priority-builder capture; Viscap remains media-pending; Map retains the prototype routes and colors with `PROJECTS` replacing `WORK`. The glyph is decorative and nonfocusable, so its eventual surrounding control must supply the Map label.
+
+**Ruling:** Preserve the owner's existing `HomeArtifact` type rather than replacing it with the earlier planned interface. The records use `kind: "image"` for ONFF, `kind: "vector"` for Map, and `kind: "other"` for pending Viscap. All three populate `href` and `linkLabel`, although those remain optional in the owner's type. Later renderers must handle optional destinations and use the stable `found-map` / `viscap-system` IDs to distinguish their vector and pending treatments if necessary. No homepage controls or inspection behavior were added in Task 1. Verification: TypeScript checking, focused ESLint, and all four existing content repository tests passed. The glyph was rendered and inspected in a standalone Chrome preview; the browser tree was stopped afterward. A fresh read-only review found no concrete correctness issues. No dev server was started.
+
 **Architecture:** One homepage-scoped client provider owns the selected artifact and renders the existing native `Dialog`. Separate triggers in Spotlight, Map, and pile share that state. Page structure remains server composition; temporary interaction state stays local.
 
 **Tech Stack:** Existing React context/state, native dialog, CSS Modules, `ContentImage`, `useUISound`, and `Link`. No modal/carousel library.
@@ -13,6 +19,22 @@
 **Global constraints:** Four spaces; preserve accepted Phase 1 behavior. Optional inspection never gates Projects/About/catalogue/Map navigation. No collectible awards or storage writes in this chunk.
 
 **Review focus:** Keyboard focus return, complete inspectable media, pending Viscap, mobile scrolling, and repeated reversible actions are checked below.
+
+## Tasks 2-4 implementation record - 2026-10-07
+
+`HomeInspection` owns one selected record and one existing native `Dialog`; its synchronous selection ref prevents duplicate events from playing repeated clicks. `InspectArtifactButton` validates IDs through that provider and names its dialog behavior. `HomeArtifactVisual` keeps Map, complete ONFF media, and pending Viscap consistent between inspector and pile. Optional destinations render only when both href and link label exist. The inspector centers locally, scrolls within the shared viewport bounds, and keeps its close bar sticky. Shared Dialog, visitor profile, intro, and audio infrastructure remain unchanged.
+
+The server homepage reads artifacts alongside its existing content and passes server-authored children through the client provider. Spotlight's capture caption now inspects ONFF; its professional destination links remain direct. Found Map, the authored-order focus/shuffle pile, and Replay occupy subsequent flow rows. The accepted primary and activity positions, owner CSS offsets, and flexible lower activity row remain intact. Familiar does not move when changelog expands.
+
+The supplied 32x32, 11-frame Life Crystal GIF was copied unchanged to `public/media/home/crystal.gif`; its first frame was exported to `crystal-still.png`. Native `picture` selects that still under reduced motion. The >=44px button remains present in both poses, changes its pressed state and accessible label, and requests only the accepted UI click. No collectible awards, persistence, or new dependencies were added.
+
+**Rulings:** Keep the owner's content schema and optional destination fields; use IDs for the Map and pending treatments. Keep this work in the shared checkout and preserve the owner's uncommitted CSS changes. Use the approved browser-first verification strategy and existing regression suite rather than broad component tests or tests mirroring authored data. Execute only Part 3; decoration/editor/randomization remain later chunks. No commit or deployment was requested.
+
+Production browser checks covered 320, 390, 720 (reflow proxy), 760, 768, 1024, 1220, 1221, 1440, 1600, and 1920px with no horizontal page overflow, broken images, console errors, or Familiar movement on changelog expansion. Pointer, Enter, Space, Escape, backdrop, close button, native modal focus, focus restoration, all three records, shuffle, crystal touch/restore, reduced-motion still selection, visitor profile, and Map destination navigation passed. Mobile focus scrolls a file into view within its strip, and dialogs fit 320px. Enabled inspection open/close, shuffle, and crystal actions each produced exactly one audio start; muted actions produced none. Native browser zoom and physical-device touch remain useful owner checks.
+
+Lint, production build/type checking, and all 24 existing tests passed. A fresh read-only review reported no important findings. Temporary browser captures remain outside the repository. Task 1's earlier no-server record above describes that earlier pass; all servers and browser processes started for this pass were stopped before handoff.
+
+Owner-requested visual refinements remove the file pile's dashed divider, reduce its desktop top margin from 2.5rem to 1rem, remove its 1.5rem top padding, and rename its label to `MORE STUFF`. Shuffle now includes the prototype's arrow, smaller mono text, and lime hover/focus fill while retaining a 44px target. The crystal now toggles the prototype's pink 8px glow, preserving brightness and orientation; reduced motion keeps the still and removes the filter transition. The owner's newly supplied Viscap screenshot is preserved, with both content references corrected to its actual uppercase `.PNG` extension after browser checks exposed 404s from lowercase paths.
 
 ## Learn first: one dialog, several entry points
 
@@ -40,34 +62,34 @@ Complete chunks 1–2. Read `components/ui/dialog.tsx`, `components/site/visitor
 
 ## Task 1: Describe real objects before making controls
 
-- [ ] **Step 1 — FIRST EDIT: Add `HomeArtifact` and author its three records.**
+- [x] **Step 1 — FIRST EDIT: Add `HomeArtifact` and author its three records.**
 
 **Interface only — complete type, no runtime renderer:**
 
 ```ts
 export type HomeArtifact = {
-    id: "onff-build" | "viscap-system" | "found-map";
+    id: string;
     label: string;
     title: string;
     description: string;
     media: ImageMedia | null;
-    visual: "image" | "map" | "pending";
-    href: string;
-    linkLabel: string;
+    kind: "image" | "vector" | "other";
+    href?: string;
+    linkLabel?: string;
 };
 ```
 
-Use `ONFF / BUILD 01` with the existing priority-builder capture, factual battle-plan description, and canonical ONFF href. Use `VISCAP / SYSTEM 02`, `visual: "pending"`, `media: null`, clear media-pending description and `/projects/viscap-ai`. Use `FOUND / MAP 03`, `visual: "map"`, and `/map`. The map is a found navigation object, not a promise of an unlock. These are homepage artifact records, not new project entities or collectibles.
+Use `ONFF / BUILD 01` with the existing priority-builder capture, `kind: "image"`, factual battle-plan description, and canonical ONFF href. Use `VISCAP / SYSTEM 02`, `kind: "other"`, `media: null`, clear media-pending description and `/projects/viscap-ai`. Use `FOUND / MAP 03`, `kind: "vector"`, `media: null`, and `/map`; its inline SVG comes from `HomeMapGlyph`. The map is a found navigation object, not a promise of an unlock. These are homepage artifact records, not new project entities or collectibles.
 
 Append `getHomeArtifacts` in the repository using the same shallow-array-copy pattern as the current reads. Keep paths in content records, not repeated among controls.
 
-- [ ] **Step 2: Translate the small prototype `MapGlyph` into `HomeMapGlyph`.**
+- [x] **Step 2: Translate the small prototype `MapGlyph` into `HomeMapGlyph`.**
 
 Keep its 170×130 viewBox, lime border, three colored nodes and route lines. Update visible `WORK` to `PROJECTS` if room permits. Use decorative `aria-hidden="true"` when adjacent control text supplies the meaning; the text must name the Map. Do not build the full site Map or introduce a diagram engine.
 
 ## Task 2: Wire a homepage-scoped inspector
 
-- [ ] **Step 1: Implement `HomeInspection` and `InspectArtifactButton`.**
+- [x] **Step 1: Implement `HomeInspection` and `InspectArtifactButton`.**
 
 Selected state is `HomeArtifact["id"] | null`. Look up the current artifact in the passed array. The context exposes only `inspect(id)`; throw a helpful development error if a trigger is rendered outside its provider. Opening validates the record, requests one `uiClick`, and selects it. Closing checks whether something is open, requests one `uiClick`, and sets selection to null. Use the same close handler for button, Escape, backdrop, and destination navigation. Ignore duplicate close/open requests.
 
@@ -96,7 +118,7 @@ The provider renders children plus one existing `Dialog`. Use a unique `home-ins
 
 This fragment omits media, destination, context, and handlers; implement those as described. The native dialog stays mounted. Confirm focus restoration to its originating button before adding custom focus code; do not modify the shared primitive unless a demonstrated defect requires it.
 
-- [ ] **Step 2: Wrap only the homepage content and replace Spotlight's temporary media link.**
+- [x] **Step 2: Wrap only the homepage content and replace Spotlight's temporary media link.**
 
 Fetch artifacts alongside existing page reads, then wrap the canvas with `HomeInspection`. Server-authored children can be passed through a client provider; this does not turn the imported content repository into client code. Spotlight uses `InspectArtifactButton` with `artifactId="onff-build"`. Its main Projects/About links stay ordinary direct links.
 
@@ -104,13 +126,13 @@ Append found Map after changelog: an `InspectArtifactButton` containing `HomeMap
 
 ## Task 3: Make archive focus usable on desktop and mobile
 
-- [ ] **Step 1: Implement the file pile after found Map.**
+- [x] **Step 1: Implement the file pile after found Map.**
 
 Render `Stuff you can inspect`, brief practical introduction, explicit `Shuffle focus` button, and the three artifact buttons. Each button has its file label, preview/pending/Map visual, and title. Keep stable artifact IDs as React keys. No button contains a nested link/button.
 
 Use `focusedId` state initialized to the first record (or null). On pointer enter and keyboard focus, set it to that file. Shuffle cycles through the records in authored order, with a functional update; this reproduces the prototype's explicit focus change without unnecessarily randomizing content. Empty list means no shuffle; one record disables it. Shuffle requests `uiClick` once; hover/focus remain silent. Each file activation invokes the provider's inspect function once, not a second sound handler.
 
-- [ ] **Step 2: Add the focus and mobile presentations.**
+- [x] **Step 2: Add the focus and mobile presentations.**
 
 On desktop, vary file angle/vertical position and allow selective overlap. Hover/focus/selected file raises above siblings; keep all titles and a reachable part of each button apparent. Use classes or data attributes on IDs, not fragile `nth-child` rules affected by future decorative siblings.
 
@@ -141,11 +163,11 @@ Reduced motion removes decorative lift/transition, while stacking/focus state re
 
 ## Task 4: Add the reversible crystal
 
-- [ ] **Step 1: Select the prototype crystal source from the full library and copy only that file.**
+- [x] **Step 1: Select the prototype crystal source from the full library and copy only that file.**
 
 The matching candidate is `assets/artifacts/misc sprites (pixel)/Life_Crystal_(placed).gif`. Inspect its animation in context, provenance in the asset inventory, and the prototype reaction; copy to `public/media/home/crystal.gif` for this tutorial. Use the source's real dimensions. If the owner chooses an original replacement, keep the same small reaction, not a new interaction direction.
 
-- [ ] **Step 2: Implement `HomeCrystal`.**
+- [x] **Step 2: Implement `HomeCrystal`.**
 
 Use a button with `aria-pressed`, local boolean state, and changing label `Touch the little crystal` / `Put the crystal back`. Toggle a small CSS pose or opacity without removing the button, keeping the return action visible and hit target usable (at least 44×44). Request `uiClick` on activation. No unlock, disappearance, storage write, or forced audio. Reserve its position near Current Project/Familiar so chunk 4 can include it as a fixed exclusion.
 

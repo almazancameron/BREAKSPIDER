@@ -100,3 +100,14 @@ export type ChangelogEntry = {
     publishedAt: string;
     links: { label: string; href: string }[];
 };
+
+export type HomeArtifact = {
+    id: string;
+    label: string;
+    title: string;
+    description: string;
+    media: ImageMedia | null;
+    kind: "image" | "vector" | "other";
+    href?: string;
+    linkLabel?: string;
+};
