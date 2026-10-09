@@ -2,6 +2,17 @@ import type { ChangelogEntry } from "../lib/content/models.ts";
 
 export const changelogEntries = [
     {
+        id: "homepage-authored-clutter",
+        version: "v0.1",
+        title: "Homepage authored clutter",
+        notes: [
+            "Placed curated sprites and keepsakes around the homepage.",
+            "Tuned overlaps and spacing for desktop and smaller screens.",
+        ],
+        publishedAt: "2026-10-08",
+        links: [],
+    },
+    {
         id: "homepage-composition",
         version: "v0.1",
         title: "Homepage composition",
