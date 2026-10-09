@@ -1,6 +1,6 @@
 # Homepage authored clutter: revision 02
 
-**Implementation status, October 9, 2026:** the approved composition is now implemented, including the final adjustment that keeps the whole Terra Blade visible. See [implementation details and browser evidence](implementation-notes.md). Owner verification locally and live is pending. The design comps below remain the proposal captures; application screenshots are linked in the implementation notes.
+**Status: Complete and accepted (2026-10-09).** The approved composition is implemented, including the final adjustment that keeps the whole Terra Blade visible. The owner verified everything locally and on the live deployment. See [implementation details and browser evidence](implementation-notes.md). The design comps below remain the proposal captures; application screenshots are linked in the implementation notes.
 
 **Recommended direction:** a small collection of deliberately placed keepsakes, with lively outer corners and an increasingly playful lower field. Leave the remaining space for the future randomized layer. The combined page should reach roughly 6/10 chaos; the authored layer alone should not try to fill every gap.
 

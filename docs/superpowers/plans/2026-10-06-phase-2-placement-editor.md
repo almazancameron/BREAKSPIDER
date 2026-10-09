@@ -169,3 +169,7 @@ Saved items should appear identically with the dev draft reset. Inspect desktop 
 **Learning checkpoint:** Explain which operation changes a draft, which saves source data, and why nearest-anchor selection occurs at authoring time only.
 
 **Finish:** Commit the editor and reviewed placements separately if useful. The next tutorial adds optional random decoration using the saved composition as protected input.
+
+## Implementation record — October 9, 2026
+
+Part 5 is implemented and agent-verified; owner local/live acceptance is pending. The [October 9 handoff](2026-10-09-phase-2-part-5-handoff.md) supplied the current five-mode schema, nine-anchor tie order, and edge-offset contract. The [implementation notes](../../design/home-clutter-2026-10-09/part-5-implementation-notes.md) record the resulting behavior, editing limits, browser checks, focused tests, production absence, and process cleanup. These supersede historical Desktop/Compact, rail-anchor, and 256px-cap assumptions in this tutorial. No source placements were changed, no commit/deployment was performed, and Part 6 was not started.

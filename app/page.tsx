@@ -46,7 +46,7 @@ export default async function Home() {
     const olderUpdates = changelog.slice(1);
     const roamingFamiliar = familiars.find((familiar) => familiar.slug === "ashwing") ?? null;
 
-    return (
+    const content = (
         <HomeInspection artifacts={artifacts}>
             <div className={styles.canvas}>
                 <section className={styles.spotlight} data-home-anchor="spotlight" data-home-exclusion="spotlight" aria-labelledby="home-spotlight-title">
@@ -272,4 +272,10 @@ export default async function Home() {
             </div>
         </HomeInspection>
     );
+
+    if (process.env.NODE_ENV === "development") {
+        const { HomeClutterEditor } = await import("../components/home/home-clutter-editor");
+        return <HomeClutterEditor>{content}</HomeClutterEditor>;
+    }
+    return content;
 }

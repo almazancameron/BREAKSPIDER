@@ -1,12 +1,12 @@
 # Phase 2 Authored Homepage Clutter Implementation Plan
 
-**Implementation status (October 9, 2026):** implemented from the approved revision-02 comp with the final full-sword adjustment. [Implementation notes, current contracts, and browser captures](../../design/home-clutter-2026-10-09/revision-02/implementation-notes.md). Owner local/live acceptance is pending; the dev-only editor and randomized layer remain separate later chunks. The original worked examples below are teaching material, not the current asset roster.
+**Status: Complete and accepted (2026-10-09).** Implemented from the approved revision-02 comp with the final full-sword adjustment. The owner verified everything locally and on the live deployment. [Implementation notes, current contracts, and browser captures](../../design/home-clutter-2026-10-09/revision-02/implementation-notes.md). The dev-only editor and randomized layer remain separate later chunks. The original worked examples below are teaching material, not the current asset roster.
 
 > **For agentic workers:** Use `superpowers:executing-plans` if later requested. The owner implements this tutorial manually; no implementation or delegation is requested now.
 
 **Goal:** Add curated, fixed decorative clusters with easy-to-edit semantic placements, preserving Prototype 04's object relationships.
 
-**Art-direction proposal (October 9, 2026), revision 02:** [Visual review, placement plan, and all-44 asset coverage](../../design/home-clutter-2026-10-09/revision-02/README.md). The current recommendation uses 18 supplied assets plus one existing ONFF process image, with Noise and most small pickups reserved for the later randomized layer. It supersedes the earlier dense comp. Production placements remain unimplemented. Establish a small authored foundation, then use the dev-only editor to tune the remaining fixed composition.
+**Approved art direction (October 9, 2026), revision 02:** [Visual review, placement plan, and all-44 asset coverage](../../design/home-clutter-2026-10-09/revision-02/README.md). The implemented composition uses 18 supplied assets plus one existing ONFF process image, with Noise and most small pickups reserved for the later randomized layer. It supersedes the earlier dense comp. The dev-only editor is the next chunk for tuning saved placements.
 
 **Architecture:** Structural regions remain page CSS. A small asset catalogue and placement array describe quiet decoration attached to named, positioned wrappers. The renderer consumes those records deterministically; a narrow optional context will allow the next chunk's dev editor to preview drafts.
 
@@ -41,7 +41,7 @@ Read the installed CSS/image/client-boundary docs before editing. Finish chunks 
 
 ## Task 1: Define a narrow placement vocabulary
 
-- [ ] **Step 1 — FIRST EDIT: Create `lib/home/clutter-types.ts`.**
+- [x] **Step 1 — FIRST EDIT: Create `lib/home/clutter-types.ts`.**
 
 **Interface only — complete type definitions; no renderer/editor implementation:**
 
@@ -88,7 +88,7 @@ Units: offsets/width/exclusion padding are CSS pixels; rotation is degrees; scal
 
 Anchor IDs are explicit, not arbitrary selectors. Fixed decorations start behind primary controls in local layers 1–3; deliberately attached objects may be higher when safe. `exclusionPadding` protects a little room around them from future random clutter.
 
-- [ ] **Step 2: Curate an initial authored roster in `content/home-clutter.ts`.**
+- [x] **Step 2: Curate an initial authored roster in `content/home-clutter.ts`.**
 
 Inspect candidates at their intended sizes alongside the captures. Select a small set of silhouette/color variants for uneven rail banks, an interior bridge below Spotlight, an archive pocket behind files, and one or two attached keepsakes. Preserve dark gaps and asymmetry. Increase authored density deliberately if the composition is too sparse; do not expect random objects to supply the canonical clutter.
 
@@ -124,7 +124,7 @@ This is not a complete roster and `chosen-badge` is not an existing asset ID. Su
 
 ## Task 2: Build the deterministic renderer
 
-- [ ] **Step 1: Define the optional draft context and renderer.**
+- [x] **Step 1: Define the optional draft context and renderer.**
 
 `home-clutter-state.tsx` is a Client Component module exporting `ClutterDraftContext = createContext<AuthoredPlacement[] | null>(null)`. The next tutorial provides its value in development; production consumers use the passed placements. Context carries only records, not editor functions or DOM refs.
 
@@ -134,7 +134,7 @@ For each record, merge `mobile` over the base pose for compact values. Compute a
 
 Use `data-clutter-placement` containing the record ID and `data-clutter-viewport="desktop"` or `"mobile"` where separate anchor instances are necessary. The editor only selects visible instances. Validate catalogue lookup; a missing asset is omitted with a useful development diagnostic, not a broken image over the page.
 
-- [ ] **Step 2: Implement center-based placement and native asset treatment.**
+- [x] **Step 2: Implement center-based placement and native asset treatment.**
 
 Position the outer object center using anchor percentage plus offset, with `transform: translate(-50%, -50%)`. Put rotation/scale on its inner image wrapper, using center transform origin. Set width from pose and preserve the image aspect ratio. This lets editor math use the visible object's center consistently.
 
@@ -163,30 +163,30 @@ Do not use a renderer position for an interactive object; its owning component s
 
 ## Task 3: Attach decoration and mark safe regions
 
-- [ ] **Step 1: Mark eligible wrappers with `data-home-anchor`.**
+- [x] **Step 1: Mark eligible wrappers with `data-home-anchor`.**
 
 Set `position: relative` on each named structural region. Add left/right rail and lower-field wrappers as absolute, noninteractive named regions owned by the canvas. Their dimensions belong in `app/page.module.css`; use content-relative heights/insets, not the prototype's fixed canvas height. Do not transform eligible anchor wrappers: editor offsets assume unscaled CSS pixels.
 
 Attach `HomeAuthoredClutter` for the applicable IDs. Render decorations after structural content inside wrappers, but select explicit local z-index values. Keep an isolated canvas stacking context beneath root-level modal/splash presentation. Decorative layers can clip at their outer rail edge; clipping must not cut interactive content or focus outlines.
 
-- [ ] **Step 2: Mark `data-home-exclusion` on protected content.**
+- [x] **Step 2: Mark `data-home-exclusion` on protected content.**
 
 Protect Spotlight, About text/portrait link, Projects evidence/links, roaming Familiar link, current work, Sketchbook, Familiar, changelog, found Map, pile file strip, replay, and crystal. Use section-sized rectangles initially; this conservative rule is easier to reason about than text-by-text measurement. Pure decorative rail wrappers are not exclusions. Each rendered authored decoration is also an exclusion with its recorded padding, measured later in chunk 6.
 
 These markers describe safety; they do not change structural layout. Random clutter will use gaps/rails around them. Keep the archive-background cluster behind legible file objects intentionally; random objects cannot claim those occupied spaces.
 
-- [ ] **Step 3: Tune the authored composition with randomness absent.**
+- [x] **Step 3: Tune the authored composition with randomness absent.**
 
 At 1440/1920, vary the perimeter banks and interior cluster silhouettes, sizes, layering, and gaps. Include some meaningful edge cropping, not complete disappearance. On compact screens hide dense interior banks, reduce edge groups, and move retained identity-bearing scraps next to their actual anchors. Check 768/1024 so desktop placement does not create collisions before the compact breakpoint.
 
 ## Browser checkpoint before the editor
 
-- [ ] Compare full-page captures at all established widths. Authored clutter alone carries the approved density/relationships. Temporarily hide decoration: the primary composition still has character and hierarchy.
-- [ ] Resize continuously; decorations travel with anchors. Expand changelog and alter draft copy length; lower regions/decoration move together.
-- [ ] Tab through Home and inspect artifacts. No decorative item receives focus or covers controls/outlines. Header/logo/splash/profile remain unobstructed.
-- [ ] Check image loading and reduced motion. No layout shift from unknown dimensions; retained moving assets have static alternatives where needed.
-- [ ] Change one placement record and reload. Only that authored relationship changes. A mobile override does not overwrite its desktop pose. Missing catalogue records fail safely.
-- [ ] Run lint/typecheck. No automated DOM/collision suite is needed for authored CSS; browser evidence decides visual acceptance.
+- [x] Compare full-page captures at all established widths. Authored clutter alone carries the approved density/relationships. Temporarily hide decoration: the primary composition still has character and hierarchy.
+- [x] Resize continuously; decorations travel with anchors. Expand changelog and alter draft copy length; lower regions/decoration move together.
+- [x] Tab through Home and inspect artifacts. No decorative item receives focus or covers controls/outlines. Header/logo/splash/profile remain unobstructed.
+- [x] Check image loading and reduced motion. No layout shift from unknown dimensions; retained moving assets have static alternatives where needed.
+- [x] Change one placement record and reload. Only that authored relationship changes. A mobile override does not overwrite its desktop pose. Missing catalogue records fail safely.
+- [x] Run lint/typecheck. No automated DOM/collision suite is needed for authored CSS; browser evidence decides visual acceptance.
 
 **Learning checkpoint:** Demonstrate the distinction between page CSS deciding a section's placement, a saved decoration pose, and a measured random exclusion.
 

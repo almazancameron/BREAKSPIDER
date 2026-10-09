@@ -1,6 +1,6 @@
 # Authored clutter implementation — October 9, 2026
 
-The owner approved revision 02 and authorized implementation with one final adjustment: show the whole Terra Blade. The deterministic authored layer is implemented. **Owner acceptance locally and live is still pending.** The development-only editor and randomized layer remain later chunks.
+The owner approved revision 02 and authorized implementation with one final adjustment: show the whole Terra Blade. **Phase 2 Part 4 is complete and accepted (2026-10-09).** The owner verified everything locally and on the live deployment. The development-only editor and randomized layer remain later chunks.
 
 ## What is now in production code
 
@@ -53,4 +53,8 @@ The repository's existing root minimum width is 320px. A 320px emulated viewport
 
 Full-page capture temporarily changes Chromium's viewport. Layout checks run before screenshots to avoid reporting that capture behavior as a real section shift. The harness explicitly loads visible images before capturing; it does not change the application's lazy-loading policy.
 
-Temporary preview-server and browser processes are stopped after each run. No commit or deployment was performed. Run the dev server normally for the owner's final visual verification.
+Temporary preview-server and browser processes were stopped after testing. The agent performed no commit or deployment. The owner subsequently verified the implementation locally and on the live deployment and accepted Part 4.
+
+## Later authoring tool
+
+Phase 2 Part 5 is implemented and agent-verified. See the [editor implementation and verification notes](../part-5-implementation-notes.md). The accepted Part 4 catalogue, placements, renderer, and layering are preserved. Part 5 owner acceptance remains pending local/live verification; randomized clutter remains planned.
