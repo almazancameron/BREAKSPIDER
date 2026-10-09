@@ -1,0 +1,53 @@
+.object {
+    position: absolute;
+    left: calc(var(--point-x) + var(--offset-x));
+    top: calc(var(--point-y) + var(--offset-y));
+    z-index: var(--object-layer);
+    display: none;
+    width: var(--object-width);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    user-select: none;
+}
+
+.visual {
+    display: block;
+    transform: rotate(var(--object-rotation)) scale(var(--object-scale)) scaleX(var(--object-flip));
+    transform-origin: center;
+    filter: drop-shadow(2px 3px 0 #090b1380);
+}
+
+.visual img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.pixelArt img {
+    image-rendering: pixelated;
+}
+
+.framed {
+    border: 2px solid #9da1bb;
+    box-shadow: 5px 6px 0 #090b13;
+}
+
+@media (width > 110rem) {
+    .wide { display: block; }
+}
+
+@media (90rem < width <= 110rem) {
+    .desktop { display: block; }
+}
+
+@media (76.25rem < width <= 90rem) {
+    .narrow { display: block; }
+}
+
+@media (47.5rem < width <= 76.25rem) {
+    .tablet { display: block; }
+}
+
+@media (width <= 47.5rem) {
+    .mobile { display: block; }
+}

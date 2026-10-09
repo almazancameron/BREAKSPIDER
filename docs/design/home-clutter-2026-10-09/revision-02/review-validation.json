@@ -1,0 +1,146 @@
+{
+    "suppliedAssets": 44,
+    "authoredSupplied": 18,
+    "desktopObjects": 19,
+    "noAuthoredNoise": true,
+    "errors": [],
+    "checks": [
+        {
+            "width": "1920",
+            "mode": "revision",
+            "naturalWidth": 1905,
+            "complete": true,
+            "selected": "true"
+        },
+        {
+            "width": "1920",
+            "mode": "baseline",
+            "naturalWidth": 1905,
+            "complete": true,
+            "selected": "true"
+        },
+        {
+            "width": "1920",
+            "mode": "previous",
+            "naturalWidth": 1905,
+            "complete": true,
+            "selected": "true"
+        },
+        {
+            "width": "1600",
+            "mode": "revision",
+            "naturalWidth": 1585,
+            "complete": true,
+            "selected": "true"
+        },
+        {
+            "width": "1600",
+            "mode": "baseline",
+            "naturalWidth": 1585,
+            "complete": true,
+            "selected": "true"
+        },
+        {
+            "width": "1600",
+            "mode": "previous",
+            "naturalWidth": 1585,
+            "complete": true,
+            "selected": "true"
+        },
+        {
+            "width": "1440",
+            "mode": "revision",
+            "naturalWidth": 1425,
+            "complete": true,
+            "selected": "true"
+        },
+        {
+            "width": "1440",
+            "mode": "baseline",
+            "naturalWidth": 1425,
+            "complete": true,
+            "selected": "true"
+        },
+        {
+            "width": "1440",
+            "mode": "previous",
+            "naturalWidth": 1425,
+            "complete": true,
+            "selected": "true"
+        },
+        {
+            "width": "1024",
+            "mode": "revision",
+            "naturalWidth": 1009,
+            "complete": true,
+            "selected": "true"
+        },
+        {
+            "width": "1024",
+            "mode": "baseline",
+            "naturalWidth": 1009,
+            "complete": true,
+            "selected": "true"
+        },
+        {
+            "width": "1024",
+            "mode": "previous",
+            "naturalWidth": 1009,
+            "complete": true,
+            "selected": "true"
+        },
+        {
+            "width": "390",
+            "mode": "revision",
+            "naturalWidth": 375,
+            "complete": true,
+            "selected": "true"
+        },
+        {
+            "width": "390",
+            "mode": "baseline",
+            "naturalWidth": 375,
+            "complete": true,
+            "selected": "true"
+        },
+        {
+            "width": "390",
+            "mode": "previous",
+            "naturalWidth": 375,
+            "complete": true,
+            "selected": "true"
+        },
+        {
+            "mode": "rainbow",
+            "size": "1920",
+            "nativeWidth": "1905px",
+            "naturalWidth": 1905
+        },
+        {
+            "directPreview": 1920,
+            "images": 20,
+            "broken": 0
+        },
+        {
+            "directPreview": 1600,
+            "images": 20,
+            "broken": 0
+        },
+        {
+            "directPreview": 1440,
+            "images": 20,
+            "broken": 0
+        },
+        {
+            "directPreview": 1024,
+            "images": 18,
+            "broken": 0
+        },
+        {
+            "directPreview": 390,
+            "images": 13,
+            "broken": 0
+        }
+    ],
+    "limitation": "Offline design previews only; no production placement or live interaction verification."
+}

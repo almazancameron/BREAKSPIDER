@@ -1,4 +1,5 @@
 .canvas {
+    --home-gutter: clamp(1rem, 3.6vw, 4rem);
     --home-pink: #ef7ea6;
     --home-cyan: #71dcf3;
     --home-orange: #ffad76;
@@ -6,7 +7,8 @@
     isolation: isolate;
     display: grid;
     gap: 2.5rem;
-    padding: 2.5rem clamp(1rem, 3.6vw, 4rem) 3rem;
+    padding: 2.5rem var(--home-gutter) 3rem;
+    overflow-x: clip;
     background:
         radial-gradient(circle at 65% 10%, #292235 0, transparent 40%),
         radial-gradient(circle at 5% 90%, #1e2c34 0, transparent 35%),
@@ -482,7 +484,14 @@
 }
 
 .sketchbook {
+    position: relative;
+    z-index: 1;
     align-self: start;
+}
+
+.sketchbookFrame {
+    position: relative;
+    z-index: 2;
     border: 2px solid #9da1bb;
     background: #171c2d;
     box-shadow: -8px 9px 0 #0b0d16, -12px 13px 0 #a15088;
@@ -620,6 +629,14 @@
 
 .artifactPile {
     min-width: 0;
+}
+
+.about,
+.current,
+.changelog,
+.foundMap,
+.artifactPile {
+    position: relative;
 }
 
 .changelog {
@@ -928,6 +945,7 @@
 
 @media (max-width: 47.5rem) {
     .canvas {
+        --home-gutter: 1rem;
         gap: 2rem;
         padding: 1.25rem 1rem 2rem;
     }

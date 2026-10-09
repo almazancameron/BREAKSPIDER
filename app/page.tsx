@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { HomeAuthoredClutter } from "../components/home/home-authored-clutter";
+import { HOME_AUTHORED_PLACEMENTS, HOME_CLUTTER_ASSETS } from "../content/home-clutter";
 import { ContentImage } from "../components/ui/content-image";
 import { HomeFamiliar } from "../components/home/home-familiar";
 import { HomeInspection, InspectArtifactButton } from "../components/home/home-inspection";
@@ -47,7 +49,7 @@ export default async function Home() {
     return (
         <HomeInspection artifacts={artifacts}>
             <div className={styles.canvas}>
-                <section className={styles.spotlight} aria-labelledby="home-spotlight-title">
+                <section className={styles.spotlight} data-home-anchor="spotlight" data-home-exclusion="spotlight" aria-labelledby="home-spotlight-title">
                     <div className={styles.windowBar}>
                         <span><i aria-hidden="true" /> PINNED TO PROFILE</span>
                         <span>{home.availability}</span>
@@ -93,9 +95,10 @@ export default async function Home() {
                         </figcaption>
                     </figure>
                     <span className={styles.spotlightCorner} aria-hidden="true">◆</span>
+                    <HomeAuthoredClutter anchor="spotlight" assets={HOME_CLUTTER_ASSETS} placements={HOME_AUTHORED_PLACEMENTS} />
                 </section>
 
-                <section className={styles.about} aria-labelledby="home-about-title">
+                <section className={styles.about} data-home-anchor="about" data-home-exclusion="about" aria-labelledby="home-about-title">
                     <div className={styles.aboutCopy}>
                         <p className={styles.moduleLabel}>A LITTLE ABOUT ME</p>
                         <h2 id="home-about-title">About me</h2>
@@ -108,14 +111,15 @@ export default async function Home() {
                         </Link>
                         <span className={styles.aboutBracket} aria-hidden="true">[ mostly human ]</span>
                     </div>
-                    <Link className={styles.creatorPortrait} href="/about" aria-label="About the creator">
+                    <Link className={styles.creatorPortrait} data-home-exclusion="portrait" href="/about" aria-label="About the creator">
                         <ContentImage media={home.portrait} sizes="(max-width: 76.25rem) 104px, 128px" />
                     </Link>
+                    <HomeAuthoredClutter anchor="about" assets={HOME_CLUTTER_ASSETS} placements={HOME_AUTHORED_PLACEMENTS} />
                 </section>
 
-                <section className={styles.projects} aria-labelledby="home-projects-title">
+                <section className={styles.projects} data-home-anchor="projects" data-home-exclusion="projects" aria-labelledby="home-projects-title">
                     {roamingFamiliar && (
-                        <Link className={styles.roamingFamiliar} href="/familiars" aria-label="Meet the Familiars — wild encounter">
+                        <Link className={styles.roamingFamiliar} data-home-exclusion="roaming-familiar" href="/familiars" aria-label="Meet the Familiars — wild encounter">
                             <ContentImage media={roamingFamiliar.sprite} sizes="88px" />
                             <span>WILD ENCOUNTER <span aria-hidden="true">↗</span></span>
                         </Link>
@@ -161,9 +165,10 @@ export default async function Home() {
                         <span>SOFTWARE + GAMES</span>
                         <Link href="/projects">All projects <span aria-hidden="true">↗</span></Link>
                     </div>
+                    <HomeAuthoredClutter anchor="projects" assets={HOME_CLUTTER_ASSETS} placements={HOME_AUTHORED_PLACEMENTS} />
                 </section>
 
-                <section className={styles.current} aria-labelledby="home-current-title">
+                <section className={styles.current} data-home-anchor="current" data-home-exclusion="current" aria-labelledby="home-current-title">
                     <div className={styles.currentCopy}>
                         <p className={styles.moduleLabel}>WORKING ON</p>
                         <h2 id="home-current-title">{currentProject?.title ?? "Current project"}</h2>
@@ -172,37 +177,42 @@ export default async function Home() {
                             {currentProject ? "Open project" : "See projects"} <span aria-hidden="true">↗</span>
                         </Link>
                     </div>
+                    <HomeAuthoredClutter anchor="current" assets={HOME_CLUTTER_ASSETS} placements={HOME_AUTHORED_PLACEMENTS} />
                 </section>
 
-                <section className={styles.sketchbook} aria-labelledby="home-sketchbook-title">
-                    <div className={styles.sketchbookHead}>
-                        <p className={styles.moduleLabel}>FROM THE SKETCHBOOK</p>
-                        <h2 id="home-sketchbook-title">Recent posts</h2>
-                    </div>
-                    <div className={styles.sketchbookFeed} role="region" aria-label="Recent Sketchbook posts" tabIndex={0}>
-                        {recentPosts.length > 0 ? recentPosts.map((post) => (
-                            <article className={styles.sketchbookPost} key={post.id}>
-                                <time dateTime={post.publishedAt}>{updateDate.format(new Date(post.publishedAt))}</time>
-                                <h3>{post.title}</h3>
-                                <p>{post.excerpt}</p>
-                                <Link href={post.isLongform ? `/sketchbook/${post.slug}` : "/sketchbook"}>
-                                    {post.isLongform ? "Read post" : "Open Sketchbook"} <span aria-hidden="true">↗</span>
-                                </Link>
-                                {post.tags.length > 0 && <p className={styles.postTags}>{post.tags.join(" · ")}</p>}
-                            </article>
-                        )) : <p className={styles.sketchbookEmpty}>No Sketchbook entries yet</p>}
-                    </div>
-                    <div className={styles.sketchbookBottom}>
-                        <Link href="/sketchbook">All Sketchbook posts <span aria-hidden="true">↗</span></Link>
-                    </div>
-                </section>
+                <div className={styles.sketchbook} data-home-anchor="sketchbook">
+                    <section className={styles.sketchbookFrame} data-home-exclusion="sketchbook" aria-labelledby="home-sketchbook-title">
+                        <div className={styles.sketchbookHead}>
+                            <p className={styles.moduleLabel}>FROM THE SKETCHBOOK</p>
+                            <h2 id="home-sketchbook-title">Recent posts</h2>
+                        </div>
+                        <div className={styles.sketchbookFeed} role="region" aria-label="Recent Sketchbook posts" tabIndex={0}>
+                            {recentPosts.length > 0 ? recentPosts.map((post) => (
+                                <article className={styles.sketchbookPost} key={post.id}>
+                                    <time dateTime={post.publishedAt}>{updateDate.format(new Date(post.publishedAt))}</time>
+                                    <h3>{post.title}</h3>
+                                    <p>{post.excerpt}</p>
+                                    <Link href={post.isLongform ? `/sketchbook/${post.slug}` : "/sketchbook"}>
+                                        {post.isLongform ? "Read post" : "Open Sketchbook"} <span aria-hidden="true">↗</span>
+                                    </Link>
+                                    {post.tags.length > 0 && <p className={styles.postTags}>{post.tags.join(" · ")}</p>}
+                                </article>
+                            )) : <p className={styles.sketchbookEmpty}>No Sketchbook entries yet</p>}
+                        </div>
+                        <div className={styles.sketchbookBottom}>
+                            <Link href="/sketchbook">All Sketchbook posts <span aria-hidden="true">↗</span></Link>
+                        </div>
+                    </section>
+                    <HomeAuthoredClutter anchor="sketchbook" assets={HOME_CLUTTER_ASSETS} placements={HOME_AUTHORED_PLACEMENTS} />
+                </div>
 
-                <section className={styles.familiar} aria-labelledby="home-familiar-title">
+                <section className={styles.familiar} data-home-anchor="familiar" data-home-exclusion="familiar" aria-labelledby="home-familiar-title">
                     <HomeFamiliar familiars={familiars} featuredSlug={home.featuredFamiliarSlug} />
-                    <div className={styles.crystal}><HomeCrystal /></div>
+                    <div className={styles.crystal} data-home-exclusion="crystal"><HomeCrystal /></div>
+                    <HomeAuthoredClutter anchor="familiar" assets={HOME_CLUTTER_ASSETS} placements={HOME_AUTHORED_PLACEMENTS} />
                 </section>
 
-                <section className={styles.changelog} aria-labelledby="home-changelog-title">
+                <section className={styles.changelog} data-home-anchor="changelog" data-home-exclusion="changelog" aria-labelledby="home-changelog-title">
                     <div className={styles.updateBar}>
                         <span>UPDATE.TXT</span>
                         {latestUpdate && <span>{latestUpdate.version}</span>}
@@ -239,19 +249,24 @@ export default async function Home() {
                             </>
                         ) : <p>No site updates yet</p>}
                     </div>
+                    <HomeAuthoredClutter anchor="changelog" assets={HOME_CLUTTER_ASSETS} placements={HOME_AUTHORED_PLACEMENTS} />
                 </section>
 
-                <section className={styles.foundMap} aria-label="Found site map">
+                <section className={styles.foundMap} data-home-anchor="map" data-home-exclusion="map" aria-label="Found site map">
                     <InspectArtifactButton artifactId="found-map">
                         <HomeMapGlyph />
                         <span>found: MAP.EXE</span>
                         <strong>Inspect</strong>
                     </InspectArtifactButton>
+                    <HomeAuthoredClutter anchor="map" assets={HOME_CLUTTER_ASSETS} placements={HOME_AUTHORED_PLACEMENTS} />
                 </section>
 
-                <div className={styles.artifactPile}><HomeArtifactPile artifacts={artifacts} /></div>
+                <div className={styles.artifactPile} data-home-anchor="pile">
+                    <HomeArtifactPile artifacts={artifacts} />
+                    <HomeAuthoredClutter anchor="pile" assets={HOME_CLUTTER_ASSETS} placements={HOME_AUTHORED_PLACEMENTS} />
+                </div>
 
-                <div className={styles.homeActions}>
+                <div className={styles.homeActions} data-home-exclusion="replay">
                     <ReplayIntroButton />
                 </div>
             </div>

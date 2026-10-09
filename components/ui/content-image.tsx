@@ -7,6 +7,7 @@ type ContentImageProps = {
     className?: string;
     sizes?: string;
     loading?: "eager" | "lazy";
+    unoptimized?: boolean;
 };
 
 export function ContentImage({
@@ -14,6 +15,7 @@ export function ContentImage({
     className,
     sizes = "(max-width: 48rem) 100vw, 50vw",
     loading = "lazy",
+    unoptimized = false,
 }: ContentImageProps) {
     return (
         <Image
@@ -24,6 +26,7 @@ export function ContentImage({
             height={media.height ?? 540}
             sizes={sizes}
             loading={loading}
+            unoptimized={unoptimized}
         />
     );
 }

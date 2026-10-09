@@ -1,8 +1,12 @@
 # Phase 2 Authored Homepage Clutter Implementation Plan
 
+**Implementation status (October 9, 2026):** implemented from the approved revision-02 comp with the final full-sword adjustment. [Implementation notes, current contracts, and browser captures](../../design/home-clutter-2026-10-09/revision-02/implementation-notes.md). Owner local/live acceptance is pending; the dev-only editor and randomized layer remain separate later chunks. The original worked examples below are teaching material, not the current asset roster.
+
 > **For agentic workers:** Use `superpowers:executing-plans` if later requested. The owner implements this tutorial manually; no implementation or delegation is requested now.
 
 **Goal:** Add curated, fixed decorative clusters with easy-to-edit semantic placements, preserving Prototype 04's object relationships.
+
+**Art-direction proposal (October 9, 2026), revision 02:** [Visual review, placement plan, and all-44 asset coverage](../../design/home-clutter-2026-10-09/revision-02/README.md). The current recommendation uses 18 supplied assets plus one existing ONFF process image, with Noise and most small pickups reserved for the later randomized layer. It supersedes the earlier dense comp. Production placements remain unimplemented. Establish a small authored foundation, then use the dev-only editor to tune the remaining fixed composition.
 
 **Architecture:** Structural regions remain page CSS. A small asset catalogue and placement array describe quiet decoration attached to named, positioned wrappers. The renderer consumes those records deterministically; a narrow optional context will allow the next chunk's dev editor to preview drafts.
 
@@ -92,7 +96,7 @@ Catalogue entries record one deployed path and actual dimensions per asset. Use 
 
 Copy selected sources into `public/media/home/clutter/` with legible names; leave source files intact. For moving GIFs either choose a static alternative or provide a still from the same source in `reducedMotionMedia`. Do not apply pixel rendering to vectors/portraits/screenshots.
 
-Include one real ONFF process keepsake behind the archive files, using `assets/work-screenshots/onff-godot-panel.PNG` as the creator-owned candidate. Put its reviewed deployed copy in this catalogue with `pixelArt: false`; attach it to `pile` and tune its offset so a recognizable part peeks from behind the files, matching the reference's provenance/layer relationship. Do not replace it with a random product capture or crop every part out of sight. This quiet background keepsake does not become a fourth inspection file.
+Include one real ONFF process keepsake using `assets/work-screenshots/onff-godot-panel.PNG`. The approved art-direction revision moves it beside Working on, tucked behind Sketchbook rather than the archive. Put its deployed copy in the catalogue with `pixelArt: false`; attach it to `sketchbook` on desktop and `current` on tablet. This quiet keepsake does not become another inspection file.
 
 **Worked fragment — placement shape with a symbolic chosen catalogue ID; adjust these tuning values:**
 

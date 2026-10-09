@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Breakspider homepage clutter — visual proposal</title>
+        <style>
+            :root { color-scheme: dark; font-family: system-ui, sans-serif; color: #f7f0e3; background: #11131d; }
+            body { margin: 0; }
+            header, .notes { max-width: 1280px; margin: auto; padding: 24px; }
+            h1 { font-size: 26px; margin: 0 0 10px; }
+            h2 { font-size: 20px; }
+            p { max-width: 85ch; line-height: 1.5; }
+            a { color: #9ee0f2; text-underline-offset: 3px; }
+            .controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 18px 0; }
+            button, select { background: #262b40; color: #fff1de; border: 1px solid #858aa4; padding: 9px 12px; font: inherit; cursor: pointer; }
+            button[aria-pressed="true"] { background: #c8f26e; color: #14171f; border-color: #c8f26e; }
+            label { display: inline-flex; align-items: center; gap: 7px; }
+            .hint { color: #b8bdcd; font-size: 13px; }
+            .viewport { overflow: auto; margin: 0 20px; border: 1px solid #555c76; background: #151520; }
+            .stage { position: relative; width: 100%; max-width: 1905px; margin: auto; }
+            #composition { display: block; width: 100%; height: auto; }
+            #markers { position: absolute; inset: 0; pointer-events: none; }
+            .marker { position: absolute; width: 30px; height: 30px; display: grid; place-items: center; transform: translate(-50%, -50%); border: 1px solid #fff1de; border-radius: 50%; background: #101421ed; color: #c8f26e; font: 700 14px monospace; pointer-events: auto; text-decoration: none; }
+            .key { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 16px; }
+            .key a { font-size: 13px; }
+            .details { display: grid; grid-template-columns: 1fr; gap: 24px; }
+            figure { margin: 0; }
+            figure img { display: block; max-width: 100%; height: auto; }
+            figcaption { color: #b8bdcd; font-size: 13px; padding-top: 8px; line-height: 1.5; }
+            .clusters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 28px; }
+            .clusters p { font-size: 14px; color: #c3c9d8; }
+            .clusters h3 { margin-bottom: 6px; font-size: 16px; }
+            .contacts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+            .contacts img { width: 100%; }
+            @media (max-width: 800px) {
+                header, .notes { padding: 16px; }
+                .viewport { margin: 0 8px; }
+                .clusters, .contacts { grid-template-columns: 1fr; }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <p><strong>Revision 02 supersedes this placement proposal.</strong> <a href="revision-02/review.html">Open the current visual review</a>.</p>
+            <h1>Breakspider homepage: authored clutter proposal</h1>
+            <p>37 supplied images, unequal Noise banks, larger personal keepsakes, and one real ONFF process screenshot. Target chaos: about 6/10 on desktop. This is a visual proposal; the production homepage is unchanged.</p>
+            <p><a href="placement-plan.md">Placement plan + critical review</a> · <a href="asset-review.md">All 44 assets</a> · <a href="placement-reference.md">Exact preview poses</a></p>
+            <div class="controls">
+                <label>Capture
+                    <select id="size">
+                        <option value="1920">1920 × 1080 desktop</option>
+                        <option value="1600">1600 × 900 desktop</option>
+                        <option value="1440">1440 × 900 desktop</option>
+                        <option value="1221">1221 × 900 narrow desktop</option>
+                        <option value="1024">1024 × 900 tablet</option>
+                        <option value="768">768 × 900 narrow tablet</option>
+                        <option value="390">390 × 844 mobile</option>
+                        <option value="320">320 × 740 minimum width</option>
+                    </select>
+                </label>
+                <button type="button" id="proposed" aria-pressed="true">Proposed</button>
+                <button type="button" id="baseline" aria-pressed="false">Current homepage</button>
+                <label><input type="checkbox" id="native"> Actual image size</label>
+                <label><input type="checkbox" id="labels"> Cluster markers</label>
+            </div>
+            <p class="hint">Full-page captures. The requested viewport may include a 15px scrollbar. GIFs are frozen in these images. “Actual image size” enables horizontal panning for closer inspection. Mobile captures are shown at native width.</p>
+            <div class="key">
+                <a href="#cluster-A">A · left perimeter</a>
+                <a href="#cluster-B">B · right perimeter</a>
+                <a href="#cluster-C">C · profile keepsakes</a>
+                <a href="#cluster-D">D · gear bridge</a>
+                <a href="#cluster-E">E · Familiar / toys</a>
+                <a href="#cluster-F">F · Sketchbook</a>
+                <a href="#cluster-G">G · updates</a>
+                <a href="#cluster-H">H · map</a>
+                <a href="#cluster-I">I · archive</a>
+            </div>
+        </header>
+        <div class="viewport">
+            <div class="stage" id="stage">
+                <img id="composition" src="comp-1920.png" alt="Proposed authored clutter composition on the production Breakspider homepage at a 1920 pixel viewport">
+                <div id="markers"></div>
+            </div>
+        </div>
+        <main class="notes">
+            <h2>Regional details</h2>
+            <div class="details">
+                <figure>
+                    <a href="about-detail.png"><img src="about-detail.png" alt="About detail showing the portrait brooch, boomerang, small mask and locket group, and retained contact paths"></a>
+                    <figcaption>About: your portrait stays in charge. A brooch attaches to its clothing; the corner weapon, mask, locket, and small Noise occupy different pockets around the copy.</figcaption>
+                </figure>
+                <figure>
+                    <a href="lower-detail.png"><img src="lower-detail.png" alt="Lower field detail showing the Familiar toy pocket, Miku television at Sketchbook, megaphone, map keepsakes, and process material behind real files"></a>
+                    <figcaption>The discovery field mixes crisp work evidence, pixels, smooth cutouts, and black Noise silhouettes. The process screenshot and archive objects sit behind functional files. Click either detail to view the standalone PNG.</figcaption>
+                </figure>
+            </div>
+            <h2>Composition key</h2>
+            <div class="clusters">
+                <section id="cluster-A"><h3>A · Left perimeter</h3><p>Warmer, denser, and more cropped. Large orange opening skull; little masks and fangs; a broad lower ram. Unequal heights and dark breaks.</p></section>
+                <section id="cluster-B"><h3>B · Right perimeter</h3><p>Cooler echoes, interrupted by Projects and updates. Fewer instances; broad open gaps remain. It answers the left edge without mirroring it.</p></section>
+                <section id="cluster-C"><h3>C · Profile keepsakes</h3><p>Two collected Spotlight pins, a portrait brooch, a boomerang at the outer About corner, and a small pink/gold/lavender group below the biography.</p></section>
+                <section id="cluster-D"><h3>D · Gear bridge</h3><p>Three tiny, enlarged pixel items between Spotlight and Working On. A loose reference pocket, with no fake inventory UI or new interactions.</p></section>
+                <section id="cluster-E"><h3>E · Familiar / toys</h3><p>Winged berry below the real Familiar; snake ring and skull overlap farther left. Pink handheld and small rider form a staggered lower pocket.</p></section>
+                <section id="cluster-F"><h3>F · Sketchbook broadcast</h3><p>Larger Miku/TV cutout tucks against the feed's lower-right edge, with one small darker badge. The reading surface stays clear.</p></section>
+                <section id="cluster-G"><h3>G · Update announcement</h3><p>Dimensional red megaphone beside UPDATE.TXT, with one small red grin. A direct prototype relationship that still makes sense in production.</p></section>
+                <section id="cluster-H"><h3>H · Found-map discoveries</h3><p>Cyan slime, hanging Wayfinder, blue Noise, and two unequal crystals gather around the actual inspectable diagram. The map remains unobstructed.</p></section>
+                <section id="cluster-I"><h3>I · Archive sediment</h3><p>Real Godot material behind the files; a pixel creature and green sword nearby; dark cat behind the opposite corner; brown ukulele below.</p></section>
+            </div>
+            <h2>All supplied images</h2>
+            <p>The contact sheets are an inspection catalogue, not a proposed grid layout. The full asset review explains each selection and all seven reserves.</p>
+            <div class="contacts">
+                <a href="contact-sheet-1.png"><img src="contact-sheet-1.png" alt="Asset inspection contact sheet one"></a>
+                <a href="contact-sheet-2.png"><img src="contact-sheet-2.png" alt="Asset inspection contact sheet two"></a>
+                <a href="contact-sheet-3.png"><img src="contact-sheet-3.png" alt="Asset inspection contact sheet three"></a>
+                <a href="contact-sheet-4.png"><img src="contact-sheet-4.png" alt="Asset inspection contact sheet four"></a>
+            </div>
+            <p><a href="detail-small-sprites.png">Enlarged tiny-sprite inspection</a> · <a href="exploration-01-1920.png">Initial exploration before revisions</a></p>
+            <p class="hint">No new production placements, renderer, or editor were implemented. The temporary capture server and browser were stopped. This review opens from the filesystem.</p>
+        </main>
+        <script>
+            const annotations = {
+                "320": [
+                    {
+                        "cluster": "A",
+                        "title": "Left perimeter",
+                        "x": 14,
+                        "y": 1182.859375
+                    },
+                    {
+                        "cluster": "C",
+                        "title": "Profile keepsakes",
+                        "x": 276,
+                        "y": 1167.859375
+                    },
+                    {
+                        "cluster": "D",
+                        "title": "Gear bridge",
+                        "x": 284,
+                        "y": 1817.84375
+                    },
+                    {
+                        "cluster": "E",
+                        "title": "Familiar / toy pocket",
+                        "x": 68,
+                        "y": 2595.328125
+                    },
+                    {
+                        "cluster": "F",
+                        "title": "Sketchbook broadcast",
+                        "x": 263,
+                        "y": 1795.84375
+                    },
+                    {
+                        "cluster": "G",
+                        "title": "Update announcement",
+                        "x": 269,
+                        "y": 2608.328125
+                    },
+                    {
+                        "cluster": "H",
+                        "title": "Found-map discoveries",
+                        "x": 23,
+                        "y": 3051.40625
+                    },
+                    {
+                        "cluster": "I",
+                        "title": "Archive sediment",
+                        "x": 253,
+                        "y": 3694.0625
+                    }
+                ],
+                "390": [
+                    {
+                        "cluster": "A",
+                        "title": "Left perimeter",
+                        "x": 14,
+                        "y": 1183.765625
+                    },
+                    {
+                        "cluster": "C",
+                        "title": "Profile keepsakes",
+                        "x": 331,
+                        "y": 1168.765625
+                    },
+                    {
+                        "cluster": "D",
+                        "title": "Gear bridge",
+                        "x": 339,
+                        "y": 1818.75
+                    },
+                    {
+                        "cluster": "E",
+                        "title": "Familiar / toy pocket",
+                        "x": 68,
+                        "y": 2596.234375
+                    },
+                    {
+                        "cluster": "F",
+                        "title": "Sketchbook broadcast",
+                        "x": 318,
+                        "y": 1796.75
+                    },
+                    {
+                        "cluster": "G",
+                        "title": "Update announcement",
+                        "x": 324,
+                        "y": 2609.234375
+                    },
+                    {
+                        "cluster": "H",
+                        "title": "Found-map discoveries",
+                        "x": 50.5,
+                        "y": 3052.3125
+                    },
+                    {
+                        "cluster": "I",
+                        "title": "Archive sediment",
+                        "x": 308,
+                        "y": 3675.78125
+                    }
+                ],
+                "768": [
+                    {
+                        "cluster": "A",
+                        "title": "Left perimeter",
+                        "x": 8,
+                        "y": 206.796875
+                    },
+                    {
+                        "cluster": "B",
+                        "title": "Right perimeter",
+                        "x": 753,
+                        "y": 685.359375
+                    },
+                    {
+                        "cluster": "C",
+                        "title": "Profile keepsakes",
+                        "x": 107.640625,
+                        "y": 747.359375
+                    },
+                    {
+                        "cluster": "E",
+                        "title": "Familiar / toy pocket",
+                        "x": 87.640625,
+                        "y": 1806.765625
+                    },
+                    {
+                        "cluster": "F",
+                        "title": "Sketchbook broadcast",
+                        "x": 338.5,
+                        "y": 1405.1875
+                    },
+                    {
+                        "cluster": "G",
+                        "title": "Update announcement",
+                        "x": 367.5,
+                        "y": 1547.1875
+                    },
+                    {
+                        "cluster": "H",
+                        "title": "Found-map discoveries",
+                        "x": 211.5,
+                        "y": 1908.265625
+                    },
+                    {
+                        "cluster": "I",
+                        "title": "Archive sediment",
+                        "x": 659.359375,
+                        "y": 2034.109375
+                    }
+                ],
+                "1024": [
+                    {
+                        "cluster": "A",
+                        "title": "Left perimeter",
+                        "x": 8,
+                        "y": 206.796875
+                    },
+                    {
+                        "cluster": "B",
+                        "title": "Right perimeter",
+                        "x": 1009,
+                        "y": 685.359375
+                    },
+                    {
+                        "cluster": "C",
+                        "title": "Profile keepsakes",
+                        "x": 116.859375,
+                        "y": 747.359375
+                    },
+                    {
+                        "cluster": "E",
+                        "title": "Familiar / toy pocket",
+                        "x": 96.859375,
+                        "y": 1798.1875
+                    },
+                    {
+                        "cluster": "F",
+                        "title": "Sketchbook broadcast",
+                        "x": 466.5,
+                        "y": 1405.1875
+                    },
+                    {
+                        "cluster": "G",
+                        "title": "Update announcement",
+                        "x": 495.5,
+                        "y": 1547.1875
+                    },
+                    {
+                        "cluster": "H",
+                        "title": "Found-map discoveries",
+                        "x": 339.5,
+                        "y": 1898.1875
+                    },
+                    {
+                        "cluster": "I",
+                        "title": "Archive sediment",
+                        "x": 906.140625,
+                        "y": 2024.03125
+                    }
+                ],
+                "1221": [
+                    {
+                        "cluster": "A",
+                        "title": "Left perimeter",
+                        "x": 18,
+                        "y": 161.1875
+                    },
+                    {
+                        "cluster": "B",
+                        "title": "Right perimeter",
+                        "x": 1205,
+                        "y": 275.1875
+                    },
+                    {
+                        "cluster": "C",
+                        "title": "Profile keepsakes",
+                        "x": 878.515625,
+                        "y": 260.1875
+                    },
+                    {
+                        "cluster": "D",
+                        "title": "Gear bridge",
+                        "x": 255.3125,
+                        "y": 710.71875
+                    },
+                    {
+                        "cluster": "E",
+                        "title": "Familiar / toy pocket",
+                        "x": 139.953125,
+                        "y": 1220.984375
+                    },
+                    {
+                        "cluster": "F",
+                        "title": "Sketchbook broadcast",
+                        "x": 815.828125,
+                        "y": 1125.625
+                    },
+                    {
+                        "cluster": "G",
+                        "title": "Update announcement",
+                        "x": 853.515625,
+                        "y": 950.71875
+                    },
+                    {
+                        "cluster": "H",
+                        "title": "Found-map discoveries",
+                        "x": 566.25,
+                        "y": 1298.796875
+                    },
+                    {
+                        "cluster": "I",
+                        "title": "Archive sediment",
+                        "x": 335.953125,
+                        "y": 1394.640625
+                    }
+                ],
+                "1440": [
+                    {
+                        "cluster": "A",
+                        "title": "Left perimeter",
+                        "x": 18,
+                        "y": 161.1875
+                    },
+                    {
+                        "cluster": "B",
+                        "title": "Right perimeter",
+                        "x": 1424,
+                        "y": 275.1875
+                    },
+                    {
+                        "cluster": "C",
+                        "title": "Profile keepsakes",
+                        "x": 1042.171875,
+                        "y": 260.1875
+                    },
+                    {
+                        "cluster": "D",
+                        "title": "Gear bridge",
+                        "x": 330.9375,
+                        "y": 714.734375
+                    },
+                    {
+                        "cluster": "E",
+                        "title": "Familiar / toy pocket",
+                        "x": 147.828125,
+                        "y": 1227.234375
+                    },
+                    {
+                        "cluster": "F",
+                        "title": "Sketchbook broadcast",
+                        "x": 942.265625,
+                        "y": 1129.640625
+                    },
+                    {
+                        "cluster": "G",
+                        "title": "Update announcement",
+                        "x": 1013.828125,
+                        "y": 954.734375
+                    },
+                    {
+                        "cluster": "H",
+                        "title": "Found-map discoveries",
+                        "x": 701.15625,
+                        "y": 1302.8125
+                    },
+                    {
+                        "cluster": "I",
+                        "title": "Archive sediment",
+                        "x": 343.828125,
+                        "y": 1398.65625
+                    }
+                ],
+                "1600": [
+                    {
+                        "cluster": "A",
+                        "title": "Left perimeter",
+                        "x": 18,
+                        "y": 161.1875
+                    },
+                    {
+                        "cluster": "B",
+                        "title": "Right perimeter",
+                        "x": 1584,
+                        "y": 275.1875
+                    },
+                    {
+                        "cluster": "C",
+                        "title": "Profile keepsakes",
+                        "x": 1196.390625,
+                        "y": 260.1875
+                    },
+                    {
+                        "cluster": "D",
+                        "title": "Gear bridge",
+                        "x": 386.1875,
+                        "y": 702
+                    },
+                    {
+                        "cluster": "E",
+                        "title": "Familiar / toy pocket",
+                        "x": 153.59375,
+                        "y": 1219.375
+                    },
+                    {
+                        "cluster": "F",
+                        "title": "Sketchbook broadcast",
+                        "x": 1041.640625,
+                        "y": 1116.90625
+                    },
+                    {
+                        "cluster": "G",
+                        "title": "Update announcement",
+                        "x": 1130.9375,
+                        "y": 942
+                    },
+                    {
+                        "cluster": "H",
+                        "title": "Found-map discoveries",
+                        "x": 799.703125,
+                        "y": 1290.078125
+                    },
+                    {
+                        "cluster": "I",
+                        "title": "Archive sediment",
+                        "x": 349.59375,
+                        "y": 1385.921875
+                    }
+                ],
+                "1920": [
+                    {
+                        "cluster": "A",
+                        "title": "Left perimeter",
+                        "x": 18,
+                        "y": 161.1875
+                    },
+                    {
+                        "cluster": "B",
+                        "title": "Right perimeter",
+                        "x": 1904,
+                        "y": 275.1875
+                    },
+                    {
+                        "cluster": "C",
+                        "title": "Profile keepsakes",
+                        "x": 1392.75,
+                        "y": 260.1875
+                    },
+                    {
+                        "cluster": "D",
+                        "title": "Gear bridge",
+                        "x": 495,
+                        "y": 702
+                    },
+                    {
+                        "cluster": "E",
+                        "title": "Familiar / toy pocket",
+                        "x": 160,
+                        "y": 1201.46875
+                    },
+                    {
+                        "cluster": "F",
+                        "title": "Sketchbook broadcast",
+                        "x": 1227.25,
+                        "y": 1116.90625
+                    },
+                    {
+                        "cluster": "G",
+                        "title": "Update announcement",
+                        "x": 1367.75,
+                        "y": 942
+                    },
+                    {
+                        "cluster": "H",
+                        "title": "Found-map discoveries",
+                        "x": 998.125,
+                        "y": 1273.28125
+                    },
+                    {
+                        "cluster": "I",
+                        "title": "Archive sediment",
+                        "x": 356,
+                        "y": 1369.125
+                    }
+                ]
+            };
+            const size = document.querySelector('#size');
+            const image = document.querySelector('#composition');
+            const stage = document.querySelector('#stage');
+            const native = document.querySelector('#native');
+            const labels = document.querySelector('#labels');
+            const markers = document.querySelector('#markers');
+            const proposed = document.querySelector('#proposed');
+            const baseline = document.querySelector('#baseline');
+            let mode = 'comp';
+            function layout() {
+                stage.style.width = native.checked || Number(size.value) <= 760 ? `${image.naturalWidth}px` : '100%';
+                stage.style.maxWidth = `${image.naturalWidth}px`;
+                markers.replaceChildren();
+                if (!labels.checked || mode !== 'comp') return;
+                for (const item of annotations[size.value] || []) {
+                    const marker = document.createElement('a');
+                    marker.className = 'marker';
+                    marker.href = `#cluster-${item.cluster}`;
+                    marker.textContent = item.cluster;
+                    marker.title = item.title;
+                    marker.setAttribute('aria-label', item.title);
+                    marker.style.left = `${item.x / image.naturalWidth * 100}%`;
+                    marker.style.top = `${item.y / image.naturalHeight * 100}%`;
+                    markers.append(marker);
+                }
+            }
+            function update() {
+                proposed.setAttribute('aria-pressed', String(mode === 'comp'));
+                baseline.setAttribute('aria-pressed', String(mode === 'baseline'));
+                image.alt = `${mode === 'comp' ? 'Proposed authored clutter composition' : 'Unchanged production homepage'} at a ${size.value} pixel viewport`;
+                image.src = `${mode}-${size.value}.png`;
+            }
+            image.addEventListener('load', layout);
+            size.addEventListener('change', update);
+            native.addEventListener('change', layout);
+            labels.addEventListener('change', layout);
+            proposed.addEventListener('click', () => { mode = 'comp'; update(); });
+            baseline.addEventListener('click', () => { mode = 'baseline'; update(); });
+            if (image.complete) layout();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,188 @@
+{
+    "checks": [
+        {
+            "width": 1920,
+            "clientWidth": 1905,
+            "minimumRootWidth": 320,
+            "pageWidth": 1905,
+            "pageHeight": 1927,
+            "visibleClutter": 19,
+            "duplicates": [],
+            "brokenImages": [],
+            "decorativeFocusable": 0,
+            "bladeFullyVisible": true,
+            "sketchbookMask": "none",
+            "sketchbookPosition": {
+                "x": 671,
+                "y": 735,
+                "width": 493.25,
+                "height": 421.90625
+            },
+            "familiarStableOnUpdates": true
+        },
+        {
+            "width": 1600,
+            "clientWidth": 1585,
+            "minimumRootWidth": 320,
+            "pageWidth": 1585,
+            "pageHeight": 1944,
+            "visibleClutter": 19,
+            "duplicates": [],
+            "brokenImages": [],
+            "decorativeFocusable": 0,
+            "bladeFullyVisible": true,
+            "sketchbookMask": "none",
+            "sketchbookPosition": {
+                "x": 562.1875,
+                "y": 735,
+                "width": 416.453125,
+                "height": 421.90625
+            },
+            "familiarStableOnUpdates": true
+        },
+        {
+            "width": 1440,
+            "clientWidth": 1425,
+            "minimumRootWidth": 320,
+            "pageWidth": 1425,
+            "pageHeight": 1957,
+            "visibleClutter": 19,
+            "duplicates": [],
+            "brokenImages": [],
+            "decorativeFocusable": 0,
+            "bladeFullyVisible": true,
+            "sketchbookMask": "none",
+            "sketchbookPosition": {
+                "x": 506.9375,
+                "y": 747.734375,
+                "width": 379.328125,
+                "height": 421.90625
+            },
+            "familiarStableOnUpdates": true
+        },
+        {
+            "width": 1221,
+            "clientWidth": 1206,
+            "minimumRootWidth": 320,
+            "pageWidth": 1206,
+            "pageHeight": 1953,
+            "visibleClutter": 19,
+            "duplicates": [],
+            "brokenImages": [],
+            "decorativeFocusable": 0,
+            "bladeFullyVisible": true,
+            "sketchbookMask": "none",
+            "sketchbookPosition": {
+                "x": 431.3125,
+                "y": 743.71875,
+                "width": 328.515625,
+                "height": 421.90625
+            },
+            "familiarStableOnUpdates": true
+        },
+        {
+            "width": 1024,
+            "clientWidth": 1009,
+            "minimumRootWidth": 320,
+            "pageWidth": 1009,
+            "pageHeight": 2736,
+            "visibleClutter": 17,
+            "duplicates": [],
+            "brokenImages": [],
+            "decorativeFocusable": 0,
+            "bladeFullyVisible": null,
+            "sketchbookMask": "none",
+            "sketchbookPosition": {
+                "x": 520.5,
+                "y": 1054.28125,
+                "width": 451.640625,
+                "height": 421.90625
+            },
+            "familiarStableOnUpdates": true
+        },
+        {
+            "width": 768,
+            "clientWidth": 753,
+            "minimumRootWidth": 320,
+            "pageWidth": 753,
+            "pageHeight": 2771,
+            "visibleClutter": 17,
+            "duplicates": [],
+            "brokenImages": [],
+            "decorativeFocusable": 0,
+            "bladeFullyVisible": null,
+            "sketchbookMask": "none",
+            "sketchbookPosition": {
+                "x": 392.5,
+                "y": 1054.28125,
+                "width": 332.859375,
+                "height": 421.90625
+            },
+            "familiarStableOnUpdates": true
+        },
+        {
+            "width": 390,
+            "clientWidth": 375,
+            "minimumRootWidth": 320,
+            "pageWidth": 375,
+            "pageHeight": 3907,
+            "visibleClutter": 12,
+            "duplicates": [],
+            "brokenImages": [],
+            "decorativeFocusable": 0,
+            "bladeFullyVisible": null,
+            "sketchbookMask": "none",
+            "sketchbookPosition": {
+                "x": 16,
+                "y": 1835.75,
+                "width": 343,
+                "height": 421.90625
+            },
+            "familiarStableOnUpdates": true
+        },
+        {
+            "width": 320,
+            "clientWidth": 305,
+            "minimumRootWidth": 320,
+            "pageWidth": 320,
+            "pageHeight": 3965,
+            "visibleClutter": 12,
+            "duplicates": [],
+            "brokenImages": [],
+            "decorativeFocusable": 0,
+            "bladeFullyVisible": null,
+            "sketchbookMask": "none",
+            "sketchbookPosition": {
+                "x": 16,
+                "y": 1834.84375,
+                "width": 288,
+                "height": 421.90625
+            },
+            "familiarStableOnUpdates": true
+        }
+    ],
+    "reducedMotion": [
+        {
+            "id": "about-kris",
+            "source": "http://127.0.0.1:3017/media/home/clutter/stills/action-acting.png"
+        },
+        {
+            "id": "familiar-strawberry",
+            "source": "http://127.0.0.1:3017/media/home/clutter/stills/Strawberry_flap.png"
+        },
+        {
+            "id": "lancer",
+            "source": "http://127.0.0.1:3017/media/home/clutter/stills/lancer-deltarune.png"
+        }
+    ],
+    "dialogOpened": true,
+    "dialogClosed": true,
+    "interactions": {
+        "familiarCycles": true,
+        "crystalGlows": true,
+        "crystalResets": true,
+        "filesShuffle": true,
+        "feedScrolls": true
+    },
+    "errors": []
+}

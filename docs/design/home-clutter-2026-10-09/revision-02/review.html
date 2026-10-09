@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Breakspider authored clutter — revision 02</title>
+        <style>
+            :root { color-scheme: dark; color: #fff1de; background: #11131d; font-family: system-ui, sans-serif; }
+            body { margin: 0; }
+            header, main { max-width: 1400px; margin: auto; padding: 24px; }
+            h1 { margin-top: 0; font-size: 26px; }
+            p { max-width: 85ch; line-height: 1.6; }
+            a { color: #9ee0f2; }
+            .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 20px 0; }
+            button, select { border: 1px solid #858aa4; background: #262b40; color: #fff1de; padding: 10px; font: inherit; cursor: pointer; }
+            button[aria-pressed="true"] { background: #c8f26e; color: #14171f; }
+            .viewport { margin: 0 16px; overflow: auto; border: 1px solid #555c76; }
+            #composition { display: block; width: 100%; height: auto; margin: auto; }
+            .details { display: grid; gap: 28px; }
+            figure { margin: 0; }
+            figure img { max-width: 100%; height: auto; }
+            figcaption, #status { color: #c3c9d8; font-size: 14px; line-height: 1.5; }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Homepage authored clutter — revision 02</h1>
+            <p>18 supplied assets and one Godot process image. Noise and most incidental pickups are reserved for the later random layer. These comps use the actual assets over the unchanged production homepage; they are planning artifacts.</p>
+            <p><a href="placement-plan.md">Placement plan + critical review</a> · <a href="asset-coverage.md">All 44 assets</a> · <a href="placement-reference.md">Numeric reference</a></p>
+            <div class="controls">
+                <label>Capture
+                    <select id="size">
+                        <option value="1920">1920 desktop</option>
+                        <option value="1600">1600 desktop</option>
+                        <option value="1440">1440 desktop</option>
+                        <option value="1024">1024 tablet</option>
+                        <option value="390">390 mobile</option>
+                    </select>
+                </label>
+                <button data-mode="revision" aria-pressed="true">Revision 02</button>
+                <button data-mode="baseline" aria-pressed="false">Current homepage</button>
+                <button data-mode="previous" aria-pressed="false">Earlier proposal</button>
+                <button data-mode="rainbow" aria-pressed="false">Rainbow pin at 1920</button>
+                <label><input id="native" type="checkbox"> Actual pixel size</label>
+            </div>
+            <p id="status" aria-live="polite"></p>
+            <a id="direct" href="comp-1920.png">Open selected image</a>
+        </header>
+        <div class="viewport">
+            <img id="composition" src="comp-1920.png" alt="Revision 02 authored clutter composition at 1920 pixels">
+        </div>
+        <main>
+            <p>Frames hide tucked objects in the previews. PNG captures freeze animated assets; live positioning and behavior will be checked during implementation. Requested capture widths include a 15px scrollbar reduction. The rainbow alternative replaces only the narwhal.</p>
+            <div class="details">
+                <figure><img src="about-detail.png" alt="Flipped Kris pointing toward the portrait and a small Killer Queen head below About"><figcaption>C: an inward gesture without a sticker covering the avatar.</figcaption></figure>
+                <figure><img src="working-detail.png" alt="Godot process screenshot tucked beside Working on and behind Sketchbook"><figcaption>D: actual development material beside the ONFF work.</figcaption></figure>
+                <figure><img src="miku-detail.png" alt="Miku peeking from the right page boundary below the changelog"><figcaption>B: Miku occupies open space below the changelog; the source's existing tilt makes her look around the edge.</figcaption></figure>
+                <figure><img src="lower-detail.png" alt="Relics, handheld, Lancer, slime, map crystals, file perches, and ukulele"><figcaption>E–I: separate pockets leave breathing room for the later random layer.</figcaption></figure>
+            </div>
+        </main>
+        <script>
+            const size = document.querySelector("#size");
+            const native = document.querySelector("#native");
+            const composition = document.querySelector("#composition");
+            const modes = [...document.querySelectorAll("[data-mode]")];
+            let mode = "revision";
+
+            function update() {
+                const width = size.value;
+                const names = { revision: "Revision 02", baseline: "Current homepage", previous: "Earlier proposal", rainbow: "Revision 02 with rainbow pin" };
+                const paths = { revision: `comp-${width}.png`, baseline: `../baseline-${width}.png`, previous: `../comp-${width}.png`, rainbow: "fallback-rainbow-1920.png" };
+                composition.src = paths[mode];
+                composition.alt = `${names[mode]} at ${width} pixels`;
+                composition.style.width = native.checked ? `${Number(width) - 15}px` : "100%";
+                composition.style.maxWidth = `${Number(width) - 15}px`;
+                document.querySelector("#direct").href = paths[mode];
+                document.querySelector("#status").textContent = `${names[mode]} · requested width ${width}px. ${mode === "previous" ? "Historical proposal; placements superseded." : "Design preview; application code unchanged."}`;
+                modes.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.mode === mode)));
+            }
+
+            modes.forEach(button => button.addEventListener("click", () => {
+                mode = button.dataset.mode;
+                if (mode === "rainbow") size.value = "1920";
+                update();
+            }));
+            size.addEventListener("change", () => {
+                if (mode === "rainbow") mode = "revision";
+                update();
+            });
+            native.addEventListener("change", update);
+            update();
+        </script>
+    </body>
+</html>

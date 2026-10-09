@@ -1,0 +1,574 @@
+[
+    {
+        "file": "Aqua's_Wayfinder.webp",
+        "width": 251,
+        "height": 329,
+        "bounds": {
+            "minX": 13,
+            "minY": 13,
+            "maxX": 237,
+            "maxY": 315
+        },
+        "visibleFraction": 0.272,
+        "opaqueFraction": 0.254
+    },
+    {
+        "file": "FF4_PSP_Dark_Crystal.webp",
+        "width": 28,
+        "height": 64,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 27,
+            "maxY": 63
+        },
+        "visibleFraction": 0.813,
+        "opaqueFraction": 0.813
+    },
+    {
+        "file": "FF4_PSP_Light_Crystal.webp",
+        "width": 28,
+        "height": 64,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 27,
+            "maxY": 63
+        },
+        "visibleFraction": 0.813,
+        "opaqueFraction": 0.813
+    },
+    {
+        "file": "LoL_item_jaksho.png",
+        "width": 17,
+        "height": 21,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 16,
+            "maxY": 20
+        },
+        "visibleFraction": 0.633,
+        "opaqueFraction": 0.633
+    },
+    {
+        "file": "LoL_item_lichbane.png",
+        "width": 19,
+        "height": 19,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 18,
+            "maxY": 18
+        },
+        "visibleFraction": 0.554,
+        "opaqueFraction": 0.554
+    },
+    {
+        "file": "LoL_item_locket.png",
+        "width": 18,
+        "height": 24,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 17,
+            "maxY": 23
+        },
+        "visibleFraction": 0.505,
+        "opaqueFraction": 0.505
+    },
+    {
+        "file": "LoL_item_rabadon.png",
+        "width": 22,
+        "height": 20,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 21,
+            "maxY": 19
+        },
+        "visibleFraction": 0.552,
+        "opaqueFraction": 0.552
+    },
+    {
+        "file": "LoL_item_witsend.png",
+        "width": 17,
+        "height": 18,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 16,
+            "maxY": 17
+        },
+        "visibleFraction": 0.461,
+        "opaqueFraction": 0.461
+    },
+    {
+        "file": "StS2_RingOfTheSnake.png",
+        "width": 200,
+        "height": 200,
+        "bounds": {
+            "minX": 4,
+            "minY": 5,
+            "maxX": 195,
+            "maxY": 193
+        },
+        "visibleFraction": 0.717,
+        "opaqueFraction": 0.431
+    },
+    {
+        "file": "StS2_SneckoSkull.png",
+        "width": 200,
+        "height": 200,
+        "bounds": {
+            "minX": 5,
+            "minY": 9,
+            "maxX": 195,
+            "maxY": 181
+        },
+        "visibleFraction": 0.528,
+        "opaqueFraction": 0.279
+    },
+    {
+        "file": "Strawberry_flap.gif",
+        "width": 200,
+        "height": 120,
+        "bounds": {
+            "minX": 15,
+            "minY": 20,
+            "maxX": 184,
+            "maxY": 84
+        },
+        "visibleFraction": 0.229,
+        "opaqueFraction": 0.229
+    },
+    {
+        "file": "Terra_Blade.webp",
+        "width": 46,
+        "height": 54,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 45,
+            "maxY": 53
+        },
+        "visibleFraction": 0.33,
+        "opaqueFraction": 0.33
+    },
+    {
+        "file": "Ukulele.webp",
+        "width": 160,
+        "height": 165,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 159,
+            "maxY": 164
+        },
+        "visibleFraction": 0.475,
+        "opaqueFraction": 0.475
+    },
+    {
+        "file": "acnh_megaphone.png",
+        "width": 128,
+        "height": 128,
+        "bounds": {
+            "minX": 30,
+            "minY": 26,
+            "maxX": 97,
+            "maxY": 101
+        },
+        "visibleFraction": 0.141,
+        "opaqueFraction": 0.127
+    },
+    {
+        "file": "action-acting.gif",
+        "width": 200,
+        "height": 139,
+        "bounds": {
+            "minX": 16,
+            "minY": 19,
+            "maxX": 109,
+            "maxY": 138
+        },
+        "visibleFraction": 0.245,
+        "opaqueFraction": 0.245
+    },
+    {
+        "file": "avatar-sokka-boomerang.png",
+        "width": 326,
+        "height": 326,
+        "bounds": {
+            "minX": 55,
+            "minY": 25,
+            "maxX": 249,
+            "maxY": 301
+        },
+        "visibleFraction": 0.14,
+        "opaqueFraction": 0.127
+    },
+    {
+        "file": "color-pixels-old-games-pink-handheld.png",
+        "width": 268,
+        "height": 268,
+        "bounds": {
+            "minX": 50,
+            "minY": 8,
+            "maxX": 217,
+            "maxY": 259
+        },
+        "visibleFraction": 0.513,
+        "opaqueFraction": 0.504
+    },
+    {
+        "file": "games-terraria-lunatic-cultist-ice-mist-lunatic-cultist.png",
+        "width": 284,
+        "height": 284,
+        "bounds": {
+            "minX": 45,
+            "minY": 8,
+            "maxX": 238,
+            "maxY": 275
+        },
+        "visibleFraction": 0.507,
+        "opaqueFraction": 0.495
+    },
+    {
+        "file": "jet_badge.png",
+        "width": 64,
+        "height": 64,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 63,
+            "maxY": 63
+        },
+        "visibleFraction": 0.492,
+        "opaqueFraction": 0.492
+    },
+    {
+        "file": "jojo-giorno-pin.png",
+        "width": 320,
+        "height": 327,
+        "bounds": {
+            "minX": 50,
+            "minY": 45,
+            "maxX": 265,
+            "maxY": 279
+        },
+        "visibleFraction": 0.372,
+        "opaqueFraction": 0.361
+    },
+    {
+        "file": "jojo-killer-queen.png",
+        "width": 287,
+        "height": 326,
+        "bounds": {
+            "minX": 49,
+            "minY": 22,
+            "maxX": 224,
+            "maxY": 302
+        },
+        "visibleFraction": 0.389,
+        "opaqueFraction": 0.381
+    },
+    {
+        "file": "lancer-deltarune.gif",
+        "width": 148,
+        "height": 125,
+        "bounds": {
+            "minX": 19,
+            "minY": 21,
+            "maxX": 124,
+            "maxY": 102
+        },
+        "visibleFraction": 0.168,
+        "opaqueFraction": 0.168
+    },
+    {
+        "file": "miku_tv_static.png",
+        "width": 323,
+        "height": 327,
+        "bounds": {
+            "minX": 45,
+            "minY": 24,
+            "maxX": 284,
+            "maxY": 306
+        },
+        "visibleFraction": 0.362,
+        "opaqueFraction": 0.323
+    },
+    {
+        "file": "noise_01_orange.png",
+        "width": 170,
+        "height": 173,
+        "bounds": {
+            "minX": 0,
+            "minY": 1,
+            "maxX": 169,
+            "maxY": 171
+        },
+        "visibleFraction": 0.334,
+        "opaqueFraction": 0.259
+    },
+    {
+        "file": "noise_02_lavender.png",
+        "width": 75,
+        "height": 83,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 74,
+            "maxY": 82
+        },
+        "visibleFraction": 0.509,
+        "opaqueFraction": 0.343
+    },
+    {
+        "file": "noise_04_red.png",
+        "width": 129,
+        "height": 160,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 128,
+            "maxY": 159
+        },
+        "visibleFraction": 0.571,
+        "opaqueFraction": 0.5
+    },
+    {
+        "file": "noise_05_lavender.png",
+        "width": 125,
+        "height": 153,
+        "bounds": {
+            "minX": 0,
+            "minY": 1,
+            "maxX": 123,
+            "maxY": 152
+        },
+        "visibleFraction": 0.553,
+        "opaqueFraction": 0.481
+    },
+    {
+        "file": "noise_06_red.png",
+        "width": 52,
+        "height": 40,
+        "bounds": {
+            "minX": 0,
+            "minY": 1,
+            "maxX": 51,
+            "maxY": 39
+        },
+        "visibleFraction": 0.719,
+        "opaqueFraction": 0.525
+    },
+    {
+        "file": "noise_07_blue.png",
+        "width": 67,
+        "height": 83,
+        "bounds": {
+            "minX": 1,
+            "minY": 1,
+            "maxX": 65,
+            "maxY": 82
+        },
+        "visibleFraction": 0.624,
+        "opaqueFraction": 0.519
+    },
+    {
+        "file": "noise_08_lavender.png",
+        "width": 293,
+        "height": 186,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 292,
+            "maxY": 185
+        },
+        "visibleFraction": 0.45,
+        "opaqueFraction": 0.375
+    },
+    {
+        "file": "noise_10_blue.png",
+        "width": 145,
+        "height": 123,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 144,
+            "maxY": 122
+        },
+        "visibleFraction": 0.652,
+        "opaqueFraction": 0.495
+    },
+    {
+        "file": "noise_12_orange.png",
+        "width": 124,
+        "height": 114,
+        "bounds": {
+            "minX": 0,
+            "minY": 1,
+            "maxX": 123,
+            "maxY": 113
+        },
+        "visibleFraction": 0.562,
+        "opaqueFraction": 0.463
+    },
+    {
+        "file": "noise_13_blue.png",
+        "width": 86,
+        "height": 102,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 85,
+            "maxY": 100
+        },
+        "visibleFraction": 0.522,
+        "opaqueFraction": 0.384
+    },
+    {
+        "file": "noise_14_red.png",
+        "width": 111,
+        "height": 148,
+        "bounds": {
+            "minX": 1,
+            "minY": 0,
+            "maxX": 109,
+            "maxY": 146
+        },
+        "visibleFraction": 0.572,
+        "opaqueFraction": 0.502
+    },
+    {
+        "file": "noise_15_orange.png",
+        "width": 94,
+        "height": 139,
+        "bounds": {
+            "minX": 1,
+            "minY": 0,
+            "maxX": 93,
+            "maxY": 137
+        },
+        "visibleFraction": 0.621,
+        "opaqueFraction": 0.501
+    },
+    {
+        "file": "pixel-art-purple-narwhal-purple-narwhal-left.png",
+        "width": 277,
+        "height": 277,
+        "bounds": {
+            "minX": 8,
+            "minY": 28,
+            "maxX": 268,
+            "maxY": 247
+        },
+        "visibleFraction": 0.407,
+        "opaqueFraction": 0.366
+    },
+    {
+        "file": "rainbow_badge.png",
+        "width": 64,
+        "height": 64,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 63,
+            "maxY": 63
+        },
+        "visibleFraction": 0.641,
+        "opaqueFraction": 0.641
+    },
+    {
+        "file": "relic_badge.png",
+        "width": 64,
+        "height": 64,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 63,
+            "maxY": 63
+        },
+        "visibleFraction": 0.641,
+        "opaqueFraction": 0.641
+    },
+    {
+        "file": "rising_badge.png",
+        "width": 64,
+        "height": 64,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 63,
+            "maxY": 63
+        },
+        "visibleFraction": 0.797,
+        "opaqueFraction": 0.797
+    },
+    {
+        "file": "sanrio-nyanmi-pack.png",
+        "width": 302,
+        "height": 326,
+        "bounds": {
+            "minX": 40,
+            "minY": 27,
+            "maxX": 242,
+            "maxY": 298
+        },
+        "visibleFraction": 0.427,
+        "opaqueFraction": 0.418
+    },
+    {
+        "file": "shaymin-land_shiny.png",
+        "width": 96,
+        "height": 96,
+        "bounds": {
+            "minX": 27,
+            "minY": 33,
+            "maxX": 59,
+            "maxY": 63
+        },
+        "visibleFraction": 0.077,
+        "opaqueFraction": 0.077
+    },
+    {
+        "file": "slimerancher_glitch.png",
+        "width": 278,
+        "height": 326,
+        "bounds": {
+            "minX": 14,
+            "minY": 23,
+            "maxX": 263,
+            "maxY": 302
+        },
+        "visibleFraction": 0.519,
+        "opaqueFraction": 0.509
+    },
+    {
+        "file": "starforce_omega_1.png",
+        "width": 36,
+        "height": 42,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 35,
+            "maxY": 41
+        },
+        "visibleFraction": 0.555,
+        "opaqueFraction": 0.555
+    },
+    {
+        "file": "starforce_omega_2.png",
+        "width": 55,
+        "height": 45,
+        "bounds": {
+            "minX": 0,
+            "minY": 0,
+            "maxX": 54,
+            "maxY": 44
+        },
+        "visibleFraction": 0.405,
+        "opaqueFraction": 0.405
+    }
+]

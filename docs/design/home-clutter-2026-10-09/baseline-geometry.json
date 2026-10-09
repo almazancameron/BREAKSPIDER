@@ -1,0 +1,727 @@
+[
+    {
+        "width": 1920,
+        "pageHeight": 1927,
+        "sections": [
+            {
+                "label": "home-spotlight-title",
+                "class": "page-module__E0kJGG__spotlight",
+                "x": 64,
+                "y": 135.1875,
+                "width": 1178,
+                "height": 534
+            },
+            {
+                "label": "home-about-title",
+                "class": "page-module__E0kJGG__about",
+                "x": 1435.75,
+                "y": 159.1875,
+                "width": 405.25,
+                "height": 218.5625
+            },
+            {
+                "label": "home-projects-title",
+                "class": "page-module__E0kJGG__projects",
+                "x": 1112.25,
+                "y": 435.1875,
+                "width": 728.75,
+                "height": 383.8125
+            },
+            {
+                "label": "home-current-title",
+                "class": "page-module__E0kJGG__current",
+                "x": 64,
+                "y": 723,
+                "width": 555,
+                "height": 188.46875
+            },
+            {
+                "label": "home-sketchbook-title",
+                "class": "page-module__E0kJGG__sketchbook",
+                "x": 671,
+                "y": 735,
+                "width": 493.25,
+                "height": 421.90625
+            },
+            {
+                "label": "home-familiar-title",
+                "class": "page-module__E0kJGG__familiar",
+                "x": 64,
+                "y": 935.46875,
+                "width": 555,
+                "height": 192
+            },
+            {
+                "label": "home-changelog-title",
+                "class": "page-module__E0kJGG__changelog",
+                "x": 1411.75,
+                "y": 907,
+                "width": 429.25,
+                "height": 257.28125
+            },
+            {
+                "label": "Found site map",
+                "class": "page-module__E0kJGG__foundMap",
+                "x": 1084.125,
+                "y": 1196.28125,
+                "width": 186,
+                "height": 181.84375
+            },
+            {
+                "label": "home-artifacts-title",
+                "class": "home-artifact-pile-module__xPL1Mq__pile",
+                "x": 64,
+                "y": 1394.125,
+                "width": 1777,
+                "height": 272
+            }
+        ],
+        "figures": [
+            {
+                "class": "page-module__E0kJGG__heroCapture",
+                "x": 808.1028442382812,
+                "y": 263.3057861328125,
+                "width": 469.93487548828125,
+                "height": 369.763427734375
+            }
+        ],
+        "headings": [
+            {
+                "text": "Full-stacksoftware engineer.Game developer.",
+                "x": 94,
+                "y": 236.796875,
+                "width": 695.359375,
+                "height": 175.828125
+            },
+            {
+                "text": "About me",
+                "x": 1435.75,
+                "y": 181.75,
+                "width": 405.25,
+                "height": 44
+            },
+            {
+                "text": "THINGS I'VE MADE ↗",
+                "x": 1130.25,
+                "y": 469.34375,
+                "width": 692.75,
+                "height": 29.390625
+            },
+            {
+                "text": "One Night Familiar Fight",
+                "x": 64,
+                "y": 749.5625,
+                "width": 555,
+                "height": 76
+            },
+            {
+                "text": "Recent posts",
+                "x": 689,
+                "y": 769.15625,
+                "width": 457.25,
+                "height": 23.75
+            },
+            {
+                "text": "Pebbloq",
+                "x": 64,
+                "y": 955.28125,
+                "width": 280,
+                "height": 40
+            },
+            {
+                "text": "Site changelog",
+                "x": 1426.34375,
+                "y": 951.015625,
+                "width": 400.0625,
+                "height": 20.796875
+            },
+            {
+                "text": "Stuff you can inspect",
+                "x": 64,
+                "y": 1430.125,
+                "width": 288,
+                "height": 66.875
+            }
+        ]
+    },
+    {
+        "width": 1600,
+        "pageHeight": 1944,
+        "sections": [
+            {
+                "label": "home-spotlight-title",
+                "class": "page-module__E0kJGG__spotlight",
+                "x": 57.59375,
+                "y": 135.1875,
+                "width": 973.203125,
+                "height": 534
+            },
+            {
+                "label": "home-about-title",
+                "class": "page-module__E0kJGG__about",
+                "x": 1239.390625,
+                "y": 159.1875,
+                "width": 288,
+                "height": 238.265625
+            },
+            {
+                "label": "home-projects-title",
+                "class": "page-module__E0kJGG__projects",
+                "x": 926.640625,
+                "y": 435.1875,
+                "width": 600.75,
+                "height": 383.8125
+            },
+            {
+                "label": "home-current-title",
+                "class": "page-module__E0kJGG__current",
+                "x": 57.59375,
+                "y": 723,
+                "width": 452.59375,
+                "height": 206.375
+            },
+            {
+                "label": "home-sketchbook-title",
+                "class": "page-module__E0kJGG__sketchbook",
+                "x": 562.1875,
+                "y": 735,
+                "width": 416.453125,
+                "height": 421.90625
+            },
+            {
+                "label": "home-familiar-title",
+                "class": "page-module__E0kJGG__familiar",
+                "x": 57.59375,
+                "y": 953.375,
+                "width": 452.59375,
+                "height": 192
+            },
+            {
+                "label": "home-changelog-title",
+                "class": "page-module__E0kJGG__changelog",
+                "x": 1174.9375,
+                "y": 907,
+                "width": 352.453125,
+                "height": 274.078125
+            },
+            {
+                "label": "Found site map",
+                "class": "page-module__E0kJGG__foundMap",
+                "x": 885.703125,
+                "y": 1213.078125,
+                "width": 186,
+                "height": 181.84375
+            },
+            {
+                "label": "home-artifacts-title",
+                "class": "home-artifact-pile-module__xPL1Mq__pile",
+                "x": 57.59375,
+                "y": 1410.921875,
+                "width": 1469.796875,
+                "height": 272
+            }
+        ],
+        "figures": [
+            {
+                "class": "page-module__E0kJGG__heroCapture",
+                "x": 676.7504272460938,
+                "y": 264.6995849609375,
+                "width": 390.10845947265625,
+                "height": 366.975830078125
+            }
+        ],
+        "headings": [
+            {
+                "text": "Full-stacksoftware engineer.Game developer.",
+                "x": 87.59375,
+                "y": 236.796875,
+                "width": 564.28125,
+                "height": 173.4375
+            },
+            {
+                "text": "About me",
+                "x": 1239.390625,
+                "y": 181.75,
+                "width": 288,
+                "height": 44
+            },
+            {
+                "text": "THINGS I'VE MADE ↗",
+                "x": 944.640625,
+                "y": 469.34375,
+                "width": 564.75,
+                "height": 29.390625
+            },
+            {
+                "text": "One Night Familiar Fight",
+                "x": 57.59375,
+                "y": 749.5625,
+                "width": 452.59375,
+                "height": 76
+            },
+            {
+                "text": "Recent posts",
+                "x": 580.1875,
+                "y": 769.15625,
+                "width": 380.453125,
+                "height": 23.75
+            },
+            {
+                "text": "Pebbloq",
+                "x": 57.59375,
+                "y": 973.1875,
+                "width": 280,
+                "height": 40
+            },
+            {
+                "text": "Site changelog",
+                "x": 1189.53125,
+                "y": 951.015625,
+                "width": 323.265625,
+                "height": 20.796875
+            },
+            {
+                "text": "Stuff you can inspect",
+                "x": 57.59375,
+                "y": 1446.921875,
+                "width": 288,
+                "height": 66.875
+            }
+        ]
+    },
+    {
+        "width": 1440,
+        "pageHeight": 1957,
+        "sections": [
+            {
+                "label": "home-spotlight-title",
+                "class": "page-module__E0kJGG__spotlight",
+                "x": 51.828125,
+                "y": 135.1875,
+                "width": 874.21875,
+                "height": 534
+            },
+            {
+                "label": "home-about-title",
+                "class": "page-module__E0kJGG__about",
+                "x": 1085.171875,
+                "y": 159.1875,
+                "width": 288,
+                "height": 238.265625
+            },
+            {
+                "label": "home-projects-title",
+                "class": "page-module__E0kJGG__projects",
+                "x": 834.265625,
+                "y": 435.1875,
+                "width": 538.90625,
+                "height": 396.546875
+            },
+            {
+                "label": "home-current-title",
+                "class": "page-module__E0kJGG__current",
+                "x": 51.828125,
+                "y": 735.734375,
+                "width": 403.109375,
+                "height": 201.5
+            },
+            {
+                "label": "home-sketchbook-title",
+                "class": "page-module__E0kJGG__sketchbook",
+                "x": 506.9375,
+                "y": 747.734375,
+                "width": 379.328125,
+                "height": 421.90625
+            },
+            {
+                "label": "home-familiar-title",
+                "class": "page-module__E0kJGG__familiar",
+                "x": 51.828125,
+                "y": 961.234375,
+                "width": 403.109375,
+                "height": 192
+            },
+            {
+                "label": "home-changelog-title",
+                "class": "page-module__E0kJGG__changelog",
+                "x": 1057.828125,
+                "y": 919.734375,
+                "width": 315.34375,
+                "height": 274.078125
+            },
+            {
+                "label": "Found site map",
+                "class": "page-module__E0kJGG__foundMap",
+                "x": 787.15625,
+                "y": 1225.8125,
+                "width": 186,
+                "height": 181.84375
+            },
+            {
+                "label": "home-artifacts-title",
+                "class": "home-artifact-pile-module__xPL1Mq__pile",
+                "x": 51.828125,
+                "y": 1423.65625,
+                "width": 1321.34375,
+                "height": 272
+            }
+        ],
+        "figures": [
+            {
+                "class": "page-module__E0kJGG__heroCapture",
+                "x": 610.5980224609375,
+                "y": 265.3733215332031,
+                "width": 351.522705078125,
+                "height": 365.6283874511719
+            }
+        ],
+        "headings": [
+            {
+                "text": "Full-stacksoftware engineer.Game developer.",
+                "x": 81.828125,
+                "y": 236.796875,
+                "width": 500.9375,
+                "height": 156.09375
+            },
+            {
+                "text": "About me",
+                "x": 1085.171875,
+                "y": 181.75,
+                "width": 288,
+                "height": 44
+            },
+            {
+                "text": "THINGS I'VE MADE ↗",
+                "x": 852.265625,
+                "y": 469.34375,
+                "width": 502.90625,
+                "height": 26.453125
+            },
+            {
+                "text": "One Night Familiar Fight",
+                "x": 51.828125,
+                "y": 762.296875,
+                "width": 403.109375,
+                "height": 71.125
+            },
+            {
+                "text": "Recent posts",
+                "x": 524.9375,
+                "y": 781.890625,
+                "width": 343.328125,
+                "height": 23.75
+            },
+            {
+                "text": "Pebbloq",
+                "x": 51.828125,
+                "y": 981.046875,
+                "width": 267.109375,
+                "height": 40
+            },
+            {
+                "text": "Site changelog",
+                "x": 1072.421875,
+                "y": 963.75,
+                "width": 286.15625,
+                "height": 20.796875
+            },
+            {
+                "text": "Stuff you can inspect",
+                "x": 51.828125,
+                "y": 1459.65625,
+                "width": 288,
+                "height": 66.875
+            }
+        ]
+    },
+    {
+        "width": 1024,
+        "pageHeight": 2736,
+        "sections": [
+            {
+                "label": "home-spotlight-title",
+                "class": "page-module__E0kJGG__spotlight",
+                "x": 36.859375,
+                "y": 168.796875,
+                "width": 935.28125,
+                "height": 413.5625
+            },
+            {
+                "label": "home-about-title",
+                "class": "page-module__E0kJGG__about",
+                "x": 36.859375,
+                "y": 622.359375,
+                "width": 451.640625,
+                "height": 210.5625
+            },
+            {
+                "label": "home-projects-title",
+                "class": "page-module__E0kJGG__projects",
+                "x": 520.5,
+                "y": 622.359375,
+                "width": 451.640625,
+                "height": 391.921875
+            },
+            {
+                "label": "home-current-title",
+                "class": "page-module__E0kJGG__current",
+                "x": 36.859375,
+                "y": 1054.28125,
+                "width": 451.640625,
+                "height": 421.90625
+            },
+            {
+                "label": "home-sketchbook-title",
+                "class": "page-module__E0kJGG__sketchbook",
+                "x": 520.5,
+                "y": 1054.28125,
+                "width": 451.640625,
+                "height": 421.90625
+            },
+            {
+                "label": "home-familiar-title",
+                "class": "page-module__E0kJGG__familiar",
+                "x": 36.859375,
+                "y": 1516.1875,
+                "width": 451.640625,
+                "height": 264
+            },
+            {
+                "label": "home-changelog-title",
+                "class": "page-module__E0kJGG__changelog",
+                "x": 520.5,
+                "y": 1516.1875,
+                "width": 451.640625,
+                "height": 240.484375
+            },
+            {
+                "label": "Found site map",
+                "class": "page-module__E0kJGG__foundMap",
+                "x": 411.5,
+                "y": 1820.1875,
+                "width": 186,
+                "height": 181.84375
+            },
+            {
+                "label": "home-artifacts-title",
+                "class": "home-artifact-pile-module__xPL1Mq__pile",
+                "x": 36.859375,
+                "y": 2042.03125,
+                "width": 935.28125,
+                "height": 432.625
+            }
+        ],
+        "figures": [
+            {
+                "class": "page-module__E0kJGG__heroCapture",
+                "x": 655.4281616210938,
+                "y": 280.29559326171875,
+                "width": 292.7374267578125,
+                "height": 239.5806884765625
+            }
+        ],
+        "headings": [
+            {
+                "text": "Full-stacksoftware engineer.Game developer.",
+                "x": 66.859375,
+                "y": 270.40625,
+                "width": 549.328125,
+                "height": 118.78125
+            },
+            {
+                "text": "About me",
+                "x": 156.859375,
+                "y": 644.921875,
+                "width": 331.640625,
+                "height": 36
+            },
+            {
+                "text": "THINGS I'VE MADE ↗",
+                "x": 538.5,
+                "y": 656.515625,
+                "width": 415.640625,
+                "height": 21.828125
+            },
+            {
+                "text": "One Night Familiar Fight",
+                "x": 36.859375,
+                "y": 1080.84375,
+                "width": 451.640625,
+                "height": 27.34375
+            },
+            {
+                "text": "Recent posts",
+                "x": 538.5,
+                "y": 1088.4375,
+                "width": 415.640625,
+                "height": 23.75
+            },
+            {
+                "text": "Pebbloq",
+                "x": 172.859375,
+                "y": 1536,
+                "width": 315.640625,
+                "height": 40
+            },
+            {
+                "text": "Site changelog",
+                "x": 535.09375,
+                "y": 1560.203125,
+                "width": 422.453125,
+                "height": 20.796875
+            },
+            {
+                "text": "Stuff you can inspect",
+                "x": 36.859375,
+                "y": 2078.03125,
+                "width": 363.0625,
+                "height": 33.4375
+            }
+        ]
+    },
+    {
+        "width": 390,
+        "pageHeight": 3922,
+        "sections": [
+            {
+                "label": "home-spotlight-title",
+                "class": "page-module__E0kJGG__spotlight",
+                "x": 16,
+                "y": 132.390625,
+                "width": 343,
+                "height": 644.375
+            },
+            {
+                "label": "home-about-title",
+                "class": "page-module__E0kJGG__about",
+                "x": 16,
+                "y": 808.765625,
+                "width": 343,
+                "height": 362
+            },
+            {
+                "label": "home-projects-title",
+                "class": "page-module__E0kJGG__projects",
+                "x": 16,
+                "y": 1202.765625,
+                "width": 343,
+                "height": 367.921875
+            },
+            {
+                "label": "home-current-title",
+                "class": "page-module__E0kJGG__current",
+                "x": 16,
+                "y": 1602.6875,
+                "width": 343,
+                "height": 201.0625
+            },
+            {
+                "label": "home-sketchbook-title",
+                "class": "page-module__E0kJGG__sketchbook",
+                "x": 16,
+                "y": 1835.75,
+                "width": 343,
+                "height": 421.90625
+            },
+            {
+                "label": "home-familiar-title",
+                "class": "page-module__E0kJGG__familiar",
+                "x": 16,
+                "y": 2289.65625,
+                "width": 343,
+                "height": 296.578125
+            },
+            {
+                "label": "home-changelog-title",
+                "class": "page-module__E0kJGG__changelog",
+                "x": 16,
+                "y": 2618.234375,
+                "width": 343,
+                "height": 274.078125
+            },
+            {
+                "label": "Found site map",
+                "class": "page-module__E0kJGG__foundMap",
+                "x": 94.5,
+                "y": 2924.3125,
+                "width": 186,
+                "height": 181.84375
+            },
+            {
+                "label": "home-artifacts-title",
+                "class": "home-artifact-pile-module__xPL1Mq__pile",
+                "x": 16,
+                "y": 3138.15625,
+                "width": 343,
+                "height": 480.625
+            }
+        ],
+        "figures": [
+            {
+                "class": "page-module__E0kJGG__heroCapture",
+                "x": 29.455852508544922,
+                "y": 504.34478759765625,
+                "width": 316.08831787109375,
+                "height": 253.1229248046875
+            }
+        ],
+        "headings": [
+            {
+                "text": "Full-stacksoftware engineer.Game developer.",
+                "x": 34,
+                "y": 231.15625,
+                "width": 307,
+                "height": 99.609375
+            },
+            {
+                "text": "About me",
+                "x": 24,
+                "y": 839.328125,
+                "width": 327,
+                "height": 36
+            },
+            {
+                "text": "THINGS I'VE MADE ↗",
+                "x": 30,
+                "y": 1236.921875,
+                "width": 315,
+                "height": 21.828125
+            },
+            {
+                "text": "One Night Familiar Fight",
+                "x": 24,
+                "y": 1637.25,
+                "width": 327,
+                "height": 54.6875
+            },
+            {
+                "text": "Recent posts",
+                "x": 34,
+                "y": 1869.90625,
+                "width": 307,
+                "height": 23.75
+            },
+            {
+                "text": "Pebbloq",
+                "x": 132,
+                "y": 2309.46875,
+                "width": 227,
+                "height": 40
+            },
+            {
+                "text": "Site changelog",
+                "x": 30.59375,
+                "y": 2662.25,
+                "width": 313.8125,
+                "height": 20.796875
+            },
+            {
+                "text": "Stuff you can inspect",
+                "x": 16,
+                "y": 3174.15625,
+                "width": 343,
+                "height": 66.875
+            }
+        ]
+    }
+]
