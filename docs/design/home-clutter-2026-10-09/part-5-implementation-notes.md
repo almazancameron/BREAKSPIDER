@@ -1,6 +1,8 @@
 # Phase 2 Part 5 — static clutter placement editor
 
-**Implemented and verified by the agent: October 9, 2026. Owner acceptance is pending local and live verification.** Parts 1–4 retain their accepted status. Part 6 remains planned. No commit or deployment was performed.
+**October 10 authoring extension:** Part 5 remains accepted. The editor also adds/swaps images from the generated folder library and previews the selected image. Procedural decoration was removed. Legacy exclusion padding survives exports but is no longer edited or used. See [the current editing guide and fresh verification](../home-clutter-reassessment-2026-10-10/implementation-notes.md). Owner acceptance of this later reassessment remains pending.
+
+**Phase 2 Part 5 is complete and accepted (October 9, 2026).** The owner verified the editor locally and confirmed that live verification is not required for this development-only tool. Parts 1–4 retain their accepted status. Part 6 is implemented and agent-verified, with owner acceptance pending; see [its implementation notes](part-6-implementation-notes.md). No commit or deployment was performed by the agent.
 
 ## Implementation
 
@@ -34,7 +36,7 @@ An existing `edgeOffset` replaces ordinary X with gutter minus offset. Dragging,
 
 Editing limits are width 8–2048px, scale 0.25–8, rotation −180–180°, integer local layer 0–9, and exclusion padding 0–512px. Offsets and edge offsets accept signed finite numbers. Blank/nonfinite/out-of-range edits revert to the previous value. Loading, selection, and export never clamp saved values, including values beyond the editing limits. Changed X/Y offsets round to one decimal; untouched numbers retain their precision. Fields apply on Enter or blur, and Escape abandons a numeric edit.
 
-The active wrapper exposes `data-home-clutter-editing="true"` as the future random-layer suspension hook. No Part 6 consumer exists yet. Done keeps the draft visible in memory; reload discards it unless the owner has pasted the export into source. Neither operation claims to save repository data.
+The active wrapper exposes `data-home-clutter-editing="true"` for editor-state diagnostics. The former procedural consumer was removed in the October 10 reassessment. Done keeps the draft visible in memory; reload discards it unless the owner has pasted the export into source. Neither operation claims to save repository data.
 
 ## Verification
 
@@ -53,10 +55,10 @@ Production verification used a separately started `next start` server at port 30
 
 Artifact inspection/Escape, Familiar cycling, reversible crystal glow, file focus shuffle, Sketchbook scrolling, and Familiar stability while updates expand passed in production. Console warnings/errors and runtime exceptions were absent. Scanning `.next/static`, the generated homepage HTML, and its server module found none of the editor control strings, editor module name, or authoring module name. The editor is excluded from the production client build rather than merely hidden.
 
-Every test browser and the temporary production/failed dev server process trees were stopped by the harness cleanup. The dev server that was already running on port 3000 was reused and left untouched. No test process was left running. Testing was Chromium-based; owner local/live acceptance and other browser engines remain pending.
+Every test browser and the temporary production/failed dev server process trees were stopped by the harness cleanup. The dev server that was already running on port 3000 was reused and left untouched. No test process was left running. Agent testing was Chromium-based; other browser engines were not tested. The owner subsequently verified the editor locally and accepted Part 5, with no live verification required.
 
 ## Owner checkpoint
 
-- [ ] Verify the development editor locally, paste a reviewed export if desired, and confirm responsive fidelity.
-- [ ] Verify the deployed production homepage preserves the accepted composition and has no editor.
-- [ ] Accept Part 5. Part 6 remains unstarted.
+- [x] Owner verified the development editor locally.
+- [x] Owner confirmed that live verification is not required for this development-only tool. Agent production-absence checks passed as recorded above.
+- [x] Owner accepted Part 5 on October 9, 2026. Part 6 is tracked separately in [its implementation notes](part-6-implementation-notes.md), with owner acceptance pending.

@@ -48,7 +48,6 @@ export function HomeAuthoredClutter({ anchor, assets, placements }: {
                     aria-hidden="true"
                     data-clutter-placement={placement.id}
                     data-clutter-viewport={viewport}
-                    data-clutter-exclusion-padding={placement.exclusionPadding}
                 >
                     <span data-clutter-visual className={`${styles.visual} ${asset.pixelArt ? styles.pixelArt : ""} ${asset.framed ? styles.framed : ""}`}>
                         <picture>

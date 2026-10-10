@@ -1,0 +1,2216 @@
+[
+    {
+        "index": 1,
+        "group": "vriska",
+        "file": "0ndmf3k4t8ed1.webp",
+        "width": 320,
+        "height": 408,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 2,
+        "group": "vriska",
+        "file": "76g8wvj4t8ed1.webp",
+        "width": 320,
+        "height": 349,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 3,
+        "group": "vriska",
+        "file": "9dxdmhj4t8ed1.webp",
+        "width": 320,
+        "height": 408,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 4,
+        "group": "vriska",
+        "file": "agrr5uj4t8ed1.webp",
+        "width": 640,
+        "height": 509,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 5,
+        "group": "vriska",
+        "file": "b2dqxuj4t8ed1.webp",
+        "width": 320,
+        "height": 432,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 6,
+        "group": "vriska",
+        "file": "br4a7xj4t8ed1.webp",
+        "width": 320,
+        "height": 408,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 7,
+        "group": "vriska",
+        "file": "f11smuj4t8ed1.webp",
+        "width": 320,
+        "height": 408,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 8,
+        "group": "vriska",
+        "file": "ki15itj4t8ed1.webp",
+        "width": 320,
+        "height": 432,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 9,
+        "group": "vriska",
+        "file": "pcclq7k4t8ed1.webp",
+        "width": 320,
+        "height": 389,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 10,
+        "group": "vriska",
+        "file": "t2ot48k4t8ed1.webp",
+        "width": 320,
+        "height": 389,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 11,
+        "group": "vriska",
+        "file": "xg3mn3k4t8ed1.webp",
+        "width": 320,
+        "height": 393,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 12,
+        "group": "vriska",
+        "file": "xo23qtj4t8ed1.webp",
+        "width": 640,
+        "height": 509,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 13,
+        "group": "vriska",
+        "file": "ykoz03k4t8ed1.webp",
+        "width": 320,
+        "height": 408,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 14,
+        "group": "vriska",
+        "file": "z9jrmhj4t8ed1.webp",
+        "width": 320,
+        "height": 408,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 15,
+        "group": "misc sprites (non-pixel)",
+        "file": "448-4487397_jojo-logo-hd-png-download.png",
+        "width": 860,
+        "height": 367,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 16,
+        "group": "misc sprites (non-pixel)",
+        "file": "Aqua's_Wayfinder_(Art).webp",
+        "width": 251,
+        "height": 329,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 17,
+        "group": "misc sprites (non-pixel)",
+        "file": "FFIII_Model_-_Wind_Crystal.webp",
+        "width": 146,
+        "height": 310,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 18,
+        "group": "misc sprites (non-pixel)",
+        "file": "FFX_Artwork_Yuna.webp",
+        "width": 260,
+        "height": 680,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 19,
+        "group": "misc sprites (non-pixel)",
+        "file": "FFX_Lulu_Art.webp",
+        "width": 563,
+        "height": 1000,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 20,
+        "group": "misc sprites (non-pixel)",
+        "file": "FFX_Tidus_Art_Render.webp",
+        "width": 675,
+        "height": 1185,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 21,
+        "group": "misc sprites (non-pixel)",
+        "file": "Franklin_Badge.webp",
+        "width": 205,
+        "height": 210,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 22,
+        "group": "misc sprites (non-pixel)",
+        "file": "Megaphone_(Switch_2)_NH_Icon.png",
+        "width": 128,
+        "height": 128,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 23,
+        "group": "misc sprites (non-pixel)",
+        "file": "StS2_BoundPhylactery.png",
+        "width": 200,
+        "height": 200,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 24,
+        "group": "misc sprites (non-pixel)",
+        "file": "StS2_BurningBlood.png",
+        "width": 200,
+        "height": 200,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 25,
+        "group": "misc sprites (non-pixel)",
+        "file": "StS2_CrackedCore.png",
+        "width": 200,
+        "height": 200,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 26,
+        "group": "misc sprites (non-pixel)",
+        "file": "StS2_DivineRight.png",
+        "width": 200,
+        "height": 200,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 27,
+        "group": "misc sprites (non-pixel)",
+        "file": "StS2_IceCream.png",
+        "width": 200,
+        "height": 200,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 28,
+        "group": "misc sprites (non-pixel)",
+        "file": "StS2_RingOfTheSnake.png",
+        "width": 200,
+        "height": 200,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 29,
+        "group": "misc sprites (non-pixel)",
+        "file": "StS2_SneckoSkull.png",
+        "width": 200,
+        "height": 200,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 30,
+        "group": "misc sprites (non-pixel)",
+        "file": "StoneMaskAnime.png",
+        "width": 640,
+        "height": 1023,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 31,
+        "group": "misc sprites (non-pixel)",
+        "file": "Terra's_Wayfinder_(Art).png",
+        "width": 243,
+        "height": 336,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 32,
+        "group": "misc sprites (non-pixel)",
+        "file": "Ventus's_Wayfinder_(Art).webp",
+        "width": 251,
+        "height": 334,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 33,
+        "group": "misc sprites (non-pixel)",
+        "file": "VisCap.ai-LOGO2.png",
+        "width": 285,
+        "height": 165,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 34,
+        "group": "misc sprites (non-pixel)",
+        "file": "Wayfinder_(Aqua)_KHBBS.webp",
+        "width": 128,
+        "height": 128,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 35,
+        "group": "misc sprites (non-pixel)",
+        "file": "Wayfinder_(Terra)_KHBBS.webp",
+        "width": 256,
+        "height": 256,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 36,
+        "group": "misc sprites (non-pixel)",
+        "file": "Wayfinder_(Ventus)_KHBBS.webp",
+        "width": 256,
+        "height": 256,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 37,
+        "group": "misc sprites (non-pixel)",
+        "file": "avatar-aang-glider-staff.png",
+        "width": 326,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 38,
+        "group": "misc sprites (non-pixel)",
+        "file": "avatar-sokka-boomerang.png",
+        "width": 326,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 39,
+        "group": "misc sprites (non-pixel)",
+        "file": "chibi-anime-chainsaw-man-makima.png",
+        "width": 327,
+        "height": 327,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 40,
+        "group": "misc sprites (non-pixel)",
+        "file": "chibi-chaimsaw-man-aki.png",
+        "width": 327,
+        "height": 327,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 41,
+        "group": "misc sprites (non-pixel)",
+        "file": "chibi-chaimsaw-man-wolf.png",
+        "width": 327,
+        "height": 327,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 42,
+        "group": "misc sprites (non-pixel)",
+        "file": "chibi-dandadan-seiko-ayase.png",
+        "width": 321,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 43,
+        "group": "misc sprites (non-pixel)",
+        "file": "crouching_orange.png",
+        "width": 295,
+        "height": 217,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 44,
+        "group": "misc sprites (non-pixel)",
+        "file": "cute-axolotl-pack.png",
+        "width": 310,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 45,
+        "group": "misc sprites (non-pixel)",
+        "file": "cute-gojou-satoru-pack.png",
+        "width": 322,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 46,
+        "group": "misc sprites (non-pixel)",
+        "file": "cute-jujutsu-kaisen-suguru-geto-knjaku-pack.png",
+        "width": 326,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 47,
+        "group": "misc sprites (non-pixel)",
+        "file": "cute-mimikyu-pack.png",
+        "width": 328,
+        "height": 327,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 48,
+        "group": "misc sprites (non-pixel)",
+        "file": "cute-ramp-fish-cursor-pack.png",
+        "width": 286,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 49,
+        "group": "misc sprites (non-pixel)",
+        "file": "davepeta_arms_out.png",
+        "width": 295,
+        "height": 257,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 50,
+        "group": "misc sprites (non-pixel)",
+        "file": "davepeta_arms_out_2.png",
+        "width": 295,
+        "height": 257,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 51,
+        "group": "misc sprites (non-pixel)",
+        "file": "davepeta_crouching_green.png",
+        "width": 295,
+        "height": 217,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 52,
+        "group": "misc sprites (non-pixel)",
+        "file": "davepeta_full.png",
+        "width": 1280,
+        "height": 720,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 53,
+        "group": "misc sprites (non-pixel)",
+        "file": "exec-275b2cb0-2e76-4a45-9be2-51ea5f414a13.png",
+        "width": 1170,
+        "height": 1344,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 54,
+        "group": "misc sprites (non-pixel)",
+        "file": "fire-emblem-tharja-pack.png",
+        "width": 302,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 55,
+        "group": "misc sprites (non-pixel)",
+        "file": "game-fire-emblem-lucina-pack.png",
+        "width": 306,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 56,
+        "group": "misc sprites (non-pixel)",
+        "file": "game-puyo-puyo-pack.png",
+        "width": 340,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 57,
+        "group": "misc sprites (non-pixel)",
+        "file": "game-the-world-ends-mr-mew-pack.png",
+        "width": 316,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 58,
+        "group": "misc sprites (non-pixel)",
+        "file": "game-the-world-ends-shiki-misaki-pack.png",
+        "width": 288,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 59,
+        "group": "misc sprites (non-pixel)",
+        "file": "game-world-ends-with-you-rhyme-pack.png",
+        "width": 324,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 60,
+        "group": "misc sprites (non-pixel)",
+        "file": "games-fire-emblem-anna-pack.png",
+        "width": 298,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 61,
+        "group": "misc sprites (non-pixel)",
+        "file": "games-jet-set-radio-beat-pack.png",
+        "width": 329,
+        "height": 327,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 62,
+        "group": "misc sprites (non-pixel)",
+        "file": "games-kingdom-hearts-vanitas-pack.png",
+        "width": 325,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 63,
+        "group": "misc sprites (non-pixel)",
+        "file": "games-the-legend-of-zelda-ocarina-of-time-harp-pack.png",
+        "width": 347,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 64,
+        "group": "misc sprites (non-pixel)",
+        "file": "games-the-legend-of-zelda-ocarina-of-time-sheik-pack.png",
+        "width": 285,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 65,
+        "group": "misc sprites (non-pixel)",
+        "file": "games-twewy-sho-minamimoto-pack.png",
+        "width": 325,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 66,
+        "group": "misc sprites (non-pixel)",
+        "file": "gamesslimerancherglitchslime.png",
+        "width": 278,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 67,
+        "group": "misc sprites (non-pixel)",
+        "file": "gamesslimeranchersecretstyle.png",
+        "width": 292,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 68,
+        "group": "misc sprites (non-pixel)",
+        "file": "hollow-knight-mantis-lords-cursor-pack.png",
+        "width": 260,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 69,
+        "group": "misc sprites (non-pixel)",
+        "file": "hollow_knight_972.png",
+        "width": 304,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 70,
+        "group": "misc sprites (non-pixel)",
+        "file": "hollow_knight_hornet_needle_1156.png",
+        "width": 278,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 71,
+        "group": "misc sprites (non-pixel)",
+        "file": "jojo-bizzare-adventure-iggy-and-lollipop-pack.png",
+        "width": 326,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 72,
+        "group": "misc sprites (non-pixel)",
+        "file": "jojo-bizzare-adventure-rohan-kishibe-and-pen-cursor-pack.png",
+        "width": 311,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 73,
+        "group": "misc sprites (non-pixel)",
+        "file": "jojo-giorno-pin.png",
+        "width": 320,
+        "height": 327,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 74,
+        "group": "misc sprites (non-pixel)",
+        "file": "jojo-jean-pierre-polnareff-and-coco-jumbo-pack.png",
+        "width": 314,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 75,
+        "group": "misc sprites (non-pixel)",
+        "file": "jojo-jotaro-peace-pin.png",
+        "width": 256,
+        "height": 278,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 76,
+        "group": "misc sprites (non-pixel)",
+        "file": "jojo-killer-queen.png",
+        "width": 287,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 77,
+        "group": "misc sprites (non-pixel)",
+        "file": "jojo-kira-tie.png",
+        "width": 307,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 78,
+        "group": "misc sprites (non-pixel)",
+        "file": "jojos-bizarre-adventure-jotaro-kujo-and-star-platinum-cursor-pack.png",
+        "width": 331,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 79,
+        "group": "misc sprites (non-pixel)",
+        "file": "jojos-bizarre-adventure-koichi-hirose-and-act3-cursor-pack.png",
+        "width": 330,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 80,
+        "group": "misc sprites (non-pixel)",
+        "file": "jojos-bizarre-enrico-pucci-and-whitesnake-pack.png",
+        "width": 284,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 81,
+        "group": "misc sprites (non-pixel)",
+        "file": "jojos_bizarre_adventure_dio_brando_and_stone_mask_1360.png",
+        "width": 292,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 82,
+        "group": "misc sprites (non-pixel)",
+        "file": "jojos_bizarre_adventure_robert_e_o_speedwagon_1261.png",
+        "width": 300,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 83,
+        "group": "misc sprites (non-pixel)",
+        "file": "jotaro_anime.png",
+        "width": 860,
+        "height": 716,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 84,
+        "group": "misc sprites (non-pixel)",
+        "file": "jotaro_game.png",
+        "width": 860,
+        "height": 563,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 85,
+        "group": "misc sprites (non-pixel)",
+        "file": "kirby-cracko.png",
+        "width": 293,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 86,
+        "group": "misc sprites (non-pixel)",
+        "file": "kirby-marx.png",
+        "width": 318,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 87,
+        "group": "misc sprites (non-pixel)",
+        "file": "kirby_951.png",
+        "width": 286,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 88,
+        "group": "misc sprites (non-pixel)",
+        "file": "kirby_meta_knight_1398.png",
+        "width": 293,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 89,
+        "group": "misc sprites (non-pixel)",
+        "file": "lying_green.png",
+        "width": 398,
+        "height": 240,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 90,
+        "group": "misc sprites (non-pixel)",
+        "file": "lying_orange.png",
+        "width": 398,
+        "height": 240,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 91,
+        "group": "misc sprites (non-pixel)",
+        "file": "meowscarada.png",
+        "width": 256,
+        "height": 256,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 92,
+        "group": "misc sprites (non-pixel)",
+        "file": "naruto-obito-uchiha-and-mask-pack.png",
+        "width": 320,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 93,
+        "group": "misc sprites (non-pixel)",
+        "file": "naruto_deva_path_akatsuki_1216.png",
+        "width": 312,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 94,
+        "group": "misc sprites (non-pixel)",
+        "file": "ogerpon-teal.png",
+        "width": 256,
+        "height": 256,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 95,
+        "group": "misc sprites (non-pixel)",
+        "file": "one-piece-devil-fruit.png",
+        "width": 324,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 96,
+        "group": "misc sprites (non-pixel)",
+        "file": "one_piece_flag_764.png",
+        "width": 305,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 97,
+        "group": "misc sprites (non-pixel)",
+        "file": "one_piece_monkey_d_luffy_764.png",
+        "width": 314,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 98,
+        "group": "misc sprites (non-pixel)",
+        "file": "pack2154.png",
+        "width": 285,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 99,
+        "group": "misc sprites (non-pixel)",
+        "file": "pack262.png",
+        "width": 284,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 100,
+        "group": "misc sprites (non-pixel)",
+        "file": "puyo-carbuncle-pack.png",
+        "width": 328,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 101,
+        "group": "misc sprites (non-pixel)",
+        "file": "rezidoodle.png",
+        "width": 560,
+        "height": 997,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 102,
+        "group": "misc sprites (non-pixel)",
+        "file": "sanrio-nyanmi-pack.png",
+        "width": 302,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 103,
+        "group": "misc sprites (non-pixel)",
+        "file": "sega-bomberman-white-bomberman-pack.png",
+        "width": 313,
+        "height": 327,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 104,
+        "group": "misc sprites (non-pixel)",
+        "file": "slime-rancher-tabby-slime.png",
+        "width": 326,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 105,
+        "group": "misc sprites (non-pixel)",
+        "file": "slime-rancher-the-tarr-pack.png",
+        "width": 313,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 106,
+        "group": "misc sprites (non-pixel)",
+        "file": "stand_arrow_1_by_justazag_ddht534-375w-2x.png",
+        "width": 630,
+        "height": 1797,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 107,
+        "group": "misc sprites (non-pixel)",
+        "file": "standing_green.png",
+        "width": 295,
+        "height": 224,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 108,
+        "group": "misc sprites (non-pixel)",
+        "file": "standing_orange.png",
+        "width": 295,
+        "height": 224,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 109,
+        "group": "misc sprites (non-pixel)",
+        "file": "twewy-megaphone.png",
+        "width": 274,
+        "height": 326,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 110,
+        "group": "misc sprites (non-pixel)",
+        "file": "vocaloids-flavor-foley-hatsune-miku-static-pack.png",
+        "width": 323,
+        "height": 327,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 111,
+        "group": "misc sprites (non-pixel)",
+        "file": "vrisdoodle.png",
+        "width": 570,
+        "height": 997,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 112,
+        "group": "misc sprites (pixel)",
+        "file": "329-3297343_annoying-dog-png-undertale-toby-fox-dog-transparent.png",
+        "width": 860,
+        "height": 857,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 113,
+        "group": "misc sprites (pixel)",
+        "file": "433-4339475_leafeon-gen-5-sprite-png-download-leafeon-pixel.png",
+        "width": 860,
+        "height": 866,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 114,
+        "group": "misc sprites (pixel)",
+        "file": "453-4530018_skyrim-logo-pixel-art-hd-png-download.png",
+        "width": 860,
+        "height": 1209,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 115,
+        "group": "misc sprites (pixel)",
+        "file": "553-5533838_part-2-of-anons-request-primeape-2020.png",
+        "width": 860,
+        "height": 771,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 116,
+        "group": "misc sprites (pixel)",
+        "file": "Copper_Pickaxe.webp",
+        "width": 32,
+        "height": 32,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 117,
+        "group": "misc sprites (pixel)",
+        "file": "Dracula's_Castle_-_18.webp",
+        "width": 133,
+        "height": 180,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 118,
+        "group": "misc sprites (pixel)",
+        "file": "FF4_PSP_Dark_Crystal.webp",
+        "width": 28,
+        "height": 64,
+        "pages": 6,
+        "alpha": true
+    },
+    {
+        "index": 119,
+        "group": "misc sprites (pixel)",
+        "file": "FF4_PSP_Light_Crystal.webp",
+        "width": 28,
+        "height": 64,
+        "pages": 6,
+        "alpha": true
+    },
+    {
+        "index": 120,
+        "group": "misc sprites (pixel)",
+        "file": "Life_Crystal_(placed).gif",
+        "width": 32,
+        "height": 32,
+        "pages": 11,
+        "alpha": true
+    },
+    {
+        "index": 121,
+        "group": "misc sprites (pixel)",
+        "file": "Mana_Crystal_(placed).gif",
+        "width": 32,
+        "height": 32,
+        "pages": 11,
+        "alpha": true
+    },
+    {
+        "index": 122,
+        "group": "misc sprites (pixel)",
+        "file": "Mr_Saturn_Sprite_Earthbound.png",
+        "width": 64,
+        "height": 84,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 123,
+        "group": "misc sprites (pixel)",
+        "file": "Strawberry_flap.gif",
+        "width": 200,
+        "height": 120,
+        "pages": 36,
+        "alpha": true
+    },
+    {
+        "index": 124,
+        "group": "misc sprites (pixel)",
+        "file": "Strawberry_idle.gif",
+        "width": 144,
+        "height": 128,
+        "pages": 43,
+        "alpha": true
+    },
+    {
+        "index": 125,
+        "group": "misc sprites (pixel)",
+        "file": "Terra_Blade.webp",
+        "width": 46,
+        "height": 54,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 126,
+        "group": "misc sprites (pixel)",
+        "file": "Ukulele.webp",
+        "width": 160,
+        "height": 165,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 127,
+        "group": "misc sprites (pixel)",
+        "file": "action-acting.gif",
+        "width": 200,
+        "height": 139,
+        "pages": 13,
+        "alpha": true
+    },
+    {
+        "index": 128,
+        "group": "misc sprites (pixel)",
+        "file": "blue-baby-the-binding-of-isaac.gif",
+        "width": 220,
+        "height": 220,
+        "pages": 9,
+        "alpha": true
+    },
+    {
+        "index": 129,
+        "group": "misc sprites (pixel)",
+        "file": "chrono-trigger-question-mark.gif",
+        "width": 170,
+        "height": 480,
+        "pages": 2,
+        "alpha": true
+    },
+    {
+        "index": 130,
+        "group": "misc sprites (pixel)",
+        "file": "color-pixels-espeon-and-umbreon-espeon.png",
+        "width": 266,
+        "height": 266,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 131,
+        "group": "misc sprites (pixel)",
+        "file": "color-pixels-espeon-and-umbreon-umbreon.png",
+        "width": 246,
+        "height": 246,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 132,
+        "group": "misc sprites (pixel)",
+        "file": "color-pixels-gastly-and-gengar-gastly.png",
+        "width": 264,
+        "height": 264,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 133,
+        "group": "misc sprites (pixel)",
+        "file": "color-pixels-gastly-and-gengar-gengar.png",
+        "width": 274,
+        "height": 274,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 134,
+        "group": "misc sprites (pixel)",
+        "file": "color-pixels-old-games-blue-handheld.png",
+        "width": 266,
+        "height": 266,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 135,
+        "group": "misc sprites (pixel)",
+        "file": "color-pixels-old-games-pink-handheld.png",
+        "width": 268,
+        "height": 268,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 136,
+        "group": "misc sprites (pixel)",
+        "file": "color-pixels-pokemon-minun-plusle-minun.png",
+        "width": 286,
+        "height": 286,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 137,
+        "group": "misc sprites (pixel)",
+        "file": "color-pixels-pokemon-minun-plusle-plusle.png",
+        "width": 287,
+        "height": 287,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 138,
+        "group": "misc sprites (pixel)",
+        "file": "color-pixels-well-cauldron.png",
+        "width": 283,
+        "height": 283,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 139,
+        "group": "misc sprites (pixel)",
+        "file": "color-pixels-well-potion.png",
+        "width": 264,
+        "height": 264,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 140,
+        "group": "misc sprites (pixel)",
+        "file": "dbmswwz-f833bbd0-2eeb-4f07-b1d0-4210dda55634.gif",
+        "width": 157,
+        "height": 206,
+        "pages": 9,
+        "alpha": true
+    },
+    {
+        "index": 141,
+        "group": "misc sprites (pixel)",
+        "file": "deino-pokemon.gif",
+        "width": 49,
+        "height": 50,
+        "pages": 126,
+        "alpha": true
+    },
+    {
+        "index": 142,
+        "group": "misc sprites (pixel)",
+        "file": "eaf3cd950bef.png",
+        "width": 32,
+        "height": 32,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 143,
+        "group": "misc sprites (pixel)",
+        "file": "fefetasprite-homestuck.gif",
+        "width": 212,
+        "height": 278,
+        "pages": 3,
+        "alpha": true
+    },
+    {
+        "index": 144,
+        "group": "misc sprites (pixel)",
+        "file": "frisk.png",
+        "width": 175,
+        "height": 246,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 145,
+        "group": "misc sprites (pixel)",
+        "file": "games-terraria-lunatic-cultist-ice-mist-ice-mist.png",
+        "width": 275,
+        "height": 275,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 146,
+        "group": "misc sprites (pixel)",
+        "file": "games-terraria-lunatic-cultist-ice-mist-lunatic-cultist.png",
+        "width": 284,
+        "height": 284,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 147,
+        "group": "misc sprites (pixel)",
+        "file": "games-terraria-terraprisma-empress-of-light-empress-of-light.png",
+        "width": 287,
+        "height": 287,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 148,
+        "group": "misc sprites (pixel)",
+        "file": "games-terraria-terraprisma-empress-of-light-terraprisma.png",
+        "width": 280,
+        "height": 280,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 149,
+        "group": "misc sprites (pixel)",
+        "file": "isaac-specialist.gif",
+        "width": 135,
+        "height": 138,
+        "pages": 449,
+        "alpha": true
+    },
+    {
+        "index": 150,
+        "group": "misc sprites (pixel)",
+        "file": "lancer-deltarune.gif",
+        "width": 148,
+        "height": 125,
+        "pages": 6,
+        "alpha": true
+    },
+    {
+        "index": 151,
+        "group": "misc sprites (pixel)",
+        "file": "mad_mew_mew_center.png",
+        "width": 278,
+        "height": 361,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 152,
+        "group": "misc sprites (pixel)",
+        "file": "mad_mew_mew_left.png",
+        "width": 278,
+        "height": 369,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 153,
+        "group": "misc sprites (pixel)",
+        "file": "mad_mew_mew_right.png",
+        "width": 278,
+        "height": 369,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 154,
+        "group": "misc sprites (pixel)",
+        "file": "madeline-celeste.gif",
+        "width": 112,
+        "height": 112,
+        "pages": 6,
+        "alpha": true
+    },
+    {
+        "index": 155,
+        "group": "misc sprites (pixel)",
+        "file": "mismagius-pokemon.gif",
+        "width": 61,
+        "height": 84,
+        "pages": 29,
+        "alpha": true
+    },
+    {
+        "index": 156,
+        "group": "misc sprites (pixel)",
+        "file": "nepeta-leijon-homestuck.gif",
+        "width": 167,
+        "height": 104,
+        "pages": 12,
+        "alpha": true
+    },
+    {
+        "index": 157,
+        "group": "misc sprites (pixel)",
+        "file": "papyrus.png",
+        "width": 215,
+        "height": 349,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 158,
+        "group": "misc sprites (pixel)",
+        "file": "pixel-art-ghost-ghost-key.png",
+        "width": 282,
+        "height": 282,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 159,
+        "group": "misc sprites (pixel)",
+        "file": "pixel-art-ghost-ghost.png",
+        "width": 283,
+        "height": 283,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 160,
+        "group": "misc sprites (pixel)",
+        "file": "pixel-art-purple-narwhal-purple-narwhal-left.png",
+        "width": 277,
+        "height": 277,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 161,
+        "group": "misc sprites (pixel)",
+        "file": "pixel-art-purple-narwhal-purple-narwhal-right.png",
+        "width": 257,
+        "height": 257,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 162,
+        "group": "misc sprites (pixel)",
+        "file": "pixel-pokemon-shiny-lopunny-mega-lopunny-mega-lopunny.png",
+        "width": 278,
+        "height": 278,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 163,
+        "group": "misc sprites (pixel)",
+        "file": "pixel-pokemon-shiny-lopunny-mega-lopunny-shiny-lopunny.png",
+        "width": 277,
+        "height": 277,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 164,
+        "group": "misc sprites (pixel)",
+        "file": "reshiram-reshiram-sprite.gif",
+        "width": 108,
+        "height": 83,
+        "pages": 223,
+        "alpha": true
+    },
+    {
+        "index": 165,
+        "group": "misc sprites (pixel)",
+        "file": "sans.png",
+        "width": 199,
+        "height": 254,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 166,
+        "group": "misc sprites (pixel)",
+        "file": "shaymin-land.png",
+        "width": 96,
+        "height": 96,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 167,
+        "group": "misc sprites (pixel)",
+        "file": "shaymin-land_shiny.png",
+        "width": 96,
+        "height": 96,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 168,
+        "group": "misc sprites (pixel)",
+        "file": "sonic.gif",
+        "width": 428,
+        "height": 498,
+        "pages": 4,
+        "alpha": true
+    },
+    {
+        "index": 169,
+        "group": "misc sprites (pixel)",
+        "file": "sprite.gif",
+        "width": 150,
+        "height": 112,
+        "pages": 70,
+        "alpha": true
+    },
+    {
+        "index": 170,
+        "group": "misc sprites (pixel)",
+        "file": "starwalker-original.gif",
+        "width": 92,
+        "height": 92,
+        "pages": 8,
+        "alpha": true
+    },
+    {
+        "index": 171,
+        "group": "misc sprites (pixel)",
+        "file": "terraria-huge-dragon-egg-chillet-ignis-chillet-ignis.png",
+        "width": 270,
+        "height": 270,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 172,
+        "group": "misc sprites (pixel)",
+        "file": "terraria-huge-dragon-egg-chillet-ignis-dragon-egg.png",
+        "width": 270,
+        "height": 270,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 173,
+        "group": "misc sprites (pixel)",
+        "file": "terraria-yharon-burning-sky-burning-sky-weapon.png",
+        "width": 229,
+        "height": 229,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 174,
+        "group": "misc sprites (pixel)",
+        "file": "terraria-yharon-burning-sky-yharon.png",
+        "width": 264,
+        "height": 264,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 175,
+        "group": "misc sprites (pixel)",
+        "file": "toriel.png",
+        "width": 215,
+        "height": 444,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 176,
+        "group": "misc sprites (pixel)",
+        "file": "whimsicott-animated.gif",
+        "width": 177,
+        "height": 200,
+        "pages": 87,
+        "alpha": true
+    },
+    {
+        "index": 177,
+        "group": "misc sprites (pixel)",
+        "file": "whimsicott.png",
+        "width": 96,
+        "height": 96,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 178,
+        "group": "misc sprites (pixel)",
+        "file": "whimsicott_shiny.png",
+        "width": 96,
+        "height": 96,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 179,
+        "group": "misc images",
+        "file": "7b83e6d4-e19c-45a9-a543-13c80dfe70ca.png",
+        "width": 740,
+        "height": 800,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 180,
+        "group": "misc images",
+        "file": "Save_Room_-_Aria_of_Sorrow_-_01.webp",
+        "width": 240,
+        "height": 160,
+        "pages": 1,
+        "alpha": false
+    },
+    {
+        "index": 181,
+        "group": "misc images",
+        "file": "Untitled(1).png",
+        "width": 180,
+        "height": 267,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 182,
+        "group": "misc images",
+        "file": "ds48_by_trashiestdoodles_dm5e2ek-414w-2x_1_30.jpg",
+        "width": 248,
+        "height": 373,
+        "pages": 1,
+        "alpha": false
+    },
+    {
+        "index": 183,
+        "group": "misc images",
+        "file": "dst-52-screams-from-within.jpg",
+        "width": 488,
+        "height": 680,
+        "pages": 1,
+        "alpha": false
+    },
+    {
+        "index": 184,
+        "group": "misc images",
+        "file": "i19e41af8ldh1.webp",
+        "width": 750,
+        "height": 613,
+        "pages": 1,
+        "alpha": false
+    },
+    {
+        "index": 185,
+        "group": "misc images",
+        "file": "l5lp5s6op7m51.png",
+        "width": 6245,
+        "height": 3513,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 186,
+        "group": "misc images",
+        "file": "redvid_io_watch_out_mesa_there_s_a_new_sheriff_in_town-ezgif.com-video-to-gif-converter.gif",
+        "width": 800,
+        "height": 450,
+        "pages": 138,
+        "alpha": true
+    },
+    {
+        "index": 187,
+        "group": "misc images",
+        "file": "shopping.webp",
+        "width": 323,
+        "height": 450,
+        "pages": 1,
+        "alpha": false
+    },
+    {
+        "index": 188,
+        "group": "misc images",
+        "file": "tenor.gif",
+        "width": 426,
+        "height": 240,
+        "pages": 29,
+        "alpha": true
+    },
+    {
+        "index": 189,
+        "group": "misc images",
+        "file": "whiterose.png",
+        "width": 696,
+        "height": 564,
+        "pages": 1,
+        "alpha": false
+    },
+    {
+        "index": 190,
+        "group": "misc images",
+        "file": "woe-117-warehouse-tabby.jpg",
+        "width": 488,
+        "height": 680,
+        "pages": 1,
+        "alpha": false
+    },
+    {
+        "index": 191,
+        "group": "vectors",
+        "file": "brotherhood-lrxiii.svg",
+        "width": 980,
+        "height": 540,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 192,
+        "group": "vectors",
+        "file": "heartless-emblem.svg",
+        "width": 868,
+        "height": 1188,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 193,
+        "group": "vectors",
+        "file": "isaac-treasure-map.svg",
+        "width": 343,
+        "height": 439,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 194,
+        "group": "vectors",
+        "file": "kingdom-key-kh.svg",
+        "width": 600,
+        "height": 600,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 195,
+        "group": "vectors",
+        "file": "nav-sticker-blob.svg",
+        "width": 260,
+        "height": 100,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 196,
+        "group": "vectors",
+        "file": "nav-sticker-comet.svg",
+        "width": 260,
+        "height": 100,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 197,
+        "group": "vectors",
+        "file": "nav-sticker-fold.svg",
+        "width": 260,
+        "height": 100,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 198,
+        "group": "vectors",
+        "file": "nav-sticker-melt.svg",
+        "width": 260,
+        "height": 100,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 199,
+        "group": "vectors",
+        "file": "nav-sticker-moth.svg",
+        "width": 260,
+        "height": 100,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 200,
+        "group": "vectors",
+        "file": "nav-sticker-shard.svg",
+        "width": 260,
+        "height": 100,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 201,
+        "group": "vectors",
+        "file": "nav-sticker-thorn.svg",
+        "width": 260,
+        "height": 100,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 202,
+        "group": "vectors",
+        "file": "nav-sticker-ticket.svg",
+        "width": 260,
+        "height": 100,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 203,
+        "group": "vectors",
+        "file": "p4g-tv-icon.svg",
+        "width": 512,
+        "height": 512,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 204,
+        "group": "vectors",
+        "file": "phantom-thieves-2.svg",
+        "width": 340,
+        "height": 335,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 205,
+        "group": "vectors",
+        "file": "player-pin-switch.svg",
+        "width": 240,
+        "height": 240,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 206,
+        "group": "vectors",
+        "file": "rescue-team-badge-basic.svg",
+        "width": 460,
+        "height": 175,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 207,
+        "group": "vectors",
+        "file": "ror-drifter-cube.svg",
+        "width": 256,
+        "height": 256,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 208,
+        "group": "vectors",
+        "file": "team-plasma-logo.svg",
+        "width": 900,
+        "height": 900,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 209,
+        "group": "vectors",
+        "file": "twewy-pin-lightning-rage.svg",
+        "width": 120,
+        "height": 120,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 210,
+        "group": "vectors",
+        "file": "twewy-speech-bubble-exclamation.svg",
+        "width": 128,
+        "height": 128,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 211,
+        "group": "vectors",
+        "file": "twewy-speech-bubble-question.svg",
+        "width": 128,
+        "height": 128,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 212,
+        "group": "vectors",
+        "file": "twewy-speech-bubble.svg",
+        "width": 128,
+        "height": 128,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 213,
+        "group": "vectors",
+        "file": "warframe-lotus-white-outline.svg",
+        "width": 1050,
+        "height": 979,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 214,
+        "group": "vectors",
+        "file": "warframe-lotus-white.svg",
+        "width": 1050,
+        "height": 979,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 215,
+        "group": "vectors",
+        "file": "warframe-lotus.svg",
+        "width": 1050,
+        "height": 979,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 216,
+        "group": "vectors",
+        "file": "yevon.svg",
+        "width": 258,
+        "height": 248,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 217,
+        "group": "familiar sprites",
+        "file": "ashwing1.png",
+        "width": 64,
+        "height": 64,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 218,
+        "group": "familiar sprites",
+        "file": "pebbloq1.png",
+        "width": 64,
+        "height": 64,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 219,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_01_pose_top_01.png",
+        "width": 36,
+        "height": 40,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 220,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_02_pose_top_02.png",
+        "width": 36,
+        "height": 42,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 221,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_03_pose_top_03.png",
+        "width": 36,
+        "height": 42,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 222,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_04_pose_back_01.png",
+        "width": 41,
+        "height": 41,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 223,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_05_pose_back_02.png",
+        "width": 41,
+        "height": 42,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 224,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_06_pose_back_03.png",
+        "width": 41,
+        "height": 43,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 225,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_07_pose_transition_01.png",
+        "width": 25,
+        "height": 48,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 226,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_08_effect_transition_01.png",
+        "width": 17,
+        "height": 64,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 227,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_09_effect_transition_02.png",
+        "width": 5,
+        "height": 86,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 228,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_11_effect_front_01.png",
+        "width": 5,
+        "height": 86,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 229,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_12_effect_front_02.png",
+        "width": 29,
+        "height": 52,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 230,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_13_pose_front_01.png",
+        "width": 47,
+        "height": 51,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 231,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_14_pose_front_02.png",
+        "width": 55,
+        "height": 44,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 232,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_15_pose_front_03.png",
+        "width": 55,
+        "height": 45,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 233,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_16_pose_lower_01.png",
+        "width": 36,
+        "height": 40,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 234,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_17_pose_lower_02.png",
+        "width": 25,
+        "height": 48,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 235,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_18_effect_lower_01.png",
+        "width": 17,
+        "height": 64,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 236,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_19_effect_lower_02.png",
+        "width": 5,
+        "height": 86,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 237,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_20_pose_bottom_01.png",
+        "width": 44,
+        "height": 38,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 238,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_21_pose_bottom_02.png",
+        "width": 45,
+        "height": 31,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 239,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_22_pose_bottom_03.png",
+        "width": 45,
+        "height": 28,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 240,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_23_effect_bottom_01.png",
+        "width": 30,
+        "height": 30,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 241,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_24_effect_bottom_02.png",
+        "width": 12,
+        "height": 12,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 242,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_25_portrait_01.png",
+        "width": 40,
+        "height": 48,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 243,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_26_portrait_02.png",
+        "width": 40,
+        "height": 48,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 244,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_27_portrait_03.png",
+        "width": 40,
+        "height": 48,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 245,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_28_portrait_04.png",
+        "width": 40,
+        "height": 48,
+        "pages": 1,
+        "alpha": true
+    },
+    {
+        "index": 246,
+        "group": "MegaManSF Sprites",
+        "file": "omega_xis_29_portrait_05.png",
+        "width": 40,
+        "height": 48,
+        "pages": 1,
+        "alpha": true
+    }
+]

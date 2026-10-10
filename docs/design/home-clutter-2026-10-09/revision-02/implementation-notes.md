@@ -57,4 +57,4 @@ Temporary preview-server and browser processes were stopped after testing. The a
 
 ## Later authoring tool
 
-Phase 2 Part 5 is implemented and agent-verified. See the [editor implementation and verification notes](../part-5-implementation-notes.md). The accepted Part 4 catalogue, placements, renderer, and layering are preserved. Part 5 owner acceptance remains pending local/live verification; randomized clutter remains planned.
+Phase 2 Part 5 is complete and accepted (2026-10-09). The owner verified the development-only editor locally and confirmed that live verification is not required. See the [editor implementation and verification notes](../part-5-implementation-notes.md). The accepted Part 4 catalogue, placements, renderer, and layering are preserved; Part 6 is now implemented and agent-verified, with owner acceptance pending. See [random-clutter implementation and verification notes](../part-6-implementation-notes.md).

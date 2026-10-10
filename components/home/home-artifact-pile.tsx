@@ -20,7 +20,7 @@ export function HomeArtifactPile({ artifacts }: { artifacts: HomeArtifact[] }) {
     };
 
     return (
-        <section className={styles.pile} data-home-exclusion="pile" aria-labelledby="home-artifacts-title">
+        <section className={styles.pile} aria-labelledby="home-artifacts-title">
             <div className={styles.introduction}>
                 <span>MORE STUFF</span>
                 <h2 id="home-artifacts-title">Stuff you can inspect</h2>

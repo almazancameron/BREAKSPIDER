@@ -1,5 +1,7 @@
 # Breakspider asset curation and homepage coverage
 
+**Current homepage selection (October 10, 2026):** The preferred curated homepage retains its 19 authored keepsakes; automatic decorative selection is removed. The expanded archive audit, compositional roles, rejected alternatives, and optional sourcing suggestions are in [the current reassessment](design/home-clutter-reassessment-2026-10-10/implementation-notes.md). The original RAR inventory below records historical coverage, not the extent of the current asset tree.
+
 **Scope.** I inspected every item in `artifacts.rar`: 187 visual files and two development support files. The accompanying CSV has one row per archive item. Contact-sheet IDs match the CSV `index` column. The comparison uses `breakspider_wireframes(3)(1).html` (spatial revision 04) alongside the design philosophy, site architecture, and inspiration manifest. Per the creator's clarification, a Breakspider logo/animation, Viscap screenshots and demos, and game screenshots and demos **already exist outside this archive**. Their availability is assumed here; their exact formats, dimensions, and visual fit were not inspected.
 
 ## Curation read

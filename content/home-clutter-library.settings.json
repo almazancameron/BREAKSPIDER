@@ -1,0 +1,22 @@
+{
+    "folders": {
+        "noise": {"family":"noise","pixelArt":false,"widthRange":[32,74]},
+        "badges": {"family":"badge","pixelArt":true,"widthRange":[20,38]},
+        "sprites": {"family":"sprite","pixelArt":false,"widthRange":[44,110]},
+        "pixel-sprites": {"family":"sprite","pixelArt":true,"widthRange":[44,110]}
+    },
+    "overrides": {
+        "sprites/stand_arrow_1_by_justazag_ddht534-375w-2x.png": {"widthRange":[44,53]},
+        "sprites/StoneMaskAnime.png": {"widthRange":[44,94]},
+        "pixel-sprites/453-4530018_skyrim-logo-pixel-art-hd-png-download.png": {"widthRange":[44,107]},
+        "pixel-sprites/frisk.png": {"widthRange":[44,107]},
+        "pixel-sprites/papyrus.png": {"widthRange":[44,92]},
+        "pixel-sprites/toriel.png": {"widthRange":[44,73]},
+        "pixel-sprites/omega_xis_01_pose_top_01.png": {"widthRange":[40,72]},
+        "pixel-sprites/omega_xis_07_pose_transition_01.png": {"widthRange":[40,72]},
+        "pixel-sprites/omega_xis_13_pose_front_01.png": {"widthRange":[40,72]},
+        "pixel-sprites/omega_xis_16_pose_lower_01.png": {"widthRange":[40,72]},
+        "pixel-sprites/omega_xis_20_pose_bottom_01.png": {"widthRange":[40,72]},
+        "pixel-sprites/omega_xis_22_pose_bottom_03.png": {"widthRange":[40,72]}
+    }
+}

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent, type ReactNode } from "react";
 import { createPortal } from "react-dom";
-import { HOME_AUTHORED_PLACEMENTS, HOME_CLUTTER_ASSETS } from "../../content/home-clutter";
+import { HOME_AUTHORED_PLACEMENTS } from "../../content/home-clutter";
 import {
     ANCHOR_ORDER, ANCHOR_POINTS, VIEWPORT_QUERIES, anchorPointPosition, clonePlacements,
     exportPlacements, findNearestAnchor, findNearestAnchorPoint, patchPlacementPose,
@@ -10,7 +10,7 @@ import {
     type Point, type Rect,
 } from "../../lib/home/clutter-authoring";
 import { resolveClutterPose } from "../../lib/home/clutter-placement";
-import type { AnchorPoint, AuthoredPlacement, ClutterViewport, HomeAnchorId, PlacementPose } from "../../lib/home/clutter-types";
+import type { AnchorPoint, AuthoredPlacement, ClutterAsset, ClutterViewport, HomeAnchorId, PlacementPose } from "../../lib/home/clutter-types";
 import { ContentImage } from "../ui/content-image";
 import { ClutterDraftContext } from "./home-clutter-state";
 import clutterStyles from "./home-authored-clutter.module.css";
@@ -100,7 +100,7 @@ function NumberField({ label, value, min, max, step = "any", commitUnchanged = f
     );
 }
 
-export function HomeClutterEditor({ children }: { children: ReactNode }) {
+export function HomeClutterEditor({ children, assets }: { children: ReactNode; assets: ClutterAsset[] }) {
     const [editing, setEditing] = useState(false);
     const [draft, setDraft] = useState(() => clonePlacements(HOME_AUTHORED_PLACEMENTS));
     const [root, setRoot] = useState<HTMLDivElement | null>(null);
@@ -110,22 +110,23 @@ export function HomeClutterEditor({ children }: { children: ReactNode }) {
             <div ref={setRoot} data-home-clutter-editing={editing ? "true" : undefined}>
                 {children}
             </div>
-            {editing && root ? <ActiveEditor root={root} draft={draft} setDraft={setDraft} onClose={() => setEditing(false)} /> : (
+            {editing && root ? <ActiveEditor root={root} assets={assets} draft={draft} setDraft={setDraft} onClose={() => setEditing(false)} /> : (
                 <button type="button" className={styles.toggle} onClick={() => setEditing(true)}>Edit clutter</button>
             )}
         </ClutterDraftContext.Provider>
     );
 }
 
-function ActiveEditor({ root, draft, setDraft, onClose }: {
+function ActiveEditor({ root, assets, draft, setDraft, onClose }: {
     root: HTMLElement;
+    assets: ClutterAsset[];
     draft: AuthoredPlacement[];
     setDraft: React.Dispatch<React.SetStateAction<AuthoredPlacement[]>>;
     onClose: () => void;
 }) {
     const [mode, setMode] = useState<ClutterViewport>(currentViewport);
     const [selectedId, setSelectedId] = useState(draft[0]?.id ?? "");
-    const [assetId, setAssetId] = useState(HOME_CLUTTER_ASSETS[0].id);
+    const [assetId, setAssetId] = useState(assets[0].id);
     const [handles, setHandles] = useState<Handle[]>([]);
     const [preview, setPreview] = useState<Preview | null>(null);
     const [status, setStatus] = useState("");
@@ -188,11 +189,11 @@ function ActiveEditor({ root, draft, setDraft, onClose }: {
     const newRecord = (): AuthoredPlacement => {
         let id: string;
         do { id = `${assetId}-${nextId.current++}`; } while (draft.some((record) => record.id === id));
-        const asset = HOME_CLUTTER_ASSETS.find((item) => item.id === assetId)!;
+        const asset = assets.find((item) => item.id === assetId)!;
         return {
             id, assetId, anchor: pose?.anchor ?? "spotlight", anchorPoint: "center",
-            x: 0, y: 0, width: Math.min(asset.media.width ?? 96, 160), rotation: 0, scale: 1,
-            zIndex: 3, hidden: false, flip: false, edgeOffset: null, exclusionPadding: 12,
+            x: 0, y: 0, width: asset.widthRange ? Math.min(80, asset.widthRange[1]) : Math.min(asset.media.width ?? 96, 160),
+            rotation: 0, scale: 1, zIndex: 3, hidden: false, flip: false, edgeOffset: null,
         };
     };
 
@@ -279,7 +280,8 @@ function ActiveEditor({ root, draft, setDraft, onClose }: {
         setPreview({ record, pose: dragPose, center, target: targetAt(center) });
     };
 
-    const previewAsset = preview && HOME_CLUTTER_ASSETS.find((asset) => asset.id === preview.record.assetId);
+    const previewAsset = preview && assets.find((asset) => asset.id === preview.record.assetId);
+    const paletteAsset = assets.find((asset) => asset.id === assetId)!;
     const field = (label: string, name: "x" | "y" | "width" | "rotation" | "scale" | "zIndex" | "edgeOffset", min?: number, max?: number, step?: number) => pose && (
         <NumberField key={`${selectedId}-${mode}-${name}-${pose[name]}`} label={label} value={pose[name] ?? 0} min={min} max={max} step={step}
             commitUnchanged={name === "x" && pose.edgeOffset != null}
@@ -357,13 +359,11 @@ function ActiveEditor({ root, draft, setDraft, onClose }: {
                             {mode !== "desktop" && <button type="button" disabled={!selected[mode]} onClick={() => setDraft((records) => resetPlacementOverride(records, selected.id, mode))}>Reset {mode} override</button>}
                             <details>
                                 <summary>Whole record / all modes</summary>
-                                <p>Asset, exclusion padding, and Delete affect every mode. IDs stay fixed.</p>
+                                <p>Asset and Delete affect every mode. IDs stay fixed.</p>
                                 <label>Asset<select value={selected.assetId} onChange={(event) => {
                                     const value = event.target.value;
                                     setDraft((records) => records.map((record) => record.id === selected.id ? { ...record, assetId: value } : record));
-                                }}>{HOME_CLUTTER_ASSETS.map((asset) => <option key={asset.id}>{asset.id}</option>)}</select></label>
-                                <NumberField key={`${selected.id}-${selected.exclusionPadding}`} label="Exclusion padding (0–512 px)" value={selected.exclusionPadding} min={0} max={512}
-                                    onCommit={(value) => setDraft((records) => records.map((record) => record.id === selected.id ? { ...record, exclusionPadding: value } : record))} />
+                                }}>{assets.map((asset) => <option key={asset.id}>{asset.id}</option>)}</select></label>
                                 <button type="button" onClick={() => {
                                     setDraft((records) => records.filter((record) => record.id !== selected.id));
                                     setSelectedId("");
@@ -374,8 +374,11 @@ function ActiveEditor({ root, draft, setDraft, onClose }: {
                             <summary>Add from catalogue</summary>
                             <p>Add creates a whole record at the selected anchor (or Spotlight). Dragging in an override mode adds that mode&apos;s position.</p>
                             <label>New asset<select value={assetId} onChange={(event) => setAssetId(event.target.value)}>
-                                {HOME_CLUTTER_ASSETS.map((asset) => <option key={asset.id}>{asset.id}</option>)}
+                                {assets.map((asset) => <option key={asset.id}>{asset.id}</option>)}
                             </select></label>
+                            <div className={`${styles.palettePreview} ${paletteAsset.pixelArt ? clutterStyles.pixelArt : ""}`}>
+                                <ContentImage media={{ ...paletteAsset.media, alt: "Selected decoration preview" }} sizes="80px" unoptimized />
+                            </div>
                             <div className={styles.row}>
                                 <button type="button" onClick={() => {
                                     const record = newRecord();

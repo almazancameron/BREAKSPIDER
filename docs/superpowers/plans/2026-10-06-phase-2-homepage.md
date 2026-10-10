@@ -1,10 +1,12 @@
 # Phase 2 Homepage Implementation Plan — Reading Guide
 
+**Current clutter direction (October 10, 2026):** The reassessment restores the preferred authored composition and removes procedural decoration. The folder collection remains available through the dev-only editor. See [the current implementation/verification guide](../../design/home-clutter-reassessment-2026-10-10/implementation-notes.md). Parts 1–5 remain accepted; this later reassessment and final Phase 2 acceptance remain pending.
+
 > **For agentic workers:** Use `superpowers:executing-plans` only if the owner later requests implementation. These are tutorials for manual implementation by the owner. They authorize no implementation or delegation.
 
-**Status:** Part 1 (primary composition) is complete and accepted (2026-10-07). The owner verified it through local testing and live deployment. Part 2 (activity modules) is complete and accepted (2026-10-07), verified locally and in live deployment by the owner. Part 3 (artifact interactions) is complete and accepted (2026-10-07), verified locally and in live deployment by the owner. Part 4 (authored clutter) is complete and accepted (2026-10-09), verified locally and in live deployment by the owner. Parts 5–6 remain planned. Phase 1 remains complete and accepted.
+**Status:** Part 1 (primary composition) is complete and accepted (2026-10-07). The owner verified it through local testing and live deployment. Part 2 (activity modules) is complete and accepted (2026-10-07), verified locally and in live deployment by the owner. Part 3 (artifact interactions) is complete and accepted (2026-10-07), verified locally and in live deployment by the owner. Part 4 (authored clutter) is complete and accepted (2026-10-09), verified locally and in live deployment by the owner. Part 5 (development-only placement editor) is complete and accepted (2026-10-09), verified locally by the owner; live verification is not required. Part 6 is implemented and agent-verified (2026-10-09); owner local/live acceptance and final Phase 2 acceptance remain pending. See [random-clutter implementation and verification notes](../../design/home-clutter-2026-10-09/part-6-implementation-notes.md). Phase 1 remains complete and accepted.
 
-**Goal:** Translate the approved Prototype 04 homepage into production, including its optional interactions, editable authored decoration, and restrained session-stable random clutter.
+**Goal:** Translate the approved Prototype 04 homepage into production, including its optional interactions, editable authored decoration, and dense session-stable collage pockets.
 
 **Architecture:** Keep the homepage's composition in its own CSS and JSX. Read static content through the existing repository, reuse the image/dialog/audio/visitor infrastructure, and introduce small client components only for interaction and browser measurements. Structural layout, decorative placement, and dev-only authoring have separate responsibilities.
 
@@ -22,7 +24,7 @@ Finish each tutorial's browser checkpoint before starting the next. Each chunk y
 | 2 | [Activity modules](2026-10-06-phase-2-activity-modules.md) — complete and accepted | Current project, recent Sketchbook feed, Familiar cycling, and changelog complete the structural field. Depends on chunk 1's data and layout ownership. |
 | 3 | [Artifact interactions](2026-10-06-phase-2-artifact-interactions.md) - complete and accepted | Shared homepage inspection, found Map, archive focus/shuffle, mobile file strip, and reversible crystal. Depends on actual content from chunks 1–2. |
 | 4 | [Authored clutter](2026-10-06-phase-2-authored-clutter.md) — complete and accepted | Curated clusters attach to semantic anchors through readable placement records. Verified locally and in live deployment by the owner. |
-| 5 | [Dev-only placement editor](2026-10-06-phase-2-placement-editor.md) — implemented; owner acceptance pending | Static decoration authoring, five-mode pose adjustments, and complete exports. See [implementation/verification notes](../../design/home-clutter-2026-10-09/part-5-implementation-notes.md). |
+| 5 | [Dev-only placement editor](2026-10-06-phase-2-placement-editor.md) — complete and accepted | Verified locally by the owner; live verification is not required. Static decoration authoring, five-mode pose adjustments, and complete exports. See [implementation/verification notes](../../design/home-clutter-2026-10-09/part-5-implementation-notes.md). |
 | 6 | [Random clutter and acceptance](2026-10-06-phase-2-random-clutter.md) | Seeded supplemental clusters avoid measured exclusions; final visual and Phase 1 regression review. Depends on stable authored placements, not the editor at runtime. |
 
 Chunks 2 and 3 deliberately precede decoration: the actual content determines safe space. The editor is its own chunk because authoring convenience can be reviewed separately from the runtime renderer. Randomization comes last so it cannot become a substitute for the approved composition.
@@ -92,6 +94,8 @@ These installed guides were reviewed for this plan. Read the relevant ones again
 Browser checks are the main evidence. Use existing Vitest selectively for pure nearest-anchor/offset math and random generation/collision rules. Do not add component snapshots, fake DOM geometry tests, or a coverage target. At final acceptance run the existing suite and normal lint/type/build commands once, then inspect the production build in the browser. Each plan labels code as a **complete implementation**, **worked fragment**, or **interface only**; fragments and types are not complete components.
 
 ## Completion record to fill in during manual implementation
+
+Parts 1–5 are owner-accepted. Part 6 implementation and agent checks are recorded in [its verification notes](../../design/home-clutter-2026-10-09/part-6-implementation-notes.md); the final owner acceptance record below remains pending.
 
 - [ ] Each chunk's learning and browser checkpoints passed.
 - [ ] Desktop at 1440/1920, intermediate widths, and mobile at 390/320 reviewed against the approved captures.

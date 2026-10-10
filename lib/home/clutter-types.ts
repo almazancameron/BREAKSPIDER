@@ -15,6 +15,9 @@ export type ClutterAsset = {
     pixelArt: boolean;
     reducedMotionMedia?: ImageMedia;
     framed?: boolean;
+    // Folder palette metadata suggests an initial authoring size; saved poses own rendering.
+    widthRange?: readonly [number, number];
+    family?: "noise" | "badge" | "sprite";
 };
 
 export type PlacementPose = {
@@ -36,7 +39,8 @@ export type PlacementPose = {
 export type AuthoredPlacement = PlacementPose & {
     id: string;
     assetId: string;
-    exclusionPadding: number;
+    // Retained for compatibility with earlier exports; no runtime collision pass consumes it.
+    exclusionPadding?: number;
     wide?: Partial<PlacementPose>;
     narrow?: Partial<PlacementPose>;
     tablet?: Partial<PlacementPose>;

@@ -1,12 +1,18 @@
 # Phase 2 Supplemental Random Clutter and Acceptance Implementation Plan
 
+**Historical tutorial, superseded October 10, 2026.** Current owner direction selects fully authored decoration and removes the procedural runtime. The folder collection is now an editor palette, with no automatic placement. See [the current implementation and asset-curation report](../../design/home-clutter-reassessment-2026-10-10/implementation-notes.md). This tutorial no longer describes active code or requirements.
+
 > **For agentic workers:** Use `superpowers:executing-plans` if later requested. The owner intends manual implementation; no implementation or delegation is requested now.
 
-**Goal:** Add restrained random clusters that vary with a new document, stay stable in the loaded SPA, and yield to all fixed content and authored objects.
+**Goal:** Add dense, varied collage pockets that vary with a new document, stay stable in the loaded SPA, and preserve readable content, controls, media, and authored objects.
 
-**Architecture:** Seeded pure functions choose symbolic candidates once per document/configuration. A homepage client layer measures named safe zones and exclusions, then admits only safe candidates. It renders quiet decoration independently of structural sections and the dev editor.
+**Implementation status (2026-10-09):** Revised after the owner rejected the first pass as too sparse. The current library contains 16 Noise designs, 16 badges, and 103 miscellaneous cutouts across nine pockets. Stratified centers and small upper-margin pieces spread the collage through the page; reduced footer allocation and shorter desktop/tablet trailing spacing address the later bottom-heavy composition feedback. Visible text, controls, media, focus perimeters, scrollbars, and authored visuals are protected; empty section interiors and edges remain eligible. Random pieces can overlap up to 65% of the smaller bounding box, with at most two visible copies of an asset. This supersedes the conservative starter density, whole-section exclusions, and blanket random-to-random rejection below. See [implementation and verification notes](../../design/home-clutter-2026-10-09/part-6-implementation-notes.md). Owner local/live review and final Phase 2 acceptance remain pending. The authored five-mode schema is unchanged; random choices use a desktop/tablet sequence and an explicit reduced mobile sequence, measured against the active authored mode.
 
-**Tech Stack:** Existing TypeScript/React, native `ResizeObserver`, CSS Modules, small Vitest logic tests. No physics/collision library, canvas renderer, storage, or dependency.
+**Architecture:** Seeded pure functions choose symbolic candidates once per document/configuration. A homepage client layer measures named pockets and actual visible content, then admits candidates into the remaining space. It renders decorative collage independently of structural sections and the dev editor.
+
+**Collection authoring update (2026-10-10):** The hand-maintained asset array is replaced by a generated catalogue. Add/remove/replace static images in `public/media/home/random-clutter/{noise,badges,sprites,pixel-sprites}/`, then run `npm run clutter:generate`; it also runs before dev/build. Folder defaults and optional exceptions live in `content/home-random-clutter.settings.json`. Dimensions are detected automatically. Pocket/density settings remain in `content/home-random-clutter.ts`. See [the collection guide](../../../public/media/home/random-clutter/README.md) for supported formats, filenames, overrides, and check mode. The original types/tutorial below describe runtime contracts, not a requirement to maintain asset records manually. The migration preserved all 135 image bytes and metadata settings; 56 tests, normal checks, and eight-width production browser verification passed. Owner acceptance remains pending.
+
+**Tech Stack:** Existing TypeScript/React, native `ResizeObserver`, CSS Modules, small Vitest logic tests, and build-time Sharp metadata reading. No physics/collision library, canvas renderer, or storage.
 
 **Spec:** [Phase 2 roadmap](../../breakspider_master_implementation_roadmap_v2.md#8-phase-2--homepage-production-implementation), [reading guide](2026-10-06-phase-2-homepage.md), and [authored placement contract](2026-10-06-phase-2-authored-clutter.md).
 
@@ -27,7 +33,11 @@ Finish chunks 1–5 and save authored placement data. Read the installed client-
 | File | Responsibility |
 | --- | --- |
 | `lib/home/random-clutter.ts` | Typed zone/candidate/rectangle definitions; pure seeded selection and collision filtering. |
-| `content/home-random-clutter.ts` | Small curated zone configurations/pools; compact overrides. |
+| `content/home-random-clutter.ts` | Pocket configurations, compact overrides, and the generated asset import. |
+| `content/home-random-clutter.generated.ts` | Generated typed assets; do not edit manually. |
+| `content/home-random-clutter.settings.json` | Folder defaults and optional asset settings. |
+| `scripts/generate-random-clutter.mjs` | Scan the deployable collection and derive dimensions/catalogue. |
+| `lib/home/random-clutter-dom.ts` | Visible text, control, media, focus, scrollbar, and authored exclusion measurement. |
 | `components/home/home-random-clutter.tsx` / `.module.css` | Hydration-safe measurement and decorative overlay. |
 | `tests/random-clutter.test.ts` | Seed, bounds, collision, count, and stable-candidate logic. |
 | `app/page.tsx` / `app/page.module.css` | Add named zones and mount layer within the homepage canvas. |

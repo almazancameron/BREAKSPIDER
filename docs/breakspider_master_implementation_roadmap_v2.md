@@ -1,5 +1,7 @@
 # Breakspider — Master Implementation Roadmap
 
+**Homepage clutter update (October 10, 2026):** The owner requested restoration of the preferred curated composition and authorized removal of procedural machinery. Decoration is now fully authored; the generated folder collection supports manual selection in the existing development-only editor. See [the current implementation, asset audit, comparisons, and verification](design/home-clutter-reassessment-2026-10-10/implementation-notes.md). Earlier procedural proposals below are historical. Parts 1–5 retain acceptance; this later reassessment and Phase 2 as a whole await owner acceptance.
+
 ## Purpose
 
 This roadmap is the implementation source of truth for Breakspider v0.1.
@@ -29,7 +31,7 @@ Breakspider v0.1 is a public, evolving personal website / professional portfolio
 - Collection / visitor profile system
 - site Map
 - lightweight collectible scavenger hunt
-- randomized + hand-placed homepage clutter
+- authored homepage clutter with practical development-only placement tools
 - persistent visitor cosmetics/progress
 - UI audio
 - finished Breakspider splash intro
@@ -49,7 +51,7 @@ The site should be safe to launch while visibly unfinished and capable of accumu
 - **Vercel**
 - local/static content for v0.1
 - `localStorage` for persistent visitor state
-- browser-memory page-load seed for a supplemental randomized clutter layer around authored placements
+- browser-memory page-load seed for existing Random Familiar selection
 - static production assets in the repo/public bundle
 
 ### Future stack direction
@@ -426,7 +428,7 @@ The static Breakspider logo should have a smaller hover/click animation related 
 
 ## 8. Phase 2 — Homepage Production Implementation
 
-**Status: In progress.** [Part 1 — primary homepage composition](superpowers/plans/2026-10-06-phase-2-primary-composition.md) is complete and accepted (2026-10-07). Spotlight, About/portrait, and overlapping Projects are implemented, including responsive layout refinements. The owner verified the homepage through local testing and live deployment. [Part 2 — activity modules](superpowers/plans/2026-10-06-phase-2-activity-modules.md) is complete and accepted (2026-10-07), verified locally and in live deployment by the owner: current work, the recent Sketchbook feed, Familiar selection/cycling, roaming Familiar, and changelog. Viscap's media-pending treatment remains an intentional content follow-up. [Part 3 - artifact interactions](superpowers/plans/2026-10-06-phase-2-artifact-interactions.md) is complete and accepted (2026-10-07), verified locally and in live deployment by the owner: shared inspection, found Map, focus/shuffle file pile, mobile strip, and reversible crystal glow. [Part 4 — authored clutter](superpowers/plans/2026-10-06-phase-2-authored-clutter.md) is complete and accepted (2026-10-09), with the owner confirming local testing and live-deployment verification: curated anchor-relative keepsakes, real layering, responsive placements, and reduced-motion stills. [Part 5 — dev-only placement editor](superpowers/plans/2026-10-06-phase-2-placement-editor.md) is implemented and agent-verified (2026-10-09); owner local/live acceptance is pending. See [editor implementation and verification notes](design/home-clutter-2026-10-09/part-5-implementation-notes.md). Randomized clutter remains planned; Phase 2 as a whole is not yet complete.
+**Status: In progress.** [Part 1 — primary homepage composition](superpowers/plans/2026-10-06-phase-2-primary-composition.md) is complete and accepted (2026-10-07). Spotlight, About/portrait, and overlapping Projects are implemented, including responsive layout refinements. The owner verified the homepage through local testing and live deployment. [Part 2 — activity modules](superpowers/plans/2026-10-06-phase-2-activity-modules.md) is complete and accepted (2026-10-07), verified locally and in live deployment by the owner: current work, the recent Sketchbook feed, Familiar selection/cycling, roaming Familiar, and changelog. Viscap's media-pending treatment remains an intentional content follow-up. [Part 3 - artifact interactions](superpowers/plans/2026-10-06-phase-2-artifact-interactions.md) is complete and accepted (2026-10-07), verified locally and in live deployment by the owner: shared inspection, found Map, focus/shuffle file pile, mobile strip, and reversible crystal glow. [Part 4 — authored clutter](superpowers/plans/2026-10-06-phase-2-authored-clutter.md) is complete and accepted (2026-10-09), with the owner confirming local testing and live-deployment verification: curated anchor-relative keepsakes, real layering, responsive placements, and reduced-motion stills. [Part 5 — dev-only placement editor](superpowers/plans/2026-10-06-phase-2-placement-editor.md) is complete and accepted (2026-10-09), verified locally by the owner; live verification is not required for this development-only tool. See [editor implementation and verification notes](design/home-clutter-2026-10-09/part-5-implementation-notes.md). [Part 6 — clutter reassessment](design/home-clutter-reassessment-2026-10-10/implementation-notes.md) restores the preferred fully authored composition (2026-10-10). Procedural scatter and supporting groups were removed; the generated folder library remains a manual editor palette. Agent verification passed. Owner acceptance of this reassessment and Phase 2 as a whole remains pending.
 
 ### Goal
 
@@ -481,7 +483,9 @@ Each can declare:
 
 Random clutter must never overcrowd or cover these.
 
-#### Layer B — randomized clutter
+#### Layer B — retired procedural exploration (historical)
+
+**Superseded October 10, 2026:** The following records the earlier procedural exploration. Current code and authoring are documented in [the reassessment guide](design/home-clutter-reassessment-2026-10-10/implementation-notes.md).
 
 Add a restrained set of randomized decorative objects around the authored composition. On every full page load / refresh:
 

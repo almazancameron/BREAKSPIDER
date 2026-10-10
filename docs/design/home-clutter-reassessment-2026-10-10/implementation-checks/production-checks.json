@@ -1,0 +1,289 @@
+{
+    "results": [
+        {
+            "width": 1440,
+            "overflow": false,
+            "ids": [
+                "spotlight-narwhal",
+                "about-kris",
+                "about-killer-queen",
+                "terra-blade",
+                "onff-process",
+                "snake-ring",
+                "snecko-skull",
+                "familiar-strawberry",
+                "pink-handheld",
+                "lancer",
+                "margin-miku",
+                "megaphone",
+                "glitch-slime",
+                "wayfinder",
+                "light-crystal",
+                "dark-crystal",
+                "starforce",
+                "kuromi",
+                "ukulele"
+            ],
+            "modes": [
+                "narrow"
+            ],
+            "inert": true,
+            "broken": []
+        },
+        {
+            "width": 1920,
+            "overflow": false,
+            "ids": [
+                "spotlight-narwhal",
+                "about-kris",
+                "about-killer-queen",
+                "terra-blade",
+                "onff-process",
+                "snake-ring",
+                "snecko-skull",
+                "familiar-strawberry",
+                "pink-handheld",
+                "lancer",
+                "margin-miku",
+                "megaphone",
+                "glitch-slime",
+                "wayfinder",
+                "light-crystal",
+                "dark-crystal",
+                "starforce",
+                "kuromi",
+                "ukulele"
+            ],
+            "modes": [
+                "wide"
+            ],
+            "inert": true,
+            "broken": []
+        },
+        {
+            "width": 1600,
+            "overflow": false,
+            "ids": [
+                "spotlight-narwhal",
+                "about-kris",
+                "about-killer-queen",
+                "terra-blade",
+                "onff-process",
+                "snake-ring",
+                "snecko-skull",
+                "familiar-strawberry",
+                "pink-handheld",
+                "lancer",
+                "margin-miku",
+                "megaphone",
+                "glitch-slime",
+                "wayfinder",
+                "light-crystal",
+                "dark-crystal",
+                "starforce",
+                "kuromi",
+                "ukulele"
+            ],
+            "modes": [
+                "desktop"
+            ],
+            "inert": true,
+            "broken": []
+        },
+        {
+            "width": 1221,
+            "overflow": false,
+            "ids": [
+                "spotlight-narwhal",
+                "about-kris",
+                "about-killer-queen",
+                "terra-blade",
+                "onff-process",
+                "snake-ring",
+                "snecko-skull",
+                "familiar-strawberry",
+                "pink-handheld",
+                "lancer",
+                "margin-miku",
+                "megaphone",
+                "glitch-slime",
+                "wayfinder",
+                "light-crystal",
+                "dark-crystal",
+                "starforce",
+                "kuromi",
+                "ukulele"
+            ],
+            "modes": [
+                "narrow"
+            ],
+            "inert": true,
+            "broken": []
+        },
+        {
+            "width": 1024,
+            "overflow": false,
+            "ids": [
+                "spotlight-narwhal",
+                "about-kris",
+                "about-killer-queen",
+                "onff-process",
+                "snake-ring",
+                "snecko-skull",
+                "familiar-strawberry",
+                "pink-handheld",
+                "margin-miku",
+                "megaphone",
+                "glitch-slime",
+                "wayfinder",
+                "light-crystal",
+                "dark-crystal",
+                "starforce",
+                "kuromi",
+                "ukulele"
+            ],
+            "modes": [
+                "tablet"
+            ],
+            "inert": true,
+            "broken": []
+        },
+        {
+            "width": 768,
+            "overflow": false,
+            "ids": [
+                "spotlight-narwhal",
+                "about-kris",
+                "about-killer-queen",
+                "onff-process",
+                "snake-ring",
+                "snecko-skull",
+                "familiar-strawberry",
+                "pink-handheld",
+                "margin-miku",
+                "megaphone",
+                "glitch-slime",
+                "wayfinder",
+                "light-crystal",
+                "dark-crystal",
+                "starforce",
+                "kuromi",
+                "ukulele"
+            ],
+            "modes": [
+                "tablet"
+            ],
+            "inert": true,
+            "broken": []
+        },
+        {
+            "width": 760,
+            "overflow": false,
+            "ids": [
+                "spotlight-narwhal",
+                "about-kris",
+                "margin-miku",
+                "familiar-strawberry",
+                "pink-handheld",
+                "megaphone",
+                "glitch-slime",
+                "wayfinder",
+                "light-crystal",
+                "dark-crystal",
+                "kuromi",
+                "ukulele"
+            ],
+            "modes": [
+                "mobile"
+            ],
+            "inert": true,
+            "broken": []
+        },
+        {
+            "width": 390,
+            "overflow": false,
+            "ids": [
+                "spotlight-narwhal",
+                "about-kris",
+                "margin-miku",
+                "familiar-strawberry",
+                "pink-handheld",
+                "megaphone",
+                "glitch-slime",
+                "wayfinder",
+                "light-crystal",
+                "dark-crystal",
+                "kuromi",
+                "ukulele"
+            ],
+            "modes": [
+                "mobile"
+            ],
+            "inert": true,
+            "broken": []
+        },
+        {
+            "width": 320,
+            "overflow": false,
+            "ids": [
+                "spotlight-narwhal",
+                "about-kris",
+                "margin-miku",
+                "familiar-strawberry",
+                "pink-handheld",
+                "megaphone",
+                "glitch-slime",
+                "wayfinder",
+                "light-crystal",
+                "dark-crystal",
+                "kuromi",
+                "ukulele"
+            ],
+            "modes": [
+                "mobile"
+            ],
+            "inert": true,
+            "broken": []
+        }
+    ],
+    "checks": [
+        "1440 responsive instances, inert decor, media and overflow",
+        "1440 no procedural layer",
+        "1920 responsive instances, inert decor, media and overflow",
+        "1920 no procedural layer",
+        "1600 responsive instances, inert decor, media and overflow",
+        "1600 no procedural layer",
+        "1221 responsive instances, inert decor, media and overflow",
+        "1221 no procedural layer",
+        "1024 responsive instances, inert decor, media and overflow",
+        "1024 no procedural layer",
+        "768 responsive instances, inert decor, media and overflow",
+        "768 no procedural layer",
+        "760 responsive instances, inert decor, media and overflow",
+        "760 no procedural layer",
+        "390 responsive instances, inert decor, media and overflow",
+        "390 no procedural layer",
+        "320 responsive instances, inert decor, media and overflow",
+        "320 no procedural layer",
+        "Familiar cycling preserves decorative composition",
+        "Crystal collectible toggles",
+        "File focus shuffling preserves perches",
+        "Found Map inspection opens",
+        "Inspection closes",
+        "Bottom-anchored Miku follows expanded changelog",
+        "Scrolling preserves authored geometry",
+        "Projects remains free of homepage decoration",
+        "SPA return retains authored composition",
+        "Refresh retains authored composition",
+        "Visitor profile opens",
+        "Visitor profile closes",
+        "Spotlight CTAs remain accessible to pointer input",
+        "Production has no editor UI or marker",
+        "Production has no authoring/procedural listeners",
+        "Production does not download unplaced folder assets",
+        "Production payload omits unused palette asset records",
+        "Reduced motion selects three authored GIF stills",
+        "No runtime exceptions"
+    ],
+    "errors": []
+}

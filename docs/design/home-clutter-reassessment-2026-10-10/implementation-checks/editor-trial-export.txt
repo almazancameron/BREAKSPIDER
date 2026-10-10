@@ -1,0 +1,564 @@
+import type { AuthoredPlacement } from "../lib/home/clutter-types";
+
+export const HOME_AUTHORED_PLACEMENTS = [
+    {
+        "id": "spotlight-narwhal",
+        "assetId": "spotlight-narwhal",
+        "anchor": "spotlight",
+        "anchorPoint": "top-left",
+        "x": 0,
+        "y": -15,
+        "width": 84,
+        "rotation": -5,
+        "scale": 1,
+        "zIndex": 3,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": null,
+        "exclusionPadding": 12,
+        "tablet": {
+            "x": -5,
+            "y": -19,
+            "width": 60
+        },
+        "mobile": {
+            "x": 1,
+            "y": -12,
+            "width": 44
+        },
+        "narrow": {
+            "anchor": "spotlight",
+            "anchorPoint": "top-left",
+            "x": 28,
+            "y": 20,
+            "edgeOffset": null
+        }
+    },
+    {
+        "id": "margin-miku",
+        "assetId": "margin-miku",
+        "anchor": "changelog",
+        "anchorPoint": "bottom-right",
+        "x": 0,
+        "y": 116,
+        "width": 220,
+        "rotation": 0,
+        "scale": 1,
+        "zIndex": 3,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": 23,
+        "exclusionPadding": 12,
+        "narrow": {
+            "width": 190
+        },
+        "tablet": {
+            "y": 92,
+            "width": 150
+        },
+        "mobile": {
+            "anchor": "sketchbook",
+            "anchorPoint": "top-right",
+            "x": -41,
+            "y": -39,
+            "width": 88,
+            "edgeOffset": null
+        }
+    },
+    {
+        "id": "about-kris",
+        "assetId": "about-kris",
+        "anchor": "about",
+        "anchorPoint": "top-right",
+        "x": 0,
+        "y": 16,
+        "width": 160,
+        "rotation": 0,
+        "scale": 1,
+        "zIndex": 3,
+        "hidden": false,
+        "flip": true,
+        "edgeOffset": 93,
+        "exclusionPadding": 12,
+        "narrow": {
+            "width": 128,
+            "y": -24
+        },
+        "tablet": {
+            "anchorPoint": "bottom-right",
+            "x": -51,
+            "y": 62,
+            "width": 140,
+            "edgeOffset": null
+        },
+        "mobile": {
+            "anchorPoint": "bottom-left",
+            "x": 61,
+            "y": -91,
+            "width": 104,
+            "flip": false,
+            "edgeOffset": null
+        }
+    },
+    {
+        "id": "about-killer-queen",
+        "assetId": "about-killer-queen",
+        "anchor": "projects",
+        "anchorPoint": "top-right",
+        "x": -190.2,
+        "y": -22.6,
+        "width": 66,
+        "rotation": -9,
+        "scale": 1,
+        "zIndex": 3,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": null,
+        "exclusionPadding": 12,
+        "tablet": {
+            "anchorPoint": "bottom-right",
+            "x": -31,
+            "y": -73.9,
+            "width": 60,
+            "anchor": "about",
+            "edgeOffset": null
+        },
+        "mobile": {
+            "hidden": true
+        },
+        "wide": {
+            "anchor": "about",
+            "anchorPoint": "center",
+            "x": -5.2,
+            "y": 125.3,
+            "edgeOffset": null
+        }
+    },
+    {
+        "id": "onff-process",
+        "assetId": "onff-process",
+        "anchor": "sketchbook",
+        "anchorPoint": "top-left",
+        "x": 44,
+        "y": 32,
+        "width": 172,
+        "rotation": 7,
+        "scale": 1,
+        "zIndex": 1,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": null,
+        "exclusionPadding": 12,
+        "wide": {
+            "x": -8
+        },
+        "narrow": {
+            "width": 152
+        },
+        "tablet": {
+            "anchor": "current",
+            "anchorPoint": "top-right",
+            "x": -113,
+            "y": 210,
+            "width": 150
+        },
+        "mobile": {
+            "hidden": true
+        }
+    },
+    {
+        "id": "familiar-strawberry",
+        "assetId": "familiar-strawberry",
+        "anchor": "familiar",
+        "anchorPoint": "bottom-right",
+        "x": -140,
+        "y": 34,
+        "width": 76,
+        "rotation": -8,
+        "scale": 1,
+        "zIndex": 3,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": null,
+        "exclusionPadding": 12,
+        "tablet": {
+            "anchorPoint": "bottom-left",
+            "x": 60,
+            "y": 18,
+            "width": 62
+        },
+        "mobile": {
+            "anchorPoint": "bottom-left",
+            "x": 52,
+            "y": 10,
+            "width": 50,
+            "rotation": -7
+        }
+    },
+    {
+        "id": "pink-handheld",
+        "assetId": "pink-handheld",
+        "anchor": "familiar",
+        "anchorPoint": "bottom-left",
+        "x": 112,
+        "y": 163,
+        "width": 160,
+        "rotation": -12,
+        "scale": 1,
+        "zIndex": 3,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": null,
+        "exclusionPadding": 12,
+        "tablet": {
+            "x": 162,
+            "y": 77,
+            "width": 114
+        },
+        "mobile": {
+            "x": 45,
+            "y": -74,
+            "width": 72
+        }
+    },
+    {
+        "id": "lancer",
+        "assetId": "lancer",
+        "anchor": "familiar",
+        "anchorPoint": "bottom-left",
+        "x": 306,
+        "y": 120,
+        "width": 152,
+        "rotation": 0,
+        "scale": 1,
+        "zIndex": 3,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": null,
+        "exclusionPadding": 12,
+        "tablet": {
+            "hidden": true
+        },
+        "mobile": {
+            "hidden": true
+        }
+    },
+    {
+        "id": "snake-ring",
+        "assetId": "snake-ring",
+        "anchor": "sketchbook",
+        "anchorPoint": "bottom-right",
+        "x": 55,
+        "y": -86,
+        "width": 78,
+        "rotation": -15,
+        "scale": 1,
+        "zIndex": 3,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": null,
+        "exclusionPadding": 12,
+        "narrow": {
+            "x": 35
+        },
+        "tablet": {
+            "anchorPoint": "bottom-left",
+            "x": -50,
+            "y": -69,
+            "width": 48
+        },
+        "mobile": {
+            "hidden": true
+        }
+    },
+    {
+        "id": "snecko-skull",
+        "assetId": "snecko-skull",
+        "anchor": "sketchbook",
+        "anchorPoint": "bottom-right",
+        "x": 112,
+        "y": -14,
+        "width": 104,
+        "rotation": 9,
+        "scale": 1,
+        "zIndex": 3,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": null,
+        "exclusionPadding": 12,
+        "narrow": {
+            "x": 65
+        },
+        "tablet": {
+            "anchorPoint": "bottom-left",
+            "x": -76,
+            "y": -8,
+            "width": 62
+        },
+        "mobile": {
+            "hidden": true
+        }
+    },
+    {
+        "id": "megaphone",
+        "assetId": "megaphone",
+        "anchor": "changelog",
+        "anchorPoint": "top-left",
+        "x": -44,
+        "y": 35,
+        "width": 140,
+        "rotation": -12,
+        "scale": 1,
+        "zIndex": 3,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": null,
+        "exclusionPadding": 12,
+        "tablet": {
+            "x": -25,
+            "y": 31,
+            "width": 110
+        },
+        "mobile": {
+            "anchorPoint": "bottom-right",
+            "x": -56,
+            "y": 4,
+            "width": 80,
+            "rotation": 10,
+            "anchor": "familiar",
+            "edgeOffset": null
+        }
+    },
+    {
+        "id": "glitch-slime",
+        "assetId": "glitch-slime",
+        "anchor": "map",
+        "anchorPoint": "top-left",
+        "x": -105,
+        "y": 77,
+        "width": 130,
+        "rotation": -8,
+        "scale": 1,
+        "zIndex": 3,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": null,
+        "exclusionPadding": 12,
+        "tablet": {
+            "x": -90,
+            "y": 78,
+            "width": 105
+        },
+        "mobile": {
+            "x": -55,
+            "y": 128,
+            "width": 66,
+            "rotation": -5
+        }
+    },
+    {
+        "id": "wayfinder",
+        "assetId": "wayfinder",
+        "anchor": "map",
+        "anchorPoint": "top-right",
+        "x": 35,
+        "y": 40,
+        "width": 86,
+        "rotation": 12,
+        "scale": 1,
+        "zIndex": 3,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": null,
+        "exclusionPadding": 12,
+        "tablet": {
+            "x": 30,
+            "width": 80
+        },
+        "mobile": {
+            "x": 38,
+            "y": 50,
+            "width": 64,
+            "rotation": 10
+        }
+    },
+    {
+        "id": "light-crystal",
+        "assetId": "light-crystal",
+        "anchor": "map",
+        "anchorPoint": "top-right",
+        "x": 105,
+        "y": 101,
+        "width": 22,
+        "rotation": -8,
+        "scale": 1,
+        "zIndex": 3,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": null,
+        "exclusionPadding": 12,
+        "tablet": {
+            "x": 96,
+            "y": 111,
+            "width": 18
+        },
+        "mobile": {
+            "x": 21,
+            "y": 117,
+            "width": 15
+        }
+    },
+    {
+        "id": "dark-crystal",
+        "assetId": "dark-crystal",
+        "anchor": "map",
+        "anchorPoint": "top-left",
+        "x": -35,
+        "y": 160,
+        "width": 20,
+        "rotation": 9,
+        "scale": 1,
+        "zIndex": 3,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": null,
+        "exclusionPadding": 12,
+        "tablet": {
+            "x": -28,
+            "y": 168,
+            "width": 18
+        },
+        "mobile": {
+            "x": -29,
+            "y": 169,
+            "width": 14
+        }
+    },
+    {
+        "id": "starforce",
+        "assetId": "starforce",
+        "anchor": "pile",
+        "anchorPoint": "top-left",
+        "x": 430,
+        "y": -29,
+        "width": 100,
+        "rotation": 0,
+        "scale": 1,
+        "zIndex": 1,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": null,
+        "exclusionPadding": 12,
+        "narrow": {
+            "x": 380
+        },
+        "tablet": {
+            "x": 470,
+            "y": 34,
+            "width": 80
+        },
+        "mobile": {
+            "hidden": true
+        }
+    },
+    {
+        "id": "terra-blade",
+        "assetId": "terra-blade",
+        "anchor": "projects",
+        "anchorPoint": "bottom-right",
+        "x": 0,
+        "y": 8,
+        "width": 106,
+        "rotation": 9,
+        "scale": 1,
+        "zIndex": 3,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": 84,
+        "exclusionPadding": 12,
+        "tablet": {
+            "hidden": true
+        },
+        "mobile": {
+            "hidden": true
+        }
+    },
+    {
+        "id": "kuromi",
+        "assetId": "kuromi",
+        "anchor": "pile",
+        "anchorPoint": "top-right",
+        "x": -69,
+        "y": -15,
+        "width": 130,
+        "rotation": 9,
+        "scale": 1,
+        "zIndex": 1,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": null,
+        "exclusionPadding": 12,
+        "tablet": {
+            "x": -66,
+            "y": -18,
+            "width": 104
+        },
+        "mobile": {
+            "x": -36,
+            "y": -10,
+            "width": 72
+        }
+    },
+    {
+        "id": "ukulele",
+        "assetId": "ukulele",
+        "anchor": "pile",
+        "anchorPoint": "bottom-left",
+        "x": 223,
+        "y": 34,
+        "width": 124,
+        "rotation": -12,
+        "scale": 1,
+        "zIndex": 3,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": null,
+        "exclusionPadding": 12,
+        "tablet": {
+            "x": 170,
+            "y": 42,
+            "width": 100
+        },
+        "mobile": {
+            "anchorPoint": "bottom-right",
+            "x": -50,
+            "y": 60,
+            "width": 78
+        }
+    },
+    {
+        "id": "badge_15_r02_c07-1",
+        "assetId": "433-4339475_leafeon-gen-5-sprite-png-download-leafeon-pixel",
+        "anchor": "spotlight",
+        "anchorPoint": "center",
+        "x": 0,
+        "y": 0,
+        "width": 38,
+        "rotation": 0,
+        "scale": 1,
+        "zIndex": 3,
+        "hidden": false,
+        "flip": false,
+        "edgeOffset": null,
+        "narrow": {
+            "anchor": "about",
+            "anchorPoint": "center",
+            "x": 55,
+            "y": 112.9,
+            "edgeOffset": null
+        },
+        "mobile": {
+            "hidden": true
+        }
+    }
+] satisfies AuthoredPlacement[];

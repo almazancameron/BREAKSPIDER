@@ -1,49 +1,32 @@
-# Drag-and-Drop Clutter Positioning
+# Authored clutter positioning
 
-Breakspider uses a small visual authoring system for decorative "clutter" assets so their placement does not need to be hand-coded in page components.
+The preferred curated homepage is the source of truth. Procedural decoration was removed in the October 10 reassessment. [Current implementation, asset audit, editing guide, screenshots, and verification](design/home-clutter-reassessment-2026-10-10/implementation-notes.md).
 
-## Core behavior
-
-- Clutter items are dragged directly into place on the rendered page.
-- On drop, the editor automatically chooses the nearest eligible **static anchor element** on the page.
-- The chosen anchor is saved with the clutter item; anchors are **not** recomputed at runtime.
-- Position is stored as an offset from that anchor, ideally from the nearest anchor point/edge rather than raw viewport coordinates.
-- The rendered clutter should therefore move naturally when its anchor moves during responsive layout changes.
-
-## Authoring workflow
-
-1. Drag an asset into place.
-2. Automatically detect and highlight the nearest eligible anchor.
-3. Save the anchor + relative offset + visual properties.
-4. Resize/test the page responsively.
-5. If needed, adjust the item at a breakpoint and save a breakpoint-specific offset or visibility override.
-
-Manual anchor selection should exist only as a fallback if automatic selection chooses poorly.
-
-## Data model
-
-Clutter should be stored as normal repo-authored data rather than embedded layout code, e.g.:
+Each decorative placement in `content/home-clutter.ts` names a static semantic anchor: `spotlight`, `about`, `projects`, `current`, `sketchbook`, `familiar`, `changelog`, `map`, or `pile`. It saves a corner/center and pixel offsets locating the image center relative to the anchor padding box. Runtime uses ordinary CSS; it does not measure content, choose another anchor, or admit/reject decorations.
 
 ```ts
 {
-    id: "hero-decoration",
-        asset: "/artifacts/example.png",
-            anchor: "hero",
-                anchorPoint: "bottom-right",
-                    x: 24,
-                        y: -16,
-                            rotation: -8,
-                                scale: 0.9,
-                                    zIndex: 3,
+    id: "my-keepsake",
+    assetId: "my-image-filename",
+    anchor: "projects",
+    anchorPoint: "top-right",
+    x: -24,
+    y: -16,
+    width: 80,
+    rotation: -8,
+    scale: 1,
+    zIndex: 3,
+    hidden: false,
+    flip: false,
+    edgeOffset: null,
+    mobile: { hidden: true },
 }
 ```
 
-Optional responsive overrides can adjust position, scale, or visibility.
+Base pose is desktop. Independent `wide`, `narrow`, `tablet`, and `mobile` partial overrides can change placement, anchor, size, layer, or visibility. They inherit directly from the base rather than from one another. Ranges are >110rem, 90–110rem, 76.25–90rem, 47.5–76.25rem, and <=47.5rem respectively, with the lower boundary excluded for each non-mobile range. `edgeOffset` replaces X with gutter minus offset; set it to `null` to use ordinary X again.
 
-## Implementation constraints
+In development, click **Edit clutter** to select/drag decorations, correct their anchors, adjust numeric properties, add or swap an asset, and export complete four-space records. The editor chooses a nearest eligible anchor on drop; it never recalculates that choice in production. Reanchoring preserves the visual center. Dragging, reanchoring, or explicitly editing X clears edge positioning in the edited mode.
 
-- Only intentional page-level/static elements should be eligible anchors (sections, cards, headings, images, widgets, etc.), not every DOM node.
-- Prefer distance to an element's bounding rectangle/nearest edge over center-to-center distance.
-- Keep the renderer deterministic and independent from the editor.
-- The editor is a dev-only authoring convenience; if it disappears, the saved clutter data should still render normally.
-- Keep this narrow: it is a clutter placement tool, not a general page builder.
+Folder assets in `public/media/home/random-clutter/` form a manual palette. Run `npm run clutter:generate` after swapping images, then choose them in the editor. Adding a file alone does not place it. Export all records and replace only `HOME_AUTHORED_PLACEMENTS` to save durably. Done retains an in-memory preview; reload discards unsaved changes. Production resolves saved folder IDs but receives only placed assets. [Palette formats, naming, and generation](../public/media/home/random-clutter/README.md).
+
+Review responsive widths and actual screenshots after authoring. Keep meaningful text, controls, media, and focus clear; local layers and natural panel/file occlusion support selective overlap. Decoration is pointer-inert and does not enter the tab order. The editor remains development-only and inactive until enabled. There is no runtime collision engine or general page builder.

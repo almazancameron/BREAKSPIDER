@@ -1,6 +1,6 @@
 import type { AuthoredPlacement, ClutterAsset } from "../lib/home/clutter-types";
 
-// Approved authored keepsakes. Noise and other pickups belong to the later random pass.
+// The curated composition is the source of truth. Folder palette assets can also be placed by ID.
 // Offsets locate the image center relative to its anchor corner, in CSS pixels.
 export const HOME_CLUTTER_ASSETS: ClutterAsset[] = [
     {
@@ -236,7 +236,7 @@ export const HOME_CLUTTER_ASSETS: ClutterAsset[] = [
     }
 ];
 
-export const HOME_AUTHORED_PLACEMENTS: AuthoredPlacement[] = [
+export const HOME_AUTHORED_PLACEMENTS = [
     {
         "id": "spotlight-narwhal",
         "assetId": "spotlight-narwhal",
@@ -332,10 +332,10 @@ export const HOME_AUTHORED_PLACEMENTS: AuthoredPlacement[] = [
     {
         "id": "about-killer-queen",
         "assetId": "about-killer-queen",
-        "anchor": "about",
-        "anchorPoint": "bottom-right",
-        "x": -135,
-        "y": 0,
+        "anchor": "projects",
+        "anchorPoint": "top-right",
+        "x": -190.2,
+        "y": -22.6,
         "width": 66,
         "rotation": -9,
         "scale": 1,
@@ -345,13 +345,22 @@ export const HOME_AUTHORED_PLACEMENTS: AuthoredPlacement[] = [
         "edgeOffset": null,
         "exclusionPadding": 12,
         "tablet": {
-            "anchorPoint": "bottom-left",
-            "x": 165,
-            "y": 30,
-            "width": 60
+            "anchorPoint": "bottom-right",
+            "x": -31,
+            "y": -73.9,
+            "width": 60,
+            "anchor": "about",
+            "edgeOffset": null
         },
         "mobile": {
             "hidden": true
+        },
+        "wide": {
+            "anchor": "about",
+            "anchorPoint": "center",
+            "x": -5.2,
+            "y": 125.3,
+            "edgeOffset": null
         }
     },
     {
@@ -540,11 +549,13 @@ export const HOME_AUTHORED_PLACEMENTS: AuthoredPlacement[] = [
             "width": 110
         },
         "mobile": {
-            "anchorPoint": "top-right",
-            "x": -35,
-            "y": -28,
+            "anchorPoint": "bottom-right",
+            "x": -56,
+            "y": 4,
             "width": 80,
-            "rotation": 10
+            "rotation": 10,
+            "anchor": "familiar",
+            "edgeOffset": null
         }
     },
     {
@@ -754,4 +765,4 @@ export const HOME_AUTHORED_PLACEMENTS: AuthoredPlacement[] = [
             "width": 78
         }
     }
-];
+] satisfies AuthoredPlacement[];

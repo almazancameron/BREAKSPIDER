@@ -1,0 +1,4267 @@
+{
+    "results": [
+        {
+            "width": 1440,
+            "bands": {
+                "upper": 6,
+                "middle": 19,
+                "pile": 0,
+                "bottom": 4
+            },
+            "tail": {
+                "canvasHeight": 1724.46875,
+                "pileBottom": 1600.46875,
+                "replayTop": 1632.46875,
+                "gap": 32,
+                "remaining": 124
+            },
+            "seed": "123456",
+            "mode": "narrow",
+            "items": [
+                {
+                    "id": "narwhal-pins/constellation/emblem",
+                    "asset": "noise_02_blue",
+                    "family": "noise",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 101.51287841796875,
+                        "top": 85.71710205078125,
+                        "width": 48.3179931640625,
+                        "height": 52.1282958984375,
+                        "right": 149.83087158203125,
+                        "bottom": 137.84539794921875
+                    }
+                },
+                {
+                    "id": "profile-charms/orbit/companion",
+                    "asset": "StS2_CrackedCore",
+                    "family": "sprite",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1202.172607421875,
+                        "top": 90.42265319824219,
+                        "width": 62.15478515625,
+                        "height": 62.154693603515625,
+                        "right": 1264.327392578125,
+                        "bottom": 152.5773468017578
+                    }
+                },
+                {
+                    "id": "profile-charms/orbit/crest",
+                    "asset": "badge_34_r05_c02",
+                    "family": "badge",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1249.0855712890625,
+                        "top": 94.52116394042969,
+                        "width": 34.610107421875,
+                        "height": 33.082672119140625,
+                        "right": 1283.6956787109375,
+                        "bottom": 127.60383605957031
+                    }
+                },
+                {
+                    "id": "profile-charms/orbit/fragment",
+                    "asset": "shaymin-land_shiny",
+                    "family": "sprite",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1381.9073486328125,
+                        "top": 141.5479736328125,
+                        "width": 35.685302734375,
+                        "height": 35.685302734375,
+                        "right": 1417.5926513671875,
+                        "bottom": 177.2332763671875
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/emblem",
+                    "asset": "pixel-art-ghost-ghost-key",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1228.0689697265625,
+                        "top": 870.1001586914062,
+                        "width": 58.862060546875,
+                        "height": 58.8621826171875,
+                        "right": 1286.9310302734375,
+                        "bottom": 928.9623413085938
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/companion",
+                    "asset": "color-pixels-pokemon-minun-plusle-plusle",
+                    "family": "sprite",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 234.99070739746094,
+                        "top": 1369.64697265625,
+                        "width": 76.95606994628906,
+                        "height": 76.9560546875,
+                        "right": 311.94677734375,
+                        "bottom": 1446.60302734375
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/emblem",
+                    "asset": "noise_01_orange",
+                    "family": "noise",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 22.350160598754883,
+                        "top": 1211.6968994140625,
+                        "width": 66.9246826171875,
+                        "height": 67.731201171875,
+                        "right": 89.27484321594238,
+                        "bottom": 1279.4281005859375
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/badge-a",
+                    "asset": "badge_54_r07_c08",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 15.825216293334961,
+                        "top": 1261.98974609375,
+                        "width": 30.91206932067871,
+                        "height": 34.1767578125,
+                        "right": 46.73728561401367,
+                        "bottom": 1296.16650390625
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/badge-b",
+                    "asset": "badge_31_r04_c07",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 35.879154205322266,
+                        "top": 1284.722900390625,
+                        "width": 29.147937774658203,
+                        "height": 29.14794921875,
+                        "right": 65.02709197998047,
+                        "bottom": 1313.870849609375
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/scrap",
+                    "asset": "jotaro_anime",
+                    "family": "sprite",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 49.50994110107422,
+                        "top": 1356.721923828125,
+                        "width": 53.41761779785156,
+                        "height": 46.80615234375,
+                        "right": 102.92755889892578,
+                        "bottom": 1403.528076171875
+                    }
+                },
+                {
+                    "id": "update-transmission/vertical/emblem",
+                    "asset": "noise_bonus_green",
+                    "family": "noise",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 892.7862548828125,
+                        "top": 873.2703247070312,
+                        "width": 56.802490234375,
+                        "height": 50.6781005859375,
+                        "right": 949.5887451171875,
+                        "bottom": 923.9484252929688
+                    }
+                },
+                {
+                    "id": "update-transmission/vertical/pin",
+                    "asset": "badge_08_r01_c08",
+                    "family": "badge",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 894.4580688476562,
+                        "top": 911.6455688476562,
+                        "width": 28.8338623046875,
+                        "height": 28.8338623046875,
+                        "right": 923.2919311523438,
+                        "bottom": 940.4794311523438
+                    }
+                },
+                {
+                    "id": "update-transmission/vertical/listener",
+                    "asset": "color-pixels-pokemon-minun-plusle-minun",
+                    "family": "sprite",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 984.6583862304688,
+                        "top": 1024.392822265625,
+                        "width": 40.62078857421875,
+                        "height": 40.62060546875,
+                        "right": 1025.2791748046875,
+                        "bottom": 1065.013427734375
+                    }
+                },
+                {
+                    "id": "map-discoveries/expedition/emblem",
+                    "asset": "noise_05_lavender",
+                    "family": "noise",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 551.0828247070312,
+                        "top": 1271.646240234375,
+                        "width": 74.3656005859375,
+                        "height": 86.20751953125,
+                        "right": 625.4484252929688,
+                        "bottom": 1357.853759765625
+                    }
+                },
+                {
+                    "id": "map-discoveries/expedition/friend",
+                    "asset": "kirby-marx",
+                    "family": "sprite",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 576.802978515625,
+                        "top": 1382.9532470703125,
+                        "width": 42.92529296875,
+                        "height": 43.874755859375,
+                        "right": 619.728271484375,
+                        "bottom": 1426.8280029296875
+                    }
+                },
+                {
+                    "id": "map-discoveries/expedition/pickup",
+                    "asset": "badge_08_r01_c08",
+                    "family": "badge",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 620.5227661132812,
+                        "top": 1393.1478271484375,
+                        "width": 22.6732177734375,
+                        "height": 22.673095703125,
+                        "right": 643.1959838867188,
+                        "bottom": 1415.8209228515625
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/companion",
+                    "asset": "mad_mew_mew_center",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 343.1368713378906,
+                        "top": 1709.150390625,
+                        "width": 59.63250732421875,
+                        "height": 75.94921875,
+                        "right": 402.7693786621094,
+                        "bottom": 1785.099609375
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/pin",
+                    "asset": "badge_25_r04_c01",
+                    "family": "badge",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 136.99609375,
+                        "top": 101.24610137939453,
+                        "width": 32.0703125,
+                        "height": 32.07030487060547,
+                        "right": 169.06640625,
+                        "bottom": 133.31640625
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/friend",
+                    "asset": "color-pixels-old-games-blue-handheld",
+                    "family": "sprite",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 179.14627075195312,
+                        "top": 95.5525131225586,
+                        "width": 33.95745849609375,
+                        "height": 33.95746612548828,
+                        "right": 213.10372924804688,
+                        "bottom": 129.50997924804688
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/pickup",
+                    "asset": "omega_xis_01_pose_top_01",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1205.0504150390625,
+                        "top": 893.0977783203125,
+                        "width": 42.524169921875,
+                        "height": 46.991943359375,
+                        "right": 1247.5745849609375,
+                        "bottom": 940.0897216796875
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/pin",
+                    "asset": "badge_15_r02_c07",
+                    "family": "badge",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1205.0787353515625,
+                        "top": 899.8287963867188,
+                        "width": 32.811279296875,
+                        "height": 32.8111572265625,
+                        "right": 1237.8900146484375,
+                        "bottom": 932.6399536132812
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/scrap",
+                    "asset": "jojos-bizarre-adventure-koichi-hirose-and-act3-cursor-pack",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1218.9718017578125,
+                        "top": 931.3451538085938,
+                        "width": 36.243896484375,
+                        "height": 35.9034423828125,
+                        "right": 1255.2156982421875,
+                        "bottom": 967.2485961914062
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/friend",
+                    "asset": "color-pixels-well-potion",
+                    "family": "sprite",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 302.3408203125,
+                        "top": 1370.3408203125,
+                        "width": 44.505859375,
+                        "height": 44.505859375,
+                        "right": 346.8466796875,
+                        "bottom": 1414.8466796875
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/loose-pin",
+                    "asset": "badge_25_r04_c01",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 334.6045227050781,
+                        "top": 1405.7294921875,
+                        "width": 22.47845458984375,
+                        "height": 22.478515625,
+                        "right": 357.0829772949219,
+                        "bottom": 1428.2080078125
+                    }
+                },
+                {
+                    "id": "map-discoveries/expedition/companion",
+                    "asset": "omega_xis_22_pose_bottom_03",
+                    "family": "sprite",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 523.3006591796875,
+                        "top": 1338.0040283203125,
+                        "width": 58.554931640625,
+                        "height": 36.741943359375,
+                        "right": 581.8555908203125,
+                        "bottom": 1374.7459716796875
+                    }
+                },
+                {
+                    "id": "map-discoveries/expedition/pin",
+                    "asset": "badge_34_r05_c02",
+                    "family": "badge",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 541.3656616210938,
+                        "top": 1296.995849609375,
+                        "width": 27.7686767578125,
+                        "height": 26.38330078125,
+                        "right": 569.1343383789062,
+                        "bottom": 1323.379150390625
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/emblem",
+                    "asset": "cute-ramp-fish-cursor-pack",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 391.4913330078125,
+                        "top": 1707.1007080078125,
+                        "width": 51.579833984375,
+                        "height": 56.611083984375,
+                        "right": 443.0711669921875,
+                        "bottom": 1763.7117919921875
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/pin",
+                    "asset": "badge_13_r02_c05",
+                    "family": "badge",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 432.3777770996094,
+                        "top": 1745.4454345703125,
+                        "width": 25.58819580078125,
+                        "height": 23.452880859375,
+                        "right": 457.9659729003906,
+                        "bottom": 1768.8983154296875
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/friend",
+                    "asset": "hollow_knight_hornet_needle_1156",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 448.37371826171875,
+                        "top": 1719.1083984375,
+                        "width": 34.9400634765625,
+                        "height": 39.064453125,
+                        "right": 483.31378173828125,
+                        "bottom": 1758.1728515625
+                    }
+                }
+            ],
+            "overlaps": [],
+            "unique": 26,
+            "families": {
+                "noise": 4,
+                "sprite": 15,
+                "badge": 10
+            },
+            "frameOverlaps": 8,
+            "pairOverlaps": 17,
+            "overflow": false
+        },
+        {
+            "width": 1440,
+            "bands": {
+                "upper": 6,
+                "middle": 17,
+                "pile": 0,
+                "bottom": 4
+            },
+            "tail": {
+                "canvasHeight": 1724.46875,
+                "pileBottom": 1600.46875,
+                "replayTop": 1632.46875,
+                "gap": 32,
+                "remaining": 124
+            },
+            "seed": "890123",
+            "mode": "narrow",
+            "items": [
+                {
+                    "id": "narwhal-pins/crooked-row/emblem",
+                    "asset": "noise_02_lavender",
+                    "family": "noise",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 108.06721496582031,
+                        "top": 83.58519744873047,
+                        "width": 45.053070068359375,
+                        "height": 48.17334747314453,
+                        "right": 153.1202850341797,
+                        "bottom": 131.758544921875
+                    }
+                },
+                {
+                    "id": "profile-charms/orbit/companion",
+                    "asset": "cute-ramp-fish-cursor-pack",
+                    "family": "sprite",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1198.958984375,
+                        "top": 88.54916381835938,
+                        "width": 64.80078125,
+                        "height": 70.90167236328125,
+                        "right": 1263.759765625,
+                        "bottom": 159.45083618164062
+                    }
+                },
+                {
+                    "id": "profile-charms/orbit/crest",
+                    "asset": "badge_46_r06_c08",
+                    "family": "badge",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1247.30126953125,
+                        "top": 92.41059112548828,
+                        "width": 36.0537109375,
+                        "height": 36.05382537841797,
+                        "right": 1283.35498046875,
+                        "bottom": 128.46441650390625
+                    }
+                },
+                {
+                    "id": "profile-charms/orbit/fragment",
+                    "asset": "pixel-art-ghost-ghost-key",
+                    "family": "sprite",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1378.452880859375,
+                        "top": 142.656005859375,
+                        "width": 37.31298828125,
+                        "height": 37.31298828125,
+                        "right": 1415.765869140625,
+                        "bottom": 179.968994140625
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/emblem",
+                    "asset": "frisk",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1226.7252197265625,
+                        "top": 860.7669067382812,
+                        "width": 62.549560546875,
+                        "height": 76.4974365234375,
+                        "right": 1289.2747802734375,
+                        "bottom": 937.2643432617188
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/emblem",
+                    "asset": "noise_07_orange",
+                    "family": "noise",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 20.665159225463867,
+                        "top": 1210.5614013671875,
+                        "width": 71.857177734375,
+                        "height": 81.283447265625,
+                        "right": 92.52233695983887,
+                        "bottom": 1291.8448486328125
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/badge-a",
+                    "asset": "badge_22_r03_c06",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 16.306034088134766,
+                        "top": 1266.6549072265625,
+                        "width": 33.38793182373047,
+                        "height": 36.283935546875,
+                        "right": 49.693965911865234,
+                        "bottom": 1302.9388427734375
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/badge-b",
+                    "asset": "badge_34_r05_c02",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 15.442976951599121,
+                        "top": 1295.1717529296875,
+                        "width": 24.801544189453125,
+                        "height": 23.531494140625,
+                        "right": 40.244521141052246,
+                        "bottom": 1318.7032470703125
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/scrap",
+                    "asset": "games-terraria-lunatic-cultist-ice-mist-ice-mist",
+                    "family": "sprite",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 53.80786895751953,
+                        "top": 1357.167236328125,
+                        "width": 40.88426208496094,
+                        "height": 40.88427734375,
+                        "right": 94.69213104248047,
+                        "bottom": 1398.051513671875
+                    }
+                },
+                {
+                    "id": "update-transmission/vertical/emblem",
+                    "asset": "noise_12_orange",
+                    "family": "noise",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 894.26611328125,
+                        "top": 872.1744995117188,
+                        "width": 54.3115234375,
+                        "height": 51.2447509765625,
+                        "right": 948.57763671875,
+                        "bottom": 923.4192504882812
+                    }
+                },
+                {
+                    "id": "update-transmission/vertical/pin",
+                    "asset": "badge_27_r04_c03",
+                    "family": "badge",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 895.219482421875,
+                        "top": 909.891357421875,
+                        "width": 28.43603515625,
+                        "height": 28.43603515625,
+                        "right": 923.655517578125,
+                        "bottom": 938.327392578125
+                    }
+                },
+                {
+                    "id": "update-transmission/vertical/listener",
+                    "asset": "Mr_Saturn_Sprite_Earthbound",
+                    "family": "sprite",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 987.510498046875,
+                        "top": 1017.682373046875,
+                        "width": 41.38525390625,
+                        "height": 52.91650390625,
+                        "right": 1028.895751953125,
+                        "bottom": 1070.598876953125
+                    }
+                },
+                {
+                    "id": "map-discoveries/ragged-bank/emblem",
+                    "asset": "noise_13_lavender",
+                    "family": "noise",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 560.45556640625,
+                        "top": 1276.426513671875,
+                        "width": 80.5888671875,
+                        "height": 90.99072265625,
+                        "right": 641.04443359375,
+                        "bottom": 1367.417236328125
+                    }
+                },
+                {
+                    "id": "map-discoveries/ragged-bank/friend",
+                    "asset": "color-pixels-gastly-and-gengar-gastly",
+                    "family": "sprite",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 572.0601196289062,
+                        "top": 1371.6383056640625,
+                        "width": 47.0360107421875,
+                        "height": 47.035888671875,
+                        "right": 619.0961303710938,
+                        "bottom": 1418.6741943359375
+                    }
+                },
+                {
+                    "id": "map-discoveries/ragged-bank/pickup",
+                    "asset": "badge_05_r01_c05",
+                    "family": "badge",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 616.6144409179688,
+                        "top": 1396.817626953125,
+                        "width": 26.2711181640625,
+                        "height": 26.27099609375,
+                        "right": 642.8855590820312,
+                        "bottom": 1423.088623046875
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/companion",
+                    "asset": "433-4339475_leafeon-gen-5-sprite-png-download-leafeon-pixel",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 346.5946044921875,
+                        "top": 1716.09716796875,
+                        "width": 57.529541015625,
+                        "height": 57.9306640625,
+                        "right": 404.1241455078125,
+                        "bottom": 1774.02783203125
+                    }
+                },
+                {
+                    "id": "narwhal-pins/crooked-row/pin",
+                    "asset": "badge_46_r06_c08",
+                    "family": "badge",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 144.66358947753906,
+                        "top": 97.63233947753906,
+                        "width": 26.360321044921875,
+                        "height": 26.360321044921875,
+                        "right": 171.02391052246094,
+                        "bottom": 123.99266052246094
+                    }
+                },
+                {
+                    "id": "narwhal-pins/crooked-row/friend",
+                    "asset": "games-terraria-lunatic-cultist-ice-mist-lunatic-cultist",
+                    "family": "sprite",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 162.9265899658203,
+                        "top": 99.23908233642578,
+                        "width": 35.771820068359375,
+                        "height": 35.771827697753906,
+                        "right": 198.6984100341797,
+                        "bottom": 135.0109100341797
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/pickup",
+                    "asset": "whimsicott_shiny",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1206.1427001953125,
+                        "top": 895.3457641601562,
+                        "width": 42.558349609375,
+                        "height": 42.5584716796875,
+                        "right": 1248.7010498046875,
+                        "bottom": 937.9042358398438
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/pin",
+                    "asset": "badge_15_r02_c07",
+                    "family": "badge",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1204.553955078125,
+                        "top": 898.788330078125,
+                        "width": 32.86083984375,
+                        "height": 32.86083984375,
+                        "right": 1237.414794921875,
+                        "bottom": 931.649169921875
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/scrap",
+                    "asset": "sega-bomberman-white-bomberman-pack",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1220.038330078125,
+                        "top": 931.1952514648438,
+                        "width": 34.11083984375,
+                        "height": 35.3594970703125,
+                        "right": 1254.149169921875,
+                        "bottom": 966.5547485351562
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/friend",
+                    "asset": "cute-gojou-satoru-pack",
+                    "family": "sprite",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 295.9290771484375,
+                        "top": 1377.8311767578125,
+                        "width": 51.360595703125,
+                        "height": 51.868896484375,
+                        "right": 347.2896728515625,
+                        "bottom": 1429.7000732421875
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/loose-pin",
+                    "asset": "badge_10_r02_c02",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 326.52618408203125,
+                        "top": 1363.4793701171875,
+                        "width": 22.2601318359375,
+                        "height": 22.260009765625,
+                        "right": 348.78631591796875,
+                        "bottom": 1385.7393798828125
+                    }
+                },
+                {
+                    "id": "map-discoveries/ragged-bank/pin",
+                    "asset": "badge_01_r01_c01",
+                    "family": "badge",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 520.9622192382812,
+                        "top": 1303.259033203125,
+                        "width": 28.6380615234375,
+                        "height": 28.63818359375,
+                        "right": 549.6002807617188,
+                        "bottom": 1331.897216796875
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/emblem",
+                    "asset": "StS2_CrackedCore",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 390.4610290527344,
+                        "top": 1707.2891845703125,
+                        "width": 52.73419189453125,
+                        "height": 52.734130859375,
+                        "right": 443.1952209472656,
+                        "bottom": 1760.0233154296875
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/pin",
+                    "asset": "badge_08_r01_c08",
+                    "family": "badge",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 433.0174255371094,
+                        "top": 1745.1893310546875,
+                        "width": 26.52764892578125,
+                        "height": 26.527587890625,
+                        "right": 459.5450744628906,
+                        "bottom": 1771.7169189453125
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/friend",
+                    "asset": "jojo-bizzare-adventure-rohan-kishibe-and-pen-cursor-pack",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 450.0508117675781,
+                        "top": 1717.250732421875,
+                        "width": 34.14837646484375,
+                        "height": 35.24853515625,
+                        "right": 484.1991882324219,
+                        "bottom": 1752.499267578125
+                    }
+                }
+            ],
+            "overlaps": [],
+            "unique": 26,
+            "families": {
+                "noise": 4,
+                "sprite": 13,
+                "badge": 10
+            },
+            "frameOverlaps": 6,
+            "pairOverlaps": 17,
+            "overflow": false
+        },
+        {
+            "width": 1440,
+            "bands": {
+                "upper": 7,
+                "middle": 16,
+                "pile": 0,
+                "bottom": 4
+            },
+            "tail": {
+                "canvasHeight": 1724.46875,
+                "pileBottom": 1600.46875,
+                "replayTop": 1632.46875,
+                "gap": 32,
+                "remaining": 124
+            },
+            "seed": "314159",
+            "mode": "narrow",
+            "items": [
+                {
+                    "id": "narwhal-pins/constellation/emblem",
+                    "asset": "noise_04_red",
+                    "family": "noise",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 103.77298736572266,
+                        "top": 84.05685424804688,
+                        "width": 47.829017639160156,
+                        "height": 55.26129150390625,
+                        "right": 151.6020050048828,
+                        "bottom": 139.31814575195312
+                    }
+                },
+                {
+                    "id": "profile-charms/tail/companion",
+                    "asset": "sega-bomberman-white-bomberman-pack",
+                    "family": "sprite",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1208.0460205078125,
+                        "top": 87.72138214111328,
+                        "width": 52.126708984375,
+                        "height": 54.27599334716797,
+                        "right": 1260.1727294921875,
+                        "bottom": 141.99737548828125
+                    }
+                },
+                {
+                    "id": "profile-charms/tail/crest",
+                    "asset": "badge_08_r01_c08",
+                    "family": "badge",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1244.129638671875,
+                        "top": 119.83274841308594,
+                        "width": 35.30322265625,
+                        "height": 35.303253173828125,
+                        "right": 1279.432861328125,
+                        "bottom": 155.13600158691406
+                    }
+                },
+                {
+                    "id": "profile-charms/tail/fragment",
+                    "asset": "terraria-yharon-burning-sky-burning-sky-weapon",
+                    "family": "sprite",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1380.335205078125,
+                        "top": 147.49142456054688,
+                        "width": 38.73583984375,
+                        "height": 38.73590087890625,
+                        "right": 1419.071044921875,
+                        "bottom": 186.22732543945312
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/emblem",
+                    "asset": "color-pixels-pokemon-minun-plusle-plusle",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1228.1951904296875,
+                        "top": 871.3201904296875,
+                        "width": 56.515869140625,
+                        "height": 56.515869140625,
+                        "right": 1284.7110595703125,
+                        "bottom": 927.8360595703125
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/emblem",
+                    "asset": "noise_10_red",
+                    "family": "noise",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 25.179645538330078,
+                        "top": 1223.9903564453125,
+                        "width": 62.07820510864258,
+                        "height": 56.331787109375,
+                        "right": 87.25785064697266,
+                        "bottom": 1280.3221435546875
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/badge-a",
+                    "asset": "badge_15_r02_c07",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 20.376174926757812,
+                        "top": 1268.610595703125,
+                        "width": 31.622650146484375,
+                        "height": 31.62255859375,
+                        "right": 51.99882507324219,
+                        "bottom": 1300.233154296875
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/badge-b",
+                    "asset": "badge_54_r07_c08",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 12.618037223815918,
+                        "top": 1292.64111328125,
+                        "width": 26.57642364501953,
+                        "height": 29.3427734375,
+                        "right": 39.19446086883545,
+                        "bottom": 1321.98388671875
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/scrap",
+                    "asset": "mad_mew_mew_center",
+                    "family": "sprite",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 53.963504791259766,
+                        "top": 1351.8780517578125,
+                        "width": 40.947994232177734,
+                        "height": 52.587646484375,
+                        "right": 94.9114990234375,
+                        "bottom": 1404.4656982421875
+                    }
+                },
+                {
+                    "id": "update-transmission/broadcast/pin",
+                    "asset": "badge_46_r06_c08",
+                    "family": "badge",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 892.4312133789062,
+                        "top": 921.0874633789062,
+                        "width": 32.4500732421875,
+                        "height": 32.4500732421875,
+                        "right": 924.8812866210938,
+                        "bottom": 953.5375366210938
+                    }
+                },
+                {
+                    "id": "update-transmission/broadcast/listener",
+                    "asset": "game-the-world-ends-shiki-misaki-pack",
+                    "family": "sprite",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 985.6082153320312,
+                        "top": 1020.980224609375,
+                        "width": 41.25238037109375,
+                        "height": 46.53955078125,
+                        "right": 1026.860595703125,
+                        "bottom": 1067.519775390625
+                    }
+                },
+                {
+                    "id": "map-discoveries/ragged-bank/emblem",
+                    "asset": "noise_10_red",
+                    "family": "noise",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 561.5355834960938,
+                        "top": 1288.223876953125,
+                        "width": 77.4600830078125,
+                        "height": 68.14599609375,
+                        "right": 638.9956665039062,
+                        "bottom": 1356.369873046875
+                    }
+                },
+                {
+                    "id": "map-discoveries/ragged-bank/friend",
+                    "asset": "color-pixels-well-potion",
+                    "family": "sprite",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 572.7335205078125,
+                        "top": 1375.1553955078125,
+                        "width": 46.782958984375,
+                        "height": 46.782958984375,
+                        "right": 619.5164794921875,
+                        "bottom": 1421.9383544921875
+                    }
+                },
+                {
+                    "id": "map-discoveries/ragged-bank/pickup",
+                    "asset": "badge_34_r05_c02",
+                    "family": "badge",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 618.4751586914062,
+                        "top": 1398.667724609375,
+                        "width": 23.7996826171875,
+                        "height": 22.66455078125,
+                        "right": 642.2748413085938,
+                        "bottom": 1421.332275390625
+                    }
+                },
+                {
+                    "id": "ukulele-encore/encore/companion",
+                    "asset": "games-fire-emblem-anna-pack",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 342.16741943359375,
+                        "top": 1700.3477783203125,
+                        "width": 67.5401611328125,
+                        "height": 72.804443359375,
+                        "right": 409.70758056640625,
+                        "bottom": 1773.1522216796875
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/pin",
+                    "asset": "badge_03_r01_c03",
+                    "family": "badge",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 139.1934814453125,
+                        "top": 101.92786407470703,
+                        "width": 30.456787109375,
+                        "height": 30.45677947998047,
+                        "right": 169.6502685546875,
+                        "bottom": 132.3846435546875
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/friend",
+                    "asset": "433-4339475_leafeon-gen-5-sprite-png-download-leafeon-pixel",
+                    "family": "sprite",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 178.247314453125,
+                        "top": 96.21360778808594,
+                        "width": 37.25537109375,
+                        "height": 37.479034423828125,
+                        "right": 215.502685546875,
+                        "bottom": 133.69264221191406
+                    }
+                },
+                {
+                    "id": "profile-charms/tail/pin",
+                    "asset": "badge_05_r01_c05",
+                    "family": "badge",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1200.05029296875,
+                        "top": 130.69088745117188,
+                        "width": 24.4306640625,
+                        "height": 24.43072509765625,
+                        "right": 1224.48095703125,
+                        "bottom": 155.12161254882812
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/pickup",
+                    "asset": "453-4530018_skyrim-logo-pixel-art-hd-png-download",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1205.1197509765625,
+                        "top": 884.385498046875,
+                        "width": 44.072998046875,
+                        "height": 59.91650390625,
+                        "right": 1249.1927490234375,
+                        "bottom": 944.302001953125
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/pin",
+                    "asset": "badge_13_r02_c05",
+                    "family": "badge",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1206.953125,
+                        "top": 900.5497436523438,
+                        "width": 31.71875,
+                        "height": 29.3380126953125,
+                        "right": 1238.671875,
+                        "bottom": 929.8877563476562
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/scrap",
+                    "asset": "fire-emblem-tharja-pack",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1220.3753662109375,
+                        "top": 930.5335693359375,
+                        "width": 33.936767578125,
+                        "height": 36.214111328125,
+                        "right": 1254.3121337890625,
+                        "bottom": 966.7476806640625
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/friend",
+                    "asset": "slime-rancher-tabby-slime",
+                    "family": "sprite",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 294.2704162597656,
+                        "top": 1379.9891357421875,
+                        "width": 50.14666748046875,
+                        "height": 50.146728515625,
+                        "right": 344.4170837402344,
+                        "bottom": 1430.1358642578125
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/loose-pin",
+                    "asset": "badge_39_r06_c01",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 328.5484924316406,
+                        "top": 1361.6422119140625,
+                        "width": 21.09051513671875,
+                        "height": 21.090576171875,
+                        "right": 349.6390075683594,
+                        "bottom": 1382.7327880859375
+                    }
+                },
+                {
+                    "id": "map-discoveries/ragged-bank/pin",
+                    "asset": "badge_13_r02_c05",
+                    "family": "badge",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 516.9036865234375,
+                        "top": 1301.5120849609375,
+                        "width": 30.661376953125,
+                        "height": 27.913330078125,
+                        "right": 547.5650634765625,
+                        "bottom": 1329.4254150390625
+                    }
+                },
+                {
+                    "id": "ukulele-encore/encore/emblem",
+                    "asset": "kirby-marx",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 395.4817199707031,
+                        "top": 1731.0286865234375,
+                        "width": 51.25531005859375,
+                        "height": 52.161376953125,
+                        "right": 446.7370300292969,
+                        "bottom": 1783.1900634765625
+                    }
+                },
+                {
+                    "id": "ukulele-encore/encore/pin",
+                    "asset": "badge_31_r04_c07",
+                    "family": "badge",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 429.6573181152344,
+                        "top": 1720.2823486328125,
+                        "width": 24.99786376953125,
+                        "height": 24.997802734375,
+                        "right": 454.6551818847656,
+                        "bottom": 1745.2801513671875
+                    }
+                },
+                {
+                    "id": "ukulele-encore/encore/friend",
+                    "asset": "mad_mew_mew_center",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 452.296142578125,
+                        "top": 1747.9093017578125,
+                        "width": 31.78271484375,
+                        "height": 40.650146484375,
+                        "right": 484.078857421875,
+                        "bottom": 1788.5594482421875
+                    }
+                }
+            ],
+            "overlaps": [],
+            "unique": 24,
+            "families": {
+                "noise": 3,
+                "sprite": 13,
+                "badge": 11
+            },
+            "frameOverlaps": 6,
+            "pairOverlaps": 13,
+            "overflow": false
+        },
+        {
+            "width": 1920,
+            "bands": {
+                "upper": 6,
+                "middle": 17,
+                "pile": 1,
+                "bottom": 4
+            },
+            "tail": {
+                "canvasHeight": 1687.5625,
+                "pileBottom": 1563.5625,
+                "replayTop": 1595.5625,
+                "gap": 32,
+                "remaining": 124
+            },
+            "seed": "123456",
+            "mode": "wide",
+            "items": [
+                {
+                    "id": "narwhal-pins/constellation/emblem",
+                    "asset": "noise_02_blue",
+                    "family": "noise",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 113.68475341796875,
+                        "top": 85.71710205078125,
+                        "width": 48.3179931640625,
+                        "height": 52.1282958984375,
+                        "right": 162.00274658203125,
+                        "bottom": 137.84539794921875
+                    }
+                },
+                {
+                    "id": "profile-charms/orbit/companion",
+                    "asset": "StS2_CrackedCore",
+                    "family": "sprite",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1649.7181396484375,
+                        "top": 119.23371887207031,
+                        "width": 77.688720703125,
+                        "height": 77.68881225585938,
+                        "right": 1727.4068603515625,
+                        "bottom": 196.9225311279297
+                    }
+                },
+                {
+                    "id": "profile-charms/orbit/crest",
+                    "asset": "badge_34_r05_c02",
+                    "family": "badge",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1708.3671875,
+                        "top": 124.35609436035156,
+                        "width": 43.265625,
+                        "height": 41.350311279296875,
+                        "right": 1751.6328125,
+                        "bottom": 165.70640563964844
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/emblem",
+                    "asset": "pixel-art-ghost-ghost-key",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1708.0689697265625,
+                        "top": 857.3657836914062,
+                        "width": 58.862060546875,
+                        "height": 58.8621826171875,
+                        "right": 1766.9310302734375,
+                        "bottom": 916.2279663085938
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/emblem",
+                    "asset": "noise_01_orange",
+                    "family": "noise",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 34.522037506103516,
+                        "top": 1185.9312744140625,
+                        "width": 66.9246826171875,
+                        "height": 67.731201171875,
+                        "right": 101.44672012329102,
+                        "bottom": 1253.6624755859375
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/badge-a",
+                    "asset": "badge_54_r07_c08",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 27.99709129333496,
+                        "top": 1236.22412109375,
+                        "width": 30.91206932067871,
+                        "height": 34.1767578125,
+                        "right": 58.90916061401367,
+                        "bottom": 1270.40087890625
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/badge-b",
+                    "asset": "badge_31_r04_c07",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 48.051029205322266,
+                        "top": 1258.957275390625,
+                        "width": 29.147937774658203,
+                        "height": 29.14794921875,
+                        "right": 77.19896697998047,
+                        "bottom": 1288.105224609375
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/scrap",
+                    "asset": "jotaro_anime",
+                    "family": "sprite",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 61.68181610107422,
+                        "top": 1330.956298828125,
+                        "width": 53.41761779785156,
+                        "height": 46.80615234375,
+                        "right": 115.09943389892578,
+                        "bottom": 1377.762451171875
+                    }
+                },
+                {
+                    "id": "update-transmission/vertical/emblem",
+                    "asset": "noise_bonus_green",
+                    "family": "noise",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1246.7081298828125,
+                        "top": 860.5359497070312,
+                        "width": 56.802490234375,
+                        "height": 50.6781005859375,
+                        "right": 1303.5106201171875,
+                        "bottom": 911.2140502929688
+                    }
+                },
+                {
+                    "id": "update-transmission/vertical/pin",
+                    "asset": "badge_08_r01_c08",
+                    "family": "badge",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1248.3800048828125,
+                        "top": 898.9111938476562,
+                        "width": 28.833740234375,
+                        "height": 28.8338623046875,
+                        "right": 1277.2137451171875,
+                        "bottom": 927.7450561523438
+                    }
+                },
+                {
+                    "id": "update-transmission/vertical/listener",
+                    "asset": "color-pixels-pokemon-minun-plusle-minun",
+                    "family": "sprite",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1338.5802001953125,
+                        "top": 1011.6583862304688,
+                        "width": 40.620849609375,
+                        "height": 40.62066650390625,
+                        "right": 1379.2010498046875,
+                        "bottom": 1052.279052734375
+                    }
+                },
+                {
+                    "id": "map-discoveries/expedition/emblem",
+                    "asset": "noise_05_lavender",
+                    "family": "noise",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 848.0515747070312,
+                        "top": 1234.739990234375,
+                        "width": 74.3656005859375,
+                        "height": 86.20751953125,
+                        "right": 922.4171752929688,
+                        "bottom": 1320.947509765625
+                    }
+                },
+                {
+                    "id": "map-discoveries/expedition/friend",
+                    "asset": "kirby-marx",
+                    "family": "sprite",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 873.771728515625,
+                        "top": 1346.0469970703125,
+                        "width": 42.92529296875,
+                        "height": 43.874755859375,
+                        "right": 916.697021484375,
+                        "bottom": 1389.9217529296875
+                    }
+                },
+                {
+                    "id": "map-discoveries/expedition/pickup",
+                    "asset": "badge_08_r01_c08",
+                    "family": "badge",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 917.4915161132812,
+                        "top": 1356.2415771484375,
+                        "width": 22.6732177734375,
+                        "height": 22.673095703125,
+                        "right": 940.1647338867188,
+                        "bottom": 1378.9146728515625
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/companion",
+                    "asset": "mad_mew_mew_center",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 355.3087463378906,
+                        "top": 1672.244140625,
+                        "width": 59.63250732421875,
+                        "height": 75.94921875,
+                        "right": 414.9412536621094,
+                        "bottom": 1748.193359375
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/pin",
+                    "asset": "badge_25_r04_c01",
+                    "family": "badge",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 149.16796875,
+                        "top": 101.24610137939453,
+                        "width": 32.0703125,
+                        "height": 32.07030487060547,
+                        "right": 181.23828125,
+                        "bottom": 133.31640625
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/friend",
+                    "asset": "color-pixels-old-games-blue-handheld",
+                    "family": "sprite",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 191.31814575195312,
+                        "top": 95.5525131225586,
+                        "width": 33.95745849609375,
+                        "height": 33.95746612548828,
+                        "right": 225.27560424804688,
+                        "bottom": 129.50997924804688
+                    }
+                },
+                {
+                    "id": "profile-charms/orbit/pin",
+                    "asset": "badge_03_r01_c03",
+                    "family": "badge",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1671.88525390625,
+                        "top": 189.58831787109375,
+                        "width": 33.8232421875,
+                        "height": 33.8233642578125,
+                        "right": 1705.70849609375,
+                        "bottom": 223.41168212890625
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/pickup",
+                    "asset": "omega_xis_01_pose_top_01",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1685.0504150390625,
+                        "top": 880.3634033203125,
+                        "width": 42.524169921875,
+                        "height": 46.991943359375,
+                        "right": 1727.5745849609375,
+                        "bottom": 927.3553466796875
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/pin",
+                    "asset": "badge_15_r02_c07",
+                    "family": "badge",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1685.0787353515625,
+                        "top": 887.0944213867188,
+                        "width": 32.811279296875,
+                        "height": 32.8111572265625,
+                        "right": 1717.8900146484375,
+                        "bottom": 919.9055786132812
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/scrap",
+                    "asset": "jojos-bizarre-adventure-koichi-hirose-and-act3-cursor-pack",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1698.9718017578125,
+                        "top": 918.6107788085938,
+                        "width": 36.243896484375,
+                        "height": 35.9034423828125,
+                        "right": 1735.2156982421875,
+                        "bottom": 954.5142211914062
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/friend",
+                    "asset": "color-pixels-well-potion",
+                    "family": "sprite",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 314.5126953125,
+                        "top": 1344.5751953125,
+                        "width": 44.505859375,
+                        "height": 44.505859375,
+                        "right": 359.0185546875,
+                        "bottom": 1389.0810546875
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/loose-pin",
+                    "asset": "badge_25_r04_c01",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 346.7763977050781,
+                        "top": 1379.9638671875,
+                        "width": 22.47845458984375,
+                        "height": 22.478515625,
+                        "right": 369.2548522949219,
+                        "bottom": 1402.4423828125
+                    }
+                },
+                {
+                    "id": "map-discoveries/expedition/companion",
+                    "asset": "omega_xis_22_pose_bottom_03",
+                    "family": "sprite",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 820.2694091796875,
+                        "top": 1301.0977783203125,
+                        "width": 58.554931640625,
+                        "height": 36.741943359375,
+                        "right": 878.8243408203125,
+                        "bottom": 1337.8397216796875
+                    }
+                },
+                {
+                    "id": "map-discoveries/expedition/pin",
+                    "asset": "badge_34_r05_c02",
+                    "family": "badge",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 838.3344116210938,
+                        "top": 1260.089599609375,
+                        "width": 27.7686767578125,
+                        "height": 26.38330078125,
+                        "right": 866.1030883789062,
+                        "bottom": 1286.472900390625
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/emblem",
+                    "asset": "cute-ramp-fish-cursor-pack",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 403.6632080078125,
+                        "top": 1670.1944580078125,
+                        "width": 51.579833984375,
+                        "height": 56.611083984375,
+                        "right": 455.2430419921875,
+                        "bottom": 1726.8055419921875
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/pin",
+                    "asset": "badge_13_r02_c05",
+                    "family": "badge",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 444.5496520996094,
+                        "top": 1708.5391845703125,
+                        "width": 25.58819580078125,
+                        "height": 23.452880859375,
+                        "right": 470.1378479003906,
+                        "bottom": 1731.9920654296875
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/friend",
+                    "asset": "hollow_knight_hornet_needle_1156",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 460.54559326171875,
+                        "top": 1682.2021484375,
+                        "width": 34.9400634765625,
+                        "height": 39.064453125,
+                        "right": 495.48565673828125,
+                        "bottom": 1721.2666015625
+                    }
+                }
+            ],
+            "overlaps": [],
+            "unique": 25,
+            "families": {
+                "noise": 4,
+                "sprite": 13,
+                "badge": 11
+            },
+            "frameOverlaps": 11,
+            "pairOverlaps": 17,
+            "overflow": false
+        },
+        {
+            "width": 1920,
+            "bands": {
+                "upper": 5,
+                "middle": 17,
+                "pile": 0,
+                "bottom": 4
+            },
+            "tail": {
+                "canvasHeight": 1687.5625,
+                "pileBottom": 1563.5625,
+                "replayTop": 1595.5625,
+                "gap": 32,
+                "remaining": 124
+            },
+            "seed": "890123",
+            "mode": "wide",
+            "items": [
+                {
+                    "id": "narwhal-pins/crooked-row/emblem",
+                    "asset": "noise_02_lavender",
+                    "family": "noise",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 120.23908996582031,
+                        "top": 83.58519744873047,
+                        "width": 45.053070068359375,
+                        "height": 48.17334747314453,
+                        "right": 165.2921600341797,
+                        "bottom": 131.758544921875
+                    }
+                },
+                {
+                    "id": "profile-charms/orbit/crest",
+                    "asset": "badge_46_r06_c08",
+                    "family": "badge",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1706.142822265625,
+                        "top": 121.72098541259766,
+                        "width": 45.05810546875,
+                        "height": 45.05803680419922,
+                        "right": 1751.200927734375,
+                        "bottom": 166.77902221679688
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/emblem",
+                    "asset": "frisk",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1706.7252197265625,
+                        "top": 848.0325317382812,
+                        "width": 62.549560546875,
+                        "height": 76.4974365234375,
+                        "right": 1769.2747802734375,
+                        "bottom": 924.5299682617188
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/emblem",
+                    "asset": "noise_07_orange",
+                    "family": "noise",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 32.837032318115234,
+                        "top": 1184.7957763671875,
+                        "width": 71.857177734375,
+                        "height": 81.283447265625,
+                        "right": 104.69421005249023,
+                        "bottom": 1266.0792236328125
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/badge-a",
+                    "asset": "badge_22_r03_c06",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 28.477909088134766,
+                        "top": 1240.8892822265625,
+                        "width": 33.38793182373047,
+                        "height": 36.283935546875,
+                        "right": 61.865840911865234,
+                        "bottom": 1277.1732177734375
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/badge-b",
+                    "asset": "badge_34_r05_c02",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 27.614850997924805,
+                        "top": 1269.4061279296875,
+                        "width": 24.801546096801758,
+                        "height": 23.531494140625,
+                        "right": 52.41639709472656,
+                        "bottom": 1292.9376220703125
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/scrap",
+                    "asset": "games-terraria-lunatic-cultist-ice-mist-ice-mist",
+                    "family": "sprite",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 65.97974395751953,
+                        "top": 1331.401611328125,
+                        "width": 40.88426208496094,
+                        "height": 40.88427734375,
+                        "right": 106.86400604248047,
+                        "bottom": 1372.285888671875
+                    }
+                },
+                {
+                    "id": "update-transmission/vertical/emblem",
+                    "asset": "noise_12_orange",
+                    "family": "noise",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1248.18798828125,
+                        "top": 859.4401245117188,
+                        "width": 54.3115234375,
+                        "height": 51.2447509765625,
+                        "right": 1302.49951171875,
+                        "bottom": 910.6848754882812
+                    }
+                },
+                {
+                    "id": "update-transmission/vertical/pin",
+                    "asset": "badge_27_r04_c03",
+                    "family": "badge",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1249.141357421875,
+                        "top": 897.156982421875,
+                        "width": 28.43603515625,
+                        "height": 28.43603515625,
+                        "right": 1277.577392578125,
+                        "bottom": 925.593017578125
+                    }
+                },
+                {
+                    "id": "update-transmission/vertical/listener",
+                    "asset": "Mr_Saturn_Sprite_Earthbound",
+                    "family": "sprite",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1341.432373046875,
+                        "top": 1004.947998046875,
+                        "width": 41.38525390625,
+                        "height": 52.91650390625,
+                        "right": 1382.817626953125,
+                        "bottom": 1057.864501953125
+                    }
+                },
+                {
+                    "id": "map-discoveries/ragged-bank/emblem",
+                    "asset": "noise_13_lavender",
+                    "family": "noise",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 857.42431640625,
+                        "top": 1239.520263671875,
+                        "width": 80.5888671875,
+                        "height": 90.99072265625,
+                        "right": 938.01318359375,
+                        "bottom": 1330.510986328125
+                    }
+                },
+                {
+                    "id": "map-discoveries/ragged-bank/friend",
+                    "asset": "color-pixels-gastly-and-gengar-gastly",
+                    "family": "sprite",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 869.0288696289062,
+                        "top": 1334.7320556640625,
+                        "width": 47.0360107421875,
+                        "height": 47.035888671875,
+                        "right": 916.0648803710938,
+                        "bottom": 1381.7679443359375
+                    }
+                },
+                {
+                    "id": "map-discoveries/ragged-bank/pickup",
+                    "asset": "badge_05_r01_c05",
+                    "family": "badge",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 913.5831909179688,
+                        "top": 1359.911376953125,
+                        "width": 26.2711181640625,
+                        "height": 26.27099609375,
+                        "right": 939.8543090820312,
+                        "bottom": 1386.182373046875
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/companion",
+                    "asset": "433-4339475_leafeon-gen-5-sprite-png-download-leafeon-pixel",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 358.7664794921875,
+                        "top": 1679.19091796875,
+                        "width": 57.529541015625,
+                        "height": 57.9306640625,
+                        "right": 416.2960205078125,
+                        "bottom": 1737.12158203125
+                    }
+                },
+                {
+                    "id": "narwhal-pins/crooked-row/pin",
+                    "asset": "badge_46_r06_c08",
+                    "family": "badge",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 156.83546447753906,
+                        "top": 97.63233947753906,
+                        "width": 26.360321044921875,
+                        "height": 26.360321044921875,
+                        "right": 183.19578552246094,
+                        "bottom": 123.99266052246094
+                    }
+                },
+                {
+                    "id": "narwhal-pins/crooked-row/friend",
+                    "asset": "games-terraria-lunatic-cultist-ice-mist-lunatic-cultist",
+                    "family": "sprite",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 175.0984649658203,
+                        "top": 99.23908233642578,
+                        "width": 35.771820068359375,
+                        "height": 35.771827697753906,
+                        "right": 210.8702850341797,
+                        "bottom": 135.0109100341797
+                    }
+                },
+                {
+                    "id": "profile-charms/orbit/pin",
+                    "asset": "badge_03_r01_c03",
+                    "family": "badge",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1671.013671875,
+                        "top": 187.52932739257812,
+                        "width": 32.34765625,
+                        "height": 32.34759521484375,
+                        "right": 1703.361328125,
+                        "bottom": 219.87692260742188
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/pickup",
+                    "asset": "whimsicott_shiny",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1686.1427001953125,
+                        "top": 882.6113891601562,
+                        "width": 42.558349609375,
+                        "height": 42.5584716796875,
+                        "right": 1728.7010498046875,
+                        "bottom": 925.1698608398438
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/pin",
+                    "asset": "badge_15_r02_c07",
+                    "family": "badge",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1684.553955078125,
+                        "top": 886.053955078125,
+                        "width": 32.86083984375,
+                        "height": 32.86083984375,
+                        "right": 1717.414794921875,
+                        "bottom": 918.914794921875
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/scrap",
+                    "asset": "sega-bomberman-white-bomberman-pack",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1700.038330078125,
+                        "top": 918.4608764648438,
+                        "width": 34.11083984375,
+                        "height": 35.3594970703125,
+                        "right": 1734.149169921875,
+                        "bottom": 953.8203735351562
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/friend",
+                    "asset": "cute-gojou-satoru-pack",
+                    "family": "sprite",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 308.1009521484375,
+                        "top": 1352.0655517578125,
+                        "width": 51.360595703125,
+                        "height": 51.868896484375,
+                        "right": 359.4615478515625,
+                        "bottom": 1403.9344482421875
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/loose-pin",
+                    "asset": "badge_10_r02_c02",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 338.69805908203125,
+                        "top": 1337.7137451171875,
+                        "width": 22.2601318359375,
+                        "height": 22.260009765625,
+                        "right": 360.95819091796875,
+                        "bottom": 1359.9737548828125
+                    }
+                },
+                {
+                    "id": "map-discoveries/ragged-bank/pin",
+                    "asset": "badge_01_r01_c01",
+                    "family": "badge",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 817.9309692382812,
+                        "top": 1266.352783203125,
+                        "width": 28.6380615234375,
+                        "height": 28.63818359375,
+                        "right": 846.5690307617188,
+                        "bottom": 1294.990966796875
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/emblem",
+                    "asset": "StS2_CrackedCore",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 402.6329040527344,
+                        "top": 1670.3829345703125,
+                        "width": 52.73419189453125,
+                        "height": 52.734130859375,
+                        "right": 455.3670959472656,
+                        "bottom": 1723.1170654296875
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/pin",
+                    "asset": "badge_08_r01_c08",
+                    "family": "badge",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 445.1893005371094,
+                        "top": 1708.2830810546875,
+                        "width": 26.52764892578125,
+                        "height": 26.527587890625,
+                        "right": 471.7169494628906,
+                        "bottom": 1734.8106689453125
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/friend",
+                    "asset": "jojo-bizzare-adventure-rohan-kishibe-and-pen-cursor-pack",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 462.2226867675781,
+                        "top": 1680.344482421875,
+                        "width": 34.14837646484375,
+                        "height": 35.24853515625,
+                        "right": 496.3710632324219,
+                        "bottom": 1715.593017578125
+                    }
+                }
+            ],
+            "overlaps": [],
+            "unique": 25,
+            "families": {
+                "noise": 4,
+                "badge": 11,
+                "sprite": 11
+            },
+            "frameOverlaps": 7,
+            "pairOverlaps": 16,
+            "overflow": false
+        },
+        {
+            "width": 1920,
+            "bands": {
+                "upper": 7,
+                "middle": 17,
+                "pile": 0,
+                "bottom": 4
+            },
+            "tail": {
+                "canvasHeight": 1687.5625,
+                "pileBottom": 1563.5625,
+                "replayTop": 1595.5625,
+                "gap": 32,
+                "remaining": 124
+            },
+            "seed": "314159",
+            "mode": "wide",
+            "items": [
+                {
+                    "id": "narwhal-pins/constellation/emblem",
+                    "asset": "noise_04_red",
+                    "family": "noise",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 115.94486236572266,
+                        "top": 84.05685424804688,
+                        "width": 47.829017639160156,
+                        "height": 55.26129150390625,
+                        "right": 163.7738800048828,
+                        "bottom": 139.31814575195312
+                    }
+                },
+                {
+                    "id": "profile-charms/tail/companion",
+                    "asset": "sega-bomberman-white-bomberman-pack",
+                    "family": "sprite",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1657.0474853515625,
+                        "top": 115.85102081298828,
+                        "width": 65.155029296875,
+                        "height": 67.86046600341797,
+                        "right": 1722.2025146484375,
+                        "bottom": 183.71148681640625
+                    }
+                },
+                {
+                    "id": "profile-charms/tail/crest",
+                    "asset": "badge_08_r01_c08",
+                    "family": "badge",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1702.1744384765625,
+                        "top": 155.9869384765625,
+                        "width": 44.119873046875,
+                        "height": 44.119873046875,
+                        "right": 1746.2943115234375,
+                        "bottom": 200.1068115234375
+                    }
+                },
+                {
+                    "id": "profile-charms/tail/fragment",
+                    "asset": "terraria-yharon-burning-sky-burning-sky-weapon",
+                    "family": "sprite",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1872.4345703125,
+                        "top": 190.5752410888672,
+                        "width": 48.412109375,
+                        "height": 48.412017822265625,
+                        "right": 1920.8466796875,
+                        "bottom": 238.9872589111328
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/emblem",
+                    "asset": "color-pixels-pokemon-minun-plusle-plusle",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1708.1951904296875,
+                        "top": 858.5858154296875,
+                        "width": 56.515869140625,
+                        "height": 56.515869140625,
+                        "right": 1764.7110595703125,
+                        "bottom": 915.1016845703125
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/emblem",
+                    "asset": "noise_10_red",
+                    "family": "noise",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 37.35152053833008,
+                        "top": 1198.2247314453125,
+                        "width": 62.07820510864258,
+                        "height": 56.331787109375,
+                        "right": 99.42972564697266,
+                        "bottom": 1254.5565185546875
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/badge-a",
+                    "asset": "badge_15_r02_c07",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 32.54804992675781,
+                        "top": 1242.844970703125,
+                        "width": 31.622650146484375,
+                        "height": 31.62255859375,
+                        "right": 64.17070007324219,
+                        "bottom": 1274.467529296875
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/badge-b",
+                    "asset": "badge_54_r07_c08",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 24.789913177490234,
+                        "top": 1266.87548828125,
+                        "width": 26.57642364501953,
+                        "height": 29.3427734375,
+                        "right": 51.366336822509766,
+                        "bottom": 1296.21826171875
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/scrap",
+                    "asset": "mad_mew_mew_center",
+                    "family": "sprite",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 66.1353759765625,
+                        "top": 1326.1124267578125,
+                        "width": 40.947998046875,
+                        "height": 52.587646484375,
+                        "right": 107.0833740234375,
+                        "bottom": 1378.7000732421875
+                    }
+                },
+                {
+                    "id": "update-transmission/broadcast/emblem",
+                    "asset": "noise_02_blue",
+                    "family": "noise",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1239.52880859375,
+                        "top": 841.6454467773438,
+                        "width": 69.5048828125,
+                        "height": 74.3028564453125,
+                        "right": 1309.03369140625,
+                        "bottom": 915.9483032226562
+                    }
+                },
+                {
+                    "id": "update-transmission/broadcast/pin",
+                    "asset": "badge_46_r06_c08",
+                    "family": "badge",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1246.3531494140625,
+                        "top": 908.3530883789062,
+                        "width": 32.449951171875,
+                        "height": 32.4500732421875,
+                        "right": 1278.8031005859375,
+                        "bottom": 940.8031616210938
+                    }
+                },
+                {
+                    "id": "update-transmission/broadcast/listener",
+                    "asset": "game-the-world-ends-shiki-misaki-pack",
+                    "family": "sprite",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1339.530029296875,
+                        "top": 1008.245849609375,
+                        "width": 41.25244140625,
+                        "height": 46.53955078125,
+                        "right": 1380.782470703125,
+                        "bottom": 1054.785400390625
+                    }
+                },
+                {
+                    "id": "map-discoveries/ragged-bank/emblem",
+                    "asset": "noise_10_red",
+                    "family": "noise",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 858.5043334960938,
+                        "top": 1251.317626953125,
+                        "width": 77.4600830078125,
+                        "height": 68.14599609375,
+                        "right": 935.9644165039062,
+                        "bottom": 1319.463623046875
+                    }
+                },
+                {
+                    "id": "map-discoveries/ragged-bank/friend",
+                    "asset": "color-pixels-well-potion",
+                    "family": "sprite",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 869.7022705078125,
+                        "top": 1338.2491455078125,
+                        "width": 46.782958984375,
+                        "height": 46.782958984375,
+                        "right": 916.4852294921875,
+                        "bottom": 1385.0321044921875
+                    }
+                },
+                {
+                    "id": "map-discoveries/ragged-bank/pickup",
+                    "asset": "badge_34_r05_c02",
+                    "family": "badge",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 915.4439086914062,
+                        "top": 1361.761474609375,
+                        "width": 23.7996826171875,
+                        "height": 22.66455078125,
+                        "right": 939.2435913085938,
+                        "bottom": 1384.426025390625
+                    }
+                },
+                {
+                    "id": "ukulele-encore/encore/companion",
+                    "asset": "games-fire-emblem-anna-pack",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 354.33929443359375,
+                        "top": 1663.4415283203125,
+                        "width": 67.5401611328125,
+                        "height": 72.804443359375,
+                        "right": 421.87945556640625,
+                        "bottom": 1736.2459716796875
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/pin",
+                    "asset": "badge_03_r01_c03",
+                    "family": "badge",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 151.3653564453125,
+                        "top": 101.92786407470703,
+                        "width": 30.456787109375,
+                        "height": 30.45677947998047,
+                        "right": 181.8221435546875,
+                        "bottom": 132.3846435546875
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/friend",
+                    "asset": "433-4339475_leafeon-gen-5-sprite-png-download-leafeon-pixel",
+                    "family": "sprite",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 190.419189453125,
+                        "top": 96.21360778808594,
+                        "width": 37.25537109375,
+                        "height": 37.479034423828125,
+                        "right": 227.674560546875,
+                        "bottom": 133.69264221191406
+                    }
+                },
+                {
+                    "id": "profile-charms/tail/pin",
+                    "asset": "badge_05_r01_c05",
+                    "family": "badge",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1647.0589599609375,
+                        "top": 169.57455444335938,
+                        "width": 30.538330078125,
+                        "height": 30.53839111328125,
+                        "right": 1677.5972900390625,
+                        "bottom": 200.11294555664062
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/pickup",
+                    "asset": "453-4530018_skyrim-logo-pixel-art-hd-png-download",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1685.1197509765625,
+                        "top": 871.651123046875,
+                        "width": 44.072998046875,
+                        "height": 59.91650390625,
+                        "right": 1729.1927490234375,
+                        "bottom": 931.567626953125
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/pin",
+                    "asset": "badge_13_r02_c05",
+                    "family": "badge",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1686.953125,
+                        "top": 887.8153686523438,
+                        "width": 31.71875,
+                        "height": 29.3380126953125,
+                        "right": 1718.671875,
+                        "bottom": 917.1533813476562
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/scrap",
+                    "asset": "fire-emblem-tharja-pack",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1700.3753662109375,
+                        "top": 917.7991943359375,
+                        "width": 33.936767578125,
+                        "height": 36.214111328125,
+                        "right": 1734.3121337890625,
+                        "bottom": 954.0133056640625
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/friend",
+                    "asset": "slime-rancher-tabby-slime",
+                    "family": "sprite",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 306.4422912597656,
+                        "top": 1354.2235107421875,
+                        "width": 50.14666748046875,
+                        "height": 50.146728515625,
+                        "right": 356.5889587402344,
+                        "bottom": 1404.3702392578125
+                    }
+                },
+                {
+                    "id": "handheld-hoard/desk-collection/loose-pin",
+                    "asset": "badge_39_r06_c01",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 340.7203674316406,
+                        "top": 1335.8765869140625,
+                        "width": 21.09051513671875,
+                        "height": 21.090576171875,
+                        "right": 361.8108825683594,
+                        "bottom": 1356.9671630859375
+                    }
+                },
+                {
+                    "id": "map-discoveries/ragged-bank/pin",
+                    "asset": "badge_13_r02_c05",
+                    "family": "badge",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 813.8724365234375,
+                        "top": 1264.6058349609375,
+                        "width": 30.661376953125,
+                        "height": 27.913330078125,
+                        "right": 844.5338134765625,
+                        "bottom": 1292.5191650390625
+                    }
+                },
+                {
+                    "id": "ukulele-encore/encore/emblem",
+                    "asset": "kirby-marx",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 407.6535949707031,
+                        "top": 1694.1224365234375,
+                        "width": 51.25531005859375,
+                        "height": 52.161376953125,
+                        "right": 458.9089050292969,
+                        "bottom": 1746.2838134765625
+                    }
+                },
+                {
+                    "id": "ukulele-encore/encore/pin",
+                    "asset": "badge_31_r04_c07",
+                    "family": "badge",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 441.8291931152344,
+                        "top": 1683.3760986328125,
+                        "width": 24.99786376953125,
+                        "height": 24.997802734375,
+                        "right": 466.8270568847656,
+                        "bottom": 1708.3739013671875
+                    }
+                },
+                {
+                    "id": "ukulele-encore/encore/friend",
+                    "asset": "mad_mew_mew_center",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 464.468017578125,
+                        "top": 1711.0030517578125,
+                        "width": 31.78271484375,
+                        "height": 40.650146484375,
+                        "right": 496.250732421875,
+                        "bottom": 1751.6531982421875
+                    }
+                }
+            ],
+            "overlaps": [],
+            "unique": 25,
+            "families": {
+                "noise": 4,
+                "sprite": 13,
+                "badge": 11
+            },
+            "frameOverlaps": 9,
+            "pairOverlaps": 14,
+            "overflow": false
+        },
+        {
+            "width": 390,
+            "bands": {
+                "upper": 2,
+                "middle": 0,
+                "pile": 0,
+                "bottom": 2
+            },
+            "tail": {
+                "canvasHeight": 3648.015625,
+                "pileBottom": 3492.015625,
+                "replayTop": 3572.015625,
+                "gap": 80,
+                "remaining": 156
+            },
+            "seed": "123456",
+            "mode": "mobile",
+            "items": [
+                {
+                    "id": "narwhal-pins/constellation/emblem",
+                    "asset": "noise_02_blue",
+                    "family": "noise",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 53.289302825927734,
+                        "top": 109.57234191894531,
+                        "width": 21.515148162841797,
+                        "height": 23.199066162109375,
+                        "right": 74.80445098876953,
+                        "bottom": 132.7714080810547
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/companion",
+                    "asset": "mad_mew_mew_center",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 202.14271545410156,
+                        "top": 3651.843994140625,
+                        "width": 24.839569091796875,
+                        "height": 31.62451171875,
+                        "right": 226.98228454589844,
+                        "bottom": 3683.468505859375
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/emblem",
+                    "asset": "cute-ramp-fish-cursor-pack",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 228.80215454101562,
+                        "top": 3658.23828125,
+                        "width": 20.17694091796875,
+                        "height": 22.1484375,
+                        "right": 248.97909545898438,
+                        "bottom": 3680.38671875
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/pin",
+                    "asset": "badge_25_r04_c01",
+                    "family": "badge",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 74.00040435791016,
+                        "top": 112.79727935791016,
+                        "width": 16.155441284179688,
+                        "height": 16.155433654785156,
+                        "right": 90.15584564208984,
+                        "bottom": 128.9527130126953
+                    }
+                }
+            ],
+            "overlaps": [],
+            "unique": 4,
+            "families": {
+                "noise": 1,
+                "sprite": 2,
+                "badge": 1
+            },
+            "frameOverlaps": 1,
+            "pairOverlaps": 1,
+            "overflow": false
+        },
+        {
+            "width": 1600,
+            "bands": {
+                "upper": 4,
+                "middle": 18,
+                "pile": 0,
+                "bottom": 4
+            },
+            "tail": {
+                "canvasHeight": 1711.734375,
+                "pileBottom": 1587.734375,
+                "replayTop": 1619.734375,
+                "gap": 32,
+                "remaining": 124
+            },
+            "seed": "123456",
+            "mode": "desktop",
+            "items": [
+                {
+                    "id": "narwhal-pins/constellation/emblem",
+                    "asset": "noise_02_blue",
+                    "family": "noise",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 107.27850341796875,
+                        "top": 85.71710205078125,
+                        "width": 48.3179931640625,
+                        "height": 52.1282958984375,
+                        "right": 155.59649658203125,
+                        "bottom": 137.84539794921875
+                    }
+                },
+                {
+                    "id": "profile-charms/orbit/crest",
+                    "asset": "badge_34_r05_c02",
+                    "family": "badge",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1388.3515625,
+                        "top": 124.35609436035156,
+                        "width": 43.265625,
+                        "height": 41.350311279296875,
+                        "right": 1431.6171875,
+                        "bottom": 165.70640563964844
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/emblem",
+                    "asset": "pixel-art-ghost-ghost-key",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1388.0533447265625,
+                        "top": 857.3657836914062,
+                        "width": 58.862060546875,
+                        "height": 58.8621826171875,
+                        "right": 1446.9154052734375,
+                        "bottom": 916.2279663085938
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/emblem",
+                    "asset": "noise_01_orange",
+                    "family": "noise",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 28.115785598754883,
+                        "top": 1203.8375244140625,
+                        "width": 66.9246826171875,
+                        "height": 67.731201171875,
+                        "right": 95.04046821594238,
+                        "bottom": 1271.5687255859375
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/badge-a",
+                    "asset": "badge_54_r07_c08",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 21.59084129333496,
+                        "top": 1254.13037109375,
+                        "width": 30.91206932067871,
+                        "height": 34.1767578125,
+                        "right": 52.50291061401367,
+                        "bottom": 1288.30712890625
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/badge-b",
+                    "asset": "badge_31_r04_c07",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 41.644779205322266,
+                        "top": 1276.863525390625,
+                        "width": 29.147937774658203,
+                        "height": 29.14794921875,
+                        "right": 70.79271697998047,
+                        "bottom": 1306.011474609375
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/scrap",
+                    "asset": "jotaro_anime",
+                    "family": "sprite",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 55.27556610107422,
+                        "top": 1348.862548828125,
+                        "width": 53.41761779785156,
+                        "height": 46.80615234375,
+                        "right": 108.69318389892578,
+                        "bottom": 1395.668701171875
+                    }
+                },
+                {
+                    "id": "update-transmission/vertical/emblem",
+                    "asset": "noise_bonus_green",
+                    "family": "noise",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1009.8956298828125,
+                        "top": 860.5359497070312,
+                        "width": 56.802490234375,
+                        "height": 50.6781005859375,
+                        "right": 1066.6981201171875,
+                        "bottom": 911.2140502929688
+                    }
+                },
+                {
+                    "id": "update-transmission/vertical/pin",
+                    "asset": "badge_08_r01_c08",
+                    "family": "badge",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1011.5674438476562,
+                        "top": 898.9111938476562,
+                        "width": 28.83380126953125,
+                        "height": 28.8338623046875,
+                        "right": 1040.4012451171875,
+                        "bottom": 927.7450561523438
+                    }
+                },
+                {
+                    "id": "update-transmission/vertical/listener",
+                    "asset": "color-pixels-pokemon-minun-plusle-minun",
+                    "family": "sprite",
+                    "zone": "update-transmission",
+                    "attachment": "megaphone",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1101.7677001953125,
+                        "top": 1011.6583862304688,
+                        "width": 40.620849609375,
+                        "height": 40.62066650390625,
+                        "right": 1142.3885498046875,
+                        "bottom": 1052.279052734375
+                    }
+                },
+                {
+                    "id": "map-discoveries/expedition/emblem",
+                    "asset": "noise_05_lavender",
+                    "family": "noise",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 649.6296997070312,
+                        "top": 1258.911865234375,
+                        "width": 74.3656005859375,
+                        "height": 86.20751953125,
+                        "right": 723.9953002929688,
+                        "bottom": 1345.119384765625
+                    }
+                },
+                {
+                    "id": "map-discoveries/expedition/friend",
+                    "asset": "kirby-marx",
+                    "family": "sprite",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 675.349853515625,
+                        "top": 1370.2188720703125,
+                        "width": 42.92529296875,
+                        "height": 43.874755859375,
+                        "right": 718.275146484375,
+                        "bottom": 1414.0936279296875
+                    }
+                },
+                {
+                    "id": "map-discoveries/expedition/pickup",
+                    "asset": "badge_08_r01_c08",
+                    "family": "badge",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 719.0696411132812,
+                        "top": 1380.4134521484375,
+                        "width": 22.6732177734375,
+                        "height": 22.673095703125,
+                        "right": 741.7428588867188,
+                        "bottom": 1403.0865478515625
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/companion",
+                    "asset": "mad_mew_mew_center",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 348.9024963378906,
+                        "top": 1696.416015625,
+                        "width": 59.63250732421875,
+                        "height": 75.94921875,
+                        "right": 408.5350036621094,
+                        "bottom": 1772.365234375
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/pin",
+                    "asset": "badge_25_r04_c01",
+                    "family": "badge",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 142.76171875,
+                        "top": 101.24610137939453,
+                        "width": 32.0703125,
+                        "height": 32.07030487060547,
+                        "right": 174.83203125,
+                        "bottom": 133.31640625
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/friend",
+                    "asset": "color-pixels-old-games-blue-handheld",
+                    "family": "sprite",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 184.91189575195312,
+                        "top": 95.5525131225586,
+                        "width": 33.95745849609375,
+                        "height": 33.95746612548828,
+                        "right": 218.86935424804688,
+                        "bottom": 129.50997924804688
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/pickup",
+                    "asset": "omega_xis_01_pose_top_01",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1365.0347900390625,
+                        "top": 880.3634033203125,
+                        "width": 42.524169921875,
+                        "height": 46.991943359375,
+                        "right": 1407.5589599609375,
+                        "bottom": 927.3553466796875
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/pin",
+                    "asset": "badge_15_r02_c07",
+                    "family": "badge",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1365.0631103515625,
+                        "top": 887.0944213867188,
+                        "width": 32.811279296875,
+                        "height": 32.8111572265625,
+                        "right": 1397.8743896484375,
+                        "bottom": 919.9055786132812
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/scrap",
+                    "asset": "jojos-bizarre-adventure-koichi-hirose-and-act3-cursor-pack",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 1378.9561767578125,
+                        "top": 918.6107788085938,
+                        "width": 36.243896484375,
+                        "height": 35.9034423828125,
+                        "right": 1415.2000732421875,
+                        "bottom": 954.5142211914062
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/friend",
+                    "asset": "color-pixels-well-potion",
+                    "family": "sprite",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 308.1064453125,
+                        "top": 1362.4814453125,
+                        "width": 44.505859375,
+                        "height": 44.505859375,
+                        "right": 352.6123046875,
+                        "bottom": 1406.9873046875
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/loose-pin",
+                    "asset": "badge_25_r04_c01",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 340.3701477050781,
+                        "top": 1397.8701171875,
+                        "width": 22.47845458984375,
+                        "height": 22.478515625,
+                        "right": 362.8486022949219,
+                        "bottom": 1420.3486328125
+                    }
+                },
+                {
+                    "id": "map-discoveries/expedition/companion",
+                    "asset": "omega_xis_22_pose_bottom_03",
+                    "family": "sprite",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 621.8475341796875,
+                        "top": 1325.2696533203125,
+                        "width": 58.554931640625,
+                        "height": 36.741943359375,
+                        "right": 680.4024658203125,
+                        "bottom": 1362.0115966796875
+                    }
+                },
+                {
+                    "id": "map-discoveries/expedition/pin",
+                    "asset": "badge_34_r05_c02",
+                    "family": "badge",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 639.9125366210938,
+                        "top": 1284.261474609375,
+                        "width": 27.7686767578125,
+                        "height": 26.38330078125,
+                        "right": 667.6812133789062,
+                        "bottom": 1310.644775390625
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/emblem",
+                    "asset": "cute-ramp-fish-cursor-pack",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 397.2569580078125,
+                        "top": 1694.3663330078125,
+                        "width": 51.579833984375,
+                        "height": 56.611083984375,
+                        "right": 448.8367919921875,
+                        "bottom": 1750.9774169921875
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/pin",
+                    "asset": "badge_13_r02_c05",
+                    "family": "badge",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 438.1434020996094,
+                        "top": 1732.7110595703125,
+                        "width": 25.58819580078125,
+                        "height": 23.452880859375,
+                        "right": 463.7315979003906,
+                        "bottom": 1756.1639404296875
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/friend",
+                    "asset": "hollow_knight_hornet_needle_1156",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 454.13934326171875,
+                        "top": 1706.3740234375,
+                        "width": 34.9400634765625,
+                        "height": 39.064453125,
+                        "right": 489.07940673828125,
+                        "bottom": 1745.4384765625
+                    }
+                }
+            ],
+            "overlaps": [],
+            "unique": 23,
+            "families": {
+                "noise": 4,
+                "badge": 10,
+                "sprite": 12
+            },
+            "frameOverlaps": 8,
+            "pairOverlaps": 15,
+            "overflow": false
+        },
+        {
+            "width": 1221,
+            "bands": {
+                "upper": 6,
+                "middle": 10,
+                "pile": 0,
+                "bottom": 4
+            },
+            "tail": {
+                "canvasHeight": 1720.453125,
+                "pileBottom": 1596.453125,
+                "replayTop": 1628.453125,
+                "gap": 32,
+                "remaining": 124
+            },
+            "seed": "123456",
+            "mode": "narrow",
+            "items": [
+                {
+                    "id": "narwhal-pins/constellation/emblem",
+                    "asset": "noise_02_blue",
+                    "family": "noise",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 93.63787841796875,
+                        "top": 85.71710205078125,
+                        "width": 48.3179931640625,
+                        "height": 52.1282958984375,
+                        "right": 141.95587158203125,
+                        "bottom": 137.84539794921875
+                    }
+                },
+                {
+                    "id": "profile-charms/orbit/companion",
+                    "asset": "StS2_CrackedCore",
+                    "family": "sprite",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 983.1726684570312,
+                        "top": 90.42265319824219,
+                        "width": 62.15472412109375,
+                        "height": 62.154693603515625,
+                        "right": 1045.327392578125,
+                        "bottom": 152.5773468017578
+                    }
+                },
+                {
+                    "id": "profile-charms/orbit/crest",
+                    "asset": "badge_34_r05_c02",
+                    "family": "badge",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1030.0855712890625,
+                        "top": 94.52116394042969,
+                        "width": 34.610107421875,
+                        "height": 33.082672119140625,
+                        "right": 1064.6956787109375,
+                        "bottom": 127.60383605957031
+                    }
+                },
+                {
+                    "id": "profile-charms/orbit/fragment",
+                    "asset": "shaymin-land_shiny",
+                    "family": "sprite",
+                    "zone": "profile-charms",
+                    "attachment": "about-kris",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1162.9073486328125,
+                        "top": 141.5479736328125,
+                        "width": 35.685302734375,
+                        "height": 35.685302734375,
+                        "right": 1198.5926513671875,
+                        "bottom": 177.2332763671875
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/emblem",
+                    "asset": "pixel-art-ghost-ghost-key",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 1009.0689086914062,
+                        "top": 866.0845336914062,
+                        "width": 58.86212158203125,
+                        "height": 58.8621826171875,
+                        "right": 1067.9310302734375,
+                        "bottom": 924.9467163085938
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/companion",
+                    "asset": "color-pixels-pokemon-minun-plusle-plusle",
+                    "family": "sprite",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 227.11570739746094,
+                        "top": 1363.39697265625,
+                        "width": 76.95606994628906,
+                        "height": 76.9560546875,
+                        "right": 304.07177734375,
+                        "bottom": 1440.35302734375
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/emblem",
+                    "asset": "noise_01_orange",
+                    "family": "noise",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 14.475160598754883,
+                        "top": 1205.4468994140625,
+                        "width": 66.9246826171875,
+                        "height": 67.731201171875,
+                        "right": 81.39984321594238,
+                        "bottom": 1273.1781005859375
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/badge-a",
+                    "asset": "badge_54_r07_c08",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 7.950216293334961,
+                        "top": 1255.73974609375,
+                        "width": 30.91206932067871,
+                        "height": 34.1767578125,
+                        "right": 38.86228561401367,
+                        "bottom": 1289.91650390625
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/badge-b",
+                    "asset": "badge_31_r04_c07",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 28.004154205322266,
+                        "top": 1278.472900390625,
+                        "width": 29.14794158935547,
+                        "height": 29.14794921875,
+                        "right": 57.152095794677734,
+                        "bottom": 1307.620849609375
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/scrap",
+                    "asset": "jotaro_anime",
+                    "family": "sprite",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 41.63494110107422,
+                        "top": 1350.471923828125,
+                        "width": 53.41761779785156,
+                        "height": 46.80615234375,
+                        "right": 95.05255889892578,
+                        "bottom": 1397.278076171875
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/companion",
+                    "asset": "mad_mew_mew_center",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 335.2618713378906,
+                        "top": 1705.134765625,
+                        "width": 59.63250732421875,
+                        "height": 75.94921875,
+                        "right": 394.8943786621094,
+                        "bottom": 1781.083984375
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/pin",
+                    "asset": "badge_25_r04_c01",
+                    "family": "badge",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 129.12109375,
+                        "top": 101.24610137939453,
+                        "width": 32.0703125,
+                        "height": 32.07030487060547,
+                        "right": 161.19140625,
+                        "bottom": 133.31640625
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/friend",
+                    "asset": "color-pixels-old-games-blue-handheld",
+                    "family": "sprite",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 171.27127075195312,
+                        "top": 95.5525131225586,
+                        "width": 33.95745849609375,
+                        "height": 33.95746612548828,
+                        "right": 205.22872924804688,
+                        "bottom": 129.50997924804688
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/pickup",
+                    "asset": "omega_xis_01_pose_top_01",
+                    "family": "sprite",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 986.0503540039062,
+                        "top": 889.0821533203125,
+                        "width": 42.52423095703125,
+                        "height": 46.991943359375,
+                        "right": 1028.5745849609375,
+                        "bottom": 936.0740966796875
+                    }
+                },
+                {
+                    "id": "sword-loot/fallen/pin",
+                    "asset": "badge_15_r02_c07",
+                    "family": "badge",
+                    "zone": "sword-loot",
+                    "attachment": "terra-blade",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 986.0787963867188,
+                        "top": 895.8131713867188,
+                        "width": 32.8111572265625,
+                        "height": 32.8111572265625,
+                        "right": 1018.8899536132812,
+                        "bottom": 928.6243286132812
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/friend",
+                    "asset": "color-pixels-well-potion",
+                    "family": "sprite",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 294.4658203125,
+                        "top": 1364.0908203125,
+                        "width": 44.505859375,
+                        "height": 44.505859375,
+                        "right": 338.9716796875,
+                        "bottom": 1408.5966796875
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/loose-pin",
+                    "asset": "badge_25_r04_c01",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 326.7295227050781,
+                        "top": 1399.4794921875,
+                        "width": 22.47845458984375,
+                        "height": 22.478515625,
+                        "right": 349.2079772949219,
+                        "bottom": 1421.9580078125
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/emblem",
+                    "asset": "cute-ramp-fish-cursor-pack",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 383.6163330078125,
+                        "top": 1703.0850830078125,
+                        "width": 51.579833984375,
+                        "height": 56.611083984375,
+                        "right": 435.1961669921875,
+                        "bottom": 1759.6961669921875
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/pin",
+                    "asset": "badge_13_r02_c05",
+                    "family": "badge",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 424.5027770996094,
+                        "top": 1741.4298095703125,
+                        "width": 25.58819580078125,
+                        "height": 23.452880859375,
+                        "right": 450.0909729003906,
+                        "bottom": 1764.8826904296875
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/friend",
+                    "asset": "hollow_knight_hornet_needle_1156",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 440.49871826171875,
+                        "top": 1715.0927734375,
+                        "width": 34.9400634765625,
+                        "height": 39.064453125,
+                        "right": 475.43878173828125,
+                        "bottom": 1754.1572265625
+                    }
+                }
+            ],
+            "overlaps": [],
+            "unique": 19,
+            "families": {
+                "noise": 2,
+                "sprite": 11,
+                "badge": 7
+            },
+            "frameOverlaps": 6,
+            "pairOverlaps": 12,
+            "overflow": false
+        },
+        {
+            "width": 1024,
+            "bands": {
+                "upper": 3,
+                "middle": 2,
+                "pile": 0,
+                "bottom": 4
+            },
+            "tail": {
+                "canvasHeight": 2477.859375,
+                "pileBottom": 2345.859375,
+                "replayTop": 2385.859375,
+                "gap": 40,
+                "remaining": 132
+            },
+            "seed": "123456",
+            "mode": "tablet",
+            "items": [
+                {
+                    "id": "narwhal-pins/constellation/emblem",
+                    "asset": "noise_02_blue",
+                    "family": "noise",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 67.91478729248047,
+                        "top": 125.74409484863281,
+                        "width": 34.51417541503906,
+                        "height": 37.230560302734375,
+                        "right": 102.42896270751953,
+                        "bottom": 162.9746551513672
+                    }
+                },
+                {
+                    "id": "handheld-hoard/creature-pile/badge-b",
+                    "asset": "badge_31_r04_c07",
+                    "family": "badge",
+                    "zone": "handheld-hoard",
+                    "attachment": "pink-handheld",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 121.3617935180664,
+                        "top": 1838.09619140625,
+                        "width": 17.65142059326172,
+                        "height": 17.6513671875,
+                        "right": 139.01321411132812,
+                        "bottom": 1855.74755859375
+                    }
+                },
+                {
+                    "id": "map-discoveries/expedition/friend",
+                    "asset": "kirby-marx",
+                    "family": "sprite",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 257.6855773925781,
+                        "top": 1946.7288818359375,
+                        "width": 26.00384521484375,
+                        "height": 26.573486328125,
+                        "right": 283.6894226074219,
+                        "bottom": 1973.3023681640625
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/companion",
+                    "asset": "mad_mew_mew_center",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 253.67169189453125,
+                        "top": 2502.595703125,
+                        "width": 40.8753662109375,
+                        "height": 52.05859375,
+                        "right": 294.54705810546875,
+                        "bottom": 2554.654296875
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/pin",
+                    "asset": "badge_25_r04_c01",
+                    "family": "badge",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 93.26374816894531,
+                        "top": 136.8262481689453,
+                        "width": 22.910003662109375,
+                        "height": 22.910003662109375,
+                        "right": 116.17375183105469,
+                        "bottom": 159.7362518310547
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/friend",
+                    "asset": "color-pixels-old-games-blue-handheld",
+                    "family": "sprite",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 123.37232971191406,
+                        "top": 132.77857971191406,
+                        "width": 24.255340576171875,
+                        "height": 24.255340576171875,
+                        "right": 147.62767028808594,
+                        "bottom": 157.03392028808594
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/emblem",
+                    "asset": "cute-ramp-fish-cursor-pack",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 286.8233337402344,
+                        "top": 2501.1953125,
+                        "width": 35.35333251953125,
+                        "height": 38.796875,
+                        "right": 322.1766662597656,
+                        "bottom": 2539.9921875
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/pin",
+                    "asset": "badge_13_r02_c05",
+                    "family": "badge",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 314.8597717285156,
+                        "top": 2527.480224609375,
+                        "width": 17.53045654296875,
+                        "height": 16.07080078125,
+                        "right": 332.3902282714844,
+                        "bottom": 2543.551025390625
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/friend",
+                    "asset": "hollow_knight_hornet_needle_1156",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 325.81903076171875,
+                        "top": 2509.419677734375,
+                        "width": 23.9556884765625,
+                        "height": 26.78564453125,
+                        "right": 349.77471923828125,
+                        "bottom": 2536.205322265625
+                    }
+                }
+            ],
+            "overlaps": [],
+            "unique": 9,
+            "families": {
+                "noise": 1,
+                "badge": 3,
+                "sprite": 5
+            },
+            "frameOverlaps": 0,
+            "pairOverlaps": 4,
+            "overflow": false
+        },
+        {
+            "width": 768,
+            "bands": {
+                "upper": 3,
+                "middle": 1,
+                "pile": 0,
+                "bottom": 4
+            },
+            "tail": {
+                "canvasHeight": 2487.9375,
+                "pileBottom": 2355.9375,
+                "replayTop": 2395.9375,
+                "gap": 40,
+                "remaining": 132
+            },
+            "seed": "123456",
+            "mode": "tablet",
+            "items": [
+                {
+                    "id": "narwhal-pins/constellation/emblem",
+                    "asset": "noise_02_blue",
+                    "family": "noise",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 58.696041107177734,
+                        "top": 125.74409484863281,
+                        "width": 34.5141716003418,
+                        "height": 37.230560302734375,
+                        "right": 93.21021270751953,
+                        "bottom": 162.9746551513672
+                    }
+                },
+                {
+                    "id": "map-discoveries/expedition/friend",
+                    "asset": "kirby-marx",
+                    "family": "sprite",
+                    "zone": "map-discoveries",
+                    "attachment": "glitch-slime",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 129.68556213378906,
+                        "top": 1956.8070068359375,
+                        "width": 26.003875732421875,
+                        "height": 26.573486328125,
+                        "right": 155.68943786621094,
+                        "bottom": 1983.3804931640625
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/companion",
+                    "asset": "mad_mew_mew_center",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 244.45294189453125,
+                        "top": 2512.673828125,
+                        "width": 40.8753662109375,
+                        "height": 52.05859375,
+                        "right": 285.32830810546875,
+                        "bottom": 2564.732421875
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/pin",
+                    "asset": "badge_25_r04_c01",
+                    "family": "badge",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 84.04499816894531,
+                        "top": 136.8262481689453,
+                        "width": 22.910003662109375,
+                        "height": 22.910003662109375,
+                        "right": 106.95500183105469,
+                        "bottom": 159.7362518310547
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/friend",
+                    "asset": "color-pixels-old-games-blue-handheld",
+                    "family": "sprite",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 114.15357971191406,
+                        "top": 132.77857971191406,
+                        "width": 24.255340576171875,
+                        "height": 24.255340576171875,
+                        "right": 138.40892028808594,
+                        "bottom": 157.03392028808594
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/emblem",
+                    "asset": "cute-ramp-fish-cursor-pack",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 277.6045837402344,
+                        "top": 2511.2734375,
+                        "width": 35.35333251953125,
+                        "height": 38.796875,
+                        "right": 312.9579162597656,
+                        "bottom": 2550.0703125
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/pin",
+                    "asset": "badge_13_r02_c05",
+                    "family": "badge",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 305.6410217285156,
+                        "top": 2537.558349609375,
+                        "width": 17.53045654296875,
+                        "height": 16.07080078125,
+                        "right": 323.1714782714844,
+                        "bottom": 2553.629150390625
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/friend",
+                    "asset": "hollow_knight_hornet_needle_1156",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 316.60028076171875,
+                        "top": 2519.497802734375,
+                        "width": 23.9556884765625,
+                        "height": 26.78564453125,
+                        "right": 340.55596923828125,
+                        "bottom": 2546.283447265625
+                    }
+                }
+            ],
+            "overlaps": [],
+            "unique": 8,
+            "families": {
+                "noise": 1,
+                "sprite": 5,
+                "badge": 2
+            },
+            "frameOverlaps": 0,
+            "pairOverlaps": 4,
+            "overflow": false
+        },
+        {
+            "width": 760,
+            "bands": {
+                "upper": 2,
+                "middle": 0,
+                "pile": 0,
+                "bottom": 2
+            },
+            "tail": {
+                "canvasHeight": 3734.453125,
+                "pileBottom": 3578.453125,
+                "replayTop": 3658.453125,
+                "gap": 80,
+                "remaining": 156
+            },
+            "seed": "123456",
+            "mode": "mobile",
+            "items": [
+                {
+                    "id": "narwhal-pins/constellation/emblem",
+                    "asset": "noise_02_blue",
+                    "family": "noise",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 53.289302825927734,
+                        "top": 109.57234191894531,
+                        "width": 21.515148162841797,
+                        "height": 23.199066162109375,
+                        "right": 74.80445098876953,
+                        "bottom": 132.7714080810547
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/companion",
+                    "asset": "mad_mew_mew_center",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 572.1427001953125,
+                        "top": 3738.281494140625,
+                        "width": 24.839599609375,
+                        "height": 31.62451171875,
+                        "right": 596.9822998046875,
+                        "bottom": 3769.906005859375
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/emblem",
+                    "asset": "cute-ramp-fish-cursor-pack",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 598.8021850585938,
+                        "top": 3744.67578125,
+                        "width": 20.1768798828125,
+                        "height": 22.1484375,
+                        "right": 618.9790649414062,
+                        "bottom": 3766.82421875
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/pin",
+                    "asset": "badge_25_r04_c01",
+                    "family": "badge",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 74.00040435791016,
+                        "top": 112.79727935791016,
+                        "width": 16.155441284179688,
+                        "height": 16.155433654785156,
+                        "right": 90.15584564208984,
+                        "bottom": 128.9527130126953
+                    }
+                }
+            ],
+            "overlaps": [],
+            "unique": 4,
+            "families": {
+                "noise": 1,
+                "sprite": 2,
+                "badge": 1
+            },
+            "frameOverlaps": 1,
+            "pairOverlaps": 1,
+            "overflow": false
+        },
+        {
+            "width": 320,
+            "bands": {
+                "upper": 2,
+                "middle": 0,
+                "pile": 0,
+                "bottom": 1
+            },
+            "tail": {
+                "canvasHeight": 3680.671875,
+                "pileBottom": 3524.671875,
+                "replayTop": 3604.671875,
+                "gap": 80,
+                "remaining": 156
+            },
+            "seed": "123456",
+            "mode": "mobile",
+            "items": [
+                {
+                    "id": "narwhal-pins/constellation/emblem",
+                    "asset": "noise_02_blue",
+                    "family": "noise",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 53.289302825927734,
+                        "top": 109.57234191894531,
+                        "width": 21.515148162841797,
+                        "height": 23.199066162109375,
+                        "right": 74.80445098876953,
+                        "bottom": 132.7714080810547
+                    }
+                },
+                {
+                    "id": "ukulele-encore/chord/emblem",
+                    "asset": "cute-ramp-fish-cursor-pack",
+                    "family": "sprite",
+                    "zone": "ukulele-encore",
+                    "attachment": "ukulele",
+                    "layer": "back",
+                    "bounds": {
+                        "left": 173.80215454101562,
+                        "top": 3690.89453125,
+                        "width": 20.17694091796875,
+                        "height": 22.1484375,
+                        "right": 193.97909545898438,
+                        "bottom": 3713.04296875
+                    }
+                },
+                {
+                    "id": "narwhal-pins/constellation/pin",
+                    "asset": "badge_25_r04_c01",
+                    "family": "badge",
+                    "zone": "narwhal-pins",
+                    "attachment": "spotlight-narwhal",
+                    "layer": "front",
+                    "bounds": {
+                        "left": 74.00040435791016,
+                        "top": 112.79727935791016,
+                        "width": 16.155441284179688,
+                        "height": 16.155433654785156,
+                        "right": 90.15584564208984,
+                        "bottom": 128.9527130126953
+                    }
+                }
+            ],
+            "overlaps": [],
+            "unique": 3,
+            "families": {
+                "noise": 1,
+                "sprite": 1,
+                "badge": 1
+            },
+            "frameOverlaps": 1,
+            "pairOverlaps": 1,
+            "overflow": false
+        }
+    ],
+    "checks": [
+        "1440 seed 123456 independent content/authored safety",
+        "1440 seed 123456 no horizontal overflow",
+        "Configured seed 123456",
+        "1440 seed 890123 independent content/authored safety",
+        "1440 seed 890123 no horizontal overflow",
+        "Configured seed 890123",
+        "1440 seed 314159 independent content/authored safety",
+        "1440 seed 314159 no horizontal overflow",
+        "Configured seed 314159",
+        "1920 seed 123456 independent content/authored safety",
+        "1920 seed 123456 no horizontal overflow",
+        "Configured seed 123456",
+        "1920 seed 890123 independent content/authored safety",
+        "1920 seed 890123 no horizontal overflow",
+        "Configured seed 890123",
+        "1920 seed 314159 independent content/authored safety",
+        "1920 seed 314159 no horizontal overflow",
+        "Configured seed 314159",
+        "390 seed 123456 independent content/authored safety",
+        "390 seed 123456 no horizontal overflow",
+        "Configured seed 123456",
+        "Three desktop refreshes produce different composed contents",
+        "No idle layout changes",
+        "Familiar rerender retains arrangement",
+        "Artifact focus change retains arrangement",
+        "Inspector opens",
+        "Inspector closes without changing arrangement",
+        "Expanded changelog protects content",
+        "Authored bottom anchor follows changelog expansion",
+        "Scrolled Sketchbook keeps content clear",
+        "Scroll does not reroll contents",
+        "Clutter creates no structural height or layout change",
+        "1600 responsive protection",
+        "1221 responsive protection",
+        "1024 responsive protection",
+        "768 responsive protection",
+        "760 responsive protection",
+        "320 responsive protection",
+        "Production has no editor UI or editing marker",
+        "Production has no active authoring listeners",
+        "Decorative companions remain pointer-inert and unfocusable",
+        "Projects route has no homepage collage layer",
+        "SPA return preserves homepage seed and contents",
+        "Reduced-motion random collection stays static",
+        "No visible broken media",
+        "No runtime exceptions"
+    ],
+    "errors": []
+}
