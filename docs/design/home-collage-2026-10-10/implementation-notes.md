@@ -2,7 +2,7 @@
 
 **Historical implementation, superseded October 10, 2026.** Procedural compositions and their runtime were removed after the owner requested the preferred curated baseline. The folder collection now serves the development editor palette. See [the current authored implementation, asset audit, comparisons, and verification](../home-clutter-reassessment-2026-10-10/implementation-notes.md). The remainder records the earlier unaccepted exploration; source links may refer to removed files.
 
-Implemented October 10, 2026. **Owner visual acceptance is pending.** No commit or deployment. Parts 1–5 remain accepted.
+Historical experiment implemented October 10, 2026, then superseded without owner acceptance of that arrangement. The final authored replacement and Phase 2 were accepted October 10; see the current guide linked above. No new commit or deployment is recorded.
 
 ## Art direction and implementation approach
 

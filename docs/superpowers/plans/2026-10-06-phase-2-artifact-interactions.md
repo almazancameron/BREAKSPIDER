@@ -4,7 +4,7 @@
 
 **Goal:** Restore Prototype 04's inspectable files, found Map, focus/shuffle behavior, mobile swipe strip, and reversible crystal reaction.
 
-**Status:** Complete and accepted (2026-10-07). The owner verified Part 3 locally and in live deployment, including the file pile and crystal glow refinements, and confirmed completion. Parts 1-2 remain accepted; Parts 4-6 remain planned.
+**Status:** Complete and accepted (2026-10-07). The owner verified Part 3 locally and in live deployment, including the file pile and crystal glow refinements. Phase 2 as a whole is complete and accepted (2026-10-10); see [the completion record](2026-10-06-phase-2-homepage.md#completion-record---accepted-october-10-2026).
 
 **Task 1 implementation record:** Added the three authored records in `content/home-artifacts.ts`, the shallow-copy `getHomeArtifacts()` reader, and the static `HomeMapGlyph` component. ONFF uses the existing priority-builder capture; Viscap remains media-pending; Map retains the prototype routes and colors with `PROJECTS` replacing `WORK`. The glyph is decorative and nonfocusable, so its eventual surrounding control must supply the Map label.
 

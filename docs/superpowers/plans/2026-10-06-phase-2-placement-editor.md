@@ -1,5 +1,7 @@
 # Phase 2 Dev-only Clutter Placement Editor Implementation Plan
 
+**Current status: Complete and accepted.** Part 5 was accepted October 9, 2026; the folder palette and direct-save follow-up were accepted with Phase 2 on October 10. Done now saves all placements and overrides directly to the repository; Copy export is a backup. [Current saving behavior and verification](../../design/home-clutter-reassessment-2026-10-10/editor-save-implementation-notes.md). The original tutorial below is historical, including its export/paste workflow and restriction on filesystem endpoints.
+
 > **For agentic workers:** Use `superpowers:executing-plans` if later requested. This tutorial is for manual implementation by the owner; no implementation or delegation is requested now.
 
 **Goal:** Author quiet homepage decoration by dragging it on the real page, then save normal placement records with automatic semantic anchoring.

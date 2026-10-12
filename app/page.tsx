@@ -165,7 +165,6 @@ export default async function Home() {
                             <span className={styles.previewLabel}>ONFF / GAME BUILD</span>
                         </Link>
                     </div>
-                    <p className={styles.projectSummary}>{viscap?.summary ?? "Viscap project details pending."}</p>
                     <div className={styles.projectBottom}>
                         <span>SOFTWARE + GAMES</span>
                         <Link href="/projects">All projects <span aria-hidden="true">↗</span></Link>

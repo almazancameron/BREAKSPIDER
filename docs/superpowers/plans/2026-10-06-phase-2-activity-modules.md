@@ -4,7 +4,7 @@
 
 **Goal:** Add current work, latest Sketchbook, a random initial Familiar with explicit cycling, and an honest site changelog.
 
-**Status:** Complete and accepted (2026-10-07). The owner verified Part 2 locally and in live deployment and requested that it be marked complete. Part 1 remains accepted; Parts 3–6 remain planned.
+**Status:** Complete and accepted (2026-10-07). The owner verified Part 2 locally and in live deployment. Phase 2 as a whole, including its final authored clutter and direct-save editor, is complete and accepted (2026-10-10); see [the completion record](2026-10-06-phase-2-homepage.md#completion-record---accepted-october-10-2026).
 
 **Architecture:** Read records in the server page and retain ordinary sections in its composition. A small Familiar client component owns cycling. A browser-only module retains one seed for the loaded document, later reused by supplemental clutter.
 

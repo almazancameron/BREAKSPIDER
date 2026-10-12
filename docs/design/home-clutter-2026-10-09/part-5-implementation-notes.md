@@ -1,8 +1,8 @@
 # Phase 2 Part 5 — static clutter placement editor
 
-**October 10 authoring extension:** Part 5 remains accepted. The editor also adds/swaps images from the generated folder library and previews the selected image. Procedural decoration was removed. Legacy exclusion padding survives exports but is no longer edited or used. See [the current editing guide and fresh verification](../home-clutter-reassessment-2026-10-10/implementation-notes.md). Owner acceptance of this later reassessment remains pending.
+**October 10 authoring extension - complete and accepted with Phase 2:** The editor adds/swaps folder-library images, previews them, and saves complete placements directly to the repository with Done. Copy export remains a backup. Procedural decoration was removed; legacy exclusion padding is compatibility metadata only. See [the accepted current editing guide](../home-clutter-reassessment-2026-10-10/implementation-notes.md) and [direct-save verification](../home-clutter-reassessment-2026-10-10/editor-save-implementation-notes.md).
 
-**Phase 2 Part 5 is complete and accepted (October 9, 2026).** The owner verified the editor locally and confirmed that live verification is not required for this development-only tool. Parts 1–4 retain their accepted status. Part 6 is implemented and agent-verified, with owner acceptance pending; see [its implementation notes](part-6-implementation-notes.md). No commit or deployment was performed by the agent.
+**Phase 2 Part 5 is complete and accepted (October 9, 2026).** The owner verified the editor locally and confirmed live verification is not required for this development-only tool. Parts 1-4 retain their earlier acceptance. The final authored reassessment and direct-save follow-up, and Phase 2 as a whole, are complete and owner-accepted (October 10, 2026). No new commit or deployment is recorded.
 
 ## Implementation
 
@@ -61,4 +61,4 @@ Every test browser and the temporary production/failed dev server process trees 
 
 - [x] Owner verified the development editor locally.
 - [x] Owner confirmed that live verification is not required for this development-only tool. Agent production-absence checks passed as recorded above.
-- [x] Owner accepted Part 5 on October 9, 2026. Part 6 is tracked separately in [its implementation notes](part-6-implementation-notes.md), with owner acceptance pending.
+- [x] Owner accepted Part 5 on October 9, 2026, then the final authored reassessment, direct-save follow-up, and Phase 2 completion on October 10. [Final implementation and acceptance](../home-clutter-reassessment-2026-10-10/implementation-notes.md).

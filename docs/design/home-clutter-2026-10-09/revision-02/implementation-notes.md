@@ -1,6 +1,6 @@
 # Authored clutter implementation — October 9, 2026
 
-The owner approved revision 02 and authorized implementation with one final adjustment: show the whole Terra Blade. **Phase 2 Part 4 is complete and accepted (2026-10-09).** The owner verified everything locally and on the live deployment. The development-only editor and randomized layer remain later chunks.
+The owner approved revision 02 and authorized implementation with the full Terra Blade adjustment. **Phase 2 Part 4 is complete and accepted (2026-10-09).** The owner verified locally and live. The later final authored reassessment, direct-save editor, and Phase 2 as a whole were accepted on October 10; see [the final implementation guide](../../home-clutter-reassessment-2026-10-10/implementation-notes.md). This document records the original Part 4 implementation.
 
 ## What is now in production code
 
@@ -57,4 +57,4 @@ Temporary preview-server and browser processes were stopped after testing. The a
 
 ## Later authoring tool
 
-Phase 2 Part 5 is complete and accepted (2026-10-09). The owner verified the development-only editor locally and confirmed that live verification is not required. See the [editor implementation and verification notes](../part-5-implementation-notes.md). The accepted Part 4 catalogue, placements, renderer, and layering are preserved; Part 6 is now implemented and agent-verified, with owner acceptance pending. See [random-clutter implementation and verification notes](../part-6-implementation-notes.md).
+Phase 2 Part 5 was accepted on October 9 after owner local verification, with no live verification required. The final authored reassessment and direct-save editor follow-up, and Phase 2 as a whole, were accepted on October 10. See [the final composition](../../home-clutter-reassessment-2026-10-10/implementation-notes.md) and [direct saving](../../home-clutter-reassessment-2026-10-10/editor-save-implementation-notes.md). Procedural decoration is retired; earlier random-clutter notes are historical.

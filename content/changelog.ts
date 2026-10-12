@@ -2,6 +2,16 @@ import type { ChangelogEntry } from "../lib/content/models.ts";
 
 export const changelogEntries = [
     {
+        id: "homepage-clutter-editor",
+        version: "v0.1",
+        title: "Clutter Editor",
+        notes: [
+            "Added a drag-and-drop GUI for repositioning clutter objects.",
+        ],
+        publishedAt: "2026-10-09",
+        links: [],
+    },
+    {
         id: "homepage-authored-clutter",
         version: "v0.1",
         title: "Homepage authored clutter",

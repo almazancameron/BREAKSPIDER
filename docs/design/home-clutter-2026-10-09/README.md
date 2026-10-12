@@ -4,7 +4,7 @@
 
 **Recommendation:** build a dark, uneven perimeter of Noise emblems around a few larger personal keepsakes. Let the composition get stranger as it moves down the page. Keep the Spotlight, your portrait, and the actual project evidence in charge.
 
-This is a design proposal for Phase 2 Part 4, dated October 9, 2026. **No production placements have been implemented.** The comps use the current production homepage and the actual supplied images. They are browser captures of temporary overlays, rather than a replacement homepage or AI-generated artwork.
+This is the historical Phase 2 Part 4 design proposal, dated October 9, 2026, before production implementation. Part 4 was subsequently implemented and accepted; Phase 2 as a whole was accepted October 10. [Final composition, implementation, and editing guide](../home-clutter-reassessment-2026-10-10/implementation-notes.md). These comps are temporary browser overlays using real images, not the current runtime or AI-generated artwork.
 
 ## Start with the pictures
 

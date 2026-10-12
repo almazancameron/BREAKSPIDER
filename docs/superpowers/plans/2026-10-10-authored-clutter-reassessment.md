@@ -4,7 +4,7 @@
 
 **Direction:** Fully authored. The owner-provided screenshots establish the baseline. Existing assets are sufficient (curation Path A). Compare the current procedural layer, the authored-only page, a reserved slime substitution, and a deliberately tucked handheld pair in browser captures. Retain the baseline if additions weaken its rhythm.
 
-**Constraints:** Preserve homepage structure, owner placement records, five responsive modes, native asset appearance, inspection/profile/collectible interactions, and the inactive development-only editor. Four-space indentation. No commit or deployment. Stop test processes. Owner acceptance remains pending.
+**Constraints:** Preserve homepage structure, owner placement records, five responsive modes, native asset appearance, inspection/profile/collectible interactions, and the inactive development-only editor. Four-space indentation. No commit or deployment. Stop test processes. Completed and owner-accepted with Phase 2 on October 10, 2026; the later Done-to-save follow-up is also accepted.
 
 - [x] Preserve the approved authored roster and placements. Remove procedural groups, generation/geometry/admission code, obsolete markers, and their tests. Keep Familiar randomness, which is an existing content interaction.
 - [x] Reuse folder catalogue generation as an authoring palette. Rename source/script terminology to clutter library; retain existing image paths. Add focused tests for duplicate catalogue IDs, deleted placed assets, and production asset selection.

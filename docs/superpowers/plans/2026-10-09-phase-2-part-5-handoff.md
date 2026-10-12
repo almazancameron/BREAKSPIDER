@@ -1,8 +1,8 @@
 # Phase 2 Part 5 — New-session handoff
 
-**Current status (2026-10-09): Part 5 is complete and accepted.** The owner verified the development-only editor locally and confirmed that live verification is not required. See the [implementation and acceptance notes](../../design/home-clutter-2026-10-09/part-5-implementation-notes.md). Part 6 remains planned. The handoff below is the historical pre-implementation context.
+**Current status (2026-10-10): Phase 2 is complete and accepted.** Part 5 was accepted October 9 after owner local verification; live verification is not required for the dev-only editor. The final authored reassessment and direct-save editor were accepted with Phase 2 on October 10. [Current composition and authoring](../../design/home-clutter-reassessment-2026-10-10/implementation-notes.md). The handoff below is historical pre-implementation context.
 
-**Recorded:** October 9, 2026. Phase 1 and Phase 2 Parts 1–4 are complete and accepted. The owner verified Part 4 locally and on the live deployment. Part 5 (development-only placement editor) and Part 6 (randomized clutter) remain planned.
+**Historical status when recorded (October 9, 2026):** Phase 1 and Parts 1-4 were accepted; Parts 5-6 were still planned. That record is superseded by the completion status above.
 
 This handoff supplies implementation context; it does not authorize starting implementation. Follow the owner's new-session instruction for scope.
 

@@ -1,6 +1,6 @@
 # Authored clutter reassessment — October 10, 2026
 
-**Implemented and locally agent-verified. Owner visual acceptance remains pending.** Parts 1–5 retain their accepted status. No commit or deployment. This supersedes the procedural scatter pass and subsequent seven-group composition overhaul.
+**Complete and owner-accepted as part of Phase 2 (October 10, 2026).** The owner confirmed Phase 2 completion, including this authored reassessment and the direct-save editor follow-up. Parts 1-5 retain their earlier acceptance dates. No new commit, deployment, or live verification is claimed. This supersedes the procedural scatter pass and seven-group composition overhaul.
 
 ## Selected direction
 
@@ -59,7 +59,7 @@ This is the critique/refinement cycle: remove generic companions, test a specifi
 2. Open Home in development and explicitly click **Edit clutter**. The editor starts inactive and mounts authoring listeners only while open.
 3. Use **Add from catalogue** to choose a curated or folder asset. The new preview shows the actual selected image. Add creates a complete record; Drag new asset places it directly. Whole-record Asset swaps an existing decoration. Folder assets require no second hand-maintained asset entry.
 4. Drag, correct the semantic anchor/point, and adjust numbers, scale, rotation, flip, visibility, or local layer. Resize to author responsive overrides. Base edits affect inherited values; override edits preserve all other modes and untouched records.
-5. **Export all placements** copies complete four-space records. Replace only `HOME_AUTHORED_PLACEMENTS` in `content/home-clutter.ts`, retaining its catalogue and existing type import. This repository edit makes the result durable. Done keeps the in-memory preview; reload discards an unsaved draft. No backend, autosave, local-storage authoring, or group editor was added.
+5. **Done now saves the complete placement array directly to `content/home-clutter.ts`**, retaining the catalogue and surrounding source, then closes after success. Copy export remains an optional backup. Reload before saving discards the draft. The later development-only save endpoint preserves failed drafts and detects external file changes; no production backend, autosave, local-storage authoring, or group editor was added. [Save follow-up implementation and fresh verification](editor-save-implementation-notes.md).
 
 | Mode | CSS/editor range |
 | --- | --- |

@@ -1,6 +1,6 @@
 # Phase 2 Authored Homepage Clutter Implementation Plan
 
-**Status: Complete and accepted (2026-10-09).** Implemented from the approved revision-02 comp with the final full-sword adjustment. The owner verified everything locally and on the live deployment. [Implementation notes, current contracts, and browser captures](../../design/home-clutter-2026-10-09/revision-02/implementation-notes.md). The dev-only editor and randomized layer remain separate later chunks. The original worked examples below are teaching material, not the current asset roster.
+**Status: Complete and accepted (2026-10-09).** Implemented from revision-02 with the full-sword adjustment; owner verified locally and live. [Original implementation notes](../../design/home-clutter-2026-10-09/revision-02/implementation-notes.md). Phase 2 as a whole is complete and accepted (2026-10-10), with the final authored reassessment and direct-save editor. The worked examples below are historical teaching material, not the current asset roster.
 
 > **For agentic workers:** Use `superpowers:executing-plans` if later requested. The owner implements this tutorial manually; no implementation or delegation is requested now.
 

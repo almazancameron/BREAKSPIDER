@@ -104,23 +104,49 @@ export function HomeClutterEditor({ children, assets }: { children: ReactNode; a
     const [editing, setEditing] = useState(false);
     const [draft, setDraft] = useState(() => clonePlacements(HOME_AUTHORED_PLACEMENTS));
     const [root, setRoot] = useState<HTMLDivElement | null>(null);
+    const [repository, setRepository] = useState(draft);
+    const [revision, setRevision] = useState<string | null>(null);
+    const [opening, setOpening] = useState(false);
+    const [openError, setOpenError] = useState("");
+
+    const open = async () => {
+        setOpening(true);
+        setOpenError("");
+        setRevision(null);
+        try {
+            const response = await fetch("/api/dev/clutter", { cache: "no-store" });
+            const result = await response.json();
+            if (!response.ok) throw new Error(result.error);
+            setDraft(result.placements);
+            setRepository(result.placements);
+            setRevision(result.revision);
+        } catch (error) {
+            setOpenError(error instanceof Error ? error.message : "Could not load repository placements. Copy export is still available.");
+        } finally {
+            setOpening(false);
+            setEditing(true);
+        }
+    };
 
     return (
         <ClutterDraftContext.Provider value={draft}>
             <div ref={setRoot} data-home-clutter-editing={editing ? "true" : undefined}>
                 {children}
             </div>
-            {editing && root ? <ActiveEditor root={root} assets={assets} draft={draft} setDraft={setDraft} onClose={() => setEditing(false)} /> : (
-                <button type="button" className={styles.toggle} onClick={() => setEditing(true)}>Edit clutter</button>
+            {editing && root ? <ActiveEditor root={root} assets={assets} draft={draft} repository={repository} revision={revision} initialStatus={openError} setDraft={setDraft} onClose={() => setEditing(false)} /> : (
+                <button type="button" className={styles.toggle} disabled={opening} onClick={open}>{opening ? "Loading clutter…" : "Edit clutter"}</button>
             )}
         </ClutterDraftContext.Provider>
     );
 }
 
-function ActiveEditor({ root, assets, draft, setDraft, onClose }: {
+function ActiveEditor({ root, assets, draft, repository, revision, initialStatus, setDraft, onClose }: {
     root: HTMLElement;
     assets: ClutterAsset[];
     draft: AuthoredPlacement[];
+    repository: AuthoredPlacement[];
+    revision: string | null;
+    initialStatus: string;
     setDraft: React.Dispatch<React.SetStateAction<AuthoredPlacement[]>>;
     onClose: () => void;
 }) {
@@ -129,7 +155,8 @@ function ActiveEditor({ root, assets, draft, setDraft, onClose }: {
     const [assetId, setAssetId] = useState(assets[0].id);
     const [handles, setHandles] = useState<Handle[]>([]);
     const [preview, setPreview] = useState<Preview | null>(null);
-    const [status, setStatus] = useState("");
+    const [status, setStatus] = useState(initialStatus);
+    const [saving, setSaving] = useState(false);
     const [expanded, setExpanded] = useState(true);
     const cleanupDrag = useRef<(() => void) | null>(null);
     const exportArea = useRef<HTMLTextAreaElement>(null);
@@ -137,6 +164,31 @@ function ActiveEditor({ root, assets, draft, setDraft, onClose }: {
     const selected = draft.find((record) => record.id === selectedId);
     const pose = selected && resolveClutterPose(selected, mode);
     const exportText = exportPlacements(draft);
+
+    const save = async () => {
+        if (!revision) {
+            setExpanded(true);
+            setStatus("Cannot save without a file revision. Copy your export, then reload the editor.");
+            return;
+        }
+        setSaving(true);
+        setStatus("Saving placements…");
+        try {
+            const response = await fetch("/api/dev/clutter", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ revision, placements: draft }),
+            });
+            const result = await response.json();
+            if (!response.ok) throw new Error(result.error);
+            onClose();
+        } catch (error) {
+            setExpanded(true);
+            setStatus(error instanceof Error ? error.message : "Save failed. Your draft is still available; retry or Copy export.");
+        } finally {
+            setSaving(false);
+        }
+    };
 
     useEffect(() => {
         let frame = 0;
@@ -198,7 +250,7 @@ function ActiveEditor({ root, assets, draft, setDraft, onClose }: {
     };
 
     const startDrag = (event: ReactPointerEvent<HTMLButtonElement>, record: AuthoredPlacement, added = false) => {
-        if (event.button !== 0 || !event.isPrimary || cleanupDrag.current) return;
+        if (saving || event.button !== 0 || !event.isPrimary || cleanupDrag.current) return;
         event.preventDefault();
         const dragMode = currentViewport();
         const dragPose = resolveClutterPose(record, dragMode);
@@ -292,7 +344,7 @@ function ActiveEditor({ root, assets, draft, setDraft, onClose }: {
         <div className={styles.editor} data-clutter-editor>
             <div className={styles.handles}>
                 {handles.map(({ id, rect }) => (
-                    <button key={id} type="button" aria-label={`Move ${id}`} aria-pressed={id === selectedId}
+                    <button key={id} type="button" disabled={saving} aria-label={`Move ${id}`} aria-pressed={id === selectedId}
                         className={styles.handle} data-clutter-handle={id} style={{ ...rect, zIndex: id === selectedId ? 2 : 1 }}
                         onPointerDown={(event) => startDrag(event, draft.find((record) => record.id === id)!)}
                         onClick={() => setSelectedId(id)} onDragStart={(event) => event.preventDefault()} />
@@ -316,12 +368,13 @@ function ActiveEditor({ root, assets, draft, setDraft, onClose }: {
                 <div className={styles.heading}>
                     <strong>Clutter · {mode}{mode === "desktop" ? " (base)" : " override"}</strong>
                     <button type="button" aria-expanded={expanded} onClick={() => setExpanded(!expanded)}>{expanded ? "Collapse" : "Expand"}</button>
-                    <button type="button" onClick={onClose}>Done</button>
+                    <button type="button" disabled={saving || !!preview} onClick={save}>{saving ? "Saving…" : "Done"}</button>
                 </div>
+                <p role="status">{status}</p>
                 <div hidden={!expanded}>
-                    <p>Draft not saved to repository. Done keeps the in-memory preview; reload discards it.</p>
+                    <p>Done saves all placements and responsive overrides to content/home-clutter.ts. Reload before saving discards the draft.</p>
                     <p>Scroll before dragging. Escape cancels. Use the list for covered or hidden objects. Numbers apply on Enter or blur; invalid values revert.</p>
-                    <fieldset disabled={!!preview}>
+                    <fieldset disabled={!!preview || saving}>
                         <label>Placement ({draft.length})
                             <select value={selected?.id ?? ""} onChange={(event) => setSelectedId(event.target.value)}>
                                 <option value="" disabled>Select a decoration</option>
@@ -390,12 +443,12 @@ function ActiveEditor({ root, assets, draft, setDraft, onClose }: {
                         </details>
                         <details>
                             <summary>Export all {draft.length} placements</summary>
-                            <p>Replace only HOME_AUTHORED_PLACEMENTS in content/home-clutter.ts. Keep the asset catalogue and existing type import; the included import is for reference.</p>
+                            <p>Optional backup: replace only HOME_AUTHORED_PLACEMENTS in content/home-clutter.ts. Done saves directly; Copy export remains available if saving fails.</p>
                             <textarea ref={exportArea} aria-label="Complete placement export" value={exportText} readOnly spellCheck={false} />
                             <button type="button" onClick={async () => {
                                 try {
                                     await navigator.clipboard.writeText(exportText);
-                                    setStatus("Copied all placements. Paste into the repository to save.");
+                                    setStatus("Copied all placements as a backup. Done saves directly to the repository.");
                                 } catch {
                                     exportArea.current?.focus();
                                     exportArea.current?.select();
@@ -404,12 +457,11 @@ function ActiveEditor({ root, assets, draft, setDraft, onClose }: {
                             }}>Copy export</button>
                         </details>
                         <button type="button" onClick={() => {
-                            setDraft(clonePlacements(HOME_AUTHORED_PLACEMENTS));
-                            setSelectedId(HOME_AUTHORED_PLACEMENTS[0]?.id ?? "");
+                            setDraft(clonePlacements(repository));
+                            setSelectedId(repository[0]?.id ?? "");
                             setStatus("Draft reset to repository placements.");
                         }}>Reset entire draft</button>
                     </fieldset>
-                    <p role="status">{status}</p>
                 </div>
             </aside>
         </div>, document.body,

@@ -1,6 +1,6 @@
 # Breakspider — Master Implementation Roadmap
 
-**Homepage clutter update (October 10, 2026):** The owner requested restoration of the preferred curated composition and authorized removal of procedural machinery. Decoration is now fully authored; the generated folder collection supports manual selection in the existing development-only editor. See [the current implementation, asset audit, comparisons, and verification](design/home-clutter-reassessment-2026-10-10/implementation-notes.md). Earlier procedural proposals below are historical. Parts 1–5 retain acceptance; this later reassessment and Phase 2 as a whole await owner acceptance.
+**Phase 2: Complete and accepted (October 10, 2026).** The owner confirmed completion of the production homepage, including the final authored clutter reassessment and direct-save development editor. Decoration is fully authored; the generated folder collection is a manual editor palette. Earlier procedural proposals below are historical and are not outstanding requirements. See [the final implementation and verification](design/home-clutter-reassessment-2026-10-10/implementation-notes.md) and [direct-save editor notes](design/home-clutter-reassessment-2026-10-10/editor-save-implementation-notes.md).
 
 ## Purpose
 
@@ -428,7 +428,7 @@ The static Breakspider logo should have a smaller hover/click animation related 
 
 ## 8. Phase 2 — Homepage Production Implementation
 
-**Status: In progress.** [Part 1 — primary homepage composition](superpowers/plans/2026-10-06-phase-2-primary-composition.md) is complete and accepted (2026-10-07). Spotlight, About/portrait, and overlapping Projects are implemented, including responsive layout refinements. The owner verified the homepage through local testing and live deployment. [Part 2 — activity modules](superpowers/plans/2026-10-06-phase-2-activity-modules.md) is complete and accepted (2026-10-07), verified locally and in live deployment by the owner: current work, the recent Sketchbook feed, Familiar selection/cycling, roaming Familiar, and changelog. Viscap's media-pending treatment remains an intentional content follow-up. [Part 3 - artifact interactions](superpowers/plans/2026-10-06-phase-2-artifact-interactions.md) is complete and accepted (2026-10-07), verified locally and in live deployment by the owner: shared inspection, found Map, focus/shuffle file pile, mobile strip, and reversible crystal glow. [Part 4 — authored clutter](superpowers/plans/2026-10-06-phase-2-authored-clutter.md) is complete and accepted (2026-10-09), with the owner confirming local testing and live-deployment verification: curated anchor-relative keepsakes, real layering, responsive placements, and reduced-motion stills. [Part 5 — dev-only placement editor](superpowers/plans/2026-10-06-phase-2-placement-editor.md) is complete and accepted (2026-10-09), verified locally by the owner; live verification is not required for this development-only tool. See [editor implementation and verification notes](design/home-clutter-2026-10-09/part-5-implementation-notes.md). [Part 6 — clutter reassessment](design/home-clutter-reassessment-2026-10-10/implementation-notes.md) restores the preferred fully authored composition (2026-10-10). Procedural scatter and supporting groups were removed; the generated folder library remains a manual editor palette. Agent verification passed. Owner acceptance of this reassessment and Phase 2 as a whole remains pending.
+**Status: Complete and accepted (2026-10-10).** The owner confirmed Phase 2 completion. [Part 1](superpowers/plans/2026-10-06-phase-2-primary-composition.md), [Part 2](superpowers/plans/2026-10-06-phase-2-activity-modules.md), and [Part 3](superpowers/plans/2026-10-06-phase-2-artifact-interactions.md) were accepted on October 7 after owner local/live verification. [Part 4](superpowers/plans/2026-10-06-phase-2-authored-clutter.md) was accepted on October 9 after owner local/live verification. [Part 5](superpowers/plans/2026-10-06-phase-2-placement-editor.md) was accepted on October 9 after local verification; the development-only editor does not require live verification. The final [Part 6 reassessment](design/home-clutter-reassessment-2026-10-10/implementation-notes.md) and [direct-save editor follow-up](design/home-clutter-reassessment-2026-10-10/editor-save-implementation-notes.md) are accepted as part of this October 10 completion. Procedural decoration was intentionally removed; authored placements, semantic anchors, responsive overrides, and a generated manual asset palette are the final model. Done saves complete placement records directly to the repository; production authoring is disabled. Existing content/media follow-ups remain recorded and do not block Phase 2. This acceptance records no new deployment or live-test claim.
 
 ### Goal
 
@@ -449,7 +449,7 @@ These are hand-authored and deterministic:
 - core artifact interactions
 - major hand-placed decorative objects
 
-The authored composition is the primary clutter layer and carries Prototype 04's specific object relationships, clusters, overlaps, and negative space. Randomized clutter is an additional, curated layer around it; it must enhance the authored composition rather than replace or rearrange it.
+The authored composition is the final clutter model and preserves the preferred curated object relationships, overlaps, and negative space. Procedural decoration was explored and deliberately removed during the accepted reassessment; restoring it is not a Phase 2 requirement.
 
 For the authoring workflow and stored anchor-relative placement data for decorative clutter, see [CLUTTER_POSITIONING.md](CLUTTER_POSITIONING.md). That convention applies to decorative assets; structural page layout remains page-specific.
 
@@ -467,7 +467,7 @@ These interactions remain secondary to the visible professional paths. Productio
 
 ### Homepage clutter system
 
-Use a hybrid model.
+Use the accepted fully authored model: typed semantic placements, independent responsive overrides, a folder-generated manual palette, and a development-only editor whose Done button saves directly to the repository.
 
 #### Layer A — fixed/priority artifacts
 
@@ -481,7 +481,7 @@ Each can declare:
 - priority
 - breakpoint behavior
 
-Random clutter must never overcrowd or cover these.
+Authored objects must preserve readable content and interactive controls. There is no runtime procedural collision engine.
 
 #### Layer B — retired procedural exploration (historical)
 
@@ -522,7 +522,7 @@ Avoid uniform random scatter.
 
 Generate clusters and deliberate gaps.
 
-#### Priority/collision rules
+#### Previous procedural priority/collision rules (historical)
 
 - fixed hand-placed content always wins
 - randomized clutter must avoid important text, CTAs and project media
@@ -554,14 +554,16 @@ Randomized clutter should respect exclusion zones created by anchored structural
 ### Acceptance criteria
 
 - homepage matches Prototype 04's composition closely
-- clutter differs after hard refresh
-- clutter remains stable during the loaded session
+- preferred curated composition is preserved with fully authored decoration
+- decorative placement remains stable across refreshes and ordinary interactions
 - authored placements and object relationships remain the dominant composition
-- no random artifact obscures essential content
+- no decoration obscures essential content or controls
 - page remains readable at primary desktop widths
 - mobile translates rather than shrinks desktop
 - manual artifact positions remain easy to adjust
-- fixed and randomized clutter are driven by readable configuration rather than scattered DOM/CSS hacks
+- authored clutter uses readable semantic-anchor configuration with independent responsive overrides
+- development-only Done saves complete placements directly to the repository; Copy export is a backup
+- production has no editor UI or authoring listeners, and authoring requests return 404
 - structural homepage content remains independent from decorative placement logic
 
 ## 9. Phase 3 — About + Contact

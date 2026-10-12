@@ -1,12 +1,12 @@
 # Phase 2 Part 6 — supplemental randomized clutter
 
-**Superseded October 10, 2026.** The current implementation is fully authored, with the folder library retained for manual editor selection. See [the current reassessment and verification](../home-clutter-reassessment-2026-10-10/implementation-notes.md). Earlier scatter/cluster material below is historical, not active configuration. Owner acceptance of the reassessment remains pending.
+**Superseded October 10, 2026. Phase 2 is complete and owner-accepted.** The accepted final implementation is fully authored, with the folder library used for manual editor selection and Done saving directly to the repository. See [the final reassessment and acceptance](../home-clutter-reassessment-2026-10-10/implementation-notes.md). Scatter/cluster material below records retired experiments, not accepted active configuration or outstanding requirements.
 
-Implemented and composition-verified on October 9, 2026; folder-based collection authoring added and verified on October 10. **Owner acceptance remains pending**, including local and live review. Parts 1–5 remain accepted. No commit or deployment was performed.
+Historical record: scatter was implemented and agent-verified on October 9; folder authoring was added October 10. These procedural arrangements were subsequently superseded, rather than owner-accepted as the final composition. The replacement authored system and Phase 2 were accepted October 10. No new commit or deployment is recorded.
 
 ## Current composition overhaul — October 10
 
-The authored cluster model in [the current implementation guide](../home-collage-2026-10-10/implementation-notes.md) supersedes the scatter regions, candidate generation, budgets, distribution rules and pairwise admission described below. Existing authored keepsakes are the dominant objects; seven typed compositions supply folder-driven companions. The collection generator and dev-only static placement editor remain in use. Owner acceptance remains pending.
+Historical intermediate step: [the earlier seven-group model](../home-collage-2026-10-10/implementation-notes.md) replaced scatter regions before being retired itself. Its folder-driven companions are no longer active. The generated manual palette and development-only editor survive in the accepted final authored system.
 
 ## Previous scatter implementation — historical record
 
@@ -39,7 +39,7 @@ All 135 migrated images were compared to a temporary pre-migration record: hashe
 
 Verification passed: lint, type checking, the full **56-test/nine-file suite**, production build (including its generation hook), the dev generation hook, and read-only catalogue consistency checking. Eight new filesystem tests cover folder defaults, nested/encoded filenames, overrides, add/remove/replace behavior, repeatable generation, stale/empty output, duplicate IDs, invalid inputs, real animation rejection, JPEG/AVIF dimensions, and unsupported content disguised under a supported extension. Initial workflow tests and format/settings regressions demonstrated failures before their corresponding fixes. Independent review confirmed the migration comparison and identified format/container validation gaps; both were resolved with regression tests. Production browser checks passed again at 1920, 1600, 1440, 1221, 1024, 768, 390, and 320px, including actual content/authored exclusions, no added overflow, no broken visible images, interactions, reduced-motion stills, and no console/runtime errors. Desktop/mobile screenshots were reviewed. All 135 generated URLs separately served byte-identical files. Production scans found no editor controls/authoring modules or filesystem/image-reader code in client chunks. The final validation fixes regenerated no asset output, and the production build passed again.
 
-Browser evidence is at `%TEMP%/breakspider-folder-catalogue-checks/`; the migration comparison record is `%TEMP%/breakspider-folder-catalogue-baseline.json`. Temporary browsers and production servers were stopped. Owner Part 6 acceptance remains pending.
+Historical folder-migration browser evidence is at `%TEMP%/breakspider-folder-catalogue-checks/`, with comparison record `%TEMP%/breakspider-folder-catalogue-baseline.json`. Test processes were stopped. This migration preceded the accepted fully authored replacement; final Phase 2 acceptance was recorded October 10.
 
 ## Runtime contract
 

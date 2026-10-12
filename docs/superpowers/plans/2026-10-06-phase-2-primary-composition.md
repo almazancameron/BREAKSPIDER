@@ -4,7 +4,7 @@
 
 **Goal:** Replace the homepage placeholder with the approved Spotlight, About/portrait, and Projects hierarchy.
 
-**Status:** Complete and accepted (2026-10-07). The owner confirmed verification through local testing and live deployment.
+**Status:** Complete and accepted (2026-10-07). The owner confirmed local/live verification. Phase 2 as a whole is complete and accepted (2026-10-10); see [the completion record](2026-10-06-phase-2-homepage.md#completion-record---accepted-october-10-2026).
 
 **Architecture:** An async Server Component reads authored homepage settings and project records through the repository. Page-owned JSX and CSS establish the responsive composition. Small interactive controls arrive in later chunks.
 
