@@ -13,7 +13,7 @@ const poseKeys = ["anchor", "anchorPoint", "x", "y", "width", "rotation", "scale
 const modes = ["wide", "narrow", "tablet", "mobile"];
 const object = (value: unknown): value is Record<string, unknown> => !!value && typeof value === "object" && !Array.isArray(value);
 
-export function validatePlacements(value: unknown, assetIds: readonly string[]): AuthoredPlacement[] {
+export function validatePlacements(value: unknown, assetIds: readonly string[], anchors: readonly string[] = ANCHOR_ORDER): AuthoredPlacement[] {
     const invalid = () => { throw new ClutterSaveError("Invalid placement data. Nothing was saved."); };
     if (!Array.isArray(value) || value.length > 500) return invalid();
     const ids = new Set<string>();
@@ -21,7 +21,7 @@ export function validatePlacements(value: unknown, assetIds: readonly string[]):
         for (const key of poseKeys) {
             const item = record[key];
             if (item === undefined && (partial || key === "edgeOffset")) continue;
-            if (key === "anchor") { if (!ANCHOR_ORDER.includes(item as never)) invalid(); }
+            if (key === "anchor") { if (!anchors.includes(item as string)) invalid(); }
             else if (key === "anchorPoint") { if (!ANCHOR_POINTS.includes(item as never)) invalid(); }
             else if (key === "hidden" || key === "flip") { if (typeof item !== "boolean") invalid(); }
             else if (key === "edgeOffset" && item === null) continue;
@@ -53,27 +53,27 @@ export function validatePlacements(value: unknown, assetIds: readonly string[]):
     return value as AuthoredPlacement[];
 }
 
-function placementArray(source: string) {
+function placementArray(source: string, exportName: string) {
     const file = ts.createSourceFile("home-clutter.ts", source, ts.ScriptTarget.Latest, true);
     const arrays: ts.ArrayLiteralExpression[] = [];
     for (const statement of file.statements) {
         if (!ts.isVariableStatement(statement)) continue;
         for (const declaration of statement.declarationList.declarations) {
-            if (!ts.isIdentifier(declaration.name) || declaration.name.text !== "HOME_AUTHORED_PLACEMENTS" || !declaration.initializer) continue;
+            if (!ts.isIdentifier(declaration.name) || declaration.name.text !== exportName || !declaration.initializer) continue;
             let node = declaration.initializer;
             while (ts.isSatisfiesExpression(node) || ts.isAsExpression(node) || ts.isParenthesizedExpression(node)) node = node.expression;
             if (ts.isArrayLiteralExpression(node)) arrays.push(node);
         }
     }
-    if (arrays.length !== 1) throw new ClutterSaveError("Cannot locate the placement array. Use Copy export and check content/home-clutter.ts.");
+    if (arrays.length !== 1) throw new ClutterSaveError(`Cannot locate ${exportName}. Use Copy export and check the placement file.`);
     return { start: arrays[0].getStart(file), end: arrays[0].getEnd() };
 }
 
 const revisionOf = (source: string) => createHash("sha256").update(source).digest("hex");
 
-export async function readPlacementFile(path: string) {
+export async function readPlacementFile(path: string, exportName = "HOME_AUTHORED_PLACEMENTS") {
     const source = await readFile(path, "utf8");
-    const { start, end } = placementArray(source);
+    const { start, end } = placementArray(source, exportName);
     // Editor-authored records are JSON literals. Never evaluate source code on the server.
     try {
         return { revision: revisionOf(source), placements: JSON.parse(source.slice(start, end)) as AuthoredPlacement[] };
@@ -84,11 +84,11 @@ export async function readPlacementFile(path: string) {
 
 let pendingSave: Promise<unknown> = Promise.resolve();
 
-export function savePlacementFile(path: string, revision: string, placements: AuthoredPlacement[]): Promise<string> {
+export function savePlacementFile(path: string, revision: string, placements: AuthoredPlacement[], exportName = "HOME_AUTHORED_PLACEMENTS"): Promise<string> {
     const save = pendingSave.catch(() => {}).then(async () => {
         const source = await readFile(path, "utf8");
         if (revisionOf(source) !== revision) throw new ClutterSaveError("The placement file changed outside this editor. Copy your export, then reload before saving.", 409);
-        const { start, end } = placementArray(source);
+        const { start, end } = placementArray(source, exportName);
         const newline = source.includes("\r\n") ? "\r\n" : "\n";
         const next = source.slice(0, start) + JSON.stringify(placements, null, 4).replaceAll("\n", newline) + source.slice(end);
         if (next === source) return revision;

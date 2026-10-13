@@ -2,7 +2,7 @@
 
 > **For agentic workers:** Use `superpowers:executing-plans` only if implementation is later requested. This tutorial authorizes no implementation, delegation, commit, or deployment.
 
-**Status:** Planned; not implemented or accepted.
+**Status:** Content types, repository read and draft content implemented October 13, 2026. Real résumé and privacy-reviewed Viscap storyboard remain pending at the owner's direction. Copy awaits owner review. See [content replacements](../../design/phase-3-about-contact/placeholder-content.md); Phase 3 is not accepted.
 
 **Goal:** Establish a small content contract, reviewable copy, and truthful media/contact states for About.
 
@@ -70,6 +70,6 @@ export type AboutContent = {
 - [ ] Confirmed contact URLs and canonical project slugs are in one About record; accepted identity still has one owner.
 - [ ] Available image paths resolve and metadata describes the actual selected images.
 - [ ] Unavailable PDF/unreviewed storyboard remain explicit pending states. They need not prevent layout work, but remain acceptance prerequisites.
-- [ ] Typecheck and any meaningful changed-content tests pass. No homepage or editor changes appear in the diff.
+- [ ] Typecheck and any meaningful changed-content tests pass. This content part does not change homepage/editor behavior; the authorized shared-editor extraction belongs to Part 3.
 
 Next: [Part 2 — Profile and contact](2026-10-12-phase-3-profile-and-contact.md).

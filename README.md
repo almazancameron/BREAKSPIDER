@@ -2,7 +2,7 @@
 
 Breakspider is a personal internet space and portfolio built with Next.js, React, and TypeScript. The production app is in `app/`; the original Next.js visual prototype is preserved under `prototype/breakspider-nextjs-prototype/` for reference.
 
-**Implementation progress:** Phases 0, 1, and 2 are complete and accepted. Phase 2 completion was confirmed by the owner on 2026-10-10: the production homepage, activity modules, artifact interactions, authored clutter, folder-based asset palette, and development-only editor with direct saving. The next planned phase is Phase 3: About + Contact; it has not been started by this documentation update. See the [master implementation roadmap](docs/breakspider_master_implementation_roadmap_v2.md).
+**Implementation progress:** Phases 0, 1, and 2 are complete and accepted. Phase 2 completion was confirmed by the owner on 2026-10-10. Phase 3's About + Contact composition and shared development clutter editor are implemented for review, with draft copy, a pending résumé and reviewed Viscap capture, and new clutter deferred until the owner provides images. Phase 3 is not accepted. See the [replacement checklist](docs/design/phase-3-about-contact/placeholder-content.md), [implementation record](docs/design/phase-3-about-contact/implementation-notes.md), and [master roadmap](docs/breakspider_master_implementation_roadmap_v2.md).
 
 ## Local development
 
@@ -13,7 +13,7 @@ npm ci
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). The homepage is implemented and accepted; the other production routes remain foundation shells until their roadmap phases are implemented.
+Open [http://localhost:3000](http://localhost:3000). Home is accepted and About is implemented for review; other rooms retain their foundation content. In development, each content page provides **Edit clutter**, with page-specific placements and direct repository saving through Done.
 
 Useful checks:
 

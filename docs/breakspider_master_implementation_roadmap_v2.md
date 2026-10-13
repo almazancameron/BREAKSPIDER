@@ -568,6 +568,8 @@ Randomized clutter should respect exclusion zones created by anchored structural
 
 ## 9. Phase 3 — About + Contact
 
+**Implementation available for owner review (October 13, 2026); not accepted.** About/profile/contact, selected work evidence and the shared development editor across current content routes are implemented with placeholders. Real résumé, reviewed storyboard media, final copy and new clutter placement remain pending. The owner requested new clutter be deferred until supplying an image folder. See [implementation and verification](design/phase-3-about-contact/implementation-notes.md) and [content replacement checklist](design/phase-3-about-contact/placeholder-content.md).
+
 Use the approved About prototype as the layout source of truth.
 
 ### Required content

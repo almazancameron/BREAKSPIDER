@@ -1,3 +1,4 @@
+import { ClutterPage } from "../../../components/clutter/clutter-page";
 import { notFound } from "next/navigation";
 import { FamiliarProfile } from "../../../components/familiars/familiar-profile";
 import { getFamiliar, getFamiliars } from "../../../lib/content/repository";
@@ -19,5 +20,9 @@ export default async function FamiliarDetailPage({
 
     if (!familiar) notFound();
 
-    return <FamiliarProfile familiar={familiar} />;
+    return (
+        <ClutterPage pageId={`familiar-${slug}`}>
+            <FamiliarProfile familiar={familiar} />
+        </ClutterPage>
+    );
 }

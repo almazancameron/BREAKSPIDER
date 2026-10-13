@@ -2,7 +2,7 @@
 
 > **For agentic workers:** Use `superpowers:executing-plans` only if implementation is later requested. This tutorial authorizes no implementation, delegation, commit, or deployment.
 
-**Status:** Planned; not implemented or accepted.
+**Status:** Profile/contact composition implemented for review October 13, 2026, with truthful pending résumé/media states. See [implementation record](../../design/phase-3-about-contact/implementation-notes.md). Phase 3 is not accepted.
 
 **Goal:** Replace the About placeholder with its professional/personal identity, portrait, contact file and concise skills framing.
 
@@ -26,7 +26,7 @@ Read the installed server/client, layout, CSS, navigation and metadata guides. R
 
 **Consumes:** `getHomepageContent(): Promise<HomepageContent>`, `getAboutContent(): Promise<AboutContent>`, `ContentImage({ media, className?, sizes?, loading? })`.
 
-**Produces:** One About composition inside the existing main; sections `about-title`, `contact-title`, `practice-title`, and anchor `contact`. Page-owned classes `page`, `routeLine`, `identity`, `portrait`, `contact`, `practice` establish Part 3's attachment regions.
+**Produces:** One About composition inside the existing main; sections `about-title`, `contact-title`, `practice-title`, and contact jump ID `contact`. Page-owned classes `page`, `routeLine`, `identity`, `portrait`, `contact`, `practice` establish Part 3's eligible clutter anchors. The contact jump ID is navigation, not a global editor anchor registry.
 
 - [ ] Replace the placeholder with an async default `AboutPage` that reads homepage and About content together. Add server metadata with a descriptive title such as `About + Contact — Cameron Almazan | Breakspider` and a factual description.
 - [ ] Render a route line/back-home link, one h1, accepted name/availability, explicit full-stack software engineer / game developer identity, drafted introduction, a `#contact` link and `/projects` link. Do not claim live online presence.

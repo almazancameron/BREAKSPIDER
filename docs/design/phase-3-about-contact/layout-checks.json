@@ -1,0 +1,146 @@
+[
+    {
+        "width": 320,
+        "scrollWidth": 320,
+        "title": "About + Contact — Cameron Almazan | Breakspider",
+        "h1": "About me.",
+        "mainCount": 1,
+        "contact": true,
+        "images": true,
+        "resume": false,
+        "editor": false,
+        "nav": "/about"
+    },
+    {
+        "width": 390,
+        "scrollWidth": 375,
+        "title": "About + Contact — Cameron Almazan | Breakspider",
+        "h1": "About me.",
+        "mainCount": 1,
+        "contact": true,
+        "images": true,
+        "resume": false,
+        "editor": false,
+        "nav": "/about"
+    },
+    {
+        "width": 720,
+        "scrollWidth": 705,
+        "title": "About + Contact — Cameron Almazan | Breakspider",
+        "h1": "About me.",
+        "mainCount": 1,
+        "contact": true,
+        "images": true,
+        "resume": false,
+        "editor": false,
+        "nav": "/about"
+    },
+    {
+        "width": 760,
+        "scrollWidth": 745,
+        "title": "About + Contact — Cameron Almazan | Breakspider",
+        "h1": "About me.",
+        "mainCount": 1,
+        "contact": true,
+        "images": true,
+        "resume": false,
+        "editor": false,
+        "nav": "/about"
+    },
+    {
+        "width": 761,
+        "scrollWidth": 746,
+        "title": "About + Contact — Cameron Almazan | Breakspider",
+        "h1": "About me.",
+        "mainCount": 1,
+        "contact": true,
+        "images": true,
+        "resume": false,
+        "editor": false,
+        "nav": "/about"
+    },
+    {
+        "width": 1024,
+        "scrollWidth": 1009,
+        "title": "About + Contact — Cameron Almazan | Breakspider",
+        "h1": "About me.",
+        "mainCount": 1,
+        "contact": true,
+        "images": true,
+        "resume": false,
+        "editor": false,
+        "nav": "/about"
+    },
+    {
+        "width": 1220,
+        "scrollWidth": 1205,
+        "title": "About + Contact — Cameron Almazan | Breakspider",
+        "h1": "About me.",
+        "mainCount": 1,
+        "contact": true,
+        "images": true,
+        "resume": false,
+        "editor": false,
+        "nav": "/about"
+    },
+    {
+        "width": 1221,
+        "scrollWidth": 1206,
+        "title": "About + Contact — Cameron Almazan | Breakspider",
+        "h1": "About me.",
+        "mainCount": 1,
+        "contact": true,
+        "images": true,
+        "resume": false,
+        "editor": false,
+        "nav": "/about"
+    },
+    {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "title": "About + Contact — Cameron Almazan | Breakspider",
+        "h1": "About me.",
+        "mainCount": 1,
+        "contact": true,
+        "images": true,
+        "resume": false,
+        "editor": false,
+        "nav": "/about"
+    },
+    {
+        "width": 1920,
+        "scrollWidth": 1905,
+        "title": "About + Contact — Cameron Almazan | Breakspider",
+        "h1": "About me.",
+        "mainCount": 1,
+        "contact": true,
+        "images": true,
+        "resume": false,
+        "editor": false,
+        "nav": "/about"
+    },
+    {
+        "width": 320,
+        "longCopyOverflow": false
+    },
+    {
+        "width": 1024,
+        "longCopyOverflow": false
+    },
+    {
+        "width": 1440,
+        "longCopyOverflow": false
+    },
+    {
+        "homeFamiliarCycles": true
+    },
+    {
+        "homeCrystalToggles": true
+    },
+    {
+        "homeInspection": true
+    },
+    {
+        "soundToggles": true
+    }
+]

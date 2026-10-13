@@ -15,7 +15,7 @@ export function getPlacedClutterAssets(placements: readonly { assetId: string }[
     const ids = new Set(placements.map((placement) => placement.assetId));
     for (const id of ids) {
         if (!catalogue.some((asset) => asset.id === id)) {
-            throw new Error(`Missing placed clutter asset: ${id}. Restore its image or update HOME_AUTHORED_PLACEMENTS.`);
+            throw new Error(`Missing placed clutter asset: ${id}. Restore its image or update this page's authored placements.`);
         }
     }
     return catalogue.filter((asset) => ids.has(asset.id));

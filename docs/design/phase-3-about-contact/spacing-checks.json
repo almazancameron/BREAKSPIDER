@@ -1,0 +1,260 @@
+[
+    {
+        "after": {
+            "width": 320,
+            "overflow": false,
+            "gap": 564,
+            "pageHeight": 2113,
+            "practice": {
+                "top": 1231.65625,
+                "bottom": 1525.28125,
+                "height": 293.625
+            },
+            "satellite": {
+                "top": 2089.578125,
+                "bottom": 2177.578125,
+                "height": 88
+            }
+        }
+    },
+    {
+        "after": {
+            "width": 390,
+            "overflow": false,
+            "gap": 603,
+            "pageHeight": 2190,
+            "practice": {
+                "top": 1284.796875,
+                "bottom": 1562.734375,
+                "height": 277.9375
+            },
+            "satellite": {
+                "top": 2166.09375,
+                "bottom": 2254.09375,
+                "height": 88
+            }
+        }
+    },
+    {
+        "after": {
+            "width": 760,
+            "overflow": false,
+            "gap": 991,
+            "pageHeight": 2671,
+            "practice": {
+                "top": 1397.46875,
+                "bottom": 1656.21875,
+                "height": 258.75
+            },
+            "satellite": {
+                "top": 2647.640625,
+                "bottom": 2735.640625,
+                "height": 88
+            }
+        }
+    },
+    {
+        "before": {
+            "width": 761,
+            "overflow": false,
+            "gap": 145,
+            "pageHeight": 1272,
+            "practice": {
+                "top": 769.109375,
+                "bottom": 1095.796875,
+                "height": 326.6875
+            },
+            "satellite": {
+                "top": 1240.71875,
+                "bottom": 1328.71875,
+                "height": 88
+            }
+        },
+        "after": {
+            "width": 761,
+            "overflow": false,
+            "gap": 48,
+            "pageHeight": 1200,
+            "practice": {
+                "top": 769.109375,
+                "bottom": 1095.796875,
+                "height": 326.6875
+            },
+            "satellite": {
+                "top": 1143.796875,
+                "bottom": 1231.796875,
+                "height": 88
+            }
+        }
+    },
+    {
+        "before": {
+            "width": 1024,
+            "overflow": false,
+            "gap": 318,
+            "pageHeight": 1258,
+            "practice": {
+                "top": 653.5625,
+                "bottom": 908.25,
+                "height": 254.6875
+            },
+            "satellite": {
+                "top": 1226.671875,
+                "bottom": 1314.671875,
+                "height": 88
+            }
+        },
+        "after": {
+            "width": 1024,
+            "overflow": false,
+            "gap": 48,
+            "pageHeight": 1186,
+            "practice": {
+                "top": 653.5625,
+                "bottom": 908.25,
+                "height": 254.6875
+            },
+            "satellite": {
+                "top": 956.25,
+                "bottom": 1044.25,
+                "height": 88
+            }
+        }
+    },
+    {
+        "before": {
+            "width": 1220,
+            "overflow": false,
+            "gap": 395,
+            "pageHeight": 1356,
+            "practice": {
+                "top": 661.890625,
+                "bottom": 929.984375,
+                "height": 268.09375
+            },
+            "satellite": {
+                "top": 1324.5,
+                "bottom": 1412.5,
+                "height": 88
+            }
+        },
+        "after": {
+            "width": 1220,
+            "overflow": false,
+            "gap": 48,
+            "pageHeight": 1281,
+            "practice": {
+                "top": 659.078125,
+                "bottom": 927.171875,
+                "height": 268.09375
+            },
+            "satellite": {
+                "top": 975.171875,
+                "bottom": 1063.171875,
+                "height": 88
+            }
+        }
+    },
+    {
+        "before": {
+            "width": 1221,
+            "overflow": false,
+            "gap": 196,
+            "pageHeight": 1246,
+            "practice": {
+                "top": 717.1875,
+                "bottom": 985.34375,
+                "height": 268.15625
+            },
+            "satellite": {
+                "top": 1181.171875,
+                "bottom": 1269.171875,
+                "height": 88
+            }
+        },
+        "after": {
+            "width": 1221,
+            "overflow": false,
+            "gap": 48,
+            "pageHeight": 1102,
+            "practice": {
+                "top": 669.1875,
+                "bottom": 937.34375,
+                "height": 268.15625
+            },
+            "satellite": {
+                "top": 985.34375,
+                "bottom": 1073.34375,
+                "height": 88
+            }
+        }
+    },
+    {
+        "before": {
+            "width": 1440,
+            "overflow": false,
+            "gap": 276,
+            "pageHeight": 1336,
+            "practice": {
+                "top": 735.734375,
+                "bottom": 995.984375,
+                "height": 260.25
+            },
+            "satellite": {
+                "top": 1271.609375,
+                "bottom": 1359.609375,
+                "height": 88
+            }
+        },
+        "after": {
+            "width": 1440,
+            "overflow": false,
+            "gap": 48,
+            "pageHeight": 1174,
+            "practice": {
+                "top": 669.1875,
+                "bottom": 929.4375,
+                "height": 260.25
+            },
+            "satellite": {
+                "top": 977.4375,
+                "bottom": 1065.4375,
+                "height": 88
+            }
+        }
+    },
+    {
+        "before": {
+            "width": 1920,
+            "overflow": false,
+            "gap": 413,
+            "pageHeight": 1620,
+            "practice": {
+                "top": 861.9375,
+                "bottom": 1142.375,
+                "height": 280.4375
+            },
+            "satellite": {
+                "top": 1555.421875,
+                "bottom": 1643.421875,
+                "height": 88
+            }
+        },
+        "after": {
+            "width": 1920,
+            "overflow": false,
+            "gap": 48,
+            "pageHeight": 1371,
+            "practice": {
+                "top": 709.125,
+                "bottom": 989.5625,
+                "height": 280.4375
+            },
+            "satellite": {
+                "top": 1037.5625,
+                "bottom": 1125.5625,
+                "height": 88
+            }
+        }
+    }
+]

@@ -1,3 +1,4 @@
+import { ClutterPage } from "../../../components/clutter/clutter-page";
 import { notFound } from "next/navigation";
 import { ViscapFoundation } from "../../../components/projects/viscap-foundation";
 import { getProject } from "../../../lib/content/repository";
@@ -7,5 +8,9 @@ export default async function ViscapAiPage() {
 
     if (!project) notFound();
 
-    return <ViscapFoundation project={project} />;
+    return (
+        <ClutterPage pageId="viscap-project">
+            <ViscapFoundation project={project} />
+        </ClutterPage>
+    );
 }

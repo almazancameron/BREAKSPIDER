@@ -1,0 +1,404 @@
+[
+    {
+        "name": "Route /",
+        "passed": true,
+        "details": {
+            "h1": "Full-stacksoftware engineer.Game developer.",
+            "editor": true,
+            "main": 1,
+            "overflow": false,
+            "errorOverlay": false
+        }
+    },
+    {
+        "name": "Editor identity home",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "Route /about",
+        "passed": true,
+        "details": {
+            "h1": "About me.",
+            "editor": true,
+            "main": 1,
+            "overflow": false,
+            "errorOverlay": false
+        }
+    },
+    {
+        "name": "Editor identity about",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "Route /projects",
+        "passed": true,
+        "details": {
+            "h1": "Things I’ve made",
+            "editor": true,
+            "main": 1,
+            "overflow": false,
+            "errorOverlay": false
+        }
+    },
+    {
+        "name": "Editor identity projects",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "Route /projects/one-night-familiar-fight",
+        "passed": true,
+        "details": {
+            "h1": "One Night Familiar Fight",
+            "editor": true,
+            "main": 1,
+            "overflow": false,
+            "errorOverlay": false
+        }
+    },
+    {
+        "name": "Editor identity onff-project",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "Route /projects/viscap-ai",
+        "passed": true,
+        "details": {
+            "h1": "Viscap",
+            "editor": true,
+            "main": 1,
+            "overflow": false,
+            "errorOverlay": false
+        }
+    },
+    {
+        "name": "Editor identity viscap-project",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "Route /sketchbook",
+        "passed": true,
+        "details": {
+            "h1": "Sketchbook",
+            "editor": true,
+            "main": 1,
+            "overflow": false,
+            "errorOverlay": false
+        }
+    },
+    {
+        "name": "Editor identity sketchbook",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "Route /sketchbook/battle-plans-first-pass",
+        "passed": true,
+        "details": {
+            "h1": "Battle plans, first pass",
+            "editor": true,
+            "main": 1,
+            "overflow": false,
+            "errorOverlay": false
+        }
+    },
+    {
+        "name": "Editor identity sketchbook-battle-plans-first-pass",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "Route /familiars",
+        "passed": true,
+        "details": {
+            "h1": "Familiars",
+            "editor": true,
+            "main": 1,
+            "overflow": false,
+            "errorOverlay": false
+        }
+    },
+    {
+        "name": "Editor identity familiars",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "Route /familiars/ashwing",
+        "passed": true,
+        "details": {
+            "h1": "Ashwing",
+            "editor": true,
+            "main": 1,
+            "overflow": false,
+            "errorOverlay": false
+        }
+    },
+    {
+        "name": "Editor identity familiar-ashwing",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "Route /familiars/pebbloq",
+        "passed": true,
+        "details": {
+            "h1": "Pebbloq",
+            "editor": true,
+            "main": 1,
+            "overflow": false,
+            "errorOverlay": false
+        }
+    },
+    {
+        "name": "Editor identity familiar-pebbloq",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "Route /collection",
+        "passed": true,
+        "details": {
+            "h1": "Collection",
+            "editor": true,
+            "main": 1,
+            "overflow": false,
+            "errorOverlay": false
+        }
+    },
+    {
+        "name": "Editor identity collection",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "Route /map",
+        "passed": true,
+        "details": {
+            "h1": "Map",
+            "editor": true,
+            "main": 1,
+            "overflow": false,
+            "errorOverlay": false
+        }
+    },
+    {
+        "name": "Editor identity map",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "Route /play/onff",
+        "passed": true,
+        "details": {
+            "h1": "One Night Familiar Fight",
+            "editor": true,
+            "main": 1,
+            "overflow": false,
+            "errorOverlay": false
+        }
+    },
+    {
+        "name": "Editor identity play-onff",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "GET guard home",
+        "passed": true,
+        "details": 200
+    },
+    {
+        "name": "GET guard about",
+        "passed": true,
+        "details": 200
+    },
+    {
+        "name": "GET guard familiar-ashwing",
+        "passed": true,
+        "details": 200
+    },
+    {
+        "name": "GET guard familiar-pebbloq",
+        "passed": true,
+        "details": 200
+    },
+    {
+        "name": "GET guard ../home",
+        "passed": true,
+        "details": 404
+    },
+    {
+        "name": "GET guard unknown",
+        "passed": true,
+        "details": 404
+    },
+    {
+        "name": "Per-page save about",
+        "passed": true,
+        "details": 200
+    },
+    {
+        "name": "Per-page roundtrip about",
+        "passed": true,
+        "details": [
+            {
+                "id": "same-id",
+                "assetId": "spotlight-narwhal",
+                "anchor": "portrait",
+                "anchorPoint": "center",
+                "x": 12,
+                "y": 14,
+                "width": 48,
+                "rotation": 3,
+                "scale": 1,
+                "zIndex": 3,
+                "hidden": false,
+                "flip": false,
+                "edgeOffset": null,
+                "mobile": {
+                    "hidden": true
+                }
+            }
+        ]
+    },
+    {
+        "name": "Stale save blocked about",
+        "passed": true,
+        "details": 409
+    },
+    {
+        "name": "Per-page save familiar-ashwing",
+        "passed": true,
+        "details": 200
+    },
+    {
+        "name": "Per-page roundtrip familiar-ashwing",
+        "passed": true,
+        "details": [
+            {
+                "id": "same-id",
+                "assetId": "spotlight-narwhal",
+                "anchor": "canvas",
+                "anchorPoint": "center",
+                "x": 12,
+                "y": 14,
+                "width": 48,
+                "rotation": 3,
+                "scale": 1,
+                "zIndex": 3,
+                "hidden": false,
+                "flip": false,
+                "edgeOffset": null,
+                "mobile": {
+                    "hidden": true
+                }
+            }
+        ]
+    },
+    {
+        "name": "Stale save blocked familiar-ashwing",
+        "passed": true,
+        "details": 409
+    },
+    {
+        "name": "Per-page save familiar-pebbloq",
+        "passed": true,
+        "details": 200
+    },
+    {
+        "name": "Per-page roundtrip familiar-pebbloq",
+        "passed": true,
+        "details": [
+            {
+                "id": "same-id",
+                "assetId": "spotlight-narwhal",
+                "anchor": "canvas",
+                "anchorPoint": "center",
+                "x": 12,
+                "y": 14,
+                "width": 48,
+                "rotation": 3,
+                "scale": 1,
+                "zIndex": 3,
+                "hidden": false,
+                "flip": false,
+                "edgeOffset": null,
+                "mobile": {
+                    "hidden": true
+                }
+            }
+        ]
+    },
+    {
+        "name": "Stale save blocked familiar-pebbloq",
+        "passed": true,
+        "details": 409
+    },
+    {
+        "name": "First object from empty set",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "Drag writes active responsive override",
+        "passed": true,
+        "details": {
+            "handle": {
+                "x": 760.046875,
+                "y": 452.953125
+            },
+            "text": "export const ABOUT_AUTHORED_PLACEMENTS = [\n    {\n        \"id\": \"spotlight-narwhal-1\",\n        \"assetId\": \"spotlight-narwhal\",\n        \"anchor\": \"portrait\",\n        \"anchorPoint\": \"center\",\n        \"x\": 0,\n        \"y\": 0,\n        \"width\": 160,\n        \"rotation\": 0,\n        \"scale\": 1,\n        \"zIndex\": 3,\n        \"hidden\": false,\n        \"flip\": false,\n        \"edgeOffset\": null,\n        \"narrow\": {\n            \"anchor\": \"portrait\",\n            \"anchorPoint\": \"center\",\n            \"x\": 35,\n            \"y\": 18,\n            \"edgeOffset\": null\n        }\n    }\n] satisfies AuthoredPlacement[];\n",
+            "status": "Placed spotlight-narwhal-1 at portrait / center (narrow)."
+        }
+    },
+    {
+        "name": "Save failure retains draft",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "UI Done saves first object",
+        "passed": true,
+        "details": 1
+    },
+    {
+        "name": "Hidden edge fixture",
+        "passed": true,
+        "details": 200
+    },
+    {
+        "name": "Hidden edge reanchor preserves rendered center",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "Professional destinations",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "Contact jump",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "Profile Escape returns focus",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "Reduced motion keeps evidence static",
+        "passed": true,
+        "details": null
+    },
+    {
+        "name": "Console exceptions",
+        "passed": true,
+        "details": []
+    }
+]

@@ -1,3 +1,4 @@
+import { aboutContent } from "../../content/about.ts";
 import { changelogEntries } from "../../content/changelog.ts";
 import { collectibles } from "../../content/collectibles.ts";
 import { familiars } from "../../content/familiars.ts";
@@ -6,6 +7,7 @@ import { homepageContent } from "../../content/homepage.ts";
 import { projects } from "../../content/projects.ts";
 import { sketchbookPosts } from "../../content/sketchbook.ts";
 import type {
+    AboutContent,
     ChangelogEntry,
     Collectible,
     Familiar,
@@ -18,6 +20,10 @@ import type {
 export const getHomepageContent = async (): Promise<HomepageContent> => {
     return { ...homepageContent };
 };
+
+export async function getAboutContent(): Promise<AboutContent> {
+    return { ...aboutContent };
+}
 
 /**
  * Pages read authored content through this module. The local arrays can later

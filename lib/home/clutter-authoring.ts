@@ -2,7 +2,7 @@ import type { AnchorPoint, AuthoredPlacement, ClutterViewport, HomeAnchorId, Pla
 
 export type Point = { x: number; y: number };
 export type Rect = { left: number; top: number; width: number; height: number };
-export type MeasuredAnchor = { id: HomeAnchorId; rect: Rect };
+export type MeasuredAnchor = { id: string; rect: Rect };
 
 export const ANCHOR_ORDER: HomeAnchorId[] = [
     "spotlight", "about", "projects", "current", "sketchbook",
@@ -27,10 +27,10 @@ export const distanceToRect = (point: Point, rect: Rect): number => Math.hypot(
     Math.max(rect.top - point.y, 0, point.y - rect.top - rect.height),
 );
 
-export function findNearestAnchor(point: Point, anchors: MeasuredAnchor[]): MeasuredAnchor | null {
+export function findNearestAnchor(point: Point, anchors: MeasuredAnchor[], order: readonly string[] = ANCHOR_ORDER): MeasuredAnchor | null {
     let nearest: MeasuredAnchor | null = null;
     let distance = Infinity;
-    for (const id of ANCHOR_ORDER) {
+    for (const id of order) {
         const anchor = anchors.find((candidate) => candidate.id === id);
         if (!anchor) continue;
         const next = distanceToRect(point, anchor.rect);

@@ -1,3 +1,4 @@
+import { ClutterPage } from "../../../components/clutter/clutter-page";
 import { notFound } from "next/navigation";
 import { SketchbookEntry } from "../../../components/sketchbook/sketchbook-entry";
 import { getSketchbookPost, getSketchbookPosts } from "../../../lib/content/repository";
@@ -19,5 +20,9 @@ export default async function SketchbookEntryPage({
 
     if (!post || !post.isLongform) notFound();
 
-    return <SketchbookEntry post={post} />;
+    return (
+        <ClutterPage pageId={`sketchbook-${slug}`}>
+            <SketchbookEntry post={post} />
+        </ClutterPage>
+    );
 }

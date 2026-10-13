@@ -1,3 +1,4 @@
+import { ClutterPage } from "../../../components/clutter/clutter-page";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { RoutePlaceholder } from "../../../components/pages/route-placeholder";
@@ -9,12 +10,14 @@ export default async function OneNightFamiliarFightPage() {
     if (!project) notFound();
 
     return (
-        <RoutePlaceholder
-            eyebrow="GAME PROJECT"
-            title={project.title}
-            summary={project.summary}
-        >
-            <Link href={project.links[0]?.href ?? "/play/onff"}>Open playable build</Link>
-        </RoutePlaceholder>
+        <ClutterPage pageId="onff-project">
+            <RoutePlaceholder
+                eyebrow="GAME PROJECT"
+                title={project.title}
+                summary={project.summary}
+            >
+                <Link href={project.links[0]?.href ?? "/play/onff"}>Open playable build</Link>
+            </RoutePlaceholder>
+        </ClutterPage>
     );
 }

@@ -24,6 +24,24 @@ export type HomepageContent = {
     portrait: ImageMedia;
 };
 
+export type AboutProjectEvidence = {
+    projectSlug: string;
+    caption: string;
+    media: ImageMedia | null;
+};
+
+export type AboutContent = {
+    introduction: string;
+    practiceSummary: string;
+    skillLabels: string[];
+    portraitCaption: string;
+    githubUrl: string;
+    linkedinUrl: string;
+    resumeUrl: string | null;
+    evidence: AboutProjectEvidence[];
+    familiarSlug: string;
+};
+
 export type Project = {
     id: string;
     slug: string;

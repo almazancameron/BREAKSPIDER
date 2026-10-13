@@ -2,7 +2,7 @@
 
 > **For agentic workers:** Use `superpowers:executing-plans` only if implementation is later requested. This tutorial authorizes no implementation, delegation, commit, or deployment.
 
-**Status:** Planned; not implemented or accepted.
+**Status:** Verification and focused code review performed October 13, 2026; see [actual results and limits](../../design/phase-3-about-contact/implementation-notes.md). Owner content review, résumé, storyboard and clutter remain pending; Phase 3 is not accepted.
 
 **Goal:** Verify the complete About/contact flow and preservation of accepted Phase 2 before requesting owner acceptance.
 
@@ -37,8 +37,9 @@
 
 - [ ] Compare Home at 1440/1920 and 390/320 against the accepted authored baseline. Confirm identity, layout, saved placements and folder palette are unchanged; decoration stays deterministic.
 - [ ] Exercise homepage Familiar cycling, file focus/shuffle/inspection, crystal interaction and found Map navigation; confirm existing audio/profile/intro behavior. About must not introduce new storage keys, audio calls or modal owners.
-- [ ] In development, inspect the homepage editor's open/read and Done behavior without changing accepted placements. If a temporary save trial is necessary, back up and restore the file byte-for-byte and verify the restoration; do not leave an unsaved or saved trial composition behind.
-- [ ] In production, confirm no editor UI/authoring listeners and GET/POST `/api/dev/clutter` return 404. Do not broaden the endpoint to accept About paths.
+- [ ] In development, verify editor availability on every registered current content route, including individual Familiar/long Sketchbook pages. Check named/default canvas anchors, empty-set asset additions, drag/numeric edits, responsive overrides, Copy export, Reset and direct-save Done. Back up and restore trial files byte-for-byte; preserve About's intentionally reviewed placements.
+- [ ] Save distinct trials on Home and About and two detail entries, then reload and navigate between them. Confirm isolated files/revisions and no cross-page draft leakage. Exercise route changes during load/drag/save, failed writes and external conflicts; the originating registered target cannot change and failures retain the correct draft while its editor is mounted.
+- [ ] In production, confirm no editor UI, full-palette downloads, handles or authoring listeners on every route, and GET/POST `/api/dev/clutter` return 404 for default, About, detail and unknown page IDs. In development, unknown/traversal-like IDs and invalid page anchors must fail without writing files. Server registration alone chooses targets.
 - [ ] Review the diff for unrelated changes, duplicated identity/state, scattered asset paths, global CSS leakage, unnecessary client boundaries and new abstractions. Run checks again only if fixes or unresolved failures warrant them.
 - [ ] Stop every server/browser process started for verification. Record the rendered evidence and technical limitations separately from owner review or live-deployment claims.
 - [ ] Present owner review with copy, storyboard derivative, desktop/mobile captures, confirmed links and any pending résumé item. Do not mark Phase 3 accepted/complete without all required content and explicit owner acceptance. Commit/deploy only under separate applicable authorization.
@@ -52,6 +53,7 @@
 - [ ] About feels like a customized profile, distinct from Home and less cluttered.
 - [ ] Mobile reading order is clear; primary widths and accessibility/motion checks pass.
 - [ ] Accepted Phase 2 and shared-shell behavior remain intact.
+- [ ] Shared development editor is available on every current content route; per-page/detail placements save independently and production contains no authoring behavior.
 - [ ] Technical evidence and remaining limitations are recorded accurately.
 - [ ] Owner explicitly accepts Phase 3.
 
