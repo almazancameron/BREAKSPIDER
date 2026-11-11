@@ -1,13 +1,12 @@
 # Phase 3 — Content to replace or review
 
-The About composition and contact paths were confirmed by the owner after local and production deployment testing on November 10, 2026. Final copy, résumé, reviewed Viscap evidence and clutter remain pending. Name, email, availability, illustrated portrait, GitHub and LinkedIn use the owner's confirmed values.
+The About composition and contact paths were confirmed by the owner after local and production deployment testing on November 10, 2026. The owner-supplied résumé is now linked locally. Final copy, reviewed Viscap evidence and clutter remain pending. Name, email, availability, illustrated portrait, GitHub and LinkedIn use the owner's confirmed values.
 
 | Item | What the owner should supply or approve | Where to update |
 | --- | --- | --- |
 | Introduction | Review the draft beginning “I build web applications, connected systems, and games.” Replace with preferred concise professional/personal introduction. | `content/about.ts`: `introduction` |
 | Practice summary | Review the draft about connected interfaces and ONFF. Supply any specific strengths, tools or experience to emphasize; no employment history was invented. | `content/about.ts`: `practiceSummary` |
 | Skills | Confirm or replace WEB APPS, SYSTEMS THINKING, GAME DEVELOPMENT and INTERACTION. | `content/about.ts`: `skillLabels` |
-| Résumé | Add a real PDF; recommended file `public/resume.pdf`. Then set `resumeUrl` to `/resume.pdf`. Until then the page says “PDF coming soon” without a broken download. | `content/about.ts`: `resumeUrl` |
 | Viscap storyboard | Supply or approve a privacy-reviewed derivative. The source at `assets/work-screenshots/viscap-storyboard.PNG` contains actor thumbnails, client/script text and identifiers; it has not been copied to About's public media. | `content/about.ts`: Viscap `evidence[0].media` |
 | Short captions | Optional review: “Connected web platform”, “Game systems in progress”, and “ALSO ME, SORT OF”. | `content/about.ts`: evidence captions and `portraitCaption` |
 | Clutter | Provide the image folder for subsequent selection and authored placement. About and the other new-page placement files remain empty; the shared development editor is ready. | `content/about-clutter.ts`, `content/clutter/`, shared asset palette |

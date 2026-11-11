@@ -1,6 +1,10 @@
 # Phase 3 About + Contact — Implementation record
 
-**Implementation for review:** October 13, 2026. Parts 1–4 implemented under the owner's placeholder/deferred-clutter scope. The owner confirmed the About page after local and production deployment testing on November 10, 2026. Final copy, real résumé, reviewed storyboard and clutter remain pending against the full Phase 3 content criteria.
+**Implementation for review:** October 13, 2026. Parts 1–4 implemented under the owner's placeholder/deferred-clutter scope. The owner confirmed the About page after local and production deployment testing on November 10, 2026. The owner-supplied résumé PDF is now linked locally; final copy, reviewed storyboard and clutter remain pending against the full Phase 3 content criteria.
+
+## Résumé follow-up — November 10, 2026
+
+The owner supplied `Cameron_Almazan_Resume_2026_BodyContact-1.pdf`. It was copied unchanged to `public/resume.pdf`, and `content/about.ts` now points to `/resume.pdf` so About shows its existing View PDF and Download actions. This local change has not been deployed or owner-confirmed on the live site yet.
 
 ## Owner confirmation — November 10, 2026
 

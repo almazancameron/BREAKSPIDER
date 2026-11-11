@@ -10,8 +10,7 @@ export const aboutContent = {
     portraitCaption: "ALSO ME, SORT OF",
     githubUrl: "https://github.com/almazancameron",
     linkedinUrl: "https://www.linkedin.com/in/almazancameron",
-    // Add the real PDF to public/resume.pdf, then set this to "/resume.pdf".
-    resumeUrl: null,
+    resumeUrl: "/resume.pdf",
     evidence: [
         {
             projectSlug: "viscap-ai",

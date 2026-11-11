@@ -568,7 +568,7 @@ Randomized clutter should respect exclusion zones created by anchored structural
 
 ## 9. Phase 3 — About + Contact
 
-**About page confirmed by the owner after local and production deployment testing (November 10, 2026).** About/profile/contact, selected work evidence and the shared development editor across current content routes are implemented. Real résumé, reviewed storyboard media, final copy and new clutter placement remain pending; the full Phase 3 content criteria are still open. The owner requested new clutter be deferred until supplying an image folder. See [implementation and verification](design/phase-3-about-contact/implementation-notes.md) and [content replacement checklist](design/phase-3-about-contact/placeholder-content.md).
+**About page confirmed by the owner after local and production deployment testing (November 10, 2026).** About/profile/contact, selected work evidence and the shared development editor across current content routes are implemented. The owner-supplied résumé PDF is linked locally; reviewed storyboard media, final copy and new clutter placement remain pending, so the full Phase 3 content criteria are still open. The owner requested new clutter be deferred until supplying an image folder. See [implementation and verification](design/phase-3-about-contact/implementation-notes.md) and [content replacement checklist](design/phase-3-about-contact/placeholder-content.md).
 
 Use the approved About prototype as the layout source of truth.
 
