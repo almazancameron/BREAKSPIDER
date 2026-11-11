@@ -17,6 +17,7 @@ const eslintConfig = defineConfig([
         "screenshots/**",
         "docs/**",
         "tools/**",
+        "public/games/onff/**",
     ]),
 ]);
 

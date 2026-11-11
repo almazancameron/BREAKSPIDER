@@ -1,6 +1,10 @@
 # Phase 3 About + Contact — Implementation record
 
-**Implementation for review:** October 13, 2026. Parts 1–4 implemented under the owner's placeholder/deferred-clutter scope. Phase 3 is not owner-accepted; final copy, real résumé, reviewed storyboard and clutter remain pending.
+**Implementation for review:** October 13, 2026. Parts 1–4 implemented under the owner's placeholder/deferred-clutter scope. The owner confirmed the About page after local and production deployment testing on November 10, 2026. Final copy, real résumé, reviewed storyboard and clutter remain pending against the full Phase 3 content criteria.
+
+## Owner confirmation — November 10, 2026
+
+The owner reported that About was tested and confirmed both locally and on the production deployment. This supersedes the earlier review-only status and the historical note below that this implementation session did not deploy. The owner did not report separate acceptance of the remaining copy, résumé, storyboard or clutter follow-ups.
 
 ## Scope and rulings
 

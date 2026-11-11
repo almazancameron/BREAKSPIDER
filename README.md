@@ -2,7 +2,7 @@
 
 Breakspider is a personal internet space and portfolio built with Next.js, React, and TypeScript. The production app is in `app/`; the original Next.js visual prototype is preserved under `prototype/breakspider-nextjs-prototype/` for reference.
 
-**Implementation progress:** Phases 0, 1, and 2 are complete and accepted. Phase 2 completion was confirmed by the owner on 2026-10-10. Phase 3's About + Contact composition and shared development clutter editor are implemented for review, with draft copy, a pending résumé and reviewed Viscap capture, and new clutter deferred until the owner provides images. Phase 3 is not accepted. See the [replacement checklist](docs/design/phase-3-about-contact/placeholder-content.md), [implementation record](docs/design/phase-3-about-contact/implementation-notes.md), and [master roadmap](docs/breakspider_master_implementation_roadmap_v2.md).
+**Implementation progress:** Phases 0, 1, and 2 are complete and accepted. Phase 2 completion was confirmed by the owner on 2026-10-10. The owner confirmed the Phase 3 About page after local and production deployment testing on 2026-11-10; its composition and shared development clutter editor are implemented. Final copy, the résumé PDF, privacy-reviewed Viscap evidence, and new clutter remain follow-ups, so the full Phase 3 content criteria are still open. See the [replacement checklist](docs/design/phase-3-about-contact/placeholder-content.md), [implementation record](docs/design/phase-3-about-contact/implementation-notes.md), and [master roadmap](docs/breakspider_master_implementation_roadmap_v2.md).
 
 ## Local development
 
@@ -13,7 +13,9 @@ npm ci
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). Home is accepted and About is implemented for review; other rooms retain their foundation content. In development, each content page provides **Edit clutter**, with page-specific placements and direct repository saving through Done.
+Open [http://localhost:3000](http://localhost:3000). Home is accepted and About has been confirmed locally and on the production deployment; other rooms retain their foundation content. In development, each content page provides **Edit clutter**, with page-specific placements and direct repository saving through Done.
+
+The playable ONFF Web export is integrated locally at `/play/onff` and verified in a production build and local Chromium. Production deployment and live game input verification remain pending.
 
 Useful checks:
 

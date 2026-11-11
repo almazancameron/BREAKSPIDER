@@ -1,6 +1,6 @@
 # Phase 3 — Content to replace or review
 
-The About composition and contact paths are implemented. Phase 3 remains unaccepted while copy, résumé, reviewed Viscap evidence and clutter are pending. Name, email, availability, illustrated portrait, GitHub and LinkedIn use the owner's confirmed values.
+The About composition and contact paths were confirmed by the owner after local and production deployment testing on November 10, 2026. Final copy, résumé, reviewed Viscap evidence and clutter remain pending. Name, email, availability, illustrated portrait, GitHub and LinkedIn use the owner's confirmed values.
 
 | Item | What the owner should supply or approve | Where to update |
 | --- | --- | --- |

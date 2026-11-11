@@ -1,0 +1,73 @@
+.page {
+    min-height: 100vh;
+    padding: clamp(1.5rem, 4vw, 4rem) clamp(1rem, 4vw, 5rem) 4rem;
+    background: radial-gradient(ellipse at 72% 8%, #38261f 0, transparent 42%),
+        radial-gradient(ellipse at 4% 86%, #152934 0, transparent 40%), #11131e;
+}
+
+.topline {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    color: var(--color-text-muted);
+    font: 700 0.7rem/1.4 var(--font-mono);
+    letter-spacing: 0.05em;
+}
+
+.topline a {
+    color: var(--color-accent-secondary);
+    text-underline-offset: 0.25rem;
+}
+
+.intro {
+    max-width: 70rem;
+    margin: clamp(2rem, 5vw, 4.5rem) 0 2rem;
+}
+
+.kicker {
+    margin: 0 0 0.8rem;
+    color: #ffad75;
+    font: 800 0.7rem/1.4 var(--font-mono);
+    letter-spacing: 0.12em;
+}
+
+.intro h1 {
+    margin: 0;
+    font-size: clamp(2.7rem, 7vw, 6.4rem);
+    line-height: 0.94;
+    letter-spacing: -0.065em;
+}
+
+.intro h1 span { color: #ffad75; }
+
+.intro > p:last-child {
+    max-width: 44rem;
+    margin: 1.5rem 0 0;
+    color: var(--color-text-muted);
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    line-height: 1.5;
+}
+
+.footnote {
+    max-width: 53rem;
+    margin: 1.5rem 0 0;
+    color: var(--color-text-muted);
+    font: 0.76rem/1.5 var(--font-mono);
+}
+
+.mobileNote { display: none; }
+
+@media (max-width: 47.5rem) {
+    .topline { flex-direction: column; gap: 0.4rem; }
+    .intro { margin-top: 2rem; }
+    .mobileNote {
+        display: block;
+        margin: 0 0 1rem;
+        padding: 0.7rem 0.9rem;
+        border-left: 3px solid #ffad75;
+        color: var(--color-text);
+        background: #292332;
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}
